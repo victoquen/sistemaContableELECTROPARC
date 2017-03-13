@@ -130,7 +130,7 @@
         <div align="center" style="background-image:url('img/banner1.jpg'); height: 70px;background-repeat:no-repeat; background-position:right">
             <table width="100%">
                 <tr>
-                    <td width="70%" ><img src="img/agro.png1" height="70px" width="80%"></td>
+                    <td width="70%" ><img src="img/electroparc.png" height="70px" width="50%"></td>
                     <td width="20%" ><strong style="color: white">Bienvenido <?php echo $_SESSION['username'] ?>.<br/></strong><a style="color:papayawhip " href="../logout.php" id="sessionKiller">Cerrar sesi&oacute;n.</a></td>
                 </tr>
             </table>

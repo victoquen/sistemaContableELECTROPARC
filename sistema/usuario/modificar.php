@@ -3,7 +3,7 @@
 $idbanco=$_GET["idbanco"];
 
 include_once '../conexion/conexion.php';
-include_once 'class/banco.php';
+include_once 'class/usuario.php';
 
 $usuario = new ServidorBaseDatos();
 $conn= $usuario->getConexion();
@@ -46,7 +46,7 @@ $row = $banco->get_banco_id($conn, $idbanco);
 				<div align="center">
 				<div id="tituloForm" class="header">MODIFICAR ENTIDAD BANCARIA</div>
 				<div id="frmBusqueda">
-				<form id="formulario" name="formulario" method="post" action="save_banco.php">
+				<form id="formulario" name="formulario" method="post" action="save.php">
 					<table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0>
 						<tr>
 							<td>ID</td>

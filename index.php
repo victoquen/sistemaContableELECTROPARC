@@ -25,7 +25,7 @@ ob_start();
                                     $pagina = "sistema/index.php";
                                     Header("Location: $pagina");
                                 } else {
-                                    echo '<img src="sistema/img/agro001.png" height="70px" width=95%">';
+                                    echo '<img src="sistema/img/electroparc.png" height="70px" width=95%">';
                                     echo '<form method="post" action="">
 		<table cellpadding="0" cellspacing="0" border="0">
 			<tr>
