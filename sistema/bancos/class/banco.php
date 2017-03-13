@@ -43,7 +43,7 @@ class Banco
 
     public function get_banco_id($conn, $id)
     {
-        $rows;
+
         $query="SELECT  nombre FROM banco WHERE id_banco ='$id' AND borrado = 0";
         $result = mysql_query($query, $conn);
         $row = mysql_fetch_assoc($result);
@@ -51,7 +51,7 @@ class Banco
     }
      public function get_banco_borrado_id($conn, $id)
     {
-        $rows;
+        
         $query="SELECT  nombre FROM banco WHERE id_banco ='$id' AND borrado = 1";
         $result = mysql_query($query, $conn);
         $row = mysql_fetch_assoc($result);

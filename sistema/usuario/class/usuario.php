@@ -1,39 +1,46 @@
 <?php
 
-class Banco
+class usuario
 {
-    private $id_banco;
+    private $id_usuario;
+    private $id_facturero;
     private $nombre;
+    private $password;
+    private $tipo;
     private $borrado;
 
     public function __construct()
     {
-        $this->id_banco=null;
-        $this->nombre=null;
-        $this->borrado=null;
+        $this->id_usuario = null;
+        $this->id_facturero = null;
+        $this->nombre = null;
+        $this->password = null;
+        $this->tipo = null;
+        $this->borrado = null;
+
     }
 
-    public function save_banco($conn, $nombre)
+    public function save($conn, $id_facturero, $nombre, $password, $tipo)
     {
-        $this->nombre=strtoupper($nombre);
-        $query="INSERT INTO banco VALUES (null,'$this->nombre','0')";
+
+        $query="INSERT INTO usuario VALUES (null, '$id_facturero','$nombre','$password', '$tipo','0')";
         $result= mysql_query($query, $conn);
         return $result;
     }
 
-    public function delete_banco($conn, $idbanco)
+    public function delete($conn, $id)
     {
-        $query = "UPDATE banco SET borrado = 1 WHERE id_banco='$idbanco'";
+        $query = "UPDATE usuario SET borrado = 1 WHERE id_usuario='$id'";
         $result = mysql_query($query, $conn);
         return $result;
     }
 
-    public function update_banco($conn, $idbanco, $nombre)
+    public function update($conn, $id, $nombre, $password, $tipo)
     {
 
-        $this->nombre=strtoupper($nombre);
-        $query = "UPDATE banco SET  nombre = '$this->nombre'
-                  WHERE id_banco = '$idbanco'";
+        
+        $query = "UPDATE usuario SET  nombre = '$nombre', password = '$password', tipo = '$tipo'
+                  WHERE id_usuario = '$id'";
 
         $result = mysql_query($query, $conn);
 
@@ -41,18 +48,18 @@ class Banco
 
     }
 
-    public function get_banco_id($conn, $id)
+    public function get_id($conn, $id)
     {
-        $rows;
-        $query="SELECT  nombre FROM banco WHERE id_banco ='$id' AND borrado = 0";
+
+        $query="SELECT  nombre, password, tipo FROM usuario WHERE id_usuario ='$id' AND borrado = 0";
         $result = mysql_query($query, $conn);
         $row = mysql_fetch_assoc($result);
         return $row;
     }
-     public function get_banco_borrado_id($conn, $id)
+
+    public function get_borrado_id($conn, $id)
     {
-        $rows;
-        $query="SELECT  nombre FROM banco WHERE id_banco ='$id' AND borrado = 1";
+        $query="SELECT  nombre FROM usuario WHERE id_usuario ='$id' AND borrado = 1";
         $result = mysql_query($query, $conn);
         $row = mysql_fetch_assoc($result);
         return $row;

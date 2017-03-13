@@ -35,18 +35,18 @@ error_reporting(0);
 
 		<script language="javascript">
 		
-		function ver_banco(idbanco) {
-			parent.location.href="ver_banco.php?idbanco=" + idbanco;
+		function ver(id) {
+			parent.location.href="ver.php?idusuario=" + idusuario;
 		}
 		
-		function modificar_banco(idbanco) {
+		function modificar_usuario(idusuario) {
                     
-			parent.location.href="modificar_banco.php?idbanco=" + idbanco;
+			parent.location.href="modificar.php?idusuario=" + idusuario;
 		}
 		
-		function eliminar_banco(idbanco) {
+		function eliminar_usuario(idusuario) {
                     if (confirm("Atencion va a proceder a la baja de una entidad bancaria. Desea continuar?")) {
-			parent.location.href="eliminar_banco.php?idbanco=" + idbanco;
+			parent.location.href="eliminar.php?idusuario=" + idusuario;
                     }
 		}
 
@@ -56,11 +56,12 @@ error_reporting(0);
                var oTable=  $('#example').dataTable( {
                    "processing": true,
                    "serverSide": true,
-                   "sAjaxSource": "processing_listado_bancos.php",
+                   "sAjaxSource": "processing_listado.php",
 
                    "sPaginationType": "full_numbers",
 
                    "aoColumns": [
+                       null,
                        null,
                        { "bSearchable": false, "bSortable": false },
                        { "bSearchable": false, "bSortable": false },

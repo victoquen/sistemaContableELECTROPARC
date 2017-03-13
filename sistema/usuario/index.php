@@ -1,7 +1,7 @@
 <html>
 	<head>
                 <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
-		<title>bancoS</title>
+		<title>usuarioS</title>
 		<link href="../estilos/estilos.css" type="text/css" rel="stylesheet">
 		<script language="javascript">
 		
@@ -18,7 +18,7 @@
 			document.getElementById("form_busqueda").submit();
 		}
 		
-		function nuevo_banco() {
+		function nuevo_usuario() {
 			location.href="new.php";
 		}		
 		</script>
@@ -31,7 +31,7 @@
 				<div id="frmBusqueda">
                                     <form id="form_busqueda" name="form_busqueda" method="post" action="rejilla.php" target="frame_rejilla">                                
                                         <br/>
-                                        <img src="../img/icono_nuevo.jpg" title="nueva Categor&iacute;a" border="0" width="30" height="30" border="1" onClick="nuevo_banco()" onMouseOver="style.cursor=cursor">
+                                        <img src="../img/icono_nuevo.jpg" title="nueva Categor&iacute;a" border="0" width="30" height="30" border="1" onClick="nuevo_usuario()" onMouseOver="style.cursor=cursor">
                                 </div>
                                      </form>
 				<div id="lineaResultado">
