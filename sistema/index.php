@@ -49,7 +49,7 @@
                     [null, 'Facturas Gastos Anuladas', './facturas_gastos_anuladas/index.php', 'principal', 'Ventas Proveedores'],
                     [null, 'Retenciones', './retenciones/index.php', 'principal', 'Retenciones']
                 ],
-                [null, 'Tesorería', null, null, 'Tesoreria',
+                [null, 'Tesorerï¿½a', null, null, 'Tesoreria',
                     [null, 'Cobros', './cobros/index.php', 'principal', 'cobros'],
                     [null, 'Pagos', './pagos/index.php', 'principal', 'pagos'],
                     [null, 'Caja Diaria', './cerrarcaja/index.php', 'principal', 'caja'],
@@ -72,6 +72,7 @@
                 ],
                 [null, 'Mantenimientos', null, null, 'mantenimientos',
                     [null, 'RUC', './ruc/index.php', 'principal', 'RUC'],
+                    [null, 'Usuarios', './usuario/index.php', 'principal', 'Usuarios'],
 					[null, 'Codigos Retencion', './codigos_retencion/index.php', 'principal', 'Retenciones'],
                     [null, 'Bancos', './bancos/index.php', 'principal', 'bancos'],                    
                     [null, 'Datos Retencionero', './retencionero/index.php', 'principal', 'retencionero'],
