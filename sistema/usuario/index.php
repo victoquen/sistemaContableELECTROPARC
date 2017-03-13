@@ -19,7 +19,7 @@
 		}
 		
 		function nuevo_banco() {
-			location.href="new_banco.php";
+			location.href="new.php";
 		}		
 		</script>
 	</head>
