@@ -54,20 +54,23 @@ error_reporting(0);
                         "sPaginationType": "full_numbers",
 
                         "aoColumns": [
-                                        { "bVisible": false, "asSorting": [ "desc", "asc" ] },
-                                        { "asSorting": [ "desc", "asc" ] },
-                                        { "asSorting": [ "desc", "asc" ] },
-                                        null,
-                                        null,
-                                        null,
-                                        null,
-                                        { "asSorting": [ "desc", "asc" ] },
-                                        { "bSearchable": false },
-                                        { "bSearchable": false },
-                                        { "bSearchable": false, "bSortable": false },
-                                        { "bSearchable": false, "bSortable": false },
-                                        { "bSearchable": false, "bSortable": false }
-                                    ],
+                            { "bVisible": false, "asSorting": [ "desc", "asc" ] },
+
+                            { "asSorting": [ "desc", "asc" ] },
+                            { "asSorting": [ "desc", "asc" ] },
+                            { "asSorting": [ "desc", "asc" ] },
+                            null,
+                            null,
+                            null,
+                            null,
+
+                            { "asSorting": [ "desc", "asc" ] },
+                            { "bSearchable": false },
+                            { "bSearchable": false },
+                            { "bSearchable": false, "bSortable": false },
+                            { "bSearchable": false, "bSortable": false },
+                            { "bSearchable": false, "bSortable": false }
+                        ],
 
                         
 
@@ -140,6 +143,7 @@ error_reporting(0);
                                     <tr>
                                         <th width="2%"><span style="font-size: 10px">Id</span></th>
                                         <th width="10%"><span style="font-size: 10px">Fecha</span></th>
+                                        <th width="5%"><span style="font-size: 10px">#Facturero</span></th>
                                         <th width="5%"><span style="font-size: 10px">#Factura</span></th>
                                         <th ><span style="font-size: 10px">Cliente</span></th>
                                         <th width="10%"><span style="font-size: 10px">Tipo Cliente</span></th>

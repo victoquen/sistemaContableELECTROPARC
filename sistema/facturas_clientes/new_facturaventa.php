@@ -3,8 +3,8 @@
 
 include ("../conexion/conexion.php");
 error_reporting(0);
-$usuario = new ServidorBaseDatos();
-$conn = $usuario->getConexion();
+$db = new ServidorBaseDatos();
+$conn = $db->getConexion();
 
 //porcentaje iva parametrizable*****************************************
 $sel_iva = "select porcentaje FROM iva where activo=1 AND borrado=0";
@@ -26,8 +26,11 @@ $query_o="SELECT * FROM facturero WHERE id_ruc= $idruc";
 $res_o=mysql_query($query_o,$conn);
 
 
-//id facturero por defecto segun EL USUARIO (por programar)
+//id facturero por defecto segun EL USUARIO
+
 $idfacturero_seleccionado = $_REQUEST["idfacturero"];
+$tipo=$_REQUEST["tipo"];
+
 
 
 
@@ -185,9 +188,14 @@ if (($maximo >= $inicio) && ($maximo <= $fin) && ($fechah <= $fechac)) {
                                                     <option selected value="<?php echo mysql_result($res_o,$contador,"id_facturero")?>"><?php echo mysql_result($res_o,$contador,"serie1") .'-'.mysql_result($res_o,$contador,"serie2")?></option>
 
 
-                                                 <?php } else {?>
+                                                 <?php } else
+                                                {
+                                                    if($tipo == "administrador"){
+                                                    ?>
                                                     <option value="<?php echo mysql_result($res_o,$contador,"id_facturero")?>"><?php echo mysql_result($res_o,$contador,"serie1") .'-'.mysql_result($res_o,$contador,"serie2")?></option>
-                                            <?php }$contador++;
+                                            <?php }
+                                                }
+                                                $contador++;
                                             } ?>
                                         </select>
                                         

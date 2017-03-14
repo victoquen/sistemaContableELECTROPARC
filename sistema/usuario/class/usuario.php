@@ -9,6 +9,8 @@ class usuario
     private $tipo;
     private $borrado;
 
+    private $leyenda_facturero;
+
     public function __construct()
     {
         $this->id_usuario = null;
@@ -17,6 +19,7 @@ class usuario
         $this->password = null;
         $this->tipo = null;
         $this->borrado = null;
+        $this->leyenda_facturero = null;
 
     }
 
@@ -35,11 +38,11 @@ class usuario
         return $result;
     }
 
-    public function update($conn, $id, $nombre, $password, $tipo)
+    public function update($conn, $id, $id_facturero, $nombre, $password, $tipo)
     {
 
         
-        $query = "UPDATE usuario SET  nombre = '$nombre', password = '$password', tipo = '$tipo'
+        $query = "UPDATE usuario SET  id_facturero = '$id_facturero', nombre = '$nombre', password = '$password', tipo = '$tipo'
                   WHERE id_usuario = '$id'";
 
         $result = mysql_query($query, $conn);
@@ -51,7 +54,7 @@ class usuario
     public function get_id($conn, $id)
     {
 
-        $query="SELECT  nombre, password, tipo FROM usuario WHERE id_usuario ='$id' AND borrado = 0";
+        $query="SELECT  u.nombre, u.password, u.tipo , u.id_facturero FROM usuario u   WHERE u.id_usuario ='$id' AND u.borrado = 0";
         $result = mysql_query($query, $conn);
         $row = mysql_fetch_assoc($result);
         return $row;
@@ -65,5 +68,12 @@ class usuario
         return $row;
     }
 
+    public function get_leyenda_facturero($conn, $id){
+        $query="SELECT CONCAT( serie1,  '-', serie2 ) AS leyendafacturero  FROM facturero   WHERE id_facturero ='$id' ";
+        $result = mysql_query($query, $conn);
+        $row = mysql_fetch_assoc($result);
+        return $row;
+
+    }
 }
 ?>

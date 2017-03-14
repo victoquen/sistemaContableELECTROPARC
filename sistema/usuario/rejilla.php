@@ -1,6 +1,6 @@
 <?php
 //include ("../conectar.php");
-error_reporting(0);
+//error_reporting(0);
 ?>
 <html>
 	<head>
@@ -35,16 +35,16 @@ error_reporting(0);
 
 		<script language="javascript">
 		
-		function ver(id) {
+		function ver(idusuario) {
 			parent.location.href="ver.php?idusuario=" + idusuario;
 		}
 		
-		function modificar_usuario(idusuario) {
+		function modificar(idusuario) {
                     
 			parent.location.href="modificar.php?idusuario=" + idusuario;
 		}
 		
-		function eliminar_usuario(idusuario) {
+		function eliminar(idusuario) {
                     if (confirm("Atencion va a proceder a la baja de una entidad bancaria. Desea continuar?")) {
 			parent.location.href="eliminar.php?idusuario=" + idusuario;
                     }
@@ -61,6 +61,7 @@ error_reporting(0);
                    "sPaginationType": "full_numbers",
 
                    "aoColumns": [
+                       null,
                        null,
                        null,
                        { "bSearchable": false, "bSortable": false },
@@ -122,7 +123,9 @@ error_reporting(0);
 
                                 <thead>
                                     <tr>
-                                        <th ><span style="font-size: 10px">Nombre</span></th>
+                                        <th ><span style="font-size: 10px">Usuario</span></th>
+                                        <th ><span style="font-size: 10px">Tipo</span></th>
+                                        <th ><span style="font-size: 10px">Facturero</span></th>
                                         <th><span style="font-size: 10px">&nbsp;</span></th>
                                         <th><span style="font-size: 10px">&nbsp;</span></th>
                                         <th><span style="font-size: 10px">&nbsp;</span></th>

@@ -4,17 +4,21 @@
 	 */
 
 	/* Array of database columns which should be read and sent back to DataTables */
-	$aColumns = array('id_factura', 'fecha','codigo_factura', 'nombre', 't_cliente', 'totalfactura', 'credito', 'plazo', 'estado', 'remision' );
-        $aColumnsAux=array( 'id_factura','a.fecha', 'a.codigo_factura', 'b.nombre', 'c.nombre', 'a.totalfactura', 'a.credito', 'a.plazo','a.estado');
+	$aColumns = array('id_factura', 'fecha','id_facturero','codigo_factura', 'nombre', 't_cliente', 'totalfactura', 'credito', 'plazo', 'estado', 'remision'  );
+	$aColumnsAux=array( 'id_factura','a.fecha','a.id_facturero', 'a.codigo_factura', 'b.nombre', 'c.nombre', 'a.totalfactura', 'a.credito', 'a.plazo','a.estado');
+
+	//$aColumns = array('id_factura', 'fecha','codigo_factura', 'nombre', 't_cliente', 'totalfactura', 'credito', 'plazo', 'estado', 'remision' );
+	//$aColumnsAux=array( 'id_factura','a.fecha', 'a.codigo_factura', 'b.nombre', 'c.nombre', 'a.totalfactura', 'a.credito', 'a.plazo','a.estado');
 	/* Indexed column (used for fast and accurate table cardinality) */
 	$sIndexColumn = "id_factura";
 
 	/* Database connection */
         include_once '../conexion/conexion.php';
-        $usuario = new ServidorBaseDatos();
-        $conn = $usuario->getConexion();
+        $db = new ServidorBaseDatos();
+        $conn = $db->getConexion();
 
-
+		include_once '../usuario/class/usuario.php';
+		$usuario = new usuario();
         
 
 
@@ -66,16 +70,47 @@
 	/*
 	 * SQL queries
 	 * Get data to display
-	 */        
-	$sQuery = "
-		SELECT SQL_CALC_FOUND_ROWS a.id_factura as id_factura, a.codigo_factura as codigo_factura,
-                         b.nombre as nombre, c.nombre as t_cliente,  a.totalfactura as totalfactura, a.fecha as fecha, (if(a.credito=0,'NO','SI'))as credito,
-                         (a.plazo*30) as plazo,a.estado as estado, a.remision as remision
-		FROM   facturas a INNER JOIN cliente b ON a.id_cliente=b.id_cliente INNER JOIN tipo_cliente c ON b.codigo_tipocliente = c.codigo_tipocliente WHERE (anulado = 0)
-                $sWhere
-		$sOrder
-		$sLimit
-	";
+	 */
+
+	session_start();
+	//id facturero segun el usuario de la sesion
+	$id_facturero=$_SESSION['id_facturero'];
+	$tipo=$_SESSION['tipo'];
+
+/*$sQuery = "
+			SELECT SQL_CALC_FOUND_ROWS a.id_factura as id_factura, a.codigo_factura as codigo_factura,
+							 b.nombre as nombre, c.nombre as t_cliente,  a.totalfactura as totalfactura, a.fecha as fecha, (if(a.credito=0,'NO','SI'))as credito,
+							 (a.plazo*30) as plazo,a.estado as estado, a.remision as remision
+			FROM   facturas a INNER JOIN cliente b ON a.id_cliente=b.id_cliente INNER JOIN tipo_cliente c ON b.codigo_tipocliente = c.codigo_tipocliente WHERE (anulado = 0)
+					$sWhere
+			$sOrder
+			$sLimit
+		";*/
+
+
+	if($id_facturero == -1){
+		$sQuery = "
+			SELECT SQL_CALC_FOUND_ROWS a.id_factura as id_factura, a.codigo_factura as codigo_factura,
+							 b.nombre as nombre, c.nombre as t_cliente,  a.totalfactura as totalfactura, a.fecha as fecha, (if(a.credito=0,'NO','SI'))as credito,
+							 (a.plazo*30) as plazo,a.estado as estado, a.remision as remision, a.id_facturero as id_facturero
+			FROM   facturas a INNER JOIN cliente b ON a.id_cliente=b.id_cliente INNER JOIN tipo_cliente c ON b.codigo_tipocliente = c.codigo_tipocliente WHERE (anulado = 0)
+					$sWhere
+			$sOrder
+			$sLimit
+		";
+	}else{
+		$sQuery = "
+			SELECT SQL_CALC_FOUND_ROWS a.id_factura as id_factura, a.codigo_factura as codigo_factura,
+							 b.nombre as nombre, c.nombre as t_cliente,  a.totalfactura as totalfactura, a.fecha as fecha, (if(a.credito=0,'NO','SI'))as credito,
+							 (a.plazo*30) as plazo,a.estado as estado, a.remision as remision, a.id_facturero as id_facturero
+			FROM   facturas a INNER JOIN cliente b ON a.id_cliente=b.id_cliente INNER JOIN tipo_cliente c ON b.codigo_tipocliente = c.codigo_tipocliente WHERE (anulado = 0)AND(a.id_facturero = $id_facturero)
+					$sWhere
+			$sOrder
+			$sLimit
+		";
+	}
+
+
 	//$rResult = mysql_query( $sQuery, $gaSql['link'] ) or die(mysql_error());
         $rResult = mysql_query( $sQuery, $conn ) or die(mysql_error());
 	/* Data set length after filtering */
@@ -149,8 +184,20 @@
                                 else
                                 {
 
-                                    /* General output */
-                                    $sOutput .= '"'.str_replace('"', '\"', $aRow[ $aColumns[$i] ]).'",';
+									if ($aColumns[$i] == "id_facturero") {
+
+										$id_factureroaux = $aRow[$aColumns[$i]];
+
+
+											$rowfacturero = $usuario->get_leyenda_facturero($conn, $id_factureroaux);
+											$leyendafacturero = $rowfacturero['leyendafacturero'];
+
+
+										$sOutput .= '"' . str_replace('"', '\"', $leyendafacturero) . '",';
+									} else {
+										/* General output */
+										$sOutput .= '"' . str_replace('"', '\"', $aRow[$aColumns[$i]]) . '",';
+									}
                                 }
                             }
 			}
@@ -185,8 +232,16 @@
 
                 
                 $sOutput .= '"'.str_replace('"', '\"', "<a href='#'><img src='../img/ver.png' border='0' width='16' height='16' border='1' title='ver' onClick='ver_factura(".$code_aux.")' onMouseOver='style.cursor=cursor'></a>").'",';
-                $sOutput .= '"'.str_replace('"', '\"', "<a href='#'><img src='../img/modificar.png' border='0' width='16' height='16' border='1' title='Modificar' onClick='modificar_factura(".$code_aux.")' onMouseOver='style.cursor=cursor'></a>").'",';
-                $sOutput .= '"'.str_replace('"', '\"', "<a href='#'><img src='../img/eliminar.png' border='0' width='16' height='16' border='1' title='Eliminar' onClick='eliminar_factura(".$code_aux.")' onMouseOver='style.cursor=cursor'></a>").'",';
+
+				if($tipo == "administrador"){
+					$sOutput .= '"'.str_replace('"', '\"', "<a href='#'><img src='../img/modificar.png' border='0' width='16' height='16' border='1' title='Modificar' onClick='modificar_factura(".$code_aux.")' onMouseOver='style.cursor=cursor'></a>").'",';
+					$sOutput .= '"'.str_replace('"', '\"', "<a href='#'><img src='../img/eliminar.png' border='0' width='16' height='16' border='1' title='Eliminar' onClick='eliminar_factura(".$code_aux.")' onMouseOver='style.cursor=cursor'></a>").'",';
+				}else{
+					$sOutput .= '"'.str_replace('"', '\"', "").'",';
+					$sOutput .= '"'.str_replace('"', '\"', "").'",';
+				}
+
+
 
                 
 		$sOutput = substr_replace( $sOutput, "", -1 );

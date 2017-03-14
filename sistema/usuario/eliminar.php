@@ -1,15 +1,21 @@
-<?
+<?php
 
-$idbanco=$_REQUEST["idbanco"];
+$idusuario=$_REQUEST["idusuario"];
 
 include_once '../conexion/conexion.php';
 include_once 'class/usuario.php';
 
-$usuario = new ServidorBaseDatos();
-$conn= $usuario->getConexion();
+$db = new ServidorBaseDatos();
+$conn = $db->getConexion();
 
-$banco= new banco();
-$row = $banco->get_banco_id($conn, $idbanco);
+$usuario = new usuario();
+$row = $usuario->get_id($conn, $idusuario);
+
+$leyendafacturero = "CONTROL TOTAL";
+if($row['id_facturero']!=-1){
+	$rowfacturero = $usuario->get_leyenda_facturero($conn,$row['id_facturero']);
+	$leyendafacturero = $rowfacturero['leyendafacturero'];
+}
 ?>
 
 <html>
@@ -19,8 +25,8 @@ $row = $banco->get_banco_id($conn, $idbanco);
 		<link href="../estilos/estilos.css" type="text/css" rel="stylesheet">
 		<script language="javascript">
 		
-		function aceptar(idbanco) {
-			location.href="save_banco.php?idbanco=" + idbanco + "&accion=baja";
+		function aceptar(idusuario) {
+			location.href="save.php?idusuario=" + idusuario + "&accion=baja";
 		}
 		
 		function cancelar() {
@@ -45,14 +51,26 @@ $row = $banco->get_banco_id($conn, $idbanco);
 				<div id="tituloForm" class="header">ELIMINAR ENTIDAD BANCARIA </div>
 				<div id="frmBusqueda">
 					<table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0>
-                                            <tr>
-                                                <td width="15%"><strong>Nombre</strong></td>
-                                                <td width="85%" colspan="2"><?php echo $row['nombre']?></td>
-					    </tr>                                            
+						<tr>
+							<td width="15%"><strong>Nombre</strong></td>
+							<td width="85%" colspan="2"><?php echo $row['nombre'] ?></td>
+						</tr>
+						<tr>
+							<td width="15%"><strong>Password</strong></td>
+							<td width="85%" colspan="2"><?php echo $row['password'] ?></td>
+						</tr>
+						<tr>
+							<td width="15%"><strong>Tipo</strong></td>
+							<td width="85%" colspan="2"><?php echo $row['tipo'] ?></td>
+						</tr>
+						<tr>
+							<td width="15%"><strong>Facturero</strong></td>
+							<td width="85%" colspan="2"><?php  echo $leyendafacturero ?></td>
+						</tr>
 					</table>
 			  </div>
 				<div id="botonBusqueda">
-					<img src="../img/botonaceptar.jpg" width="85" height="22" onClick="aceptar(<? echo $idbanco?>)" border="1" onMouseOver="style.cursor=cursor">
+					<img src="../img/botonaceptar.jpg" width="85" height="22" onClick="aceptar(<?php echo $idusuario?>)" border="1" onMouseOver="style.cursor=cursor">
 					<img src="../img/botoncancelar.jpg" width="85" height="22" onClick="cancelar()" border="1" onMouseOver="style.cursor=cursor">
 			  </div>
 			  </div>

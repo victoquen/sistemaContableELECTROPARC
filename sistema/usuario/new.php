@@ -1,3 +1,9 @@
+<?php
+include_once '../conexion/conexion.php';
+
+$db = new ServidorBaseDatos();
+$conn = $db->getConexion();
+?>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
@@ -36,9 +42,52 @@
                             <table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0>                                
                                 <tr>
                                     <td width="15%">Nombre</td>
-                                    <td width="43%"><input NAME="Anombre" type="text" class="cajaGrande" id="nombre" size="45" maxlength="45"></td>
+                                    <td width="43%"><input NAME="Anombre" type="text"  id="nombre" size="45" maxlength="45"></td>
                                     <td width="42%" rowspan="8" align="left" valign="top"><ul id="lista-errores"></ul></td>
-                                </tr>                                
+                                </tr>
+
+                                <tr>
+                                    <td width="15%">Password</td>
+                                    <td width="43%"><input NAME="Apassword" type="text"  id="password"  size="45" maxlength="45"></td>
+
+                                </tr>
+
+
+                                <tr>
+                                    <td width="17%">Tipo de USUARIO</td>
+                                    <td><select id="Acbotipos" name="Acbotipos" class="comboGrande">
+                                            <option value="">Escoger Tipo</option>
+                                            <option value="administrador">administrador</option>
+                                            <option value="facturacion">facturacion</option>
+
+                                        </select>
+                                    </td>
+                                </tr>
+
+                                <?php
+
+                                $query_o = "SELECT id_facturero, CONCAT( serie1,  '-', serie2 ) AS leyendafacturero FROM facturero ";
+                                $res_o = mysql_query($query_o, $conn);
+
+                                ?>
+                                <tr>
+                                    <td width="">Facturero:</td>
+                                    <td>
+                                        <select id="Acbofacturero" class="comboMedio" NAME="cbofacturero">
+                                            <option  value="">Escoger Facturero</option>
+                                            <option  value="-1">CONTROL TOTAL</option>
+                                            <?php
+                                            $contador = 0;
+                                            while ($contador < mysql_num_rows($res_o)) {
+                                                ?>
+                                                <option
+                                                    value="<?php echo mysql_result($res_o, $contador, "id_facturero") ?>"><?php echo mysql_result($res_o, $contador, "leyendafacturero") ?></option>
+                                                <?php $contador++;
+                                            }?>
+                                        </select>
+
+                                    </td>
+                                </tr>
                             </table>
                     </div>
 
