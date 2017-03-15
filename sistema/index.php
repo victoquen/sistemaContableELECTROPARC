@@ -12,10 +12,10 @@
                 [null, 'Inicio', 'central2.php', 'principal', 'Inicio'],
                 [null, 'Clientes', './cliente/index.php', 'principal', 'Clientes'],
                 [null, 'Proveedores', './proveedor/index.php', 'principal', 'Proveedores'],
-                [null, 'Conversion', null, null, 'Conversion',
+                /*[null, 'Conversion', null, null, 'Conversion',
                     [null, 'Transformacion', './transformacion_inventario/index.php', 'principal', 'transformacion'],
                     [null, 'Agrupacion', './agrupacion_inventario/index.php', 'principal', 'agrupacion']
-                ],
+                ],*/
                 [null, 'Productos', null, null, 'Productos',					
                     [null, 'Articulos', './producto/index.php', 'principal', 'Productos'],
                     [null, 'Grupos', './grupo/index.php', 'principal', 'Grupos'],
@@ -39,7 +39,7 @@
                     [null, 'Historial Compras', './reporte_historial_compras/index.php', 'principal', 'historial'],
                     [null, 'Reporte Iva 0-12', './reporte_fact_compras_iva0iva12/index.php', 'principal', 'iva']
                 ],
-		[null, 'Proforma', null, null, 'Proforma',
+		        [null, 'Proforma', null, null, 'Proforma',
                     [null, 'Proformas Ventas', './proformas_clientes/index.php', 'principal', 'Proformas Clientes']
                 ],
 
@@ -49,7 +49,7 @@
                     [null, 'Facturas Gastos Anuladas', './facturas_gastos_anuladas/index.php', 'principal', 'Ventas Proveedores'],
                     [null, 'Retenciones', './retenciones/index.php', 'principal', 'Retenciones']
                 ],
-                [null, 'Tesorer�a', null, null, 'Tesoreria',
+                [null, 'Tesoreria', null, null, 'Tesoreria',
                     [null, 'Cobros', './cobros/index.php', 'principal', 'cobros'],
                     [null, 'Pagos', './pagos/index.php', 'principal', 'pagos'],
                     [null, 'Caja Diaria', './cerrarcaja/index.php', 'principal', 'caja'],
@@ -67,8 +67,10 @@
                     [null, 'Historial Ventas por tipo Cliente Totales', './reporte_historial_cliente_ventas_totales/index.php', 'principal', 'Historial ventas cliente'],
                     [null, 'Kardex x Producto', './reporte_kardex/index.php', 'principal', 'Kardex']
                 ],
-                [null, 'Tributacion', null, null, 'Tributacion',
-                    [null, 'ATS', './tributacion_ats/index.php', 'principal', 'ats']
+                [null, 'Rol Pagos', null, null, 'Rol Pagos',
+                    [null, 'Empleado', './empleado/index.php', 'principal', 'empleado'],
+                    [null, 'Contrato', './contrato/index.php', 'principal', 'contrato'],
+                    [null, 'Contratacion Empleado', './empleadocontrato/index.php', 'principal', 'Contratacion Empleado']
                 ],
                 [null, 'Mantenimientos', null, null, 'mantenimientos',
                     [null, 'RUC', './ruc/index.php', 'principal', 'RUC'],

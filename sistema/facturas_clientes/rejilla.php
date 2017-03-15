@@ -6,16 +6,18 @@ error_reporting(0);
 	<head>
                 <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
 		<title>Listado de Ventas</title>
-		<link href="../estilos/estilos.css" type="text/css" rel="stylesheet">
-                
+
+
+       <link href="../estilos/estilos.css" type="text/css" rel="stylesheet">
+
                 <!-- INICIO archivos para DATA TABLES-->
                 <style type="text/css" title="currentStyle">
-			
+
 			@import "../css/demo_table.css";
                         @import "TableTools-2.0.1/media/css/TableTools.css";
 		</style>
 		<script type="text/javascript" language="javascript" src="js/jquery.js"></script>
-		
+
 		<script type="text/javascript" language="javascript" src="js/jquery.dataTables.js"></script>
 
                 <script type="text/javascript" charset="utf-8" src="TableTools-2.0.1/media/js/ZeroClipboard.js"></script>
