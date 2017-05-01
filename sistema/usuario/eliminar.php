@@ -16,6 +16,9 @@ if($row['id_facturero']!=-1){
 	$rowfacturero = $usuario->get_leyenda_facturero($conn,$row['id_facturero']);
 	$leyendafacturero = $rowfacturero['leyendafacturero'];
 }
+
+$rowbodega = $usuario->get_leyenda_bodega($conn,$row['id_bodega']);
+$leyendabodega = $rowbodega['nombre'];
 ?>
 
 <html>
@@ -66,6 +69,10 @@ if($row['id_facturero']!=-1){
 						<tr>
 							<td width="15%"><strong>Facturero</strong></td>
 							<td width="85%" colspan="2"><?php  echo $leyendafacturero ?></td>
+						</tr>
+						<tr>
+							<td width="15%"><strong>Bodega-Sucursal</strong></td>
+							<td width="85%" colspan="2"><?php  echo $leyendabodega ?></td>
 						</tr>
 					</table>
 			  </div>

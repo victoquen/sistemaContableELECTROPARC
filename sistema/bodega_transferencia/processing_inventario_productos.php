@@ -4,8 +4,10 @@
 	 */
 
 	/* Array of database columns which should be read and sent back to DataTables */
-	$aColumns = array('id_producto', 'codigo', 'nombre', 'stock','stock_consignacion','costo','iva','pvp' );
-        $aColumns_aux= array( 'nombre', 'stock','stock_consignacion', 'costo' );
+	/*$aColumns = array('id_producto', 'codigo', 'nombre', 'stock','stock_consignacion','costo','iva','pvp' );
+        $aColumns_aux= array( 'nombre', 'stock','stock_consignacion', 'costo' );*/
+	$aColumns = array('id_producto', 'codigo', 'nombre', 'stock', 'pvp', 'costo','iva','transformacion' );
+	$aColumns_aux= array( 'p.id_producto','p.codigo', 'p.nombre', 'p.stock', 'p.pvp' , 'p.costo' , 'p.iva', 'p.transformacion');
 	/* Indexed column (used for fast and accurate table cardinality) */
 	$sIndexColumn = "id_producto";
 
@@ -63,17 +65,42 @@
 	}
 
 
+	//get datos SESSION
+	session_start();
+	$id_bodega=$_SESSION['id_bodega'];
+	$tipo=$_SESSION['tipo'];
+
+
 	/*
 	 * SQL queries
 	 * Get data to display
-	 */        
-	$sQuery = "
+	 */
+
+
+	if($tipo == "administrador"){
+		$sQuery = "
 		SELECT SQL_CALC_FOUND_ROWS ".implode(", ", $aColumns)."
-		FROM   producto WHERE (borrado = 0) AND (gasto=0) 
+		FROM   producto  WHERE (borrado = 0)AND(gasto=0)
                 $sWhere
 		$sOrder
 		$sLimit
 	";
+	}else{
+
+		$sQuery = "
+		SELECT SQL_CALC_FOUND_ROWS ".implode(", ", $aColumns_aux)."
+		FROM   producto p INNER JOIN productobodega pb ON p.id_producto = pb.id_producto   
+		WHERE (p.borrado = 0)AND(p.gasto=0)AND(pb.id_bodega = '$id_bodega') 
+                $sWhere
+		$sOrder
+		$sLimit
+		";
+
+	}
+
+
+
+
 	//$rResult = mysql_query( $sQuery, $gaSql['link'] ) or die(mysql_error());
         $rResult = mysql_query( $sQuery, $conn ) or die(mysql_error());
 	/* Data set length after filtering */
@@ -114,12 +141,16 @@
                  $id_aux= $aRow["id_producto"];
                  $codigo_aux = $aRow["codigo"];
                  $nombre_aux = $aRow["nombre"];
-                 
-				$query="SELECT SUM(stock) as stock FROM productobodega WHERE id_producto ='".$id_aux."'";
+
+				if($tipo == "administrador"){
+					$query="SELECT SUM(stock) as stock FROM productobodega WHERE id_producto ='".$id_aux."'";
+				}else{
+					$query="SELECT stock FROM productobodega WHERE (id_producto ='$id_aux')AND(id_bodega = '$id_bodega')";
+				}
 				$result = mysql_query($query, $conn);
 				$stock_aux = mysql_result($result,0,"stock");
 
-                 $consignacion = $aRow["stock_consignacion"];
+
 
                  $costo_aux = $aRow["costo"];
                  $iva_aux=$aRow["iva"];
@@ -128,7 +159,6 @@
                  //$sOutput .= '"'.str_replace('"', '\"', "<a href='#' style='font-size: 9px; text-decoration: none' onClick='pon_prefijo(&#39;$codigo_aux&#39;,&#39;$nombre_aux&#39;,&#39;$pvp_aux&#39;,&#39;$id_aux&#39;,&#39;$costo_aux&#39;,&#39;$stock_aux&#39,&#39;$iva_aux&#39;)'>". $aRow["codigo"]."</a>" ).'",';
                  $sOutput .= '"'.str_replace('"', '\"', "<a href='#' style='font-size: 11px; text-decoration: none' onClick='pon_prefijo(&#39;$codigo_aux&#39;,&#39;$nombre_aux&#39;,$id_aux,&#39;$iva_aux&#39;,&#39;$pvp_aux&#39;)'>".$aRow["nombre"]."</a>").'",';
                  $sOutput .= '"'.str_replace('"', '\"', "<a href='#' style='font-size: 11px; text-decoration: none' onClick='pon_prefijo(&#39;$codigo_aux&#39;,&#39;$nombre_aux&#39;,$id_aux,&#39;$iva_aux&#39;,&#39;$pvp_aux&#39;)'>".$stock_aux."</a>").'",';
-                 $sOutput .= '"'.str_replace('"', '\"', "<a href='#' style='font-size: 11px; text-decoration: none' onClick='pon_prefijo(&#39;$codigo_aux&#39;,&#39;$nombre_aux&#39;,$id_aux,&#39;$iva_aux&#39;,&#39;$pvp_aux&#39;)'>".$aRow["stock_consignacion"]."</a>").'",';
                  $sOutput .= '"'.str_replace('"', '\"', "<a href='#' style='font-size: 11px; text-decoration: none' onClick='pon_prefijo(&#39;$codigo_aux&#39;,&#39;$nombre_aux&#39;,$id_aux,&#39;$iva_aux&#39;,&#39;$pvp_aux&#39;)'>".$aRow["costo"]."</a>").'",';
                  //$sOutput .= '"'.str_replace('"', '\"', "<a href='#' style='font-size: 9px; text-decoration: none' onClick='pon_prefijo(&#39;$codigo_aux&#39;,&#39;$nombre_aux&#39;,&#39;$pvp_aux&#39;,&#39;$id_aux&#39;,&#39;$costo_aux&#39;,&#39;$stock_aux&#39,&#39;$iva_aux&#39;)'>".$aRow["fecha_caducidad"]."</a>").'",';
 

@@ -120,6 +120,35 @@ if ($row['id_facturero'] != -1) {
 
                             </td>
                         </tr>
+
+
+                        <?php
+
+                        $query_b= "SELECT id_bodega, nombre FROM bodega";
+                        $res_b = mysql_query($query_b, $conn);
+
+                        ?>
+                        <tr>
+                            <td width="">Bodega-Sucursal:</td>
+                            <td>
+                                <select id="Acbobodega" class="comboMedio" NAME="Acbobodega">
+                                    <?php
+                                    $contadorb = 0;
+                                    while ($contadorb < mysql_num_rows($res_b)) {
+
+                                        if (mysql_result($res_b, $contadorb, "id_bodega") == $row['id_bodega']) {
+                                            ?>
+                                            <option selected="true" value="<?php echo mysql_result($res_b, $contadorb, "id_bodega") ?>"><?php echo mysql_result($res_b, $contadorb, "nombre") ?></option>
+                                        <?php } else { ?>
+                                            <option value="<?php echo mysql_result($res_b, $contadorb, "id_bodega") ?>"><?php echo mysql_result($res_b, $contadorb, "nombre") ?></option>
+                                            <?php
+                                        }
+                                        $contadorb++;
+                                    } ?>
+                                </select>
+
+                            </td>
+                        </tr>
                     </table>
             </div>
             <div id="botonBusqueda">

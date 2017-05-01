@@ -76,7 +76,7 @@ $conn = $db->getConexion();
                                 <tr>
                                     <td width="">Facturero:</td>
                                     <td>
-                                        <select id="Acbofacturero" class="comboMedio" NAME="cbofacturero">
+                                        <select id="Acbofacturero" class="comboMedio" NAME="Acbofacturero">
                                             <option  value="">Escoger Facturero</option>
                                             <option  value="-1">CONTROL TOTAL</option>
                                             <?php
@@ -91,6 +91,31 @@ $conn = $db->getConexion();
 
                                     </td>
                                 </tr>
+
+                                <?php
+
+                                $query_b = "SELECT id_bodega, nombre FROM bodega";
+                                $res_b = mysql_query($query_b, $conn);
+
+                                ?>
+                                <tr>
+                                    <td width="">Bodega-Sucursal:</td>
+                                    <td>
+                                        <select id="Acbobodega" class="comboMedio" NAME="Acbobodega">
+                                            <option  value="">Escoger Bodega-Sucursal</option>
+                                            <?php
+                                            $contadorb = 0;
+                                            while ($contadorb < mysql_num_rows($res_b)) {
+                                                ?>
+                                                <option
+                                                    value="<?php echo mysql_result($res_b, $contadorb, "id_bodega") ?>"><?php echo mysql_result($res_b, $contadorb, "nombre") ?></option>
+                                                <?php $contadorb++;
+                                            }?>
+                                        </select>
+
+                                    </td>
+                                </tr>
+
                             </table>
                     </div>
 

@@ -7,7 +7,7 @@
 
 
 /* Array of database columns which should be read and sent back to DataTables */
-$aColumns = array('id_usuario', 'nombre', 'tipo', 'id_facturero');
+$aColumns = array('id_usuario', 'nombre', 'tipo', 'id_facturero','id_bodega');
 
 /* Indexed column (used for fast and accurate table cardinality) */
 $sIndexColumn = "id_usuario";
@@ -126,8 +126,19 @@ while ($aRow = mysql_fetch_array($rResult)) {
                 
                 $sOutput .= '"' . str_replace('"', '\"', $leyendafacturero) . '",';
             } else {
-                /* General output */
-                $sOutput .= '"' . str_replace('"', '\"', $aRow[$aColumns[$i]]) . '",';
+
+                if($aColumns[$i] == "id_bodega"){
+                    $id_bodega = $aRow[$aColumns[$i]];
+                    $rowbodega = $usuario->get_leyenda_bodega($conn,$id_bodega);
+                    $leyendabodega = $rowbodega['nombre'];
+
+                    $sOutput .= '"' . str_replace('"', '\"', $leyendabodega) . '",';
+                }else{
+                    /* General output */
+                    $sOutput .= '"' . str_replace('"', '\"', $aRow[$aColumns[$i]]) . '",';
+                }
+
+
             }
         }
 

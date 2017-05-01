@@ -96,6 +96,7 @@
                 [null, 'Proveedores', './proveedor/index.php', 'principal', 'Proveedores'],
                 [null, 'Productos', null, null, 'Productos',
                     [null, 'Articulos', './producto/index.php', 'principal', 'Productos'],
+                    [null, 'Transferencias', './bodega_transferencia/index.php', 'principal', 'Transferencias'],
                     [null, 'Grupos', './grupo/index.php', 'principal', 'Grupos'],
                     [null, 'SubGrupos', './subgrupo/index.php', 'principal', 'SubGrupos']
                 ],
@@ -125,15 +126,17 @@
     </head>
     <body>
         <?php
+
         if ( isset($_SESSION['username']) && isset($_SESSION['userid']) && $_SESSION['username'] != '' && $_SESSION['userid'] != '0' )
         {
+
         $tipo=$_SESSION['tipo'];
         ?>
         <div align="center" style="background-image:url('img/banner1.jpg'); height: 70px;background-repeat:no-repeat; background-position:right">
             <table width="100%">
                 <tr>
                     <td width="70%" ><img src="img/electroparc.png" height="70px" width="50%"></td>
-                    <td width="20%" ><strong style="color: white">Bienvenido <?php echo $_SESSION['username'] ?>.<br/></strong><a style="color:papayawhip " href="../logout.php" id="sessionKiller">Cerrar sesi&oacute;n.</a></td>
+                    <td width="20%" ><strong style="color: white">Bienvenido <?php echo $_SESSION['username'] ?> -- <?php echo $_SESSION['ultimoAcceso'];?>.<br/></strong><a style="color:papayawhip " href="../logout.php" id="sessionKiller">Cerrar sesi&oacute;n.</a></td>
                 </tr>
             </table>
 
@@ -144,9 +147,9 @@
         {
         ?>
         <script language="JavaScript">
-            <!--
+         
                 cmDraw('MenuAplicacion', MenuPrincipal, 'hbr', cmThemeGray, 'ThemeGray');
-  -->
+
         </script>
         <?php
         }
@@ -154,9 +157,9 @@
         {
         ?>
         <script language="JavaScript">
-            <!--
+
                 cmDraw('MenuAplicacion', MenuFacturacion, 'hbr', cmThemeGray, 'ThemeGray');
-  -->
+
         </script>
         <?php }?>
         <iframe src="central2.php" name="principal" title="principal" width="100%" height="1050" frameborder=0 scrolling="no" style="margin-left: 0px; margin-right: 0px; margin-top: 2px; margin-bottom: 0px;"></iframe>

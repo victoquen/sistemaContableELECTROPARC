@@ -64,6 +64,7 @@
                        null,
                        null,
                        null,
+                       null,
                        { "bSearchable": false, "bSortable": false },
                        { "bSearchable": false, "bSortable": false },
                        { "bSearchable": false, "bSortable": false }
@@ -126,6 +127,7 @@
                                         <th ><span style="font-size: 10px">Usuario</span></th>
                                         <th ><span style="font-size: 10px">Tipo</span></th>
                                         <th ><span style="font-size: 10px">Facturero</span></th>
+                                        <th ><span style="font-size: 10px">Bodega-Sucursal</span></th>
                                         <th><span style="font-size: 10px">&nbsp;</span></th>
                                         <th><span style="font-size: 10px">&nbsp;</span></th>
                                         <th><span style="font-size: 10px">&nbsp;</span></th>
@@ -133,17 +135,10 @@
                                 </thead>
                                 <tbody style="font-size: 10px; padding: 1px" align="center">
                                             <tr>
-                                                    <td colspan="3" class="dataTables_empty">Cargando Datos del Servidor</td>
+                                                    <td colspan="7" class="dataTables_empty">Cargando Datos del Servidor</td>
                                             </tr>
-
                                     </tbody>
-
                             </table>
-
-
-
-
-
 			</div>
 		  </div>			
 		</div>

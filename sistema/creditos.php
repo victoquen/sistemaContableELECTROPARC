@@ -35,12 +35,12 @@
   </tr>
   <tr>
     <td>&nbsp;</td>
-    <td><div align="center" class="Estilo6">V&iacute;ctor Oquendo Coronado</div></td>
+    <td><div align="center" class="Estilo6">OMBUGAMES CIA LTDA</div></td>
     <td>&nbsp;</td>
   </tr>
     <tr>
     <td>&nbsp;</td>
-    <td><div align="center" class="Estilo6">Gabriela Altamirano</div></td>
+    <td><div align="center" class="Estilo6">OMBUGAMES CIA LTDA</div></td>
     <td>&nbsp;</td>
   </tr>
   <tr>
@@ -50,12 +50,12 @@
   </tr>
   <tr>
     <td>&nbsp;</td>
-    <td><div align="center" class="Estilo6">V&iacute;ctor Oquendo Coronado</div></td>
+    <td><div align="center" class="Estilo6">OMBUGAMES CIA LTDA</div></td>
     <td>&nbsp;</td>
   </tr>
     <tr>
     <td>&nbsp;</td>
-    <td><div align="center" class="Estilo6">Gabriela Altamirano</div></td>
+    <td><div align="center" class="Estilo6">OMBUGAMES CIA LTDA</div></td>
     <td>&nbsp;</td>
   </tr>
   <tr>
@@ -65,12 +65,12 @@
   </tr>
    <tr>
     <td>&nbsp;</td>
-    <td><div align="center" class="Estilo6">V&iacute;ctor Oquendo Coronado</div></td>
+    <td><div align="center" class="Estilo6">OMBUGAMES CIA LTDA</div></td>
     <td>&nbsp;</td>
   </tr>
     <tr>
     <td>&nbsp;</td>
-    <td><div align="center" class="Estilo6">Gabriela Altamirano</div></td>
+    <td><div align="center" class="Estilo6">OMBUGAMES CIA LTDA</div></td>
     <td>&nbsp;</td>
   </tr>
     <tr>

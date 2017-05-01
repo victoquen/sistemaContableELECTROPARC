@@ -950,7 +950,7 @@ $ivaporcetaje = mysql_result($rs_iva, 0, "porcentaje");
 <!--                                        <th><span style="font-size: 10px">Codigo</span></th>-->
                                 <th width="70%"><span style="font-size: 12px">Nombre</span></th>
                                 <th width="10%"><span style="font-size: 12px">Stock</span></th>
-                                <th width="10%"><span style="font-size: 12px">Consig.</span></th>
+
                                 <th width="10%"><span style="font-size: 12px">Pvp</span></th>
 <!--                                        <th ><span style="font-size: 10px">Exp</span></th>                                        -->
                                 <th width="5%"><span style="font-size: 12px">&nbsp;</span></th>

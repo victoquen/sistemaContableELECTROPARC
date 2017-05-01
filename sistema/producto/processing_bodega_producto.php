@@ -5,6 +5,9 @@ error_reporting(0);
 
 $id = $_REQUEST["idproducto"];
 
+//get datos SESSION
+session_start();
+$tipo=$_SESSION['tipo'];
 
 
 
@@ -164,8 +167,14 @@ $id = $_REQUEST["idproducto"];
 		 * If you need to add any extra columns (add/edit/delete etc) to the table, that aren't in the
 		 * database - you can do it here
 		 */
- 
-                $sOutput .= '"'.str_replace('"', '\"', "<a href='#'><img src='../img/modificar.png' border='0' width='16' height='16' border='1' title='Modificar' onClick='modificar_stock(".$id.",".$idbodega.")' onMouseOver='style.cursor=cursor'></a>").'",';
+
+
+				if($tipo=="administrador"){
+					$sOutput .= '"'.str_replace('"', '\"', "<a href='#'><img src='../img/modificar.png' border='0' width='16' height='16' border='1' title='Modificar' onClick='modificar_stock(".$id.",".$idbodega.")' onMouseOver='style.cursor=cursor'></a>").'",';
+				}else{
+					$sOutput .= '"'.str_replace('"', '\"', " ").'",';
+				}
+
                
 
                 

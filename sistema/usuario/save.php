@@ -20,14 +20,14 @@ if ($accion != "baja") {
     $password = $_POST["Apassword"];
     $tipo = $_POST["Acbotipos"];
     $id_facturero = $_POST["Acbofacturero"];
-
+    $id_bodega = $_POST["Acbobodega"];
 
 
 }
 
 if ($accion == "alta") {
     $usuario = new usuario();
-    $result = $usuario->save($conn, $id_facturero, $nombre, $password, $tipo);
+    $result = $usuario->save($conn, $id_facturero, $nombre, $password, $tipo,$id_bodega);
 
     if ($result) {
         $mensaje = "El usuario ha sido dado de alta correctamente";
@@ -43,7 +43,7 @@ if ($accion == "alta") {
 if ($accion == "modificar") {
     $idusuario = $_POST["idusuario"];
     $usuario = new usuario();
-    $result = $usuario->update($conn, $idusuario, $id_facturero, $nombre, $password, $tipo);
+    $result = $usuario->update($conn, $idusuario, $id_facturero, $nombre, $password, $tipo,$id_bodega);
 
 
 
@@ -55,6 +55,9 @@ if ($accion == "modificar") {
             $rowfacturero = $usuario->get_leyenda_facturero($conn, $id_facturero);
             $leyendafacturero = $rowfacturero['leyendafacturero'];
         }
+
+        $rowbodega = $usuario->get_leyenda_bodega($conn,$id_bodega);
+        $leyendabodega = $rowbodega['nombre'];
 
         $validacion = 0;
     } else {
@@ -85,12 +88,16 @@ if ($accion == "baja") {
     $password = $result['password'];
     $tipo = $result['tipo'];
     $id_facturero = $result['id_facturero'];
+    $id_bodega = $result['id_bodega'];
 
     $leyendafacturero = "CONTROL TOTAL";
     if ($id_facturero != -1) {
         $rowfacturero = $usuario->get_leyenda_facturero($conn, $id_facturero);
         $leyendafacturero = $rowfacturero['leyendafacturero'];
     }
+
+    $rowbodega = $usuario->get_leyenda_bodega($conn,$id_bodega);
+    $leyendabodega = $rowbodega['nombre'];
 
 }
 ?>
@@ -149,6 +156,11 @@ if ($accion == "baja") {
                         <td width="15%"><strong>Facturero</strong></td>
                         <td width="85%" colspan="2"><?php echo $leyendafacturero ?></td>
                     </tr>
+                    <tr>
+                        <td width="15%"><strong>Bodega-Sucursal</strong></td>
+                        <td width="85%" colspan="2"><?php echo $leyendabodega ?></td>
+                    </tr>
+
                 </table>
             </div>
             <div id="botonBusqueda">

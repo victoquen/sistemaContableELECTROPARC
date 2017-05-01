@@ -17,7 +17,11 @@
         $usuario = new ServidorBaseDatos();
         $conn = $usuario->getConexion();
 
-
+	
+	//get datos SESSION 
+	session_start();
+	$id_bodega=$_SESSION['id_bodega'];
+	$tipo=$_SESSION['tipo'];
         
 
 
@@ -92,18 +96,37 @@
 	/*
 	 * SQL queries
 	 * Get data to display
-	 */        
-	$sQuery = "
-		SELECT SQL_CALC_FOUND_ROWS a.codigo as codigo, a.nombre as nombre, a.stock as stock,
-                                           a.stock_consignacion as consignacion,
-                                           a.costo as costo, a.pvp as pvp, a.proveedor as proveedor, g.nombre as grupo, s.nombre as subgrupo,
-                                           a.gasto as gasto, a.id_producto as id_producto, a.composicion as composicion, a.aplicacion as aplicacion 
-		FROM   producto a INNER JOIN grupo g ON a.grupo=g.id_grupo INNER JOIN subgrupo s ON a.subgrupo=s.id_subgrupo
-                WHERE (a.borrado = 0)
-                $sWhere
-		$sOrder
-		$sLimit
-	";
+	 */
+
+	if($tipo == "administrador"){
+		$sQuery = "
+				SELECT SQL_CALC_FOUND_ROWS a.codigo as codigo, a.nombre as nombre, a.stock as stock,
+												   a.stock_consignacion as consignacion,
+												   a.costo as costo, a.pvp as pvp, a.proveedor as proveedor, g.nombre as grupo, s.nombre as subgrupo,
+												   a.gasto as gasto, a.id_producto as id_producto, a.composicion as composicion, a.aplicacion as aplicacion 
+				FROM   producto a INNER JOIN grupo g ON a.grupo=g.id_grupo INNER JOIN subgrupo s ON a.subgrupo=s.id_subgrupo
+						WHERE (a.borrado = 0)
+						$sWhere
+				$sOrder
+			$sLimit
+			";
+	}else{
+		$sQuery = "
+			SELECT SQL_CALC_FOUND_ROWS a.codigo as codigo, a.nombre as nombre, a.stock as stock,
+												   a.stock_consignacion as consignacion,
+												   a.costo as costo, a.pvp as pvp, a.proveedor as proveedor, g.nombre as grupo, s.nombre as subgrupo,
+												   a.gasto as gasto, a.id_producto as id_producto, a.composicion as composicion, a.aplicacion as aplicacion
+				FROM   producto a INNER JOIN grupo g ON a.grupo=g.id_grupo INNER JOIN subgrupo s ON a.subgrupo=s.id_subgrupo INNER JOIN productobodega pb ON a.id_producto = pb.id_producto
+						WHERE (a.borrado = 0)AND(pb.id_bodega = '$id_bodega')
+						$sWhere
+				$sOrder
+				$sLimit
+			";
+	}
+
+
+
+
 	//$rResult = mysql_query( $sQuery, $gaSql['link'] ) or die(mysql_error());
         $rResult = mysql_query( $sQuery, $conn ) or die(mysql_error());
 	/* Data set length after filtering */
@@ -116,11 +139,13 @@
 	$iFilteredTotal = $aResultFilterTotal[0];
 
 	/* Total data set length */
+
 	$sQuery = "
-		SELECT COUNT(".$sIndexColumn.")
-		FROM   producto
-                WHERE borrado = 0
-	";
+			SELECT COUNT(".$sIndexColumn.")
+			FROM   producto
+					WHERE borrado = 0
+		";
+
 	//$rResultTotal = mysql_query( $sQuery, $gaSql['link'] ) or die(mysql_error());
         $rResultTotal = mysql_query( $sQuery, $conn ) or die(mysql_error());
 	$aResultTotal = mysql_fetch_array($rResultTotal);
@@ -178,7 +203,12 @@
 							$idp = $aRow["id_producto"];
 							
 							
-							$query="SELECT SUM(stock) as stock FROM productobodega WHERE id_producto ='".$idp."'";
+							if($tipo=="administrador"){
+								$query="SELECT SUM(stock) as stock FROM productobodega WHERE id_producto ='$idp'";
+							}else{
+								$query="SELECT stock FROM productobodega WHERE (id_producto ='$idp')AND(id_bodega = '$id_bodega')";
+							}
+
 							$result = mysql_query($query, $conn);
 							$res = mysql_result($result,0,"stock");
 

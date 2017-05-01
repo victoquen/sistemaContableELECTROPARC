@@ -1,6 +1,11 @@
 <?php 
 include ("../conexion/conexion.php");
 
+//get datos SESSION
+session_start();
+$id_bodega=$_SESSION['id_bodega'];
+$tipo=$_SESSION['tipo'];
+
 $usuario = new ServidorBaseDatos();
 $conn = $usuario->getConexion();
 
@@ -161,7 +166,7 @@ $transferenciatmp=mysql_insert_id();
 						<tr>
 							<td >Fecha</td>
 							<td  >
-								<input NAME="fecha" type="text" class="cajaPequena" id="fecha" size="10" maxlength="10" value="<? echo $hoy?>" readonly> <img src="../img/calendario.png" name="Image1" id="Image1" width="16" height="16" border="0" id="Image1" onMouseOver="this.style.cursor='pointer'">
+								<input NAME="fecha" type="text" class="cajaPequena" id="fecha" size="10" maxlength="10" value="<?php echo $hoy?>" readonly> <img src="../img/calendario.png" name="Image1" id="Image1" width="16" height="16" border="0" id="Image1" onMouseOver="this.style.cursor='pointer'">
 							<script type="text/javascript">
 															Calendar.setup(
 															  {
@@ -176,7 +181,7 @@ $transferenciatmp=mysql_insert_id();
 					</table>										
 			  </div>
 			 
-                         <input id="transferenciatmp" name="transferenciatmp" value="<? echo $transferenciatmp?>" type="hidden">
+                         <input id="transferenciatmp" name="transferenciatmp" value="<?php echo $transferenciatmp?>" type="hidden">
                          
                           
 			  <input id="accion" name="accion" value="alta" type="hidden">
@@ -211,8 +216,10 @@ $transferenciatmp=mysql_insert_id();
 				  <tr>
 					  <td>Bodega Destino</td>
 								<td>
-									<?php 
-										
+									<?php
+
+
+
 										$queryb = "SELECT b.id_bodega as idbodega, b.nombre as nombre FROM bodega b ";
 											   $resb = mysql_query($queryb, $conn);?>
 									
@@ -223,14 +230,10 @@ $transferenciatmp=mysql_insert_id();
 												$contador=0;
 												while ($contador < mysql_num_rows($resb))
 												{
-													if(mysql_result($resb,$contador,"idbodega")==$bodega1)
+													if(mysql_result($resb,$contador,"idbodega")!=$id_bodega)
 													{?>
-														<option selected value="<?php echo mysql_result($resb,$contador,"idbodega")?>"><?php echo mysql_result($resb,$contador,"nombre");?></option>
-													   
-
-
-													 <?php } else {?>
 														<option  value="<?php echo mysql_result($resb,$contador,"idbodega")?>"><?php echo mysql_result($resb,$contador,"nombre");?></option>
+
 												<?php }$contador++;
 												} ?>
 										
@@ -243,7 +246,7 @@ $transferenciatmp=mysql_insert_id();
 				  </tr>                                                                       
 				</table>
 				</div>
-				<input name="idarticulo" value="<? echo $idarticulo?>" type="hidden" id="idarticulo">
+				<input name="idarticulo" value="<?php echo $idarticulo?>" type="hidden" id="idarticulo">
                               
 				<br>
 				<div id="frmBusqueda">
@@ -277,7 +280,7 @@ $transferenciatmp=mysql_insert_id();
                                                     <img src="../img/botonaceptar.jpg" width="85" height="22" onClick="validar_cabecera()" border="1" onMouseOver="style.cursor=cursor">
                                                     <img src="../img/botoncancelar.jpg" width="85" height="22" onClick="cancelar()" border="1" onMouseOver="style.cursor=cursor">
                                              
-                                                    <input id="transferenciatmp" name="transferenciatmp" value="<? echo $transferenciatmp?>" type="hidden">
+                                                    <input id="transferenciatmp" name="transferenciatmp" value="<?php echo $transferenciatmp?>" type="hidden">
                                                    
                                               </div>
                                             </div>

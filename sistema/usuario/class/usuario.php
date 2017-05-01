@@ -8,6 +8,7 @@ class usuario
     private $password;
     private $tipo;
     private $borrado;
+    private $id_bodega;
 
     private $leyenda_facturero;
 
@@ -20,13 +21,14 @@ class usuario
         $this->tipo = null;
         $this->borrado = null;
         $this->leyenda_facturero = null;
+        $this->id_bodega = null;
 
     }
 
-    public function save($conn, $id_facturero, $nombre, $password, $tipo)
+    public function save($conn, $id_facturero, $nombre, $password, $tipo, $id_bodega)
     {
 
-        $query="INSERT INTO usuario VALUES (null, '$id_facturero','$nombre','$password', '$tipo','0')";
+        $query="INSERT INTO usuario VALUES (null, '$id_facturero','$nombre','$password', '$tipo','0',$id_bodega)";
         $result= mysql_query($query, $conn);
         return $result;
     }
@@ -38,11 +40,11 @@ class usuario
         return $result;
     }
 
-    public function update($conn, $id, $id_facturero, $nombre, $password, $tipo)
+    public function update($conn, $id, $id_facturero, $nombre, $password, $tipo, $id_bodega)
     {
 
         
-        $query = "UPDATE usuario SET  id_facturero = '$id_facturero', nombre = '$nombre', password = '$password', tipo = '$tipo'
+        $query = "UPDATE usuario SET  id_facturero = '$id_facturero', nombre = '$nombre', password = '$password', tipo = '$tipo', id_bodega = '$id_bodega'
                   WHERE id_usuario = '$id'";
 
         $result = mysql_query($query, $conn);
@@ -54,7 +56,7 @@ class usuario
     public function get_id($conn, $id)
     {
 
-        $query="SELECT  u.nombre, u.password, u.tipo , u.id_facturero FROM usuario u   WHERE u.id_usuario ='$id' AND u.borrado = 0";
+        $query="SELECT  u.nombre, u.password, u.tipo , u.id_facturero, u.id_bodega FROM usuario u   WHERE u.id_usuario ='$id' AND u.borrado = 0";
         $result = mysql_query($query, $conn);
         $row = mysql_fetch_assoc($result);
         return $row;
@@ -74,6 +76,13 @@ class usuario
         $row = mysql_fetch_assoc($result);
         return $row;
 
+    }
+
+    public function get_leyenda_bodega($conn, $id){
+        $query="SELECT nombre  FROM bodega WHERE id_bodega ='$id' ";
+        $result = mysql_query($query, $conn);
+        $row = mysql_fetch_assoc($result);
+        return $row;
     }
 }
 ?>
