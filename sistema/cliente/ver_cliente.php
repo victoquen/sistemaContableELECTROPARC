@@ -9,6 +9,9 @@ $conn= $usuario->getConexion();
 
 $cliente= new cliente();
 $row = $cliente->get_cliente_id($conn, $idcliente);
+if($row['image'] === ""){
+    $row['image'] = "person.png";
+}
 
 ?>
 
@@ -110,7 +113,12 @@ $row = $cliente->get_cliente_id($conn, $idcliente);
                                                          }
                                                     }
                                                 ?>
-											
+                        <tr>
+                            <td></td>
+                            <td>
+                                <img src="fotografias/<?php echo $row['image']; ?>" class="img-rounded" width="150px" height="200px" />
+                            </td>
+                        </tr>
 					</table>
                                 </div>
 				<div id="botonBusqueda">

@@ -1,5 +1,7 @@
 <?php
 
+$tiempo_sesion = 60;
+
 //iniciamos la sesión
 //session_name("loginUsuario");
 session_start();
@@ -16,7 +18,7 @@ if ($_SESSION["autentificado"] != "SI") {
 	$tiempo_transcurrido = (strtotime($ahora)-strtotime($fechaGuardada));
 
 	//comparamos el tiempo transcurrido
-	if($tiempo_transcurrido >= 5) {
+	if($tiempo_transcurrido >= $tiempo_sesion) {
 		//si pasaron 1 minutos o más
 		session_destroy(); // destruyo la sesión
 		echo '<script>parent.location.href=\'../../logout.php\';</script>';

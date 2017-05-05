@@ -24,7 +24,25 @@ $codclientetmp=mysql_insert_id();
         <link href="../estilos/estilos.css" type="text/css" rel="stylesheet">
        
         <script type="text/javascript" src="../js/validar.js"></script>
+        <script type="text/javascript" src="js/fotografiaJuery.js"></script>
         <script language="javascript">
+
+
+
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#image').attr('src', e.target.result);
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+
+
 
         function cancelar() {
                 location.href="index.php";
@@ -73,6 +91,9 @@ $codclientetmp=mysql_insert_id();
             }
         }
 
+
+
+
         </script>
     </head>
     <body>
@@ -81,7 +102,7 @@ $codclientetmp=mysql_insert_id();
                 <div align="center">
                     <div id="tituloForm" class="header">INSERTAR CLIENTE</div>
                     <div id="frmBusqueda">
-                        <form id="formulario" name="formulario" method="post" action="save_cliente.php">
+                        <form id="formulario" name="formulario" method="post" action="save_cliente.php" enctype="multipart/form-data">
                             <table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0>
 
 
@@ -143,6 +164,19 @@ $codclientetmp=mysql_insert_id();
                                             <option value="0">No</option>
                                             <option value="1" selected>Si</option>
                                         </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>FOTOGRAFIA</td>
+                                    <td>
+
+                                        <input type='file' id="cliente_image" name="cliente_image" accept="image/*" onchange=" readURL(this)"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>
+                                        <img id="image" name="image" src="fotografias/person.png" alt="your image" width="150" height="200"/>
                                     </td>
                                 </tr>
                             </table>
