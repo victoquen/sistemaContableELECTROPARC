@@ -1957,7 +1957,7 @@ gestionando totales
                           default:
                               credit=1;
                             cboplazo.disabled = false;
-                            cboplazo.selectedIndex=1;
+                            cboplazo.selectedIndex=0;
                             break;
                       }
                    }
