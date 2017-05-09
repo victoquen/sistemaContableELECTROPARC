@@ -45,7 +45,7 @@
 
                 [null, 'Gastos', null, null, 'Gastos',
                     [null, 'Cuentas Gastos', './cuentas/index.php', 'principal', 'cuentas'],
-                    [null, 'Facturas Gastos', './facturas_gastos/index.php', 'principal', 'Compras Gastos'],
+                        [null, 'Facturas Gastos', './facturas_gastos/index.php', 'principal', 'Compras Gastos'],
                     [null, 'Facturas Gastos Anuladas', './facturas_gastos_anuladas/index.php', 'principal', 'Ventas Proveedores'],
                     [null, 'Retenciones', './retenciones/index.php', 'principal', 'Retenciones']
                 ],
