@@ -70,7 +70,8 @@
                 [null, 'Rol Pagos', null, null, 'Rol Pagos',
                     [null, 'Empleado', './empleado/index.php', 'principal', 'empleado'],
                     [null, 'Contrato', './contrato/index.php', 'principal', 'contrato'],
-                    [null, 'Contratacion Empleado', './empleadocontrato/index.php', 'principal', 'Contratacion Empleado']
+                    [null, 'Contratacion Empleado', './empleadocontrato/index.php', 'principal', 'Contratacion Empleado'],
+					[null, 'Rol de Pago', './roles_cuotas/table.html', 'principal', 'Contratacion Empleado'],
                 ],
                 [null, 'Mantenimientos', null, null, 'mantenimientos',
                     [null, 'RUC', './ruc/index.php', 'principal', 'RUC'],
