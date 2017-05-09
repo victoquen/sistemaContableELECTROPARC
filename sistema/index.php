@@ -163,7 +163,7 @@
 
         </script>
         <?php }?>
-        <iframe src="central2.php" name="principal" title="principal" width="100%" height="1050" frameborder=0 scrolling="no" style="margin-left: 0px; margin-right: 0px; margin-top: 2px; margin-bottom: 0px;"></iframe>
+        <iframe src="central2.php" name="principal" title="principal" width="100%" height="2300px" frameborder=0 scrolling="no" style="margin-left: 0px; margin-right: 0px; margin-top: 2px; margin-bottom: 0px;"></iframe>
         <?php
         }
         ?>
