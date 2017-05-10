@@ -93,7 +93,8 @@ app.controller('contrato', ['$scope', '$http', '$location', 'myProvider', '$loca
     $scope.inicio = function () {
         $scope.local1 = window.localStorage.getItem('idCliente');
         $scope.local2 = window.localStorage.getItem('idFactura');
-
+        $scope.local3 = window.localStorage.getItem('totalFactura');
+        
         $scope.id_contrato;
 
         $scope.tipconcodigo = 'Mensual';
@@ -160,7 +161,7 @@ app.controller('contrato', ['$scope', '$http', '$location', 'myProvider', '$loca
         $scope.conentradapendiente = '';
         $scope.concostocuota = '';
 
-        $scope.totalCompra = 1000;
+        $scope.totalCompra = $scope.local3;
 
         $scope.test = false;
         document.getElementById('datepicker').value = '';
@@ -457,7 +458,7 @@ app.controller('contrato', ['$scope', '$http', '$location', 'myProvider', '$loca
                         .then(function(){
                             localStorage.removeItem('idCliente');
                             localStorage.removeItem('idFactura');
-                            localStorage.removeItem('mod');
+                            localStorage.removeItem('totalFactura');
                             window.location = '../facturas_cliente/index.php';
                              })
                         ;
