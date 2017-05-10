@@ -5,6 +5,6 @@
     "\\sistema\\roles_cuotas",
     "\\sistema\\roles_cuotas\\controllers"
   ],
-  "SelectedNode": "\\sistema\\index.php",
+  "SelectedNode": "\\sistema\\roles_cuotas\\controllers\\contratoModificacion.js",
   "PreviewInSolutionExplorer": false
 }

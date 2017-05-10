@@ -5,8 +5,8 @@ app.controller('contrato', ['$scope', '$http', '$location', 'myProvider', '$loca
 
     $scope.tipconcodigo='Mensual';
     $scope.estconcodigo='Vigente';
-    $scope.venid=1;
-    $scope.idcliente=4052;
+    $scope.venid='';
+    $scope.idcliente='';
     $scope.connumero='';
     $scope.concedulacliente='';
     $scope.connombrescompletoscliente='';
@@ -91,13 +91,15 @@ app.controller('contrato', ['$scope', '$http', '$location', 'myProvider', '$loca
     };
 
     $scope.inicio = function () {
+        $scope.local1 = window.localStorage.getItem('idCliente');
+        $scope.local2 = window.localStorage.getItem('idFactura');
 
         $scope.id_contrato;
 
         $scope.tipconcodigo = 'Mensual';
         $scope.estconcodigo = 'Vigente';
-        $scope.venid = 1;
-        $scope.idcliente = 4052;
+        $scope.venid = $scope.local2;
+        $scope.idcliente = $scope.local1;
         $scope.connumero = '';
         $scope.concedulacliente = '';
         $scope.connombrescompletoscliente = '';
@@ -162,6 +164,10 @@ app.controller('contrato', ['$scope', '$http', '$location', 'myProvider', '$loca
 
         $scope.test = false;
         document.getElementById('datepicker').value = '';
+
+
+
+
 
     }
 
@@ -449,8 +455,10 @@ app.controller('contrato', ['$scope', '$http', '$location', 'myProvider', '$loca
                             //console.log(response.data);
                         })
                         .then(function(){
-
-                            $scope.inicio();
+                            localStorage.removeItem('idCliente');
+                            localStorage.removeItem('idFactura');
+                            localStorage.removeItem('mod');
+                            window.location = '../facturas_cliente/index.php';
                              })
                         ;
                 }

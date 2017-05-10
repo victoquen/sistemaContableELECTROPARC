@@ -42,9 +42,16 @@ var ApiUrl= function(){
     this.getAllContratosActi = function () {
         return 'http://localhost/sistemaContableELECTROPARC/sistema/roles_cuotas/getAllContratos.php';
     }
-    this.getAllContratosActiMod = function () {
+    this.getAllContratosActiMod1 = function () {
         return 'http://localhost/sistemaContableELECTROPARC/sistema/roles_cuotas/modifyCont.php';
     }
+    this.getUsr = function () {
+        return 'http://localhost/sistemaContableELECTROPARC/sistema/roles_cuotas/getUsr.php';
+    }
+    this.getUpdatePagoDelete = function () {
+        return 'http://localhost/sistemaContableELECTROPARC/sistema/roles_cuotas/updatePagoDelete.php';
+    }
+ 
 }
 
 app.factory("myProvider",function(){

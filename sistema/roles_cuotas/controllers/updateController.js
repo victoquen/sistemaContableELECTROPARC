@@ -52,6 +52,9 @@ app.controller('update', ['$scope', '$http', '$location', 'myProvider', '$localS
             });
 
 
+
+       
+
     }
 
 

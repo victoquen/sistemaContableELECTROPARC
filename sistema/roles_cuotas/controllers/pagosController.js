@@ -15,8 +15,29 @@ app.controller('PagosController', ['$scope', '$http', '$location', 'myProvider',
     $scope.pagar;
     $scope.dateNow;
     $scope.pagar1;
+    $scope.usuario;
     $scope.iniciar = function () {
+        $http({
+            method: 'POST',
+            url: myProvider.getUsr(),
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            data: {
 
+
+            }
+
+
+        })
+            .then(function (response) {
+                // console.log(response.data);
+                $scope.usuario = JSON.parse(response.data);
+                console.log($scope.usuario);
+            }, function errorCallback(response) {
+
+                console.log(response);
+            });
 
     }
 
@@ -152,7 +173,11 @@ app.controller('PagosController', ['$scope', '$http', '$location', 'myProvider',
 
     $scope.pago = function () {
 
-
+        var tiempo = new Date();
+        var hora = tiempo.getHours();
+        var minuto = tiempo.getMinutes();
+        var segundo = tiempo.getSeconds();
+        var horaActual=hora + ':' + minuto + ':' + segundo;
 
 
         $http({
@@ -165,8 +190,9 @@ app.controller('PagosController', ['$scope', '$http', '$location', 'myProvider',
                 id: $scope.pagar.id ,
                 estado:2 ,
                 valor : $scope.pagar.valor, 
-                final:  $scope.dateNow
-
+                final:  $scope.dateNow,
+                usuario: $scope.usuario,
+                hora: horaActual
 
 
             }
@@ -223,6 +249,86 @@ app.controller('PagosController', ['$scope', '$http', '$location', 'myProvider',
     }
 
     $scope.modificar = function () {
+
+        var tiempo = new Date();
+        var hora = tiempo.getHours();
+        var minuto = tiempo.getMinutes();
+        var segundo = tiempo.getSeconds();
+        var horaActual = hora + ':' + minuto + ':' + segundo;
+
+        $scope.dateNow = new Date();
+        $scope.vec1 = JSON.stringify($scope.dateNow).split('T');
+
+        $scope.dateNow = $scope.vec1[0].substring(1);
+       
+        console.log($scope.dateNow);
+        $http({
+            method: 'POST',
+            url: myProvider.getUpdatePago(),
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            data: {
+                id: $scope.pagar1.id,
+                estado: 1,
+                valor: $scope.pagar1.valor,
+                final: $scope.dateNow,
+                usuario: $scope.usuario,
+                hora: horaActual
+
+
+            }
+
+
+        })
+            .then(function (response) {
+
+                console.log('ingreso correcto');
+
+
+                $http({
+                    method: 'POST',
+                    url: myProvider.getUpdatePagoDelete(),
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    data: {
+                        id_contrato: $scope.pagar1.id_contrato,
+                        descripcion_pago: $scope.pagar1.descripcion_pago,
+                        fecha_maxima: $scope.pagar1.fecha_maxima,
+                        estado: 1,
+                        valor: $scope.pagar1.valor,
+                       // final: $scope.dateNow,
+                        usuario: $scope.usuario,
+                        hora: horaActual
+
+
+                    }
+
+
+                })
+                    .then(function (response) {
+
+                        
+
+
+                    }, function errorCallback(response) {
+                        //console.log(url2);
+                        // console.log(response.data);
+                    }).then(function (response){
+
+
+                        $scope.loadPagos();
+
+
+                }) ;
+
+                
+            }, function errorCallback(response) {
+                //console.log(url2);
+                // console.log(response.data);
+            });
+
 
 
     }
