@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b6142e45-63f9-4e7d-93db-bb8b68d54bc1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sistema/facturas_clientes/new_facturaventa.php" afterPath="$PROJECT_DIR$/sistema/facturas_clientes/new_facturaventa.php" />
     </list>
     <ignored path="sistemaContableELECTROPARC.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -119,8 +118,8 @@
       <file leaf-file-name="new_facturaventa.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sistema/facturas_clientes/new_facturaventa.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="631">
-              <caret line="889" column="0" selection-start-line="889" selection-start-column="0" selection-end-line="889" selection-end-column="0" />
+            <state relative-caret-position="665">
+              <caret line="891" column="32" selection-start-line="891" selection-start-column="32" selection-end-line="891" selection-end-column="32" />
               <folding>
                 <marker date="1494387855377" expanded="true" signature="211:266" placeholder="select porce... iva" />
                 <marker date="1494387855377" expanded="true" signature="685:723" placeholder="SELECT * FRO... facturero" />
@@ -395,7 +394,7 @@
       <workItem from="1489254516614" duration="1303000" />
       <workItem from="1489419719302" duration="590000" />
       <workItem from="1494345025962" duration="4259000" />
-      <workItem from="1494382911883" duration="4832000" />
+      <workItem from="1494382911883" duration="4846000" />
     </task>
     <task id="LOCAL-00001" summary="LocalStorage UP">
       <created>1494349590317</created>
@@ -432,11 +431,18 @@
       <option name="project" value="LOCAL" />
       <updated>1494387234128</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="php fixed 1">
+      <created>1494387920318</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1494387920318</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10984000" />
+    <option name="totallyTimeSpent" value="10998000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -756,8 +762,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sistema/facturas_clientes/new_facturaventa.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="631">
-          <caret line="889" column="0" selection-start-line="889" selection-start-column="0" selection-end-line="889" selection-end-column="0" />
+        <state relative-caret-position="665">
+          <caret line="891" column="32" selection-start-line="891" selection-start-column="32" selection-end-line="891" selection-end-column="32" />
           <folding>
             <marker date="1494387855377" expanded="true" signature="211:266" placeholder="select porce... iva" />
             <marker date="1494387855377" expanded="true" signature="685:723" placeholder="SELECT * FRO... facturero" />
