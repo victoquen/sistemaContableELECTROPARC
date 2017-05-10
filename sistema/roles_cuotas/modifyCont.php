@@ -55,82 +55,71 @@ $id = $data->id;
     $conparentescoreferenciaestudiantil = $data->conparentescoreferenciaestudiantil;
     $coninstitucionreferenciaestudiantil = $data->coninstitucionreferenciaestudiantil;
     $connivelreferenciaestudiantil = $data->connivelreferenciaestudiantil;
-    $conplazocredito = $data->conplazocredito;
-    $confechacontrato = $data->confechacontrato;
-    $coninterescredito = $data->coninterescredito;
-    $coninteresmora = $data->coninteresmora;
-    $concuotainicial = $data->concuotainicial;
-    $conentradapendiente = $data->conentradapendiente;
-    $concostocuota = $data->concostocuota;
-    $conobservacion = $data->conobservacion;
-
+   
 
 	
+	
 
-$query="UPDATE `ideweb`.`rol_pago` SET  tipconcodigo =$tipconcodigo,
-    estconcodigo = $estconcodigo,
-    venid = $venid,
-    idcliente = $idcliente,
+$query="UPDATE contrato_credito SET  tipconcodigo ='$tipconcodigo',
+    estconcodigo = '$estconcodigo',
+    id_venta = $venid,
+    id_cliente = $idcliente,
    
-    concasapropiaarrendadacliente = $concasapropiaarrendadacliente,
+    concasapropiaarrendadacliente = '$concasapropiaarrendadacliente',
    
-    concaracteristicasdomiciliocliente = $concaracteristicasdomiciliocliente,
-    conreferenciadomiciliocliente = $conreferenciadomiciliocliente,
-    contelefonodomiciliocliente = $contelefonodomiciliocliente,
-    concelularcliente = $concelularcliente,
-    conlugartrabajocliente = $conlugartrabajocliente,
-    concargotrabajocliente = $concargotrabajocliente,
-    contiempolugartrabajocliente = $contiempolugartrabajocliente,
-    condirecciontrabajocliente = $condirecciontrabajocliente,
-    contelefonostrabajocliente = $contelefonostrabajocliente,
-    conreferencialugartrabajocliente = $conreferencialugartrabajocliente,
-    concedulagaranteconyugue = $concedulagaranteconyugue,
-    connombrescompletosgaranteconyugue = $connombrescompletosgaranteconyugue,
-    conciudadgaranteconyugue = $conciudadgaranteconyugue,
-    condirecciondomiciliogaranteconyugue = $condirecciondomiciliogaranteconyugue,
-    concaracteristicasdomiciliogaranteconyugue = $concaracteristicasdomiciliogaranteconyugue,
+    concaracteristicasdomiciliocliente = '$concaracteristicasdomiciliocliente',
+    conreferenciadomiciliocliente = '$conreferenciadomiciliocliente',
+    contelefonodomiciliocliente = '$contelefonodomiciliocliente',
+    concelularcliente = '$concelularcliente',
+    conlugartrabajocliente = '$conlugartrabajocliente',
+    concargotrabajocliente = '$concargotrabajocliente',
+    contiempolugartrabajocliente = '$contiempolugartrabajocliente',
+    condirecciontrabajocliente = '$condirecciontrabajocliente',
+    contelefonostrabajocliente = '$contelefonostrabajocliente',
+    conreferencialugartrabajocliente = '$conreferencialugartrabajocliente',
+    concedulagaranteconyugue = '$concedulagaranteconyugue',
+    connombrescompletosgaranteconyugue = '$connombrescompletosgaranteconyugue',
+    conciudadgaranteconyugue = '$conciudadgaranteconyugue',
+    condirecciondomiciliogaranteconyugue = '$condirecciondomiciliogaranteconyugue',
+    concaracteristicasdomiciliogaranteconyugue = '$concaracteristicasdomiciliogaranteconyugue',
 
-    concasapropiaarrendadagaranteconyugue = $concasapropiaarrendadagaranteconyugue,
-    conreferenciadomiciliogaranteconyugue = $conreferenciadomiciliogaranteconyugue,
-    contelefonocasagaranteconyugue = $contelefonocasagaranteconyugue,
-    concelulargaranteconyugue = $concelulargaranteconyugue,
-    conlugartrabajogaranteconyugue = $conlugartrabajogaranteconyugue,
-    concargotrabajogaranteconyugue = $concargotrabajogaranteconyugue,
-    contiempolugartrabajogaranteconyugue = $contiempolugartrabajogaranteconyugue,
-    condirecciontrabajogaranteconyugue = $condirecciontrabajogaranteconyugue,
-    contelefonostrabajogaranteconyugue = $contelefonostrabajogaranteconyugue,
-    concedulareferenciapersonal = $concedulareferenciapersonal,
-    connombrescompletosreferenciapersonal = $connombrescompletosreferenciapersonal,
-    condirecciondomicilioreferenciapersonal = $condirecciondomicilioreferenciapersonal,
-    concaracteristicasdomicilioreferenciapersonal = $concaracteristicasdomicilioreferenciapersonal,
+    concasapropiaarrendadagaranteconyugue = '$concasapropiaarrendadagaranteconyugue',
+    conreferenciadomiciliogaranteconyugue = '$conreferenciadomiciliogaranteconyugue',
+    contelefonocasagaranteconyugue = '$contelefonocasagaranteconyugue',
+    concelulargaranteconyugue = '$concelulargaranteconyugue',
+    conlugartrabajogaranteconyugue = '$conlugartrabajogaranteconyugue',
+    concargotrabajogaranteconyugue = '$concargotrabajogaranteconyugue',
+    contiempolugartrabajogaranteconyugue = '$contiempolugartrabajogaranteconyugue',
+    condirecciontrabajogaranteconyugue = '$condirecciontrabajogaranteconyugue',
+    contelefonostrabajogaranteconyugue = '$contelefonostrabajogaranteconyugue',
+    concedulareferenciapersonal = '$concedulareferenciapersonal',
+    connombrescompletosreferenciapersonal = '$connombrescompletosreferenciapersonal',
+    condirecciondomicilioreferenciapersonal = '$condirecciondomicilioreferenciapersonal',
+    concaracteristicasdomicilioreferenciapersonal = '$concaracteristicasdomicilioreferenciapersonal',
 
-    concasapropiaarrendadareferenciapersonal = $concasapropiaarrendadareferenciapersonal,
-    conreferenciadomicilioreferenciapersonal = $conreferenciadomicilioreferenciapersonal,
-    contelefonocasareferenciapersonal = $contelefonocasareferenciapersonal,
-    concelularreferenciapersonal = $concelularreferenciapersonal,
-    conlugartrabajoreferenciapersonal = $conlugartrabajoreferenciapersonal,
-    concargotrabajoreferenciapersonal = $concargotrabajoreferenciapersonal,
-    contiempolugartrabajoreferenciapersonal = $contiempolugartrabajoreferenciapersonal,
-    condirecciontrabajoreferenciapersonal = $condirecciontrabajoreferenciapersonal,
-    contelefonostrabajoreferenciapersonal = $contelefonostrabajoreferenciapersonal,
-    concedulareferenciaestudiantil = $concedulareferenciaestudiantil,
-    connombrescompletosreferenciaestudiantil = $connombrescompletosreferenciaestudiantil,
-    conparentescoreferenciaestudiantil = $conparentescoreferenciaestudiantil,
-    coninstitucionreferenciaestudiantil = $coninstitucionreferenciaestudiantil,
-    connivelreferenciaestudiantil = $connivelreferenciaestudiantil,
-    conplazocredito = $conplazocredito,
-    confechacontrato = $confechacontrato,
-    coninterescredito = $coninterescredito,
-    coninteresmora = $coninteresmora,
-    concuotainicial = $concuotainicial,
-    conentradapendiente = $conentradapendiente,
-    concostocuota = $concostocuota,
-    conobservacion = $conobservacion
+    concasapropiaarrendadareferenciapersonal = '$concasapropiaarrendadareferenciapersonal',
+    conreferenciadomicilioreferenciapersonal = '$conreferenciadomicilioreferenciapersonal',
+    contelefonocasareferenciapersonal = '$contelefonocasareferenciapersonal',
+    concelularreferenciapersonal = '$concelularreferenciapersonal',
+    conlugartrabajoreferenciapersonal = '$conlugartrabajoreferenciapersonal',
+    concargotrabajoreferenciapersonal = '$concargotrabajoreferenciapersonal',
+    contiempolugartrabajoreferenciapersonal = '$contiempolugartrabajoreferenciapersonal',
+    condirecciontrabajoreferenciapersonal = '$condirecciontrabajoreferenciapersonal',
+    contelefonostrabajoreferenciapersonal = '$contelefonostrabajoreferenciapersonal',
+    concedulareferenciaestudiantil = '$concedulareferenciaestudiantil',
+    connombrescompletosreferenciaestudiantil = '$connombrescompletosreferenciaestudiantil',
+    conparentescoreferenciaestudiantil = '$conparentescoreferenciaestudiantil',
+    coninstitucionreferenciaestudiantil = '$coninstitucionreferenciaestudiantil',
+    connivelreferenciaestudiantil = '$connivelreferenciaestudiantil'
+ 
 
- WHERE id=$id",
+ WHERE codigo=$id";
+
+ //echo $query;
 	$result = $mysqli->query($query) or die($mysqli->error.__LINE__);
 
 //$result = $mysqli->affected_rows;
+
 $result=mysqli_insert_id($mysqli);
 echo $json_response = json_encode($result);
 

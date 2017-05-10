@@ -73,6 +73,11 @@
                     [null, 'Contratacion Empleado', './empleadocontrato/index.php', 'principal', 'Contratacion Empleado'],
 					[null, 'Rol de Pago', './roles_cuotas/table.html', 'principal', 'Contratacion Empleado'],
                 ],
+				[null, ' Creditos', null, null, ' Creditos',
+                    [null, 'Pago', './roles_cuotas/tablaPagos.html', 'principal', 'Pago'],
+                    [null, 'Contratos', './roles_cuotas/tableContrato.html', 'principal', 'Contratos'],
+                ],
+
                 [null, 'Mantenimientos', null, null, 'mantenimientos',
                     [null, 'RUC', './ruc/index.php', 'principal', 'RUC'],
                     [null, 'Usuarios', './usuario/index.php', 'principal', 'Usuarios'],

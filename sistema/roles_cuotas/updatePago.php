@@ -5,8 +5,10 @@ $id = $data->id;
 $estado = $data->estado;
 $valor = $data->valor;
 $final =$data->final;
+$usuario =$data->usuario;
+$hora =$data->hora;
 
-$query="UPDATE pagos_credito SET  valor=$valor, estado='$estado', fecha_pago='$final'
+$query="UPDATE pagos_credito SET  valor=$valor, estado='$estado', fecha_pago='$final', usuario='$usuario', hora='$hora'
  WHERE id=$id";
 
 $result = $mysqli->query($query) or die($mysqli->error.__LINE__);

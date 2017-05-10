@@ -59,7 +59,7 @@ app.controller('contratoMod', ['$scope', '$http', '$location', 'myProvider', '$l
     $scope.coninstitucionreferenciaestudiantil = '';
     $scope.connivelreferenciaestudiantil = '';
     $scope.conplazocredito = '';
-    $scope.confechacontrato = '';
+
     $scope.coninterescredito = 3;
     $scope.coninteresmora = 1.5;
     $scope.concuotainicial = '';
@@ -94,7 +94,7 @@ app.controller('contratoMod', ['$scope', '$http', '$location', 'myProvider', '$l
     $scope.guardar = function () {
         $http({
             method: 'POST',
-            url: myProvider.getContratoIns(),
+            url: myProvider.getAllContratosActiMod1(),
             headers: {
                 'Content-Type': 'application/json'
             },
@@ -102,8 +102,8 @@ app.controller('contratoMod', ['$scope', '$http', '$location', 'myProvider', '$l
                 id: $scope.obj.codigo,
                 tipconcodigo: $scope.obj.tipconcodigo,
                 estconcodigo: $scope.obj.estconcodigo,
-                venid: $scope.obj.venid,
-                idcliente: /* $scope.obj.idcliente*/4052,
+                venid: $scope.obj.id_venta,
+                idcliente:  $scope.obj.id_cliente,
 
                 concasapropiaarrendadacliente: $scope.obj.concasapropiaarrendadacliente,
 
@@ -150,15 +150,8 @@ app.controller('contratoMod', ['$scope', '$http', '$location', 'myProvider', '$l
                 connombrescompletosreferenciaestudiantil: $scope.obj.connombrescompletosreferenciaestudiantil,
                 conparentescoreferenciaestudiantil: $scope.obj.conparentescoreferenciaestudiantil,
                 coninstitucionreferenciaestudiantil: $scope.obj.coninstitucionreferenciaestudiantil,
-                connivelreferenciaestudiantil: $scope.obj.connivelreferenciaestudiantil,
-                conplazocredito: $scope.obj.conplazocredito,
-                confechacontrato: $scope.obj.formatedDate,
-                coninterescredito: $scope.obj.coninterescredito,
-                coninteresmora: $scope.obj.coninteresmora,
-                concuotainicial: $scope.obj.concuotainicial,
-                conentradapendiente: $scope.obj.conentradapendiente,
-                concostocuota: $scope.obj.concostocuota,
-                conobservacion: $scope.obj.conobservacion
+                connivelreferenciaestudiantil: $scope.obj.connivelreferenciaestudiantil
+               
 
 
             }
@@ -167,6 +160,8 @@ app.controller('contratoMod', ['$scope', '$http', '$location', 'myProvider', '$l
         })
             .then(function (response) {
                 console.log(response.data);
+                localStorage.removeItem('mod1');
+                window.location = 'tableContrato.html';
 
             },
 
@@ -179,5 +174,10 @@ app.controller('contratoMod', ['$scope', '$http', '$location', 'myProvider', '$l
 
 
 
+    }
+
+    $scope.regresar = function () {
+        localStorage.removeItem('mod1');
+        window.location = 'tableContrato.html';
     }
 }]);
