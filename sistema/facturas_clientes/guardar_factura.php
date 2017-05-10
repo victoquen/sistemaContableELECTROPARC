@@ -396,6 +396,7 @@ if ($accion == "alta") {
             echo "<script language=\"javascript\">";
             echo "localStorage.setItem(\"idFactura\",$idfactura);";
             echo "localStorage.setItem(\"idCliente\", $idcliente);";
+            echo "localStorage.setItem(\"totalFactura\", $totalfactura);";
             echo "window.location = \"../roles_cuotas/contrato.html\";";
             echo "</script>";
         }
@@ -499,12 +500,7 @@ if ($accion == "modificar") {
     $result = $factura->update_factura($conn, $idfactura, $idcliente, $codfactura, $serie1, $serie2, $autorizacion, $fecha, $descuento, $iva0, $iva12, $importeiva, $flete, $totalfactura, $remision, $codigo_retencion, $ret_iva, $ret_fuente, $idfacturero);
 
 
-    if($credito === 1){
-        echo "<script language=\"javascript\">";
-        echo "localStorage.setItem(\"idFactura\",$idfactura);";
-        echo "localStorage.setItem(\"idCliente\", $idcliente);";
-        echo "</script>";
-    }
+
 
     if ($result) {
         $mensaje_minimo = "<ul>";
@@ -642,6 +638,8 @@ if ($accion == "modificar") {
             };
             $contador++;
         }
+
+
     } else {
         $mensaje = "<span style='color:#f8f8ff '><img src='../img/error_icon.png'>   El CODIGO ya existe, ERROR al ingresar la FACTURA</span>";
         $validacion = 1;
