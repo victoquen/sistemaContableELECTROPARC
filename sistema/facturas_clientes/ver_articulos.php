@@ -1,4 +1,4 @@
-<?
+<?php
     $op=$_GET["op"];
 ?>
 <html>
@@ -46,7 +46,7 @@ function enviar() {
 }
 
 function nuevo_producto(){
-    var op=<?echo $op?>;
+    var op=<?php echo $op?>;
     location.href="../producto/new_producto.php?origen=factura&op="+op;
 }
 
@@ -76,7 +76,7 @@ body {
 	</tr>
 </table>
 <input type="hidden" id="iniciopagina" name="iniciopagina">
-<input type="hidden" id="op" name="op" value="<?echo $op?>">
+<input type="hidden" id="op" name="op" value="<?php echo $op?>">
 <table width="100%" border="0">
   <tr>
     <td><div align="center">
