@@ -1,4 +1,4 @@
-<?
+<?php
 function implota($fecha) // bd2local
 {
 	if (($fecha == "") || ($fecha == "0000-00-00"))
