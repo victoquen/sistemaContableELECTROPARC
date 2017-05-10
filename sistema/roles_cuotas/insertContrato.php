@@ -61,7 +61,7 @@ $data = json_decode(file_get_contents("php://input"));
     $concuotainicial = $data->concuotainicial;
     $conentradapendiente = $data->conentradapendiente;
     $concostocuota = $data->concostocuota;
-    $conobservacion = $data->conobservacion;
+    //$conobservacion = $data->conobservacion;
 
 $query="INSERT INTO `ideweb`.`contrato_credito`
 (`tipconcodigo`,
@@ -121,10 +121,9 @@ $query="INSERT INTO `ideweb`.`contrato_credito`
 `concuotainicial`,
 `conentradapendiente`,
 `concostocuota`,
-`conobservacion`,
 `estconcodigo`)
 VALUES
-(  '$tipconcodigo','$idcliente','$venid','$concasapropiaarrendadacliente','$concaracteristicasdomiciliocliente','$conreferenciadomiciliocliente','$contelefonodomiciliocliente','$concelularcliente','$conlugartrabajocliente','$concargotrabajocliente','$contiempolugartrabajocliente','$condirecciontrabajocliente','$contelefonostrabajocliente','$conreferencialugartrabajocliente','$concedulagaranteconyugue','$connombrescompletosgaranteconyugue','$conciudadgaranteconyugue','$condirecciondomiciliogaranteconyugue','$concaracteristicasdomiciliogaranteconyugue', '$concasapropiaarrendadagaranteconyugue','$conreferenciadomiciliogaranteconyugue','$contelefonocasagaranteconyugue','$concelulargaranteconyugue','$conlugartrabajogaranteconyugue','$concargotrabajogaranteconyugue','$contiempolugartrabajogaranteconyugue','$condirecciontrabajogaranteconyugue','$contelefonostrabajogaranteconyugue','$concedulareferenciapersonal','$connombrescompletosreferenciapersonal','$condirecciondomicilioreferenciapersonal','$concaracteristicasdomicilioreferenciapersonal','$concasapropiaarrendadareferenciapersonal','$conreferenciadomicilioreferenciapersonal','$contelefonocasareferenciapersonal','$concelularreferenciapersonal','$conlugartrabajoreferenciapersonal','$concargotrabajoreferenciapersonal','$contiempolugartrabajoreferenciapersonal','$condirecciontrabajoreferenciapersonal','$contelefonostrabajoreferenciapersonal','$concedulareferenciaestudiantil','$connombrescompletosreferenciaestudiantil','$conparentescoreferenciaestudiantil','$coninstitucionreferenciaestudiantil','$connivelreferenciaestudiantil','$conplazocredito','$confechacontrato','$coninterescredito','$coninteresmora','$concuotainicial','$conentradapendiente','$concostocuota','$conobservacion','$estconcodigo');";
+(  '$tipconcodigo','$idcliente','$venid','$concasapropiaarrendadacliente','$concaracteristicasdomiciliocliente','$conreferenciadomiciliocliente','$contelefonodomiciliocliente','$concelularcliente','$conlugartrabajocliente','$concargotrabajocliente','$contiempolugartrabajocliente','$condirecciontrabajocliente','$contelefonostrabajocliente','$conreferencialugartrabajocliente','$concedulagaranteconyugue','$connombrescompletosgaranteconyugue','$conciudadgaranteconyugue','$condirecciondomiciliogaranteconyugue','$concaracteristicasdomiciliogaranteconyugue', '$concasapropiaarrendadagaranteconyugue','$conreferenciadomiciliogaranteconyugue','$contelefonocasagaranteconyugue','$concelulargaranteconyugue','$conlugartrabajogaranteconyugue','$concargotrabajogaranteconyugue','$contiempolugartrabajogaranteconyugue','$condirecciontrabajogaranteconyugue','$contelefonostrabajogaranteconyugue','$concedulareferenciapersonal','$connombrescompletosreferenciapersonal','$condirecciondomicilioreferenciapersonal','$concaracteristicasdomicilioreferenciapersonal','$concasapropiaarrendadareferenciapersonal','$conreferenciadomicilioreferenciapersonal','$contelefonocasareferenciapersonal','$concelularreferenciapersonal','$conlugartrabajoreferenciapersonal','$concargotrabajoreferenciapersonal','$contiempolugartrabajoreferenciapersonal','$condirecciontrabajoreferenciapersonal','$contelefonostrabajoreferenciapersonal','$concedulareferenciaestudiantil','$connombrescompletosreferenciaestudiantil','$conparentescoreferenciaestudiantil','$coninstitucionreferenciaestudiantil','$connivelreferenciaestudiantil','$conplazocredito','$confechacontrato','$coninterescredito','$coninteresmora','$concuotainicial','$conentradapendiente','$concostocuota','$estconcodigo');";
 
 $result = $mysqli->query($query) or die($mysqli->error.__LINE__);
 

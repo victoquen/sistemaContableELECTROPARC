@@ -91,10 +91,14 @@ app.controller('contrato', ['$scope', '$http', '$location', 'myProvider', '$loca
     };
 
     $scope.inicio = function () {
+
         $scope.local1 = window.localStorage.getItem('idCliente');
         $scope.local2 = window.localStorage.getItem('idFactura');
         $scope.local3 = window.localStorage.getItem('totalFactura');
-        
+
+        console.log("CHECK INI: " + $scope.local1 + " -- " +$scope.local2);
+
+
         $scope.id_contrato;
 
         $scope.tipconcodigo = 'Mensual';
@@ -207,6 +211,7 @@ app.controller('contrato', ['$scope', '$http', '$location', 'myProvider', '$loca
 
     $scope.guardar = function () {
 
+        console.log("CHECK 1: " +$scope.idcliente);
         $scope.confechacontrato = document.getElementById('datepicker').value;
 
         $scope.vec1 = $scope.confechacontrato.split('/');
@@ -243,7 +248,7 @@ app.controller('contrato', ['$scope', '$http', '$location', 'myProvider', '$loca
 
             $http({
                 method: 'POST',
-                url: myProvider.getAllContratosActiMod(),
+                url: myProvider.getContratoIns(),
                 headers: {
                     'Content-Type': 'application/json'
                 },
@@ -251,7 +256,7 @@ app.controller('contrato', ['$scope', '$http', '$location', 'myProvider', '$loca
                     tipconcodigo: $scope.tipconcodigo,
                     estconcodigo: $scope.estconcodigo,
                     venid: $scope.venid,
-                    idcliente: /* $scope.idcliente*/1723,
+                    idcliente: $scope.idcliente,
                  
                     concasapropiaarrendadacliente: $scope.concasapropiaarrendadacliente,
           
@@ -438,8 +443,6 @@ app.controller('contrato', ['$scope', '$http', '$location', 'myProvider', '$loca
                             fecha_maxima: $scope.formatedDate1 ,
                             estado:1,
                             valor: $scope.costoCuota
-                            
-
 
                         }
 
@@ -459,7 +462,7 @@ app.controller('contrato', ['$scope', '$http', '$location', 'myProvider', '$loca
                             localStorage.removeItem('idCliente');
                             localStorage.removeItem('idFactura');
                             localStorage.removeItem('totalFactura');
-                            window.location = '../facturas_cliente/index.php';
+                            window.location = '../facturas_clientes/index.php';
                              })
                         ;
                 }

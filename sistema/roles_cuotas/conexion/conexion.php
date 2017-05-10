@@ -16,7 +16,8 @@
                 
             $this->server = "localhost";
             $this->user = "root";
-            $this->password = "123456";
+            $this->password = "23142314";
+           // $this->password = "123456";
             $this->base_datos = "ideweb";
             $this->conectar_base_datos();
         }

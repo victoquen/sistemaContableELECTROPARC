@@ -54,6 +54,8 @@ class Factura
     {
         $query="INSERT INTO facturas VALUES ('','$id_cliente','$codigo_factura','$serie1','$serie2','$autorizacion','$fecha','$descuento','$iva0','$iva12',
                                              '$iva','$flete','$totalfactura','$credito','$plazo',0,0,'$remision','$codigo_retencion','$ret_iva','$ret_fuente', '$idfacturero')";
+
+       
         $result= mysql_query($query, $conn);
         $codfactura=mysql_insert_id();
         return $codfactura;
