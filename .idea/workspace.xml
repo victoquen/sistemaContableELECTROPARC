@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b6142e45-63f9-4e7d-93db-bb8b68d54bc1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sistema/facturas_clientes/new_facturaventa.php" afterPath="$PROJECT_DIR$/sistema/facturas_clientes/new_facturaventa.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sistema/facturas_clientes/ver_articulos.php" afterPath="$PROJECT_DIR$/sistema/facturas_clientes/ver_articulos.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sistema/conexion/conexion.php" afterPath="$PROJECT_DIR$/sistema/conexion/conexion.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sistema/facturas_clientes/guardar_factura.php" afterPath="$PROJECT_DIR$/sistema/facturas_clientes/guardar_factura.php" />
     </list>
     <ignored path="sistemaContableELECTROPARC.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,30 +26,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="processing_inventario_productos.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sistema/facturas_clientes/processing_inventario_productos.php">
+      <file leaf-file-name="conexion.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sistema/conexion/conexion.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1105">
-              <caret line="6" column="104" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="104" />
-              <folding>
-                <marker date="1494384873152" expanded="true" signature="4096:4175" placeholder="SELECT SUM(s... productobodega" />
-                <marker date="1494384873152" expanded="true" signature="4202:4294" placeholder="SELECT stock... productobodega" />
-                <marker date="1494384873152" expanded="true" signature="4625:4856" placeholder="SELECT SUM(p... producto_transformacion" />
-                <marker date="1494384873152" expanded="true" signature="5193:5349" placeholder="SELECT b.id_... bodega" />
-                <marker date="1494384873152" expanded="true" signature="5824:5862" placeholder="..." />
-                <marker date="1494384873152" expanded="true" signature="6192:6230" placeholder="..." />
-                <marker date="1494384873152" expanded="true" signature="6556:6594" placeholder="..." />
-              </folding>
+            <state relative-caret-position="391">
+              <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ver_articulos.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sistema/facturas_clientes/ver_articulos.php">
+      <file leaf-file-name="processing_inventario_productos.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sistema/facturas_clientes/processing_inventario_productos.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-              <folding />
+            <state relative-caret-position="476">
+              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+              <folding>
+                <marker date="1494385527841" expanded="true" signature="4390:4469" placeholder="SELECT SUM(s... productobodega" />
+                <marker date="1494385527841" expanded="true" signature="4496:4588" placeholder="SELECT stock... productobodega" />
+                <marker date="1494385527841" expanded="true" signature="4919:5150" placeholder="SELECT SUM(p... producto_transformacion" />
+                <marker date="1494385527841" expanded="true" signature="5487:5643" placeholder="SELECT b.id_... bodega" />
+                <marker date="1494385527841" expanded="true" signature="6118:6156" placeholder="..." />
+                <marker date="1494385527841" expanded="true" signature="6486:6524" placeholder="..." />
+                <marker date="1494385527841" expanded="true" signature="6850:6888" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -58,7 +58,7 @@
         <entry file="file://$PROJECT_DIR$/sistema/facturas_clientes/frame_articulos.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-59">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
               <folding>
                 <marker date="1491160328044" expanded="true" signature="232:287" placeholder="select porce... iva" />
               </folding>
@@ -66,52 +66,52 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="guardar_factura.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="guardar_factura.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sistema/facturas_clientes/guardar_factura.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="654">
-              <caret line="381" column="0" selection-start-line="381" selection-start-column="0" selection-end-line="381" selection-end-column="0" />
+            <state relative-caret-position="313">
+              <caret line="1076" column="53" selection-start-line="1076" selection-start-column="53" selection-end-line="1076" selection-end-column="53" />
               <folding>
-                <marker date="1494383908300" expanded="true" signature="14964:15043" placeholder="SELECT stock... producto" />
-                <marker date="1494383908300" expanded="true" signature="15269:15383" placeholder="SELECT id_pr... productobodega" />
-                <marker date="1494383908300" expanded="true" signature="15660:15762" placeholder="UPDATE produ... " />
-                <marker date="1494383908300" expanded="true" signature="15864:15945" placeholder="SELECT SUM(s... productobodega" />
-                <marker date="1494383908300" expanded="true" signature="16120:16247" placeholder="UPDATE produ... " />
-                <marker date="1494383908300" expanded="true" signature="16372:16474" placeholder="UPDATE produ... " />
-                <marker date="1494383908300" expanded="true" signature="16576:16657" placeholder="SELECT SUM(s... productobodega" />
-                <marker date="1494383908300" expanded="true" signature="16831:16901" placeholder="UPDATE produ... " />
-                <marker date="1494383908300" expanded="true" signature="17016:17279" placeholder="SELECT p.nom... producto" />
-                <marker date="1494383908300" expanded="true" signature="18190:18204" placeholder="..." />
-                <marker date="1494383908300" expanded="true" signature="18640:18676" placeholder="DELETE FROM " />
-                <marker date="1494383908300" expanded="true" signature="18746:18817" placeholder="DELETE FROM " />
-                <marker date="1494383908300" expanded="true" signature="18877:18931" placeholder="SELECT * FRO... factulinea" />
-                <marker date="1494383908300" expanded="true" signature="19300:19413" placeholder="SELECT id_pr... productobodega" />
-                <marker date="1494383908300" expanded="true" signature="19798:19900" placeholder="UPDATE produ... " />
-                <marker date="1494383908300" expanded="true" signature="19986:20066" placeholder="SELECT SUM(s... productobodega" />
-                <marker date="1494383908300" expanded="true" signature="20216:20285" placeholder="UPDATE produ... " />
-                <marker date="1494383908300" expanded="true" signature="20591:20643" placeholder="SELECT * FRO... facturas" />
-                <marker date="1494383908300" expanded="true" signature="23281:23361" placeholder="SELECT canti... factulinea" />
-                <marker date="1494383908300" expanded="true" signature="24007:24065" placeholder="DELETE FROM " />
-                <marker date="1494383908300" expanded="true" signature="24625:24704" placeholder="SELECT stock... producto" />
-                <marker date="1494383908300" expanded="true" signature="24931:25045" placeholder="SELECT id_pr... productobodega" />
-                <marker date="1494383908300" expanded="true" signature="25591:25704" placeholder="UPDATE produ... " />
-                <marker date="1494383908300" expanded="true" signature="25814:25895" placeholder="SELECT SUM(s... productobodega" />
-                <marker date="1494383908300" expanded="true" signature="26082:26220" placeholder="UPDATE produ... " />
-                <marker date="1494383908300" expanded="true" signature="26532:26634" placeholder="UPDATE produ... " />
-                <marker date="1494383908300" expanded="true" signature="26744:26825" placeholder="SELECT SUM(s... productobodega" />
-                <marker date="1494383908300" expanded="true" signature="27012:27139" placeholder="UPDATE produ... " />
-                <marker date="1494383908300" expanded="true" signature="27556:27669" placeholder="UPDATE produ... " />
-                <marker date="1494383908300" expanded="true" signature="27779:27860" placeholder="SELECT SUM(s... productobodega" />
-                <marker date="1494383908300" expanded="true" signature="28046:28116" placeholder="UPDATE produ... " />
-                <marker date="1494383908300" expanded="true" signature="28372:28474" placeholder="UPDATE produ... " />
-                <marker date="1494383908300" expanded="true" signature="28584:28665" placeholder="SELECT SUM(s... productobodega" />
-                <marker date="1494383908300" expanded="true" signature="28851:28921" placeholder="UPDATE produ... " />
-                <marker date="1494383908300" expanded="true" signature="29126:29192" placeholder="SELECT stock... producto" />
-                <marker date="1494383908300" expanded="true" signature="29635:29649" placeholder="..." />
-                <marker date="1494383908300" expanded="true" signature="34033:34377" placeholder="SELECT c.nom... cliente" />
-                <marker date="1494383908300" expanded="true" signature="38039:38287" placeholder="SELECT b.cod... factulinea" />
-                <marker date="1494383908300" expanded="true" signature="43893:43952" placeholder="SELECT * FRO... formapago" />
-                <marker date="1494383908300" expanded="true" signature="46310:46365" placeholder="SELECT * FRO... banco" />
+                <marker date="1494387211459" expanded="true" signature="14964:15043" placeholder="SELECT stock... producto" />
+                <marker date="1494387211459" expanded="true" signature="15269:15383" placeholder="SELECT id_pr... productobodega" />
+                <marker date="1494387211459" expanded="true" signature="15660:15762" placeholder="UPDATE produ... " />
+                <marker date="1494387211459" expanded="true" signature="15864:15945" placeholder="SELECT SUM(s... productobodega" />
+                <marker date="1494387211459" expanded="true" signature="16120:16247" placeholder="UPDATE produ... " />
+                <marker date="1494387211459" expanded="true" signature="16372:16474" placeholder="UPDATE produ... " />
+                <marker date="1494387211459" expanded="true" signature="16576:16657" placeholder="SELECT SUM(s... productobodega" />
+                <marker date="1494387211459" expanded="true" signature="16831:16901" placeholder="UPDATE produ... " />
+                <marker date="1494387211459" expanded="true" signature="17016:17279" placeholder="SELECT p.nom... producto" />
+                <marker date="1494387211459" expanded="true" signature="18190:18204" placeholder="..." />
+                <marker date="1494387211459" expanded="true" signature="18640:18676" placeholder="DELETE FROM " />
+                <marker date="1494387211459" expanded="true" signature="18746:18817" placeholder="DELETE FROM " />
+                <marker date="1494387211459" expanded="true" signature="18877:18931" placeholder="SELECT * FRO... factulinea" />
+                <marker date="1494387211459" expanded="true" signature="19300:19413" placeholder="SELECT id_pr... productobodega" />
+                <marker date="1494387211459" expanded="true" signature="19798:19900" placeholder="UPDATE produ... " />
+                <marker date="1494387211459" expanded="true" signature="19986:20066" placeholder="SELECT SUM(s... productobodega" />
+                <marker date="1494387211459" expanded="true" signature="20216:20285" placeholder="UPDATE produ... " />
+                <marker date="1494387211459" expanded="true" signature="20591:20643" placeholder="SELECT * FRO... facturas" />
+                <marker date="1494387211459" expanded="true" signature="23281:23361" placeholder="SELECT canti... factulinea" />
+                <marker date="1494387211459" expanded="true" signature="24007:24065" placeholder="DELETE FROM " />
+                <marker date="1494387211459" expanded="true" signature="24625:24704" placeholder="SELECT stock... producto" />
+                <marker date="1494387211459" expanded="true" signature="24931:25045" placeholder="SELECT id_pr... productobodega" />
+                <marker date="1494387211459" expanded="true" signature="25591:25704" placeholder="UPDATE produ... " />
+                <marker date="1494387211459" expanded="true" signature="25814:25895" placeholder="SELECT SUM(s... productobodega" />
+                <marker date="1494387211459" expanded="true" signature="26082:26220" placeholder="UPDATE produ... " />
+                <marker date="1494387211459" expanded="true" signature="26532:26634" placeholder="UPDATE produ... " />
+                <marker date="1494387211459" expanded="true" signature="26744:26825" placeholder="SELECT SUM(s... productobodega" />
+                <marker date="1494387211459" expanded="true" signature="27012:27139" placeholder="UPDATE produ... " />
+                <marker date="1494387211459" expanded="true" signature="27556:27669" placeholder="UPDATE produ... " />
+                <marker date="1494387211459" expanded="true" signature="27779:27860" placeholder="SELECT SUM(s... productobodega" />
+                <marker date="1494387211459" expanded="true" signature="28046:28116" placeholder="UPDATE produ... " />
+                <marker date="1494387211459" expanded="true" signature="28372:28474" placeholder="UPDATE produ... " />
+                <marker date="1494387211459" expanded="true" signature="28584:28665" placeholder="SELECT SUM(s... productobodega" />
+                <marker date="1494387211459" expanded="true" signature="28851:28921" placeholder="UPDATE produ... " />
+                <marker date="1494387211459" expanded="true" signature="29126:29192" placeholder="SELECT stock... producto" />
+                <marker date="1494387211459" expanded="true" signature="29635:29649" placeholder="..." />
+                <marker date="1494387211459" expanded="true" signature="34033:34377" placeholder="SELECT c.nom... cliente" />
+                <marker date="1494387211459" expanded="true" signature="38039:38287" placeholder="SELECT b.cod... factulinea" />
+                <marker date="1494387211459" expanded="true" signature="43920:43979" placeholder="SELECT * FRO... formapago" />
+                <marker date="1494387211459" expanded="true" signature="46340:46395" placeholder="SELECT * FRO... banco" />
               </folding>
             </state>
           </provider>
@@ -153,13 +153,13 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/sistema/conexion/conexion.php" />
         <option value="$PROJECT_DIR$/sistema/facturas_clientes/js/articulos_factura.js" />
         <option value="$PROJECT_DIR$/sistema/index.php" />
-        <option value="$PROJECT_DIR$/sistema/facturas_clientes/guardar_factura.php" />
         <option value="$PROJECT_DIR$/sistema/facturas_clientes/new_facturaventa.php" />
-        <option value="$PROJECT_DIR$/sistema/facturas_clientes/processing_inventario_productos.php" />
         <option value="$PROJECT_DIR$/sistema/facturas_clientes/ver_articulos.php" />
+        <option value="$PROJECT_DIR$/sistema/facturas_clientes/processing_inventario_productos.php" />
+        <option value="$PROJECT_DIR$/sistema/conexion/conexion.php" />
+        <option value="$PROJECT_DIR$/sistema/facturas_clientes/guardar_factura.php" />
       </list>
     </option>
   </component>
@@ -410,7 +410,7 @@
       <workItem from="1489254516614" duration="1303000" />
       <workItem from="1489419719302" duration="590000" />
       <workItem from="1494345025962" duration="4259000" />
-      <workItem from="1494382911883" duration="2298000" />
+      <workItem from="1494382911883" duration="4137000" />
     </task>
     <task id="LOCAL-00001" summary="LocalStorage UP">
       <created>1494349590317</created>
@@ -426,11 +426,25 @@
       <option name="project" value="LOCAL" />
       <updated>1494383935003</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="php corregidos">
+      <created>1494385225389</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1494385225389</updated>
+    </task>
+    <task id="LOCAL-00004" summary="productos facturas corregidos SELECT">
+      <created>1494385592751</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1494385592751</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8450000" />
+    <option name="totallyTimeSpent" value="10289000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -471,7 +485,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="LocalStorage UP" />
     <MESSAGE value="factura, frame" />
-    <option name="LAST_COMMIT_MESSAGE" value="factura, frame" />
+    <MESSAGE value="php corregidos" />
+    <MESSAGE value="productos facturas corregidos SELECT" />
+    <option name="LAST_COMMIT_MESSAGE" value="productos facturas corregidos SELECT" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -493,46 +509,46 @@
         <state relative-caret-position="6800">
           <caret line="400" column="9" selection-start-line="400" selection-start-column="9" selection-end-line="400" selection-end-column="9" />
           <folding>
-            <marker date="1494383908300" expanded="true" signature="14964:15043" placeholder="SELECT stock... producto" />
-            <marker date="1494383908300" expanded="true" signature="15269:15383" placeholder="SELECT id_pr... productobodega" />
-            <marker date="1494383908300" expanded="true" signature="15660:15762" placeholder="UPDATE produ... " />
-            <marker date="1494383908300" expanded="true" signature="15864:15945" placeholder="SELECT SUM(s... productobodega" />
-            <marker date="1494383908300" expanded="true" signature="16120:16247" placeholder="UPDATE produ... " />
-            <marker date="1494383908300" expanded="true" signature="16372:16474" placeholder="UPDATE produ... " />
-            <marker date="1494383908300" expanded="true" signature="16576:16657" placeholder="SELECT SUM(s... productobodega" />
-            <marker date="1494383908300" expanded="true" signature="16831:16901" placeholder="UPDATE produ... " />
-            <marker date="1494383908300" expanded="true" signature="17016:17279" placeholder="SELECT p.nom... producto" />
-            <marker date="1494383908300" expanded="true" signature="18190:18204" placeholder="..." />
-            <marker date="1494383908300" expanded="true" signature="18640:18676" placeholder="DELETE FROM " />
-            <marker date="1494383908300" expanded="true" signature="18746:18817" placeholder="DELETE FROM " />
-            <marker date="1494383908300" expanded="true" signature="18877:18931" placeholder="SELECT * FRO... factulinea" />
-            <marker date="1494383908300" expanded="true" signature="19300:19413" placeholder="SELECT id_pr... productobodega" />
-            <marker date="1494383908300" expanded="true" signature="19798:19900" placeholder="UPDATE produ... " />
-            <marker date="1494383908300" expanded="true" signature="19986:20066" placeholder="SELECT SUM(s... productobodega" />
-            <marker date="1494383908300" expanded="true" signature="20216:20285" placeholder="UPDATE produ... " />
-            <marker date="1494383908300" expanded="true" signature="20591:20643" placeholder="SELECT * FRO... facturas" />
-            <marker date="1494383908300" expanded="true" signature="23281:23361" placeholder="SELECT canti... factulinea" />
-            <marker date="1494383908300" expanded="true" signature="24007:24065" placeholder="DELETE FROM " />
-            <marker date="1494383908300" expanded="true" signature="24625:24704" placeholder="SELECT stock... producto" />
-            <marker date="1494383908300" expanded="true" signature="24931:25045" placeholder="SELECT id_pr... productobodega" />
-            <marker date="1494383908300" expanded="true" signature="25591:25704" placeholder="UPDATE produ... " />
-            <marker date="1494383908300" expanded="true" signature="25814:25895" placeholder="SELECT SUM(s... productobodega" />
-            <marker date="1494383908300" expanded="true" signature="26082:26220" placeholder="UPDATE produ... " />
-            <marker date="1494383908300" expanded="true" signature="26532:26634" placeholder="UPDATE produ... " />
-            <marker date="1494383908300" expanded="true" signature="26744:26825" placeholder="SELECT SUM(s... productobodega" />
-            <marker date="1494383908300" expanded="true" signature="27012:27139" placeholder="UPDATE produ... " />
-            <marker date="1494383908300" expanded="true" signature="27556:27669" placeholder="UPDATE produ... " />
-            <marker date="1494383908300" expanded="true" signature="27779:27860" placeholder="SELECT SUM(s... productobodega" />
-            <marker date="1494383908300" expanded="true" signature="28046:28116" placeholder="UPDATE produ... " />
-            <marker date="1494383908300" expanded="true" signature="28372:28474" placeholder="UPDATE produ... " />
-            <marker date="1494383908300" expanded="true" signature="28584:28665" placeholder="SELECT SUM(s... productobodega" />
-            <marker date="1494383908300" expanded="true" signature="28851:28921" placeholder="UPDATE produ... " />
-            <marker date="1494383908300" expanded="true" signature="29126:29192" placeholder="SELECT stock... producto" />
-            <marker date="1494383908300" expanded="true" signature="29635:29649" placeholder="..." />
-            <marker date="1494383908300" expanded="true" signature="34033:34377" placeholder="SELECT c.nom... cliente" />
-            <marker date="1494383908300" expanded="true" signature="38039:38287" placeholder="SELECT b.cod... factulinea" />
-            <marker date="1494383908300" expanded="true" signature="43893:43952" placeholder="SELECT * FRO... formapago" />
-            <marker date="1494383908300" expanded="true" signature="46310:46365" placeholder="SELECT * FRO... banco" />
+            <marker date="1494387211459" expanded="true" signature="14964:15043" placeholder="SELECT stock... producto" />
+            <marker date="1494387211459" expanded="true" signature="15269:15383" placeholder="SELECT id_pr... productobodega" />
+            <marker date="1494387211459" expanded="true" signature="15660:15762" placeholder="UPDATE produ... " />
+            <marker date="1494387211459" expanded="true" signature="15864:15945" placeholder="SELECT SUM(s... productobodega" />
+            <marker date="1494387211459" expanded="true" signature="16120:16247" placeholder="UPDATE produ... " />
+            <marker date="1494387211459" expanded="true" signature="16372:16474" placeholder="UPDATE produ... " />
+            <marker date="1494387211459" expanded="true" signature="16576:16657" placeholder="SELECT SUM(s... productobodega" />
+            <marker date="1494387211459" expanded="true" signature="16831:16901" placeholder="UPDATE produ... " />
+            <marker date="1494387211459" expanded="true" signature="17016:17279" placeholder="SELECT p.nom... producto" />
+            <marker date="1494387211459" expanded="true" signature="18190:18204" placeholder="..." />
+            <marker date="1494387211459" expanded="true" signature="18640:18676" placeholder="DELETE FROM " />
+            <marker date="1494387211459" expanded="true" signature="18746:18817" placeholder="DELETE FROM " />
+            <marker date="1494387211459" expanded="true" signature="18877:18931" placeholder="SELECT * FRO... factulinea" />
+            <marker date="1494387211459" expanded="true" signature="19300:19413" placeholder="SELECT id_pr... productobodega" />
+            <marker date="1494387211459" expanded="true" signature="19798:19900" placeholder="UPDATE produ... " />
+            <marker date="1494387211459" expanded="true" signature="19986:20066" placeholder="SELECT SUM(s... productobodega" />
+            <marker date="1494387211459" expanded="true" signature="20216:20285" placeholder="UPDATE produ... " />
+            <marker date="1494387211459" expanded="true" signature="20591:20643" placeholder="SELECT * FRO... facturas" />
+            <marker date="1494387211459" expanded="true" signature="23281:23361" placeholder="SELECT canti... factulinea" />
+            <marker date="1494387211459" expanded="true" signature="24007:24065" placeholder="DELETE FROM " />
+            <marker date="1494387211459" expanded="true" signature="24625:24704" placeholder="SELECT stock... producto" />
+            <marker date="1494387211459" expanded="true" signature="24931:25045" placeholder="SELECT id_pr... productobodega" />
+            <marker date="1494387211459" expanded="true" signature="25591:25704" placeholder="UPDATE produ... " />
+            <marker date="1494387211459" expanded="true" signature="25814:25895" placeholder="SELECT SUM(s... productobodega" />
+            <marker date="1494387211459" expanded="true" signature="26082:26220" placeholder="UPDATE produ... " />
+            <marker date="1494387211459" expanded="true" signature="26532:26634" placeholder="UPDATE produ... " />
+            <marker date="1494387211459" expanded="true" signature="26744:26825" placeholder="SELECT SUM(s... productobodega" />
+            <marker date="1494387211459" expanded="true" signature="27012:27139" placeholder="UPDATE produ... " />
+            <marker date="1494387211459" expanded="true" signature="27556:27669" placeholder="UPDATE produ... " />
+            <marker date="1494387211459" expanded="true" signature="27779:27860" placeholder="SELECT SUM(s... productobodega" />
+            <marker date="1494387211459" expanded="true" signature="28046:28116" placeholder="UPDATE produ... " />
+            <marker date="1494387211459" expanded="true" signature="28372:28474" placeholder="UPDATE produ... " />
+            <marker date="1494387211459" expanded="true" signature="28584:28665" placeholder="SELECT SUM(s... productobodega" />
+            <marker date="1494387211459" expanded="true" signature="28851:28921" placeholder="UPDATE produ... " />
+            <marker date="1494387211459" expanded="true" signature="29126:29192" placeholder="SELECT stock... producto" />
+            <marker date="1494387211459" expanded="true" signature="29635:29649" placeholder="..." />
+            <marker date="1494387211459" expanded="true" signature="34033:34377" placeholder="SELECT c.nom... cliente" />
+            <marker date="1494387211459" expanded="true" signature="38039:38287" placeholder="SELECT b.cod... factulinea" />
+            <marker date="1494387211459" expanded="true" signature="43920:43979" placeholder="SELECT * FRO... formapago" />
+            <marker date="1494387211459" expanded="true" signature="46340:46395" placeholder="SELECT * FRO... banco" />
           </folding>
         </state>
       </provider>
@@ -558,13 +574,13 @@
         <state relative-caret-position="1462">
           <caret line="88" column="67" selection-start-line="88" selection-start-column="67" selection-end-line="88" selection-end-column="67" />
           <folding>
-            <marker date="1494384873152" expanded="true" signature="4096:4175" placeholder="SELECT SUM(s... productobodega" />
-            <marker date="1494384873152" expanded="true" signature="4202:4294" placeholder="SELECT stock... productobodega" />
-            <marker date="1494384873152" expanded="true" signature="4625:4856" placeholder="SELECT SUM(p... producto_transformacion" />
-            <marker date="1494384873152" expanded="true" signature="5193:5349" placeholder="SELECT b.id_... bodega" />
-            <marker date="1494384873152" expanded="true" signature="5824:5862" placeholder="..." />
-            <marker date="1494384873152" expanded="true" signature="6192:6230" placeholder="..." />
-            <marker date="1494384873152" expanded="true" signature="6556:6594" placeholder="..." />
+            <marker date="1494385527841" expanded="true" signature="4390:4469" placeholder="SELECT SUM(s... productobodega" />
+            <marker date="1494385527841" expanded="true" signature="4496:4588" placeholder="SELECT stock... productobodega" />
+            <marker date="1494385527841" expanded="true" signature="4919:5150" placeholder="SELECT SUM(p... producto_transformacion" />
+            <marker date="1494385527841" expanded="true" signature="5487:5643" placeholder="SELECT b.id_... bodega" />
+            <marker date="1494385527841" expanded="true" signature="6118:6156" placeholder="..." />
+            <marker date="1494385527841" expanded="true" signature="6486:6524" placeholder="..." />
+            <marker date="1494385527841" expanded="true" signature="6850:6888" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -628,14 +644,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/conexion/conexion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="21" column="41" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sistema/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="801">
@@ -662,55 +670,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/facturas_clientes/guardar_factura.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="654">
-          <caret line="381" column="0" selection-start-line="381" selection-start-column="0" selection-end-line="381" selection-end-column="0" />
-          <folding>
-            <marker date="1494383908300" expanded="true" signature="14964:15043" placeholder="SELECT stock... producto" />
-            <marker date="1494383908300" expanded="true" signature="15269:15383" placeholder="SELECT id_pr... productobodega" />
-            <marker date="1494383908300" expanded="true" signature="15660:15762" placeholder="UPDATE produ... " />
-            <marker date="1494383908300" expanded="true" signature="15864:15945" placeholder="SELECT SUM(s... productobodega" />
-            <marker date="1494383908300" expanded="true" signature="16120:16247" placeholder="UPDATE produ... " />
-            <marker date="1494383908300" expanded="true" signature="16372:16474" placeholder="UPDATE produ... " />
-            <marker date="1494383908300" expanded="true" signature="16576:16657" placeholder="SELECT SUM(s... productobodega" />
-            <marker date="1494383908300" expanded="true" signature="16831:16901" placeholder="UPDATE produ... " />
-            <marker date="1494383908300" expanded="true" signature="17016:17279" placeholder="SELECT p.nom... producto" />
-            <marker date="1494383908300" expanded="true" signature="18190:18204" placeholder="..." />
-            <marker date="1494383908300" expanded="true" signature="18640:18676" placeholder="DELETE FROM " />
-            <marker date="1494383908300" expanded="true" signature="18746:18817" placeholder="DELETE FROM " />
-            <marker date="1494383908300" expanded="true" signature="18877:18931" placeholder="SELECT * FRO... factulinea" />
-            <marker date="1494383908300" expanded="true" signature="19300:19413" placeholder="SELECT id_pr... productobodega" />
-            <marker date="1494383908300" expanded="true" signature="19798:19900" placeholder="UPDATE produ... " />
-            <marker date="1494383908300" expanded="true" signature="19986:20066" placeholder="SELECT SUM(s... productobodega" />
-            <marker date="1494383908300" expanded="true" signature="20216:20285" placeholder="UPDATE produ... " />
-            <marker date="1494383908300" expanded="true" signature="20591:20643" placeholder="SELECT * FRO... facturas" />
-            <marker date="1494383908300" expanded="true" signature="23281:23361" placeholder="SELECT canti... factulinea" />
-            <marker date="1494383908300" expanded="true" signature="24007:24065" placeholder="DELETE FROM " />
-            <marker date="1494383908300" expanded="true" signature="24625:24704" placeholder="SELECT stock... producto" />
-            <marker date="1494383908300" expanded="true" signature="24931:25045" placeholder="SELECT id_pr... productobodega" />
-            <marker date="1494383908300" expanded="true" signature="25591:25704" placeholder="UPDATE produ... " />
-            <marker date="1494383908300" expanded="true" signature="25814:25895" placeholder="SELECT SUM(s... productobodega" />
-            <marker date="1494383908300" expanded="true" signature="26082:26220" placeholder="UPDATE produ... " />
-            <marker date="1494383908300" expanded="true" signature="26532:26634" placeholder="UPDATE produ... " />
-            <marker date="1494383908300" expanded="true" signature="26744:26825" placeholder="SELECT SUM(s... productobodega" />
-            <marker date="1494383908300" expanded="true" signature="27012:27139" placeholder="UPDATE produ... " />
-            <marker date="1494383908300" expanded="true" signature="27556:27669" placeholder="UPDATE produ... " />
-            <marker date="1494383908300" expanded="true" signature="27779:27860" placeholder="SELECT SUM(s... productobodega" />
-            <marker date="1494383908300" expanded="true" signature="28046:28116" placeholder="UPDATE produ... " />
-            <marker date="1494383908300" expanded="true" signature="28372:28474" placeholder="UPDATE produ... " />
-            <marker date="1494383908300" expanded="true" signature="28584:28665" placeholder="SELECT SUM(s... productobodega" />
-            <marker date="1494383908300" expanded="true" signature="28851:28921" placeholder="UPDATE produ... " />
-            <marker date="1494383908300" expanded="true" signature="29126:29192" placeholder="SELECT stock... producto" />
-            <marker date="1494383908300" expanded="true" signature="29635:29649" placeholder="..." />
-            <marker date="1494383908300" expanded="true" signature="34033:34377" placeholder="SELECT c.nom... cliente" />
-            <marker date="1494383908300" expanded="true" signature="38039:38287" placeholder="SELECT b.cod... factulinea" />
-            <marker date="1494383908300" expanded="true" signature="43893:43952" placeholder="SELECT * FRO... formapago" />
-            <marker date="1494383908300" expanded="true" signature="46310:46365" placeholder="SELECT * FRO... banco" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sistema/facturas_clientes/new_facturaventa.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -724,10 +683,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/facturas_clientes/ver_articulos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-443">
+          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sistema/facturas_clientes/frame_articulos.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-59">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
           <folding>
             <marker date="1491160328044" expanded="true" signature="232:287" placeholder="select porce... iva" />
           </folding>
@@ -736,25 +703,74 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sistema/facturas_clientes/processing_inventario_productos.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1105">
-          <caret line="6" column="104" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="104" />
+        <state relative-caret-position="476">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding>
-            <marker date="1494384873152" expanded="true" signature="4096:4175" placeholder="SELECT SUM(s... productobodega" />
-            <marker date="1494384873152" expanded="true" signature="4202:4294" placeholder="SELECT stock... productobodega" />
-            <marker date="1494384873152" expanded="true" signature="4625:4856" placeholder="SELECT SUM(p... producto_transformacion" />
-            <marker date="1494384873152" expanded="true" signature="5193:5349" placeholder="SELECT b.id_... bodega" />
-            <marker date="1494384873152" expanded="true" signature="5824:5862" placeholder="..." />
-            <marker date="1494384873152" expanded="true" signature="6192:6230" placeholder="..." />
-            <marker date="1494384873152" expanded="true" signature="6556:6594" placeholder="..." />
+            <marker date="1494385527841" expanded="true" signature="4390:4469" placeholder="SELECT SUM(s... productobodega" />
+            <marker date="1494385527841" expanded="true" signature="4496:4588" placeholder="SELECT stock... productobodega" />
+            <marker date="1494385527841" expanded="true" signature="4919:5150" placeholder="SELECT SUM(p... producto_transformacion" />
+            <marker date="1494385527841" expanded="true" signature="5487:5643" placeholder="SELECT b.id_... bodega" />
+            <marker date="1494385527841" expanded="true" signature="6118:6156" placeholder="..." />
+            <marker date="1494385527841" expanded="true" signature="6486:6524" placeholder="..." />
+            <marker date="1494385527841" expanded="true" signature="6850:6888" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/facturas_clientes/ver_articulos.php">
+    <entry file="file://$PROJECT_DIR$/sistema/conexion/conexion.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+        <state relative-caret-position="391">
+          <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/facturas_clientes/guardar_factura.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="1076" column="53" selection-start-line="1076" selection-start-column="53" selection-end-line="1076" selection-end-column="53" />
+          <folding>
+            <marker date="1494387211459" expanded="true" signature="14964:15043" placeholder="SELECT stock... producto" />
+            <marker date="1494387211459" expanded="true" signature="15269:15383" placeholder="SELECT id_pr... productobodega" />
+            <marker date="1494387211459" expanded="true" signature="15660:15762" placeholder="UPDATE produ... " />
+            <marker date="1494387211459" expanded="true" signature="15864:15945" placeholder="SELECT SUM(s... productobodega" />
+            <marker date="1494387211459" expanded="true" signature="16120:16247" placeholder="UPDATE produ... " />
+            <marker date="1494387211459" expanded="true" signature="16372:16474" placeholder="UPDATE produ... " />
+            <marker date="1494387211459" expanded="true" signature="16576:16657" placeholder="SELECT SUM(s... productobodega" />
+            <marker date="1494387211459" expanded="true" signature="16831:16901" placeholder="UPDATE produ... " />
+            <marker date="1494387211459" expanded="true" signature="17016:17279" placeholder="SELECT p.nom... producto" />
+            <marker date="1494387211459" expanded="true" signature="18190:18204" placeholder="..." />
+            <marker date="1494387211459" expanded="true" signature="18640:18676" placeholder="DELETE FROM " />
+            <marker date="1494387211459" expanded="true" signature="18746:18817" placeholder="DELETE FROM " />
+            <marker date="1494387211459" expanded="true" signature="18877:18931" placeholder="SELECT * FRO... factulinea" />
+            <marker date="1494387211459" expanded="true" signature="19300:19413" placeholder="SELECT id_pr... productobodega" />
+            <marker date="1494387211459" expanded="true" signature="19798:19900" placeholder="UPDATE produ... " />
+            <marker date="1494387211459" expanded="true" signature="19986:20066" placeholder="SELECT SUM(s... productobodega" />
+            <marker date="1494387211459" expanded="true" signature="20216:20285" placeholder="UPDATE produ... " />
+            <marker date="1494387211459" expanded="true" signature="20591:20643" placeholder="SELECT * FRO... facturas" />
+            <marker date="1494387211459" expanded="true" signature="23281:23361" placeholder="SELECT canti... factulinea" />
+            <marker date="1494387211459" expanded="true" signature="24007:24065" placeholder="DELETE FROM " />
+            <marker date="1494387211459" expanded="true" signature="24625:24704" placeholder="SELECT stock... producto" />
+            <marker date="1494387211459" expanded="true" signature="24931:25045" placeholder="SELECT id_pr... productobodega" />
+            <marker date="1494387211459" expanded="true" signature="25591:25704" placeholder="UPDATE produ... " />
+            <marker date="1494387211459" expanded="true" signature="25814:25895" placeholder="SELECT SUM(s... productobodega" />
+            <marker date="1494387211459" expanded="true" signature="26082:26220" placeholder="UPDATE produ... " />
+            <marker date="1494387211459" expanded="true" signature="26532:26634" placeholder="UPDATE produ... " />
+            <marker date="1494387211459" expanded="true" signature="26744:26825" placeholder="SELECT SUM(s... productobodega" />
+            <marker date="1494387211459" expanded="true" signature="27012:27139" placeholder="UPDATE produ... " />
+            <marker date="1494387211459" expanded="true" signature="27556:27669" placeholder="UPDATE produ... " />
+            <marker date="1494387211459" expanded="true" signature="27779:27860" placeholder="SELECT SUM(s... productobodega" />
+            <marker date="1494387211459" expanded="true" signature="28046:28116" placeholder="UPDATE produ... " />
+            <marker date="1494387211459" expanded="true" signature="28372:28474" placeholder="UPDATE produ... " />
+            <marker date="1494387211459" expanded="true" signature="28584:28665" placeholder="SELECT SUM(s... productobodega" />
+            <marker date="1494387211459" expanded="true" signature="28851:28921" placeholder="UPDATE produ... " />
+            <marker date="1494387211459" expanded="true" signature="29126:29192" placeholder="SELECT stock... producto" />
+            <marker date="1494387211459" expanded="true" signature="29635:29649" placeholder="..." />
+            <marker date="1494387211459" expanded="true" signature="34033:34377" placeholder="SELECT c.nom... cliente" />
+            <marker date="1494387211459" expanded="true" signature="38039:38287" placeholder="SELECT b.cod... factulinea" />
+            <marker date="1494387211459" expanded="true" signature="43920:43979" placeholder="SELECT * FRO... formapago" />
+            <marker date="1494387211459" expanded="true" signature="46340:46395" placeholder="SELECT * FRO... banco" />
+          </folding>
         </state>
       </provider>
     </entry>

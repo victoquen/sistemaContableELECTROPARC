@@ -910,12 +910,12 @@ if ($accion == "modificar") {
             <div id="botonBusqueda">
                 <div align="center">
                     <!--
-                                                    <? if ($accion == "alta") {
+                                                    <?php if ($accion == "alta") {
                         ?>
-                                                    <img src="../img/botoncobrar.png" width="85" height="22" onClick="aceptar(<? echo $validacion ?>,'<? echo $accion ?>',<? echo $idfactura ?>)" border="1" onMouseOver="style.cursor=cursor">
-                                                    <? } else { ?>
-                                                    <img src="../img/botonaceptar.jpg" width="85" height="22" onClick="aceptar(<? echo $validacion ?>,'<? echo $accion ?>',<? echo $idfactura ?>)" border="1" onMouseOver="style.cursor=cursor">
-                                                    <? } ?>
+                                                    <img src="../img/botoncobrar.png" width="85" height="22" onClick="aceptar(<?php echo $validacion ?>,'<?php echo $accion ?>',<?php echo $idfactura ?>)" border="1" onMouseOver="style.cursor=cursor">
+                                                    <?php } else { ?>
+                                                    <img src="../img/botonaceptar.jpg" width="85" height="22" onClick="aceptar(<?php echo $validacion ?>,'<?php echo $accion ?>',<?php echo $idfactura ?>)" border="1" onMouseOver="style.cursor=cursor">
+                                                    <?php } ?>
                                                     -->
                     <img src="../img/botonaceptar.jpg" width="85" height="22"
                          onClick="aceptar(<?php echo $validacion ?>,'<?php echo $accion ?>',<?php echo $idfactura ?>)"
@@ -947,7 +947,7 @@ if ($accion == "modificar") {
                         <tr>
                             <td width="14%">Fecha de cobro</td>
                             <td width="18%"><input id="fechacobro" type="text" class="cajaPequena" NAME="fechacobro"
-                                                   maxlength="10" value="<? echo $hoy ?>" readonly><img
+                                                   maxlength="10" value="<?php echo $hoy ?>" readonly><img
                                     src="../img/calendario.png" name="Image1" id="Image1" width="16" height="16"
                                     border="0" id="Image1" onMouseOver="this.style.cursor='pointer'" title="Calendario">
                                 <script type="text/javascript">
@@ -1084,7 +1084,7 @@ if ($accion == "modificar") {
                 </div>
                 <div id="lineaResultado">
                     <iframe width="100%" height="250" id="frame_cobros" name="frame_cobros" frameborder="0"
-                            src="frame_cobros.php?accion=ver&idfactura=<? echo $idfactura ?>">
+                            src="frame_cobros.php?accion=ver&idfactura=<?php echo $idfactura ?>">
                         <ilayer width="100%" height="250" id="frame_cobros" name="frame_cobros"></ilayer>
                     </iframe>
                     <iframe id="frame_datos" name="frame_datos" width="0" height="0" frameborder="0">
