@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b6142e45-63f9-4e7d-93db-bb8b68d54bc1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sistema/conexion/conexion.php" afterPath="$PROJECT_DIR$/sistema/conexion/conexion.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sistema/facturas_clientes/guardar_factura.php" afterPath="$PROJECT_DIR$/sistema/facturas_clientes/guardar_factura.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sistema/facturas_clientes/new_facturaventa.php" afterPath="$PROJECT_DIR$/sistema/facturas_clientes/new_facturaventa.php" />
     </list>
     <ignored path="sistemaContableELECTROPARC.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -66,11 +65,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="guardar_factura.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="guardar_factura.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sistema/facturas_clientes/guardar_factura.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="1076" column="53" selection-start-line="1076" selection-start-column="53" selection-end-line="1076" selection-end-column="53" />
+            <state relative-caret-position="279">
+              <caret line="20" column="20" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="20" />
               <folding>
                 <marker date="1494387211459" expanded="true" signature="14964:15043" placeholder="SELECT stock... producto" />
                 <marker date="1494387211459" expanded="true" signature="15269:15383" placeholder="SELECT id_pr... productobodega" />
@@ -117,16 +116,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="new_facturaventa.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="new_facturaventa.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sistema/facturas_clientes/new_facturaventa.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="239" column="36" selection-start-line="239" selection-start-column="36" selection-end-line="239" selection-end-column="36" />
+            <state relative-caret-position="631">
+              <caret line="889" column="0" selection-start-line="889" selection-start-column="0" selection-end-line="889" selection-end-column="0" />
               <folding>
-                <marker date="1494384771671" expanded="true" signature="211:266" placeholder="select porce... iva" />
-                <marker date="1494384771671" expanded="true" signature="685:723" placeholder="SELECT * FRO... facturero" />
-                <marker date="1494384771671" expanded="true" signature="934:1034" placeholder="select serie... facturero" />
-                <marker date="1494384771671" expanded="true" signature="1490:1561" placeholder="SELECT max(c... facturas" />
+                <marker date="1494387855377" expanded="true" signature="211:266" placeholder="select porce... iva" />
+                <marker date="1494387855377" expanded="true" signature="685:723" placeholder="SELECT * FRO... facturero" />
+                <marker date="1494387855377" expanded="true" signature="934:1034" placeholder="select serie... facturero" />
+                <marker date="1494387855377" expanded="true" signature="1490:1561" placeholder="SELECT max(c... facturas" />
               </folding>
             </state>
           </provider>
@@ -135,8 +134,8 @@
       <file leaf-file-name="articulos_factura.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sistema/facturas_clientes/js/articulos_factura.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="457">
-              <caret line="139" column="5" selection-start-line="139" selection-start-column="5" selection-end-line="139" selection-end-column="5" />
+            <state relative-caret-position="2329">
+              <caret line="137" column="52" selection-start-line="137" selection-start-column="46" selection-end-line="137" selection-end-column="52" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -155,11 +154,11 @@
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/sistema/facturas_clientes/js/articulos_factura.js" />
         <option value="$PROJECT_DIR$/sistema/index.php" />
-        <option value="$PROJECT_DIR$/sistema/facturas_clientes/new_facturaventa.php" />
         <option value="$PROJECT_DIR$/sistema/facturas_clientes/ver_articulos.php" />
         <option value="$PROJECT_DIR$/sistema/facturas_clientes/processing_inventario_productos.php" />
         <option value="$PROJECT_DIR$/sistema/conexion/conexion.php" />
         <option value="$PROJECT_DIR$/sistema/facturas_clientes/guardar_factura.php" />
+        <option value="$PROJECT_DIR$/sistema/facturas_clientes/new_facturaventa.php" />
       </list>
     </option>
   </component>
@@ -285,25 +284,11 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="contrato" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sistemaContableELECTROPARC" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sistemaContableELECTROPARC" />
+              <option name="myItemId" value="facturas_clientes" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sistema" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="conexion" />
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -410,7 +395,7 @@
       <workItem from="1489254516614" duration="1303000" />
       <workItem from="1489419719302" duration="590000" />
       <workItem from="1494345025962" duration="4259000" />
-      <workItem from="1494382911883" duration="4137000" />
+      <workItem from="1494382911883" duration="4832000" />
     </task>
     <task id="LOCAL-00001" summary="LocalStorage UP">
       <created>1494349590317</created>
@@ -440,11 +425,18 @@
       <option name="project" value="LOCAL" />
       <updated>1494385592751</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="php fixed 1">
+      <created>1494387234128</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1494387234128</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10289000" />
+    <option name="totallyTimeSpent" value="10984000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -487,7 +479,8 @@
     <MESSAGE value="factura, frame" />
     <MESSAGE value="php corregidos" />
     <MESSAGE value="productos facturas corregidos SELECT" />
-    <option name="LAST_COMMIT_MESSAGE" value="productos facturas corregidos SELECT" />
+    <MESSAGE value="php fixed 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="php fixed 1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -590,10 +583,10 @@
         <state relative-caret-position="1479">
           <caret line="87" column="37" selection-start-line="87" selection-start-column="16" selection-end-line="87" selection-end-column="37" />
           <folding>
-            <marker date="1494384771671" expanded="true" signature="211:266" placeholder="select porce... iva" />
-            <marker date="1494384771671" expanded="true" signature="685:723" placeholder="SELECT * FRO... facturero" />
-            <marker date="1494384771671" expanded="true" signature="934:1034" placeholder="select serie... facturero" />
-            <marker date="1494384771671" expanded="true" signature="1490:1561" placeholder="SELECT max(c... facturas" />
+            <marker date="1494387855377" expanded="true" signature="211:266" placeholder="select porce... iva" />
+            <marker date="1494387855377" expanded="true" signature="685:723" placeholder="SELECT * FRO... facturero" />
+            <marker date="1494387855377" expanded="true" signature="934:1034" placeholder="select serie... facturero" />
+            <marker date="1494387855377" expanded="true" signature="1490:1561" placeholder="SELECT max(c... facturas" />
           </folding>
         </state>
       </provider>
@@ -660,29 +653,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/facturas_clientes/js/articulos_factura.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="139" column="5" selection-start-line="139" selection-start-column="5" selection-end-line="139" selection-end-column="5" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/facturas_clientes/new_facturaventa.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="239" column="36" selection-start-line="239" selection-start-column="36" selection-end-line="239" selection-end-column="36" />
-          <folding>
-            <marker date="1494384771671" expanded="true" signature="211:266" placeholder="select porce... iva" />
-            <marker date="1494384771671" expanded="true" signature="685:723" placeholder="SELECT * FRO... facturero" />
-            <marker date="1494384771671" expanded="true" signature="934:1034" placeholder="select serie... facturero" />
-            <marker date="1494384771671" expanded="true" signature="1490:1561" placeholder="SELECT max(c... facturas" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sistema/facturas_clientes/ver_articulos.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-443">
@@ -725,10 +695,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/facturas_clientes/js/articulos_factura.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2329">
+          <caret line="137" column="52" selection-start-line="137" selection-start-column="46" selection-end-line="137" selection-end-column="52" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sistema/facturas_clientes/guardar_factura.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="1076" column="53" selection-start-line="1076" selection-start-column="53" selection-end-line="1076" selection-end-column="53" />
+        <state relative-caret-position="279">
+          <caret line="20" column="20" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="20" />
           <folding>
             <marker date="1494387211459" expanded="true" signature="14964:15043" placeholder="SELECT stock... producto" />
             <marker date="1494387211459" expanded="true" signature="15269:15383" placeholder="SELECT id_pr... productobodega" />
@@ -770,6 +750,19 @@
             <marker date="1494387211459" expanded="true" signature="38039:38287" placeholder="SELECT b.cod... factulinea" />
             <marker date="1494387211459" expanded="true" signature="43920:43979" placeholder="SELECT * FRO... formapago" />
             <marker date="1494387211459" expanded="true" signature="46340:46395" placeholder="SELECT * FRO... banco" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/facturas_clientes/new_facturaventa.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="631">
+          <caret line="889" column="0" selection-start-line="889" selection-start-column="0" selection-end-line="889" selection-end-column="0" />
+          <folding>
+            <marker date="1494387855377" expanded="true" signature="211:266" placeholder="select porce... iva" />
+            <marker date="1494387855377" expanded="true" signature="685:723" placeholder="SELECT * FRO... facturero" />
+            <marker date="1494387855377" expanded="true" signature="934:1034" placeholder="select serie... facturero" />
+            <marker date="1494387855377" expanded="true" signature="1490:1561" placeholder="SELECT max(c... facturas" />
           </folding>
         </state>
       </provider>
