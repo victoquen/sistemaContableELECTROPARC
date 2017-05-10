@@ -4,7 +4,7 @@
 	 */
 
 	/* Array of database columns which should be read and sent back to DataTables */
-	$aColumns = array('id_producto', 'codigo', 'nombre', 'stock', 'pvp', 'costo','iva','transformacion' );
+	$aColumns = array('p.id_producto', 'p.codigo', 'p.nombre', 'p.stock', 'p.pvp', 'p.costo', 'p.iva', 'p.transformacion');
 	$aColumns_aux= array( 'p.id_producto','p.codigo', 'p.nombre', 'p.stock', 'p.pvp' , 'p.costo' , 'p.iva', 'p.transformacion');
 	/* Indexed column (used for fast and accurate table cardinality) */
 	$sIndexColumn = "id_producto";
@@ -76,13 +76,22 @@
 
 
 	if($tipo == "administrador"){
-		$sQuery = "
+		/*$sQuery = "
 		SELECT SQL_CALC_FOUND_ROWS ".implode(", ", $aColumns)."
-		FROM   producto  WHERE (borrado = 0)
+		FROM   producto  p WHERE (p.borrado = 0)
                 $sWhere
 		$sOrder
 		$sLimit
-	";
+	";*/
+
+		$sQuery = "
+		SELECT SQL_CALC_FOUND_ROWS ".implode(", ", $aColumns_aux)."
+		FROM   producto p INNER JOIN productobodega pb ON p.id_producto = pb.id_producto   
+		WHERE (p.borrado = 0)AND(pb.id_bodega = '$id_bodega') 
+                $sWhere
+		$sOrder
+		$sLimit
+		";
 	}else{
 
 		$sQuery = "
