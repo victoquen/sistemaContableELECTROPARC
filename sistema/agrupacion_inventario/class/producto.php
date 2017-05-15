@@ -81,7 +81,7 @@ class Producto
 
     public function get_producto_id($conn, $id)
     {
-        $rows;
+
         $query="SELECT codigo, nombre, stock, costo, pvp, iva,  composicion, aplicacion, proveedor, grupo, subgrupo, stock_consignacion, utilidad FROM producto WHERE id_producto ='$id' AND borrado = 0";
         $result = mysql_query($query, $conn);
         $row = mysql_fetch_assoc($result);
@@ -90,7 +90,7 @@ class Producto
 
     public function get_producto_borrado_id($conn, $id)
     {
-        $rows;
+        
         $query="SELECT codigo, nombre, stock, costo, pvp, iva,  composicion, aplicacion, proveedor, grupo, subgrupo, stock_consignacion, utilidad FROM producto WHERE id_producto ='$id' AND borrado = 1";
         $result = mysql_query($query, $conn);
         $row = mysql_fetch_assoc($result);

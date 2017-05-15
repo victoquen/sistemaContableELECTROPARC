@@ -39,7 +39,7 @@ class Retencion
 
     public function save_retencion($conn, $id_retencion, $serie1,$serie2,$codigo_retencion,$autorizacion,$concepto,$totalretencion,$fecha)
     {
-        $query="INSERT INTO retencion VALUES ('','$id_retencion','$serie1','$serie2','$codigo_retencion','$autorizacion','$concepto','$totalretencion','$fecha',0)";
+        $query="INSERT INTO retencion VALUES (null,'$id_retencion','$serie1','$serie2','$codigo_retencion','$autorizacion','$concepto','$totalretencion','$fecha',0)";
         $result= mysql_query($query, $conn);
         $codretencion=mysql_insert_id();
         return $codretencion;
