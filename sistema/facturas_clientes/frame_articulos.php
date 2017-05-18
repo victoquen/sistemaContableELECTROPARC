@@ -106,7 +106,7 @@ $ivaporcetaje = mysql_result($rs_iva, 0, "porcentaje");
     </head>
     <script language="javascript">
 
-        function pon_prefijo(codarticulo, nombre, precio, idarticulo, costo, stock, stock_consignacion, iva, transformacion, precio_con_iva) {
+        function pon_prefijo(codarticulo, nombre, precio, idarticulo, costo, stock,  iva, transformacion, precio_con_iva) {
             var password = null;
             var clave = "a";
 			var arrayJSindice=null;
@@ -117,12 +117,14 @@ $ivaporcetaje = mysql_result($rs_iva, 0, "porcentaje");
                 switch (op)
                 {
                     case 1:
+
                         parent.opener.document.formulario.codarticulo1.value = codarticulo;
                         parent.opener.document.formulario.descripcion1.value = nombre;
                         parent.opener.document.formulario.precio1.value = precio;
                         parent.opener.document.formulario.idarticulo1.value = idarticulo;
                         parent.opener.document.formulario.costo1.value = costo;
                         parent.opener.document.formulario.stock1.value = stock;
+
                         if (iva == 1)
                         {
                             parent.opener.document.formulario.ivaporc1.value = <?php echo $ivaporcetaje;?>;
@@ -131,6 +133,7 @@ $ivaporcetaje = mysql_result($rs_iva, 0, "porcentaje");
                         }
                         else
                         {
+
                             parent.opener.document.formulario.ivaporc1.value = 0;
                             parent.opener.document.formulario.grabaiva1.style.display = 'none';
                         }

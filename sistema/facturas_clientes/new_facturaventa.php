@@ -2,7 +2,7 @@
 
 
 include ("../conexion/conexion.php");
-error_reporting(0);
+//error_reporting(0);
 $db = new ServidorBaseDatos();
 $conn = $db->getConexion();
 
@@ -27,7 +27,6 @@ $res_o=mysql_query($query_o,$conn);
 
 
 //id facturero por defecto segun EL USUARIO
-
 $idfacturero_seleccionado = $_REQUEST["idfacturero"];
 $tipo=$_REQUEST["tipo"];
 
@@ -380,6 +379,8 @@ if (($maximo >= $inicio) && ($maximo <= $fin) && ($fechah <= $fechac)) {
                                     <img src="../img/ver.png" width="16" height="16" onClick="ventanaArticulos(1)" onMouseOver="style.cursor = cursor" title="Buscar articulos">
                                     <input NAME="descripcion1" id="descripcion1" type="text" class="cajaExtraGrande"  onClick="ventanaArticulos(1)" readonly>
                                     <input style="display: none" name="grabaiva1" id="grabaiva1" class="cajaExtraMinima" readonly>
+
+
                                 </td>
 								<td align="center"> 
 									<select name="cbobodega1" id="cbobodega1" class="comboPequeno" ></select>																									

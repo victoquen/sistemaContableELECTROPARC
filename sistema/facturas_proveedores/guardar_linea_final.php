@@ -8,6 +8,9 @@ $usuario = new ServidorBaseDatos();
 $conn = $usuario->getConexion();
 
 
+
+
+
 $importe_pasar = $_GET["importe_pasar"];
 $iva_pasar = $_GET["iva_pasar"];
 $cantidad_pasar = $_GET["cantidad_pasar"];
@@ -25,6 +28,22 @@ $iva = $_GET["iva"];
 $descuento = $_GET["descuento"];
 $utilidad = $_GET["utilidad"];
 $idbodega = $_GET["cbobodega"];
+
+
+// MANEJO DE SERIES ***********************************************************************************
+$series = $_GET["series"];
+$series_string = "";
+$num_series = sizeof($series);
+$cont =0;
+while($cont < $num_series){
+	if($cont == ($num_series -1)){
+		$series_string = $series_string . $series[$cont];
+	}else{
+		$series_string = $series_string . $series[$cont] . "----";
+	}
+	$cont++;
+}
+//*******************************************************************************************************
 
 
 $importe_total = $importe - $importe_pasar;

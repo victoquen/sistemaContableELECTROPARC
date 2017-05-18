@@ -21,6 +21,23 @@ $descuento=$_GET["descuento"];
 $utilidad=$_GET["utilidad"];
 $idbodega = $_GET["cbobodega"];
 
+// MANEJO DE SERIES ***********************************************************************************
+$series = $_GET["series"];
+$series_string = "";
+$num_series = sizeof($series);
+$cont =0;
+while($cont < $num_series){
+    if($cont == ($num_series -1)){
+        $series_string = $series_string . $series[$cont];
+    }else{
+        $series_string = $series_string . $series[$cont] . "----";
+    }
+    $cont++;
+}
+//*******************************************************************************************************
+
+
+
 $importe_total=$importe - $importe_pasar;
 $iva_total=$iva - $iva_pasar;
 $descuento_total=$descuento-$descuento_pasar;
@@ -34,7 +51,7 @@ $importe_total = $importe_total + $descuento_total;
 
 
 $consulta = "UPDATE factulineaptmp 
-            SET cantidad = '".$cantidad."', costo = '".$precio."', importe = '".$importe."', iva = '".$iva."', dcto = '".$descuento."', utilidad = '".$utilidad."', id_bodega = '".$idbodega."'
+            SET cantidad = '".$cantidad."', costo = '".$precio."', importe = '".$importe."', iva = '".$iva."', dcto = '".$descuento."', utilidad = '".$utilidad."', id_bodega = '".$idbodega."', series = '".$series_string."'
             WHERE codfactura ='".$codfactura."' AND numlinea='".$numlinea."'";
 $rs_consulta = mysql_query($consulta, $conn);
 //echo "<script>

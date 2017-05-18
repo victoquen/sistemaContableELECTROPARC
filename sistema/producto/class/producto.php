@@ -32,14 +32,14 @@ class Producto
         $this->utilidad=null;
     }
 
-    public function save_producto($conn, $codigo, $nombre, $stock, $costo, $pvp, $iva,  $composicion,$aplicacion, $proveedor,$grupo, $subgrupo,$stock_consignacion,$gasto,$utilidad,$idbodega)
+    public function save_producto($conn, $codigo, $nombre, $stock, $costo, $pvp, $iva,  $composicion,$aplicacion, $proveedor,$grupo, $subgrupo,$stock_consignacion,$gasto,$utilidad,$idbodega, $moto)
     {
         $this->codigo=strtoupper($codigo);
         $this->nombre=strtoupper($nombre);
         $compo=strtoupper($composicion);
         $apli=strtoupper($aplicacion);
 
-        $query="INSERT INTO producto VALUES (null,'$this->codigo','$this->nombre','$stock','$costo','$pvp','$iva','$compo','$apli','$proveedor','$grupo','$subgrupo','$stock_consignacion','0','0',$gasto,'$utilidad')";
+        $query="INSERT INTO producto VALUES (null,'$this->codigo','$this->nombre','$stock','$costo','$pvp','$iva','$compo','$apli','$proveedor','$grupo','$subgrupo','$stock_consignacion','0','0',$gasto,'$utilidad','$moto')";
         $result= mysql_query($query, $conn);
         $id_producto=mysql_insert_id();
 		
@@ -57,7 +57,7 @@ class Producto
         return $result;
     }
 
-    public function update_producto($conn, $idproducto, $codigo, $nombre, $stock, $costo, $pvp,$iva,$composicion,$aplicacion, $proveedor,$grupo, $subgrupo,$stock_consignacion,$gasto,$utilidad)
+    public function update_producto($conn, $idproducto, $codigo, $nombre, $stock, $costo, $pvp,$iva,$composicion,$aplicacion, $proveedor,$grupo, $subgrupo,$stock_consignacion,$gasto,$utilidad,$moto)
     {
         $this->codigo=strtoupper($codigo);
         $this->nombre=strtoupper($nombre);
@@ -65,7 +65,8 @@ class Producto
         $apli=strtoupper($aplicacion);
         $query = "UPDATE producto SET codigo = '$this->codigo', nombre = '$this->nombre', stock = '$stock',
                                       costo = '$costo', pvp = '$pvp',iva='$iva',composicion = '$compo',aplicacion ='$apli',
-                                      proveedor = '$proveedor',grupo='$grupo',subgrupo='$subgrupo', stock_consignacion='$stock_consignacion',gasto='$gasto',utilidad='$utilidad' 
+                                      proveedor = '$proveedor',grupo='$grupo',subgrupo='$subgrupo', stock_consignacion='$stock_consignacion',
+                                      gasto='$gasto',utilidad='$utilidad',moto='$moto'
                   WHERE id_producto = '$idproducto'";
 
         $result = mysql_query($query, $conn);
@@ -76,8 +77,8 @@ class Producto
 
     public function get_producto_id($conn, $id)
     {
-        $rows;
-        $query="SELECT p.codigo, p.nombre, SUM(b.stock) as stock, p.costo, p.pvp, p.iva,  p.composicion, p.aplicacion, p.proveedor, p.grupo, p.subgrupo, p.stock_consignacion, p.gasto, p.utilidad FROM producto p INNER JOIN productobodega b ON p.id_producto=b.id_producto WHERE p.id_producto ='$id' AND p.borrado = 0";
+        $query="SELECT p.codigo, p.nombre, SUM(b.stock) as stock, p.costo, p.pvp, p.iva,  p.composicion, p.aplicacion, p.proveedor, p.grupo, p.subgrupo, p.stock_consignacion, p.gasto, p.utilidad, p.moto 
+                FROM producto p INNER JOIN productobodega b ON p.id_producto=b.id_producto WHERE p.id_producto ='$id' AND p.borrado = 0";
         $result = mysql_query($query, $conn);
         $row = mysql_fetch_assoc($result);
         return $row;
@@ -85,8 +86,7 @@ class Producto
 
     public function get_producto_borrado_id($conn, $id)
     {
-        $rows;
-        $query="SELECT codigo, nombre, stock, costo, pvp, iva,  composicion, aplicacion, proveedor, grupo, subgrupo, stock_consignacion, gasto, utilidad FROM producto WHERE id_producto ='$id' AND borrado = 1";
+        $query="SELECT codigo, nombre, stock, costo, pvp, iva,  composicion, aplicacion, proveedor, grupo, subgrupo, stock_consignacion, gasto, utilidad, moto FROM producto WHERE id_producto ='$id' AND borrado = 1";
         $result = mysql_query($query, $conn);
         $row = mysql_fetch_assoc($result);
         return $row;

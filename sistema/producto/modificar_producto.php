@@ -229,6 +229,21 @@ $row = $producto->get_producto_id($conn, $idproducto);
                                                         </select>  
                                                     </td>
                                                 </tr>
+
+                        <tr>
+                            <td width="15%">PRODUCTO ESPECIAL</td>
+                            <td width="43%">
+                                <select NAME="especial" id="especial" class="comboPequeno">
+                                    <?if ($row["moto"]==0){?>
+                                        <option selected value="0">No</option>
+                                        <option value="1">Si</option>
+                                    <?}  else {?>
+                                        <option value="0">No</option>
+                                        <option selected value="1">Si</option>
+                                    <?}?>
+                                </select>
+                            </td>
+                        </tr>
                                                 <tr>
                                                     <td width="15%">Stock</td>
                                                     <td width="43%"> <?php echo $row['stock']?></td>   
