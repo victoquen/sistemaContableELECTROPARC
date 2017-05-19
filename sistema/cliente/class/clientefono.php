@@ -36,7 +36,7 @@ class Clientefono
 
     public function update_telefono($conn, $idtelefono, $id_cliente, $numero, $descripcion, $operadora)
     {
-        $this->nombre=strtoupper($nombre);
+
         $query = "UPDATE clientefono SET id_cliente='$id_cliente', numero = '$numero',descripcion = '$descripcion',
                                      operadora='$operadora'
                   WHERE id_telefono = '$idtelefono'";
@@ -49,7 +49,7 @@ class Clientefono
 
     public function get_telefono_id($conn, $id)
     {
-        $rows;
+   
         $query="SELECT  id_cliente, numero, descripcion, operadora
                 FROM clientefono
                 WHERE id_telefono ='$id'";

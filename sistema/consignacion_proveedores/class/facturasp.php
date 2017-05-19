@@ -58,7 +58,7 @@ class Facturap
 
     public function save_factura($conn, $id_proveedor, $codigo_factura,$serie1,$serie2,$autorizacion, $fecha, $descuento,$iva0, $iva12,$iva,$flete,$totalfactura, $credito, $plazo, $tipocomprobante,$retencion)
     {
-        $query="INSERT INTO facturasp_consig VALUES ('','$id_proveedor','$codigo_factura','$serie1','$serie2','$autorizacion','$fecha','$descuento','$iva0','$iva12',
+        $query="INSERT INTO facturasp_consig VALUES (null,'$id_proveedor','$codigo_factura','$serie1','$serie2','$autorizacion','$fecha','$descuento','$iva0','$iva12',
                                              '$iva','$flete','$totalfactura',0,0)";
         $result= mysql_query($query, $conn);
         $codfactura=mysql_insert_id();

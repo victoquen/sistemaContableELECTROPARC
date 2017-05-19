@@ -41,7 +41,7 @@ class remision
 
     public function save_remision($conn, $idfactura, $serie1,$serie2,$codremision,$autorizacion,$fecha_fin,$motivo,$punto_partida,$nombre_trans,$ci_trans)
     {
-        $query="INSERT INTO remision VALUES ('','$idfactura','$serie1','$serie2','$codremision','$autorizacion','$fecha_fin','$motivo','$punto_partida','$nombre_trans','$ci_trans')";
+        $query="INSERT INTO remision VALUES (null,'$idfactura','$serie1','$serie2','$codremision','$autorizacion','$fecha_fin','$motivo','$punto_partida','$nombre_trans','$ci_trans')";
         $result= mysql_query($query, $conn);
         $codremision=mysql_insert_id();
         return $codremision;
@@ -63,7 +63,7 @@ class remision
 
     public function get_remision_id($conn, $id)
     {
-        $rows;
+  
         $query="SELECT id_factura,codigo_remision,serie1,serie2, autorizacion,fecha_fin,motivo,punto_partida,nombre_trans,ci_trans
                 FROM remision
                 WHERE id_remision ='$id'";

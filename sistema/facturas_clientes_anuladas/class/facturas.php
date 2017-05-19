@@ -27,7 +27,7 @@ class Factura
 
     public function save_factura($conn, $id_cliente, $codigo_factura, $fecha, $iva, $totalfactura, $retencion, $totalretencion)
     {
-        $query="INSERT INTO facturas VALUES ('','$id_cliente','$codigo_factura','$fecha','$iva','$totalfactura','$retencion','$totalretencion',0)";
+        $query="INSERT INTO facturas VALUES (null,'$id_cliente','$codigo_factura','$fecha','$iva','$totalfactura','$retencion','$totalretencion',0)";
         $result= mysql_query($query, $conn);
         $codfactura=mysql_insert_id();
         return $codfactura;

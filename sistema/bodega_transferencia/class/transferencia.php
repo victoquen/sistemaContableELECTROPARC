@@ -22,7 +22,7 @@ class Transferencia
 
     public function save($conn, $fecha)
     {
-        $query="INSERT INTO transferencia VALUES ('','$fecha',0)";
+        $query="INSERT INTO transferencia VALUES (null,'$fecha',0)";
         $result= mysql_query($query, $conn);
         $idtransferencia=mysql_insert_id();
         return $idtransferencia;

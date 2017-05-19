@@ -84,7 +84,7 @@ class Factura
 
     public function get_factura_id($conn, $id)
     {
-        $rows;
+
         $query="SELECT id_cliente,codigo_factura,serie1,serie2,autorizacion,fecha,descuento,iva0,iva12,iva,flete,totalfactura,credito,plazo
                 FROM facturas
                 WHERE id_factura ='$id' AND anulado = 0";
@@ -95,7 +95,7 @@ class Factura
 
     public function get_factura_borrado_id($conn, $id)
     {
-        $rows;
+
         $query="SELECT id_cliente,codigo_factura,serie1,serie2,autorizacion,fecha,descuento,iva0,iva12,iva,flete,totalfactura,credito,plazo
                 FROM facturas
                 WHERE id_factura ='$id' AND anulado = 1";

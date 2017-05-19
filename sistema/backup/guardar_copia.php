@@ -49,7 +49,7 @@ if ($resultado) {
 	$cabecera2="NUEVA COPIA DE SEGURIDAD";
 } else {
 	$query_operacion="INSERT INTO tabbackup (id, denominacion, fecha, hora, archivo) 
-					VALUES ('', '$denominacion', '$fecha', '$hora', '$archivo')";					
+					VALUES (null, '$denominacion', '$fecha', '$hora', '$archivo')";
 	$rs_operacion=mysql_query($query_operacion);
 	if ($rs_operacion) { $mensaje="La copia de seguridad se ha creado correctamente."; }
 	$cabecera2="NUEVA COPIA DE SEGURIDAD";

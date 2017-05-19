@@ -9,6 +9,11 @@ $rs_iva = mysql_query($sel_iva, $conn);
 $ivaporcetaje = mysql_result($rs_iva, 0, "porcentaje");
 //**********************************************************************
 
+//get datos SESSION
+session_start();
+$id_bodega=$_SESSION['id_bodega'];
+$tipo=$_SESSION['tipo'];
+
 
 $idfactura=$_GET["idfactura"];
 $id_factulineap=$_GET["id_factulineap"];
@@ -183,7 +188,7 @@ body {
 					<td>
 					<?php 
 						
-						$queryb = "SELECT b.id_bodega as idbodega, b.nombre as nombre FROM bodega b";
+						$queryb = "SELECT b.id_bodega as idbodega, b.nombre as nombre FROM bodega b  WHERE b.id_bodega ='$id_bodega'";
 							   $resb = mysql_query($queryb, $conn);?>
 					
 						<select name="cbobodega" id="cbobodega" class="comboPequeno" >

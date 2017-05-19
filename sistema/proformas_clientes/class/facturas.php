@@ -42,7 +42,7 @@ class Factura
 
     public function save_factura($conn, $id_cliente, $codigo_factura,$serie1,$serie2,$autorizacion, $fecha, $descuento,$iva0, $iva12,$iva,$flete,$totalfactura, $credito, $plazo,$remision)
     {
-        $query="INSERT INTO proformas VALUES ('','$id_cliente','$codigo_factura','$serie1','$serie2','$autorizacion','$fecha','$descuento','$iva0','$iva12',
+        $query="INSERT INTO proformas VALUES (null,'$id_cliente','$codigo_factura','$serie1','$serie2','$autorizacion','$fecha','$descuento','$iva0','$iva12',
                                              '$iva','$flete','$totalfactura','$credito','$plazo',0,0,'$remision')";
         $result= mysql_query($query, $conn);
         $codfactura=mysql_insert_id();
