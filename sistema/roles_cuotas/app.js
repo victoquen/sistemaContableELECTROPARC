@@ -7,51 +7,68 @@ var app = angular.module("myApp", ['ngStorage', 'ngRoute', 'angularUtils.directi
 var ApiUrl= function(){
 
     this.getEmpleados=function(){
-        return 'http://localhost:8080/electroparc/sistemaContableELECTROPARC/sistema/roles_cuotas/selectEmpleado.php';
+        return 'http://localhost/electroparc/sistema/roles_cuotas/selectEmpleado.php';
     }
     this.getContrato=function(){
-        return 'http://localhost:8080/electroparc/sistemaContableELECTROPARC/sistema/roles_cuotas/selecContrato.php';
+        return 'http://localhost/electroparc/sistema/roles_cuotas/selecContrato.php';
     }
     this.getRol=function(){
-        return 'http://localhost:8080/electroparc/sistemaContableELECTROPARC/sistema/roles_cuotas/addOne.php';
+        return 'http://localhost/electroparc/sistema/roles_cuotas/addOne.php';
     }
     this.getModRol=function(){
-        return 'http://localhost:8080/electroparc/sistemaContableELECTROPARC/sistema/roles_cuotas/modificar.php';
+        return 'http://localhost/electroparc/sistema/roles_cuotas/modificar.php';
     }
     this.getContratoIns=function(){
-        return 'http://localhost:8080/electroparc/sistemaContableELECTROPARC/sistema/roles_cuotas/insertContrato.php';
+        return 'http://localhost/electroparc/sistema/roles_cuotas/insertContrato.php';
     }
     this.getCuotas=function(){
-        return 'http://localhost:8080/electroparc/sistemaContableELECTROPARC/sistema/roles_cuotas/addPagos.php';
+        return 'http://localhost/electroparc/sistema/roles_cuotas/addPagos.php';
     }
     this.getContratoCred=function(){
-        return 'http://localhost:8080/electroparc/sistemaContableELECTROPARC/sistema/roles_cuotas/getContratosActivos.php';
+        return 'http://localhost/electroparc/sistema/roles_cuotas/getContratosActivos.php';
     }
     this.getCuotasPago=function(){
-        return 'http://localhost:8080/electroparc/sistemaContableELECTROPARC/sistema/roles_cuotas/getCuotas.php';
+        return 'http://localhost/electroparc/sistema/roles_cuotas/getCuotas.php';
     }
     this.getUpdatePago=function(){
-        return 'http://localhost:8080/electroparc/sistemaContableELECTROPARC/sistema/roles_cuotas/updatePago.php';
+        return 'http://localhost/electroparc/sistema/roles_cuotas/updatePago.php';
     }
     this.getAllRoles1=function(){
-        return 'http://localhost:8080/electroparc/sistemaContableELECTROPARC/sistema/roles_cuotas/selectAll.php';
+        return 'http://localhost/electroparc/sistema/roles_cuotas/selectAll.php';
     }
     this.getAllRoles2 = function () {
-        return 'http://localhost:8080/electroparc/sistemaContableELECTROPARC/sistema/roles_cuotas/selectAll.php';
+        return 'http://localhost/electroparc/sistema/roles_cuotas/selectAll.php';
     }
     this.getAllContratosActi = function () {
-        return 'http://localhost:8080/electroparc/sistemaContableELECTROPARC/sistema/roles_cuotas/getAllContratos.php';
+        return 'http://localhost/electroparc/sistema/roles_cuotas/getAllContratos.php';
     }
     this.getAllContratosActiMod1 = function () {
-        return 'http://localhost:8080/electroparc/sistemaContableELECTROPARC/sistema/roles_cuotas/modifyCont.php';
+        return 'http://localhost/electroparc/sistema/roles_cuotas/modifyCont.php';
     }
     this.getUsr = function () {
-        return 'http://localhost:8080/electroparc/sistemaContableELECTROPARC/sistema/roles_cuotas/getUsr.php';
+        return 'http://localhost/electroparc/sistema/roles_cuotas/getUsr.php';
     }
     this.getUpdatePagoDelete = function () {
-        return 'http://localhost:8080/electroparc/sistemaContableELECTROPARC/sistema/roles_cuotas/updatePagoDelete.php';
+        return 'http://localhost/electroparc/sistema/roles_cuotas/updatePagoDelete.php';
     }
- 
+    this.getContratoCred2 = function () {
+        return 'http://localhost/electroparc/sistema/roles_cuotas/getContratosActivos2.php';
+    }
+    this.getFacLinea = function () {
+        return 'http://localhost/electroparc/sistema/roles_cuotas/getNames.php';
+    }
+    this.getUpdateCont = function () {
+        return 'http://localhost/electroparc/sistema/roles_cuotas/updateStateCont.php';
+    }
+    this.getAllContratosActi3 = function () {
+        return 'http://localhost/electroparc/sistema/roles_cuotas/getAllContratosActivos3.php';
+    }
+    this.getAllCompra = function () {
+        return 'http://localhost/electroparc/sistema/roles_cuotas/getFactura.php';
+    }
+    this.getClientePrint = function () {
+        return 'http://localhost/electroparc/sistema/roles_cuotas/getClientePrint.php';
+    }
 }
 
 app.factory("myProvider",function(){

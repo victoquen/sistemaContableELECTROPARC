@@ -208,7 +208,7 @@ app.controller('test', ['$scope', '$http', '$location', 'myProvider', '$localSto
          //   console.log($scope.diaslaborados);
             if ($scope.diasNoLaborados != 0) {
 
-                $scope.descuento = $scope.diasNoLaborados * ($scope.contrato.sueldo / $scope.totalDiasMes);
+                $scope.descuento = $scope.diasNoLaborados * $scope.fixedNumbers($scope.contrato.sueldo / $scope.totalDiasMes);
                 $scope.descuento = parseFloat($scope.fixedNumbers($scope.descuento));
                // console.log($scope.descuento);
             } else {
@@ -379,11 +379,14 @@ app.controller('test', ['$scope', '$http', '$location', 'myProvider', '$localSto
     }
 
     $scope.testPrint = function(){
+        var doc = new jsPDF({
 
-        var doc = new jsPDF('landscape');
+            unit: "mm",
+            format: "letter"
+        });
 
         var x = 20;
-        var y = 60;
+        var y = 50;
 
 
         doc.setFillColor(176, 176, 176);
@@ -440,7 +443,7 @@ app.controller('test', ['$scope', '$http', '$location', 'myProvider', '$localSto
             days='sin dias'
         }
         
-        doc.text(x + 50, y + 30, days);
+        doc.text(x, y + 35, days);
         doc.text(x, y + 40, 'Total Dias no Laborados:');
         if (m != undefined) {
             doc.text(x + 50, y + 40, m.toString());
@@ -448,44 +451,53 @@ app.controller('test', ['$scope', '$http', '$location', 'myProvider', '$localSto
             doc.text(x + 50, y + 40, '0');
         }
         
-        doc.text(x + 60, y + 40, 'Sueldo:');
-        doc.text(x + 80, y + 40, $scope.contrato.sueldo);
-        doc.text(x + 100, y + 40, 'Seguro:');
-        doc.text(x + 120, y + 40, $scope.seguroShow.toString());
-        doc.text(x + 135, y + 40, 'Descuento:');
-        doc.text(x + 165, y + 40, $scope.descuento.toString());
-        doc.text(x + 185, y + 40, 'Comision:');
-        doc.text(x + 205, y + 40, $scope.comision.toString());
-        doc.text(x + 180, y + 80, 'Total:');
-        doc.text(x + 200, y + 80, $scope.total.toString());
+        doc.text(x, y + 45, 'Sueldo:');
+        doc.text(x + 50, y + 45, $scope.contrato.sueldo);
+        doc.text(x, y + 50, 'Seguro:');
+        doc.text(x + 50, y + 50, $scope.seguroShow.toString());
+        doc.text(x, y + 55, 'Descuento:');
+        doc.text(x + 50, y + 55, $scope.descuento.toString());
+        doc.text(x, y + 60, 'Comision:');
+        doc.text(x + 50, y + 60, $scope.comision.toString());
+        doc.text(x, y + 65, 'Total:');
+        var aux = $scope.total.toFixedDown(2);
+        doc.text(x + 50, y + 65, aux.toString());
         //doc.setFontType("bold");
-        doc.text(150, 10, 'ELECTROPARC CIA. LTDA.','center');
+        doc.text(100, 10, 'ELECTROPARC CIA. LTDA.', 'center');
         doc.setFontSize(10);
-        doc.text(150, 20, 'electroparc10@gmail.com', 'center');
+        doc.text(100, 20, 'electroparc10@gmail.com', 'center');
         doc.setFontSize(14);
-        doc.text(150, 40, 'ROL DE PAGO', 'center');
-     
+        doc.text(100, 40, 'ROL DE PAGO', 'center');
+
+
         doc.setFontSize(10);
-        doc.text(150, y + 130, 'Electroparc Cia. Ltda. ', 'center');
-        
-        doc.text(150, y + 135, 'Riobamba Ecuador ', 'center');
+        doc.text(100, y + 75, 'Electroparc Cia. Ltda. ', 'center');
 
-        doc.text(150, y + 140, 'Direccion: Matriz Lavalle 30 56 y Olmedo Esquina', 'center');
+        doc.text(100, y + 80, 'Riobamba Ecuador ', 'center');
 
-        doc.text(150, y + 145, 'Telefonos: 0994161053','center');
-        
+        doc.text(100, y + 85, 'Direccion: Matriz Lavalle 30 56 y Olmedo Esquina', 'center');
+
+        doc.text(100, y + 90, 'Telefonos: 0994161053', 'center');
 
 
-      //  doc.setTextColor(255, 0, 0);
-       // doc.text(100, 25, 'USD.00');
-        doc.save('two-by-four.pdf')
+        doc.line(100, y + 65, 140, y + 65);
+        doc.line(150, y + 65, 190, y + 65);
+        //  doc.setTextColor(255, 0, 0);
+        // doc.text(100, 25, 'USD.00');
+        $scope.dateN = Date.now;
+        $scope.name = 'RolPago' + $scope.dateN;
+        doc.save('RolPago.pdf');
     }
     $scope.testPrint2 = function () {
 
-        var doc = new jsPDF('landscape');
+        var doc = new jsPDF({
+            
+            unit: "mm",
+            format: "letter"
+        });
 
         var x = 20;
-        var y = 60;
+        var y = 50;
 
 
         doc.setFillColor(176, 176, 176);
@@ -542,7 +554,7 @@ app.controller('test', ['$scope', '$http', '$location', 'myProvider', '$localSto
             days = 'sin dias'
         }
 
-        doc.text(x + 50, y + 30, days);
+        doc.text(x , y + 35, days);
         doc.text(x, y + 40, 'Total Dias no Laborados:');
         if (m != undefined) {
             doc.text(x + 50, y + 40, m.toString());
@@ -550,37 +562,42 @@ app.controller('test', ['$scope', '$http', '$location', 'myProvider', '$localSto
             doc.text(x + 50, y + 40, '0');
         }
 
-        doc.text(x + 60, y + 40, 'Sueldo:');
-        doc.text(x + 80, y + 40, $scope.contrato.sueldo);
-        doc.text(x + 100, y + 40, 'Seguro:');
-        doc.text(x + 120, y + 40, $scope.seguroShow.toString());
-        doc.text(x + 135, y + 40, 'Descuento:');
-        doc.text(x + 165, y + 40, $scope.descuento.toString());
-        doc.text(x + 180, y + 40, 'Comision:');
-        doc.text(x + 200, y + 40, $scope.comision.toString());
-        doc.text(x + 180, y + 80, 'Total:');
-        doc.text(x + 200, y + 80, $scope.total.toString());
+        doc.text(x , y + 45, 'Sueldo:');
+        doc.text(x + 50, y + 45, $scope.contrato.sueldo);
+        doc.text(x  , y + 50, 'Seguro:');
+        doc.text(x + 50, y + 50, $scope.seguroShow.toString());
+        doc.text(x , y + 55, 'Descuento:');
+        doc.text(x + 50, y + 55, $scope.descuento.toString());
+        doc.text(x , y + 60, 'Comision:');
+        doc.text(x + 50, y + 60, $scope.comision.toString());
+        doc.text(x, y + 65, 'Total:');
+        var aux = $scope.total.toFixedDown(2);
+        doc.text(x + 50, y + 65,aux.toString());
         //doc.setFontType("bold");
-        doc.text(150, 10, 'ELECTROPARC CIA. LTDA.', 'center');
+        doc.text(100, 10, 'ELECTROPARC CIA. LTDA.', 'center');
         doc.setFontSize(10);
-        doc.text(150, 20, 'electroparc10@gmail.com', 'center');
+        doc.text(100, 20, 'electroparc10@gmail.com', 'center');
         doc.setFontSize(14);
-        doc.text(150, 40, 'ROL DE PAGO', 'center');
+        doc.text(100, 40, 'ROL DE PAGO', 'center');
 
 
         doc.setFontSize(10);
-        doc.text(150, y + 130, 'Electroparc Cia. Ltda. ', 'center');
+        doc.text(100, y + 75, 'Electroparc Cia. Ltda. ', 'center');
 
-        doc.text(150, y + 135, 'Riobamba Ecuador ', 'center');
+        doc.text(100, y + 80, 'Riobamba Ecuador ', 'center');
 
-        doc.text(150, y + 140, 'Direccion: Matriz Lavalle 30 56 y Olmedo Esquina', 'center');
+        doc.text(100, y + 85, 'Direccion: Matriz Lavalle 30 56 y Olmedo Esquina', 'center');
 
-        doc.text(150, y + 145, 'Telefonos: 0994161053', 'center');
+        doc.text(100, y + 90, 'Telefonos: 0994161053', 'center');
 
 
+        doc.line(100, y+65, 140, y+65);
+        doc.line(150, y + 65, 190, y + 65);
         //  doc.setTextColor(255, 0, 0);
         // doc.text(100, 25, 'USD.00');
-        doc.save('two-by-four.pdf')
+        $scope.dateN = Date.now;
+        $scope.name = 'RolPago' + $scope.dateN;
+        doc.save('RolPago.pdf');
     }
 
 
@@ -600,4 +617,10 @@ app.controller('test', ['$scope', '$http', '$location', 'myProvider', '$localSto
 
 
     }
+
+    Number.prototype.toFixedDown = function (digits) {
+        var re = new RegExp("(\\d+\\.\\d{" + digits + "})(\\d)"),
+            m = this.toString().match(re);
+        return m ? parseFloat(m[1]) : this.valueOf();
+    };
 } ]);

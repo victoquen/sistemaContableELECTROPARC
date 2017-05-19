@@ -52,7 +52,7 @@ class Factura
 
     public function save_factura($conn, $id_cliente, $codigo_factura,$serie1,$serie2,$autorizacion, $fecha, $descuento,$iva0, $iva12,$iva,$flete,$totalfactura, $credito, $plazo,$remision, $codigo_retencion, $ret_iva, $ret_fuente, $idfacturero)
     {
-        $query="INSERT INTO facturas VALUES ('','$id_cliente','$codigo_factura','$serie1','$serie2','$autorizacion','$fecha','$descuento','$iva0','$iva12',
+        $query="INSERT INTO facturas VALUES (null,'$id_cliente','$codigo_factura','$serie1','$serie2','$autorizacion','$fecha','$descuento','$iva0','$iva12',
                                              '$iva','$flete','$totalfactura','$credito','$plazo',0,0,'$remision','$codigo_retencion','$ret_iva','$ret_fuente', '$idfacturero')";
 
        

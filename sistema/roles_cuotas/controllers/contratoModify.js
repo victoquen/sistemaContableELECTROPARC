@@ -24,7 +24,7 @@ app.controller('ModifyController', ['$scope', '$http', '$location', 'myProvider'
 
         $http({
             method: 'POST',
-            url: myProvider.getAllContratosActi(),
+            url: myProvider.getAllContratosActi3(),
             headers: {
                 'Content-Type': 'application/json'
             },
@@ -45,7 +45,7 @@ app.controller('ModifyController', ['$scope', '$http', '$location', 'myProvider'
                     console.log($scope.listaContratos);
                 } else {
                     console.log(response.data);
-                    alert('La cedula ingresada no tiene un contrato activo');
+                  //  alert('La cedula ingresada no tiene un contrato activo');
                 }
 
             }, function errorCallback(response) {

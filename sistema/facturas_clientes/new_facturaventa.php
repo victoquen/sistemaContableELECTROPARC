@@ -2,7 +2,7 @@
 
 
 include ("../conexion/conexion.php");
-error_reporting(0);
+//error_reporting(0);
 $db = new ServidorBaseDatos();
 $conn = $db->getConexion();
 

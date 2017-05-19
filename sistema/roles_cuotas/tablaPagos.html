@@ -19,6 +19,7 @@
     <script src="angular-1.4.6/ngStorage.min.js"></script>
     <script src="angular-1.4.6/angular-route.js"></script>
     <script src="bower_components/angularUtils-pagination/dirPagination.js"></script>
+    <script src="scripts/jspdf.min.js"></script>
     <script src="app.js"></script>
     <script src="controllers/pagosController.js"></script>
 
@@ -78,13 +79,10 @@
                     <br />
                     <div class="col-md-12 col-xs-12">
                         <h4>Buscar:</h4><br />
-                        <div class="col-md-10 col-xs-12">
+                        <div class="col-md-12 col-xs-12">
                             <input type="text" class="form-control hidden-print" ng-model="cedula" placeholder="busqueda" /><br />
                             </div>
-                        <div class="col-md-2 col-xs-12">
-
-                            <input type="submit" class="form-control btn-primary hidden-print" value="Buscar" ng-click="loadContratos()" /><br />
-                        </div>
+                       
                             <br />
                             <br /><br />
                             <br />
@@ -101,6 +99,8 @@
                                     <tr>
                                         <th>#</th>
                                         <th>Codigo</th>
+                                        <th>Nombre</th>
+                                        <th>Cedula</th>
                                         <th>Fecha Contrato</th>
                                         <th>Plazo Credito</th>
                                         <th>Estado</th>
@@ -108,6 +108,7 @@
                                         <th>Interes Credito</th>
                                         <th>Interes Mora</th>
                                         <th>Cuota Inicial</th>
+                                        <th>Productos</th>
                                     </tr>
 
 
@@ -116,10 +117,12 @@
                                 </thead>
                                 <tbody>
 
-                                    <tr dir-paginate="item in listaContratos | itemsPerPage:7" ng-class="{'selected':$index == selectedRow}" ng-click="setClickedRow($index,item)">
+                                    <tr dir-paginate="item in listaContratos | filter: cedula| itemsPerPage:7" ng-class="{'selected':$index == selectedRow}" ng-click="setClickedRow($index,item)">
 
                                         <td>{{$index}}</td>
                                         <td>{{ item.codigo}}</td>
+                                        <td>{{ item.nombre}}</td>
+                                        <td>{{ item.ci_ruc}}</td>
                                         <td>{{ item.confechacontrato }}</td>
                                         <td>{{ item.conplazocredito }}</td>
                                         <td>{{ item.estconcodigo }}</td>
@@ -127,7 +130,7 @@
                                         <td>{{ item.coninterescredito }}</td>
                                         <td>{{ item.coninteresmora }}</td>
                                         <td>{{ item.concuotainicial }}</td>
-                                        
+                                        <td>{{ item.producto }}</td>
 
                                     </tr>
                                     <dir-pagination-controls></dir-pagination-controls> <!--agregar botones paginacion-->
@@ -202,9 +205,13 @@
                                     <div class="modal-body">
                                         <div class="row">
                                             <div class="col-md-12">
+                                                <label>Descripcion Pago</label>
                                                 <input type="text"class="form-control" readonly ng-model="pagar.descripcion_pago" />
+                                                <label>Fecha maxima</label>
                                                 <input type="text" class="form-control" readonly ng-model="pagar.fecha_maxima" />
-                                                <input type="text" class="form-control" readonly ng-model="pagar.valor" />
+                                                <label>Valor a Pagar</label>
+                                                <input type="text" class="form-control"  ng-model="pagar.valor" />
+                                                <label>Fecha Actual</label>
                                                 <input type="text" class="form-control" readonly ng-model="dateNow" />
                                             </div>
                                         </div>
@@ -282,7 +289,7 @@
                     <div class="col-md-3 col-xs-12">
                         <br />
                         <br />
-                        <input class="form-control btn-primary hidden-print" type="submit" value="Imprimir" /><br>
+                        <input class="form-control btn-primary hidden-print" type="submit" value="Imprimir" ng-click="imprimir()" /><br>
                     </div>
                     <!-- Modal -->
                     <div class="modal fade" id="myModal2" role="dialog">
@@ -297,10 +304,10 @@
                                 <div class="modal-body">
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <input type="text" class="form-control"  ng-model="pagar1.descripcion_pago" />
-                                            <input type="text" class="form-control"  ng-model="pagar1.fecha_maxima" />
-                                            <input type="text" class="form-control"  ng-model="pagar1.valor" />
-                                            <input type="text" class="form-control"  ng-model="pagar1.fecha_pago" />
+                                            <input type="text" class="form-control" readonly ng-model="pagar1.descripcion_pago" />
+                                            <input type="text" class="form-control"readonly  ng-model="pagar1.fecha_maxima" />
+                                            <input type="text" class="form-control"readonly  ng-model="pagar1.valor" />
+                                            <input type="text" class="form-control" readonly ng-model="pagar1.fecha_pago" />
                                         </div>
                                     </div>
                                 </div>

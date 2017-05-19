@@ -1,5 +1,5 @@
 ﻿<?php
-error_reporting(0);
+//error_reporting(0);
 include("../js/fechas.php");
 include("../conexion/conexion.php");
 $usuario = new ServidorBaseDatos();
