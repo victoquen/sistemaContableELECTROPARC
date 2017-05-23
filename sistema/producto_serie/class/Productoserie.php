@@ -33,9 +33,9 @@ class Productoserie
 
     }
 
-    public function save($conn, $id_productobodega, $serie){
+    public function save($conn, $id_productobodega, $serie, $linea){
 
-        $query="INSERT INTO productoserie VALUES (null,'$id_productobodega','$serie','0','0')";
+        $query="INSERT INTO productoserie VALUES (null,'$id_productobodega','$serie','0','0','0',$linea)";
         $result= mysql_query($query, $conn);
         $id=mysql_insert_id();
 
@@ -58,9 +58,9 @@ class Productoserie
         return $result;
     }
 
-    public function vendido($conn, $id)
+    public function vendido($conn, $id, $linea)
     {
-        $query = "UPDATE productoserie SET estado = 1 WHERE id='$id'";
+        $query = "UPDATE productoserie SET estado = 1, id_factulinea = '$linea' WHERE id='$id'";
         $result = mysql_query($query, $conn);
         return $result;
     }

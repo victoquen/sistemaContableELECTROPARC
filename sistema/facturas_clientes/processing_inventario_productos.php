@@ -152,9 +152,6 @@ while ($aRow = mysql_fetch_array($rResult)) {
         $query = "SELECT stock FROM productobodega WHERE (id_producto ='$id_aux')AND(id_bodega = '$id_bodega')";
     }
 
-
-
-
     $result = mysql_query($query, $conn);
     $stock_aux = mysql_result($result, 0, "stock");
 
@@ -179,17 +176,26 @@ while ($aRow = mysql_fetch_array($rResult)) {
     //$nombreb=0;
     //BODEGAS
 
-    $query = "SELECT b.id_bodega as idbodega, b.nombre as nombre FROM bodega b INNER JOIN productobodega p ON b.id_bodega = p.id_bodega WHERE p.id_producto ='" . $id_aux . "'";
-    $result = mysql_query($query, $conn);
+
+    $series = array();
+    $querys = "SELECT s.id as id, s.serie as serie
+              FROM productobodega p 
+              INNER JOIN productoserie s ON p.id_productobodega = s.id_productobodega
+              WHERE s.estado ='0' AND s.borrado = '0' AND p.id_producto ='$id_aux' AND p.id_bodega = '$id_bodega'";
+    $results = mysql_query($querys, $conn);
+    while( $rows = mysql_fetch_assoc($results) ) {
+        $series[$rows['id']] = $rows['serie'];
+    }
+    $series_pass = json_encode($series);
 
 
     //$sOutput .= '"'.str_replace('"', '\"', "<a href='#' style='font-size: 9px; text-decoration: none' onClick='pon_prefijo(&#39;$codigo_aux&#39;,&#39;$nombre_aux&#39;,&#39;$pvp_aux&#39;,&#39;$id_aux&#39;,&#39;$costo_aux&#39;,&#39;$stock_aux&#39,&#39;$iva_aux&#39;)'>". $aRow["codigo"]."</a>" ).'",';
-    $sOutput .= '"' . str_replace('"', '\"', "<a href='#' style='font-size: 11px; text-decoration: none' onClick='pon_prefijo(&#39;$codigo_aux&#39;,&#39;$nombre_aux&#39;,&#39;$pvp_aux&#39;,&#39;$id_aux&#39;,&#39;$costo_aux&#39;,&#39;$stock_aux&#39,&#39;$iva_aux&#39;,&#39;$transformacion_aux&#39;,&#39;$importe_iva&#39;)'>" . $aRow["nombre"] . "</a>") . '",';
-    $sOutput .= '"' . str_replace('"', '\"', "<a href='#' style='font-size: 11px; text-decoration: none' onClick='pon_prefijo(&#39;$codigo_aux&#39;,&#39;$nombre_aux&#39;,&#39;$pvp_aux&#39;,&#39;$id_aux&#39;,&#39;$costo_aux&#39;,&#39;$stock_aux&#39,&#39;$iva_aux&#39;,&#39;$transformacion_aux&#39;,&#39;$importe_iva&#39;)'>" . $aRow["stock"] . "</a>") . '",';
-    $sOutput .= '"' . str_replace('"', '\"', "<a href='#' style='font-size: 11px; text-decoration: none' onClick='pon_prefijo(&#39;$codigo_aux&#39;,&#39;$nombre_aux&#39;,&#39;$pvp_aux&#39;,&#39;$id_aux&#39;,&#39;$costo_aux&#39;,&#39;$stock_aux&#39,&#39;$iva_aux&#39;,&#39;$transformacion_aux&#39;,&#39;$importe_iva&#39;)'>" . $aRow["pvp"] . "</a>") . '",';
+    $sOutput .= '"' . str_replace('"', '\"', "<a href='#' style='font-size: 11px; text-decoration: none' onClick='pon_prefijo(&#39;$codigo_aux&#39;,&#39;$nombre_aux&#39;,&#39;$pvp_aux&#39;,&#39;$id_aux&#39;,&#39;$costo_aux&#39;,&#39;$stock_aux&#39,&#39;$iva_aux&#39;,&#39;$transformacion_aux&#39;,&#39;$importe_iva&#39;,$series_pass)'>" . $aRow["nombre"] . "</a>") . '",';
+    $sOutput .= '"' . str_replace('"', '\"', "<a href='#' style='font-size: 11px; text-decoration: none' onClick='pon_prefijo(&#39;$codigo_aux&#39;,&#39;$nombre_aux&#39;,&#39;$pvp_aux&#39;,&#39;$id_aux&#39;,&#39;$costo_aux&#39;,&#39;$stock_aux&#39,&#39;$iva_aux&#39;,&#39;$transformacion_aux&#39;,&#39;$importe_iva&#39;,&#39;$series&#39;,$series_pass)'>" . $aRow["stock"] . "</a>") . '",';
+    $sOutput .= '"' . str_replace('"', '\"', "<a href='#' style='font-size: 11px; text-decoration: none' onClick='pon_prefijo(&#39;$codigo_aux&#39;,&#39;$nombre_aux&#39;,&#39;$pvp_aux&#39;,&#39;$id_aux&#39;,&#39;$costo_aux&#39;,&#39;$stock_aux&#39,&#39;$iva_aux&#39;,&#39;$transformacion_aux&#39;,&#39;$importe_iva&#39;,&#39;$series&#39;,$series_pass)'>" . $aRow["pvp"] . "</a>") . '",';
     //$sOutput .= '"'.str_replace('"', '\"', "<a href='#' style='font-size: 9px; text-decoration: none' onClick='pon_prefijo(&#39;$codigo_aux&#39;,&#39;$nombre_aux&#39;,&#39;$pvp_aux&#39;,&#39;$id_aux&#39;,&#39;$costo_aux&#39;,&#39;$stock_aux&#39,&#39;$iva_aux&#39;)'>".$aRow["fecha_caducidad"]."</a>").'",';
 
-    $sOutput .= '"' . str_replace('"', '\"', "<a href='#'><img src='../img/seleccionar.gif' border='0' width='16' height='16' border='1' title='Modificar' onClick='pon_prefijo(&#39;$codigo_aux&#39;,&#39;$nombre_aux&#39;,&#39;$pvp_aux&#39;,&#39;$id_aux&#39;,&#39;$costo_aux&#39;,&#39;$stock_aux&#39,&#39;$iva_aux&#39;,&#39;$transformacion_aux&#39;,&#39;$importe_iva&#39;)' onMouseOver='style.cursor=cursor'></a>") . '",';
+    $sOutput .= '"' . str_replace('"', '\"', "<a href='#'><img src='../img/seleccionar.gif' border='0' width='16' height='16' border='1' title='Modificar' onClick='pon_prefijo(&#39;$codigo_aux&#39;,&#39;$nombre_aux&#39;,&#39;$pvp_aux&#39;,&#39;$id_aux&#39;,&#39;$costo_aux&#39;,&#39;$stock_aux&#39,&#39;$iva_aux&#39;,&#39;$transformacion_aux&#39;,&#39;$importe_iva&#39;,&#39;$series&#39;,$series_pass)' onMouseOver='style.cursor=cursor'></a>") . '",';
 
 
     $sOutput = substr_replace($sOutput, "", -1);

@@ -43,7 +43,7 @@ if ($accion != "baja") {
     $array_productos = array();
     $cont_array = 0;
 
-    if (($_POST["codarticulo1"] != "") && ($_POST["descripcion1"] != "") && ($_POST["cantidad1"] > 0)) {
+    if (($_POST["descripcion1"] != "") && ($_POST["cantidad1"] > 0)) {
         $array_productos[$cont_array]["idarticulo"] = $_POST["idarticulo1"];
         $array_productos[$cont_array]["cantidad"] = $_POST["cantidad1"];
         $array_productos[$cont_array]["costo"] = $_POST["costo1"];
@@ -53,6 +53,7 @@ if ($accion != "baja") {
         $array_productos[$cont_array]["iva"] = $_POST["iva1"];
         $array_productos[$cont_array]["subt"] = $_POST["subt1"];
         $array_productos[$cont_array]["idbodega"] = $_POST["cbobodega1"];
+        $array_productos[$cont_array]["series"] = $_POST["series1"];
 
         if ($accion == 'modificar') {
             $array_productos[$cont_array]["idfactulinea"] = $_POST["idfactulinea1"];
@@ -66,7 +67,7 @@ if ($accion != "baja") {
         }
     }
 
-    if (($_POST["codarticulo2"] != "") && ($_POST["descripcion2"] != "") && ($_POST["cantidad2"] > 0)) {
+    if (($_POST["descripcion2"] != "") && ($_POST["cantidad2"] > 0)) {
         $array_productos[$cont_array]["idarticulo"] = $_POST["idarticulo2"];
         $array_productos[$cont_array]["cantidad"] = $_POST["cantidad2"];
         $array_productos[$cont_array]["costo"] = $_POST["costo2"];
@@ -76,6 +77,7 @@ if ($accion != "baja") {
         $array_productos[$cont_array]["iva"] = $_POST["iva2"];
         $array_productos[$cont_array]["subt"] = $_POST["subt2"];
         $array_productos[$cont_array]["idbodega"] = $_POST["cbobodega2"];
+        $array_productos[$cont_array]["series"] = $_POST["series2"];
 
         if ($accion == 'modificar') {
             $array_productos[$cont_array]["idfactulinea"] = $_POST["idfactulinea2"];
@@ -90,7 +92,7 @@ if ($accion != "baja") {
     }
 
 
-    if (($_POST["codarticulo3"] != "") && ($_POST["descripcion3"] != "") && ($_POST["cantidad3"] > 0)) {
+    if (($_POST["descripcion3"] != "") && ($_POST["cantidad3"] > 0)) {
         $array_productos[$cont_array]["idarticulo"] = $_POST["idarticulo3"];
         $array_productos[$cont_array]["cantidad"] = $_POST["cantidad3"];
         $array_productos[$cont_array]["costo"] = $_POST["costo3"];
@@ -100,6 +102,7 @@ if ($accion != "baja") {
         $array_productos[$cont_array]["iva"] = $_POST["iva3"];
         $array_productos[$cont_array]["subt"] = $_POST["subt3"];
         $array_productos[$cont_array]["idbodega"] = $_POST["cbobodega3"];
+        $array_productos[$cont_array]["series"] = $_POST["series3"];
 
         if ($accion == 'modificar') {
             $array_productos[$cont_array]["idfactulinea"] = $_POST["idfactulinea3"];
@@ -113,7 +116,7 @@ if ($accion != "baja") {
         }
     }
 
-    if (($_POST["codarticulo4"] != "") && ($_POST["descripcion4"] != "") && ($_POST["cantidad4"] > 0)) {
+    if (($_POST["descripcion4"] != "") && ($_POST["cantidad4"] > 0)) {
         $array_productos[$cont_array]["idarticulo"] = $_POST["idarticulo4"];
         $array_productos[$cont_array]["cantidad"] = $_POST["cantidad4"];
         $array_productos[$cont_array]["costo"] = $_POST["costo4"];
@@ -123,6 +126,7 @@ if ($accion != "baja") {
         $array_productos[$cont_array]["iva"] = $_POST["iva4"];
         $array_productos[$cont_array]["subt"] = $_POST["subt4"];
         $array_productos[$cont_array]["idbodega"] = $_POST["cbobodega4"];
+        $array_productos[$cont_array]["series"] = $_POST["series4"];
 
         if ($accion == 'modificar') {
             $array_productos[$cont_array]["idfactulinea"] = $_POST["idfactulinea4"];
@@ -137,7 +141,7 @@ if ($accion != "baja") {
     }
 
 
-    if (($_POST["codarticulo5"] != "") && ($_POST["descripcion5"] != "") && ($_POST["cantidad5"] > 0)) {
+    if (($_POST["descripcion5"] != "") && ($_POST["cantidad5"] > 0)) {
         $array_productos[$cont_array]["idarticulo"] = $_POST["idarticulo5"];
         $array_productos[$cont_array]["cantidad"] = $_POST["cantidad5"];
         $array_productos[$cont_array]["costo"] = $_POST["costo5"];
@@ -147,6 +151,7 @@ if ($accion != "baja") {
         $array_productos[$cont_array]["iva"] = $_POST["iva5"];
         $array_productos[$cont_array]["subt"] = $_POST["subt5"];
         $array_productos[$cont_array]["idbodega"] = $_POST["cbobodega5"];
+        $array_productos[$cont_array]["series"] = $_POST["series5"];
 
         if ($accion == 'modificar') {
             $array_productos[$cont_array]["idfactulinea"] = $_POST["idfactulinea5"];
@@ -161,7 +166,7 @@ if ($accion != "baja") {
     }
 
 
-    if (($_POST["codarticulo6"] != "") && ($_POST["descripcion6"] != "") && ($_POST["cantidad6"] > 0)) {
+    if (($_POST["descripcion6"] != "") && ($_POST["cantidad6"] > 0)) {
         $array_productos[$cont_array]["idarticulo"] = $_POST["idarticulo6"];
         $array_productos[$cont_array]["cantidad"] = $_POST["cantidad6"];
         $array_productos[$cont_array]["costo"] = $_POST["costo6"];
@@ -171,6 +176,7 @@ if ($accion != "baja") {
         $array_productos[$cont_array]["iva"] = $_POST["iva6"];
         $array_productos[$cont_array]["subt"] = $_POST["subt6"];
         $array_productos[$cont_array]["idbodega"] = $_POST["cbobodega6"];
+        $array_productos[$cont_array]["series"] = $_POST["series6"];
 
         if ($accion == 'modificar') {
             $array_productos[$cont_array]["idfactulinea"] = $_POST["idfactulinea6"];
@@ -185,7 +191,7 @@ if ($accion != "baja") {
     }
 
 
-    if (($_POST["codarticulo7"] != "") && ($_POST["descripcion7"] != "") && ($_POST["cantidad7"] > 0)) {
+    if (($_POST["descripcion7"] != "") && ($_POST["cantidad7"] > 0)) {
         $array_productos[$cont_array]["idarticulo"] = $_POST["idarticulo7"];
         $array_productos[$cont_array]["cantidad"] = $_POST["cantidad7"];
         $array_productos[$cont_array]["costo"] = $_POST["costo7"];
@@ -195,6 +201,7 @@ if ($accion != "baja") {
         $array_productos[$cont_array]["iva"] = $_POST["iva7"];
         $array_productos[$cont_array]["subt"] = $_POST["subt7"];
         $array_productos[$cont_array]["idbodega"] = $_POST["cbobodega7"];
+        $array_productos[$cont_array]["series"] = $_POST["series7"];
 
         if ($accion == 'modificar') {
             $array_productos[$cont_array]["idfactulinea"] = $_POST["idfactulinea7"];
@@ -209,7 +216,7 @@ if ($accion != "baja") {
     }
 
 
-    if (($_POST["codarticulo8"] != "") && ($_POST["descripcion8"] != "") && ($_POST["cantidad8"] > 0)) {
+    if (($_POST["descripcion8"] != "") && ($_POST["cantidad8"] > 0)) {
         $array_productos[$cont_array]["idarticulo"] = $_POST["idarticulo8"];
         $array_productos[$cont_array]["cantidad"] = $_POST["cantidad8"];
         $array_productos[$cont_array]["costo"] = $_POST["costo8"];
@@ -219,6 +226,7 @@ if ($accion != "baja") {
         $array_productos[$cont_array]["iva"] = $_POST["iva8"];
         $array_productos[$cont_array]["subt"] = $_POST["subt8"];
         $array_productos[$cont_array]["idbodega"] = $_POST["cbobodega8"];
+        $array_productos[$cont_array]["series"] = $_POST["series8"];
 
         if ($accion == 'modificar') {
             $array_productos[$cont_array]["idfactulinea"] = $_POST["idfactulinea8"];
@@ -233,7 +241,7 @@ if ($accion != "baja") {
     }
 
 
-    if (($_POST["codarticulo9"] != "") && ($_POST["descripcion9"] != "") && ($_POST["cantidad9"] > 0)) {
+    if (($_POST["descripcion9"] != "") && ($_POST["cantidad9"] > 0)) {
         $array_productos[$cont_array]["idarticulo"] = $_POST["idarticulo9"];
         $array_productos[$cont_array]["cantidad"] = $_POST["cantidad9"];
         $array_productos[$cont_array]["costo"] = $_POST["costo9"];
@@ -243,6 +251,7 @@ if ($accion != "baja") {
         $array_productos[$cont_array]["iva"] = $_POST["iva9"];
         $array_productos[$cont_array]["subt"] = $_POST["subt9"];
         $array_productos[$cont_array]["idbodega"] = $_POST["cbobodega9"];
+        $array_productos[$cont_array]["series"] = $_POST["series9"];
 
         if ($accion == 'modificar') {
             $array_productos[$cont_array]["idfactulinea"] = $_POST["idfactulinea9"];
@@ -257,7 +266,7 @@ if ($accion != "baja") {
     }
 
 
-    if (($_POST["codarticulo10"] != "") && ($_POST["descripcion10"] != "") && ($_POST["cantidad10"] > 0)) {
+    if (($_POST["descripcion10"] != "") && ($_POST["cantidad10"] > 0)) {
         $array_productos[$cont_array]["idarticulo"] = $_POST["idarticulo10"];
         $array_productos[$cont_array]["cantidad"] = $_POST["cantidad10"];
         $array_productos[$cont_array]["costo"] = $_POST["costo10"];
@@ -267,6 +276,7 @@ if ($accion != "baja") {
         $array_productos[$cont_array]["iva"] = $_POST["iva10"];
         $array_productos[$cont_array]["subt"] = $_POST["subt10"];
         $array_productos[$cont_array]["idbodega"] = $_POST["cbobodega10"];
+        $array_productos[$cont_array]["series"] = $_POST["series10"];
 
         if ($accion == 'modificar') {
             $array_productos[$cont_array]["idfactulinea"] = $_POST["idfactulinea10"];
@@ -281,7 +291,7 @@ if ($accion != "baja") {
     }
 
 
-    if (($_POST["codarticulo11"] != "") && ($_POST["descripcion11"] != "") && ($_POST["cantidad11"] > 0)) {
+    if (($_POST["descripcion11"] != "") && ($_POST["cantidad11"] > 0)) {
         $array_productos[$cont_array]["idarticulo"] = $_POST["idarticulo11"];
         $array_productos[$cont_array]["cantidad"] = $_POST["cantidad11"];
         $array_productos[$cont_array]["costo"] = $_POST["costo11"];
@@ -291,6 +301,7 @@ if ($accion != "baja") {
         $array_productos[$cont_array]["iva"] = $_POST["iva11"];
         $array_productos[$cont_array]["subt"] = $_POST["subt11"];
         $array_productos[$cont_array]["idbodega"] = $_POST["cbobodega11"];
+        $array_productos[$cont_array]["series"] = $_POST["series11"];
 
         if ($accion == 'modificar') {
             $array_productos[$cont_array]["idfactulinea"] = $_POST["idfactulinea11"];
@@ -324,6 +335,7 @@ if ($accion == "alta") {
 
         $contador = 0;
         //$baseimponible=0;
+        include("../producto_serie/class/Productoserie.php");
         include("class/factulinea.php");
         $factulinea = new Factulinea();
 
@@ -343,7 +355,7 @@ if ($accion == "alta") {
             $idbodega = $array_productos[$contador]["idbodega"];
 
             //$result=$factulinea->save_factulinea($conn,$idfactura, $id_producto, $cantidad, $costo, $precio, $dcto, $subtotal,$iva,$subt);
-            $result = $factulinea->save_factulinea($conn, $idfactura, $id_producto, $cantidad, $costo, $precio, $dcto, $subtotal, $iva, $idbodega);
+            $idlinea = $factulinea->save_factulinea($conn, $idfactura, $id_producto, $cantidad, $costo, $precio, $dcto, $subtotal, $iva, $idbodega);
 
 
             $sel_stocks = "SELECT stock, stock_consignacion FROM producto WHERE id_producto='$id_producto'";
@@ -379,6 +391,15 @@ if ($accion == "alta") {
                 $sel_articulos = "UPDATE producto SET stock='$totstock' WHERE id_producto='$id_producto'";
                 $rs_articulos = mysql_query($sel_articulos, $conn);
             }
+
+            // UPDATE SERIES PRODUCTO *********************************************************************************
+
+            $series= $array_productos[$contador]["series"];
+            foreach ($series as $s) {
+                $serie = new Productoserie();
+                $res_serie = $serie->vendido($conn, $s, $idlinea);
+            }
+            //**********************************************************************************************************
 
 
             $sel_minimos = "SELECT p.nombre as producto, b.nombre as bodega, pb.stock as stock FROM producto p INNER JOIN productobodega pb ON p.id_producto = pb.id_producto INNER JOIN bodega b ON pb.id_bodega = b.id_bodega  WHERE pb.id_producto='$id_producto' AND pb.id_bodega = '$idbodega'";

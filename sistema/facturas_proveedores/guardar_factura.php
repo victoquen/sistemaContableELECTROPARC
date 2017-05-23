@@ -56,8 +56,11 @@ if ($accion == "alta") {
 
         $contador = 0;
         //$baseimponible=0;
+        include("../producto_serie/class/Productoserie.php");
         include("class/factulineap.php");
         $factulineap = new Factulineap();
+
+
 
         $num_rows = mysql_num_rows($rs_tmp);
         while ($contador < $num_rows) {
@@ -75,7 +78,7 @@ if ($accion == "alta") {
             $seriestemp = mysql_result($rs_tmp, $contador, "series");
             $series = split("----", $seriestemp);
             
-            $result = $factulineap->save_factulinea($conn, $idfactura, $id_producto, $cantidad, $costo, $dcto, $subtotal, $iva, $utilidad, $idbodega);
+            $idlinea = $factulineap->save_factulinea($conn, $idfactura, $id_producto, $cantidad, $costo, $dcto, $subtotal, $iva, $utilidad, $idbodega);
 
 
             $query_bodega = "SELECT id_productobodega, stock FROM productobodega WHERE id_producto = '$id_producto' AND id_bodega = '$idbodega'";
@@ -84,11 +87,11 @@ if ($accion == "alta") {
             $id_productobodega = mysql_result($rs_bodega, 0, "id_productobodega");
 
             // INGRESO SERIES PRODUCTO *********************************************************************************
-            include("../producto_serie/class/Productoserie.php");
+
 
             foreach ($series as $s) {
                 $serie = new Productoserie();
-                $res_serie = $serie->save($conn, $id_productobodega, $s);
+                $res_serie = $serie->save($conn, $id_productobodega, $s, $idlinea);
             }
             //**********************************************************************************************************
 

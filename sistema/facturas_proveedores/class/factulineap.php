@@ -29,6 +29,8 @@ class Factulineap
     {
         $query="INSERT INTO factulineap VALUES (null,'$id_factura','$id_producto','$cantidad','$costo','$dcto','$subtotal','$iva','$utilidad','$idbodega')";
         $result= mysql_query($query, $conn);
+        $id=mysql_insert_id();
+
 		
 		$quer="SELECT id_productobodega as id FROM productobodega WHERE id_producto='$id_producto' AND id_bodega = '$idbodega'";
 		$res= mysql_query($quer,$conn);
@@ -38,7 +40,7 @@ class Factulineap
 		}
 		
 		
-        return $result;
+        return $id;
     }
 
     /*public function delete_factulinea($conn, $idfactulinea)

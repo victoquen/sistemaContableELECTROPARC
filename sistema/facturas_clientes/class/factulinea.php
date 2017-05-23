@@ -36,7 +36,9 @@ class Factulinea
     {
         $query="INSERT INTO factulinea VALUES (null,'$id_factura','$id_producto','$cantidad','$costo','$precio','$dcto','$subtotal','$iva', '$idbodega')";
         $result= mysql_query($query, $conn);
-        return $result;
+        $id=mysql_insert_id();
+        return $id;
+
     }
 	
 	

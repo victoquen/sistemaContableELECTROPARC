@@ -384,15 +384,12 @@ $obligatorio_serie = 1;
             if(Text != ""){
                 // Create an Option object
                 var opt = document.createElement("option");
-
                 // Add an Option object to Drop Down/List Box
                 document.getElementById("series").options.add(opt);
                 // Assign text and value to Option object
                 opt.text = Text;
                 opt.value = Text;
-
                 document.getElementById("serieaux").value="";
-
             }
 
             var theSelect = document.getElementById('series');
