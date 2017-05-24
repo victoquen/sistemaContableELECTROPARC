@@ -4,10 +4,6 @@
     <list default="true" id="b6142e45-63f9-4e7d-93db-bb8b68d54bc1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sistema/conexion/conexion.php" afterPath="$PROJECT_DIR$/sistema/conexion/conexion.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sistema/roles_cuotas/contrato.html" afterPath="$PROJECT_DIR$/sistema/roles_cuotas/contrato.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sistema/roles_cuotas/controllers/contratoController.js" afterPath="$PROJECT_DIR$/sistema/roles_cuotas/controllers/contratoController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sistema/roles_cuotas/controllers/contratoModificacion.js" afterPath="$PROJECT_DIR$/sistema/roles_cuotas/controllers/contratoModificacion.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sistema/roles_cuotas/db.php" afterPath="$PROJECT_DIR$/sistema/roles_cuotas/db.php" />
     </list>
     <ignored path="sistemaContableELECTROPARC.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -48,11 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="conexion.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="conexion.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sistema/conexion/conexion.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+            <state relative-caret-position="242">
+              <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -68,11 +64,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="db.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="db.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/db.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
-              <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+              <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="conexion.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/conexion/conexion.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -135,8 +141,8 @@
         <option value="$PROJECT_DIR$/sistema/proveedor/frame_telefonos_oficina_final.php" />
         <option value="$PROJECT_DIR$/sistema/proveedor/ver_proveedor.php" />
         <option value="$PROJECT_DIR$/sistema/proveedor/ver_banco_final.php" />
-        <option value="$PROJECT_DIR$/sistema/conexion/conexion.php" />
         <option value="$PROJECT_DIR$/sistema/roles_cuotas/db.php" />
+        <option value="$PROJECT_DIR$/sistema/conexion/conexion.php" />
       </list>
     </option>
   </component>
@@ -211,24 +217,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="sistema" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="electroparc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="electroparc" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sistema" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="roles_cuotas" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -367,7 +355,7 @@
       <workItem from="1495499055804" duration="12053000" />
       <workItem from="1495551198367" duration="1210000" />
       <workItem from="1495590848968" duration="5268000" />
-      <workItem from="1495597128464" duration="604000" />
+      <workItem from="1495597128464" duration="682000" />
     </task>
     <task id="LOCAL-00001" summary="LocalStorage UP">
       <created>1494349590317</created>
@@ -460,11 +448,18 @@
       <option name="project" value="LOCAL" />
       <updated>1495596502762</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="finish roles pagos">
+      <created>1495597747980</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1495597747980</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93134000" />
+    <option name="totallyTimeSpent" value="93212000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -472,6 +467,7 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18020834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09408034" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -479,7 +475,6 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -515,7 +510,8 @@
     <MESSAGE value="series class, facturas compra" />
     <MESSAGE value="series class, facturas ventas" />
     <MESSAGE value="proveedor php fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="proveedor php fixed" />
+    <MESSAGE value="finish roles pagos" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish roles pagos" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -524,7 +520,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../electroparcSource/class/class.clfpdf.php" />
     <entry file="file://$PROJECT_DIR$/../../electroparcSource/class/class.clcomprobante.php" />
     <entry file="file://$PROJECT_DIR$/../../electroparcSource/class/class.cldistribucion.php" />
     <entry file="file://$PROJECT_DIR$/sistema/class/imprimir_transferencia.php">
@@ -833,14 +828,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/conexion/conexion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -852,7 +839,23 @@
     <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/db.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/conexion/conexion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/conexion/conexion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
           <folding />
         </state>
       </provider>
