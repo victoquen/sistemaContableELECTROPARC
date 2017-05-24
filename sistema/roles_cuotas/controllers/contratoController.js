@@ -70,13 +70,16 @@ app.controller('contrato', ['$scope', '$http', '$location', 'myProvider', '$loca
     $scope.clientePrint;
     $scope.id_contrato;
     $scope.totalCompra=1000;
-
+    $scope.usuario;
     $scope.test=false;
     $scope.telefonos;
-
+    $scope.flag1=false;
 
 
     $scope.imprimir = function () {
+
+        if($scope.flag1==true){
+
 
 
         var doc = new jsPDF({
@@ -110,15 +113,15 @@ app.controller('contrato', ['$scope', '$http', '$location', 'myProvider', '$loca
        doc.text(x + 35, y + 20, $scope.conentradapendiente.toString());
      
 
-       $scope.id_contrato = '1';
+     //  $scope.id_contrato = '1';
        doc.text(x + 20, y + 35, $scope.id_contrato);
 
        var now = new Date();
        var month = now.getMonth() + 1;
        now = now.getDate() + '-' + month+ '-'+now.getFullYear();
-       doc.text(x + 55, y + 35, now.toString());
+       doc.text(x + 57, y + 35, now.toString());
 
-       doc.text(x + 87, y + 35, $scope.clientePrint.ci_ruc);
+       doc.text(x + 92, y + 35, $scope.clientePrint.ci_ruc);
 
        doc.text(x + 20, y + 40, $scope.clientePrint.nombre);
 
@@ -274,7 +277,7 @@ app.controller('contrato', ['$scope', '$http', '$location', 'myProvider', '$loca
 
         //doc.text(x, y+20, 'Mes:');
         /* doc.text(x, y + 20, mes);
-         //  $scope.aux =  ["Año:"];
+         //  $scope.aux =  ["Aï¿½o:"];
          //doc.text(x + 40, y + 20, $scope.aux[0]);
          doc.text(x + 30, y + 20, $scope.anioSeleccionado);
          doc.text(x, y + 30, 'Dias No Laborados');
@@ -405,18 +408,49 @@ app.controller('contrato', ['$scope', '$http', '$location', 'myProvider', '$loca
         doc.text(100, y + 244, 'Telefonos: 0994161053', 'center');
 
 
-        //doc.line(100, y + 20, 140, y + 20);
-        //doc.line(150, y + 20, 190, y + 20);
+        doc.line(80, y + 190, 120, y + 190);
+        doc.line(150, y + 190, 190, y + 190);
+        doc.line(x, y + 190, x+40, y + 190);
+        doc.text(x, y + 195, 'Realizado por  '+  $scope.usuario.nombre );
+        doc.text(80, y + 195, 'Cliente ' );
+        doc.text(150, y + 195, 'Autorizado por' );
         //  doc.setTextColor(255, 0, 0);
         // doc.text(100, 25, 'USD.00');
         $scope.dateN = Date.now;
         $scope.name = 'Contrato' + $scope.dateN;
         doc.save('Contrato.pdf');
 
+        }else{
 
+            alert('para imprimir se debe guardar el contrato');
+
+        }
     };
 
     $scope.inicio = function () {
+
+        $http({
+            method: 'POST',
+            url: myProvider.getUsr(),
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            data: {
+
+
+            }
+
+
+        })
+            .then(function (response) {
+                // console.log(response.data);
+                $scope.usuario = JSON.parse(response.data);
+                //   console.log($scope.usuario);
+            }, function errorCallback(response) {
+
+                console.log(response);
+            });
+       // $scope.loadContratos();
 
         $scope.local1 = window.localStorage.getItem('idCliente');
         $scope.local2 = window.localStorage.getItem('idFactura');
@@ -843,10 +877,11 @@ app.controller('contrato', ['$scope', '$http', '$location', 'myProvider', '$loca
                             //console.log(response.data);
                         })
                         .then(function(){
-                            localStorage.removeItem('idCliente');
-                            localStorage.removeItem('idFactura');
-                            localStorage.removeItem('totalFactura');
-                            window.location = '../facturas_clientes/index.php';
+                           $scope.flag1=true;
+                            //localStorage.removeItem('idCliente');
+                          //  localStorage.removeItem('idFactura');
+                          //  localStorage.removeItem('totalFactura');
+                          //  window.location = '../facturas_clientes/index.php';
                              })
                         ;
                 }
@@ -870,4 +905,13 @@ app.controller('contrato', ['$scope', '$http', '$location', 'myProvider', '$loca
         return (resp);
     }
 
+
+    $scope.finalizar=function(){
+
+        localStorage.removeItem('idCliente');
+          localStorage.removeItem('idFactura');
+          localStorage.removeItem('totalFactura');
+          window.location = '../facturas_clientes/index.php';
+
+    }
 }]);
