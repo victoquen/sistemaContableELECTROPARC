@@ -238,7 +238,8 @@ if ($accion=="baja") {
 
 		
 		function imprimir(idtransferencia) {
-			window.open("../imprimir/imprimir_transferencia.php?idtransferencia="+idtransferencia);
+			//window.open("../imprimir/imprimir_transferencia.php?idtransferencia="+idtransferencia);
+			window.open("../class/imprimir_transferencia.php?id_transferencia="+idtransferencia);
 		}
 		
 		</script>

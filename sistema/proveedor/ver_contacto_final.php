@@ -1,4 +1,4 @@
-<?
+<?php
 include ("../conexion/conexion.php");
 $usuario = new ServidorBaseDatos();
 $conn = $usuario->getConexion();
@@ -86,19 +86,19 @@ body {
           <table class="fuente8" width="95%" id="tabla_resultado" name="tabla_resultado" align="center">
               <tr>
                     <td width="5%">Cargo:</td>
-                    <td width="10%"><input NAME="cargo" value="<?echo mysql_result($rs_f,0,"cargo")?>" type="text" class="cajaMedia" id="cargo" maxlength="30"></td>
+                    <td width="10%"><input NAME="cargo" value="<?php echo mysql_result($rs_f,0,"cargo")?>" type="text" class="cajaMedia" id="cargo" maxlength="30"></td>
               </tr>
                <tr>
                     <td width="5%">Nombre:</td>
-                    <td width="10%"><input NAME="nombre_contacto" value="<?echo mysql_result($rs_f,0,'nombre')?>" type="text" class="cajaMedia" id="nombre_contacto" maxlength="50"></td>
+                    <td width="10%"><input NAME="nombre_contacto" value="<?php echo mysql_result($rs_f,0,'nombre')?>" type="text" class="cajaMedia" id="nombre_contacto" maxlength="50"></td>
                </tr>
                <tr>
                     <td width="5%">L&iacute;nea:</td>
-                    <td width="10%"><input NAME="linea_contacto" value="<?echo mysql_result($rs_f,0,'linea')?>" type="text" class="cajaMedia" id="linea_contacto" maxlength="30"></td>
+                    <td width="10%"><input NAME="linea_contacto" value="<?php echo mysql_result($rs_f,0,'linea')?>" type="text" class="cajaMedia" id="linea_contacto" maxlength="30"></td>
               </tr>
                <tr>
                     <td width="5%">Email:</td>
-                    <td width="10%"><input NAME="email_contacto" value="<?echo mysql_result($rs_f,0,'email')?>" type="text" class="cajaMedia1" id="email_contacto" maxlength="30"></td>
+                    <td width="10%"><input NAME="email_contacto" value="<?php echo mysql_result($rs_f,0,'email')?>" type="text" class="cajaMedia1" id="email_contacto" maxlength="30"></td>
              </tr>
         </table>
         
@@ -109,7 +109,7 @@ body {
         <table width="100%" border="0">
           <tr>
             <td><div align="center">
-              <img src="../img/botonaceptar.jpg"  onClick="guardar_contacto(<?echo $idproveedor?>)" border="1" onMouseOver="style.cursor=cursor">
+              <img src="../img/botonaceptar.jpg"  onClick="guardar_contacto(<?php echo $idproveedor?>)" border="1" onMouseOver="style.cursor=cursor">
               <img src="../img/botoncerrar.jpg" width="70" height="22" onClick="window.close()" border="1" onMouseOver="style.cursor=cursor">
               
             </div></td>

@@ -62,14 +62,14 @@ $retorno=0;
                     $operadora=mysql_result($rs_lineas,$i,"nombre");
                     
                     if ($i % 2) { $fondolinea="itemParTabla"; } else { $fondolinea="itemImparTabla"; } ?>
-                        <tr class="<? echo $fondolinea?>" style="height: 5px">
+                        <tr class="<?php echo $fondolinea?>" style="height: 5px">
 
-                                            <td align="center" width="15%"><? echo $numero?></td>
-                                            <td align="center" width="15%"><? echo $operadora?></td>
-                                            <td align="center" width="25%"><? echo $descripcion?></td>
+                                            <td align="center" width="15%"><?php echo $numero?></td>
+                                            <td align="center" width="15%"><?php echo $operadora?></td>
+                                            <td align="center" width="25%"><?php echo $descripcion?></td>
                                             <td align="center" width="5%"><a href="javascript:eliminar_linea(<?php echo $codproveedortmp?>,<?php echo $numfono?>)"><img src="../img/eliminar.png" border="0"></a></td>
                                     </tr>
-            <? } ?>
+            <?php } ?>
             </table>
       </div>
    </div>

@@ -169,33 +169,33 @@ $row = $proveedor->get_proveedor_id($conn, $idproveedor);
 						</tr>
                                                <tr>
                                                     <td width="15%">CI/RUC</td>
-                                                    <td width="43%"><input NAME="Vci_ruc" type="text" class="cajaGrande" id="ci_ruc" value="<?echo $row["ci_ruc"]?>" size="45" maxlength="45"></td>
+                                                    <td width="43%"><input NAME="Vci_ruc" type="text" class="cajaGrande" id="ci_ruc" value="<?php echo $row["ci_ruc"]?>" size="45" maxlength="45"></td>
                                                 </tr>
 
                                                 <tr>
                                                     <td width="15%">Empresa</td>
-                                                    <td width="43%"><input NAME="Aempresa" type="text" class="cajaGrande" id="empresa" value="<?echo $row["empresa"]?>" size="45" maxlength="45"></td>
+                                                    <td width="43%"><input NAME="Aempresa" type="text" class="cajaGrande" id="empresa" value="<?php echo $row["empresa"]?>" size="45" maxlength="45"></td>
 
                                                 </tr>
                                                  <tr>
                                                     <td width="15%">Represenante Legal</td>
-                                                    <td width="43%"><input NAME="arepresentante" type="text" class="cajaGrande" id="representante" value="<?echo $row["representante"]?>" size="45" maxlength="45"></td>
+                                                    <td width="43%"><input NAME="arepresentante" type="text" class="cajaGrande" id="representante" value="<?php echo $row["representante"]?>" size="45" maxlength="45"></td>
                                                 </tr>                                                
                                                 <tr>
                                                     <td width="15%">Email</td>
-                                                    <td width="43%"><input NAME="aemail" id="email" type="text" class="cajaGrande1" value="<?echo $row["email"]?>" size="35" maxlength="50" ></td>
+                                                    <td width="43%"><input NAME="aemail" id="email" type="text" class="cajaGrande1" value="<?php echo $row["email"]?>" size="35" maxlength="50" ></td>
                                                 </tr>
                                                 <tr>
                                                     <td width="15%">Web</td>
-                                                    <td width="43%"><input NAME="aweb" id="web" type="text" class="cajaGrande1" value="<?echo $row["web"]?>" size="35" maxlength="50" ></td>
+                                                    <td width="43%"><input NAME="aweb" id="web" type="text" class="cajaGrande1" value="<?php echo $row["web"]?>" size="35" maxlength="50" ></td>
                                                 </tr>
                                                 <tr>
                                                     <td width="17%">Direcci&oacute;n</td>
-                                                    <td> <input NAME="adireccion" id="direccion"  class="cajaGrande1" size="500" maxlength="500" value="<?echo $row["direccion"]?>"></td>
+                                                    <td> <input NAME="adireccion" id="direccion"  class="cajaGrande1" size="500" maxlength="500" value="<?php echo $row["direccion"]?>"></td>
                                                 </tr>  
                                                 <tr>
                                                     <td width="17%">Lugar/Ciudad</td>
-                                                    <td width="43%"><input NAME="alugar" id="lugar" type="text" class="cajaGrande" size="35" maxlength="50" value="<?echo $row["lugar"]?>"></td>
+                                                    <td width="43%"><input NAME="alugar" id="lugar" type="text" class="cajaGrande" size="35" maxlength="50" value="<?php echo $row["lugar"]?>"></td>
                                                 </tr>
 					</table>
 			  </div>
@@ -271,7 +271,7 @@ $row = $proveedor->get_proveedor_id($conn, $idproveedor);
 				</div>
                     </div>
 
-                <input id="idproveedor" name="idproveedor" value="<? echo $idproveedor;?>" type="hidden">
+                <input id="idproveedor" name="idproveedor" value="<?php echo $idproveedor;?>" type="hidden">
                 <input id="modif" name="modif" value="0" type="hidden">
             </form>
 
@@ -306,7 +306,7 @@ $row = $proveedor->get_proveedor_id($conn, $idproveedor);
 
                                             ?>
                                                <option value="<?php echo mysql_result($res_b,$contador,"id_banco")?>"><?php echo mysql_result($res_b,$contador,"nombre")?></option>
-                                            <? $contador++;
+                                            <?php $contador++;
                                             } ?>
                                         </select>
                                          &nbsp;
@@ -352,7 +352,7 @@ $row = $proveedor->get_proveedor_id($conn, $idproveedor);
                     </div>
 
 
-                <input id="idproveedor" name="idproveedor" value="<? echo $idproveedor;?>" type="hidden">
+                <input id="idproveedor" name="idproveedor" value="<?php echo $idproveedor;?>" type="hidden">
                 <input id="modif_bancos" name="modif_bancos" value="0" type="hidden">
             </form>
 
@@ -411,7 +411,7 @@ $row = $proveedor->get_proveedor_id($conn, $idproveedor);
 				</div>
 
                     </div>
-                <input id="idproveedor" name="idproveedor" value="<? echo $idproveedor;?>" type="hidden">
+                <input id="idproveedor" name="idproveedor" value="<?php echo $idproveedor;?>" type="hidden">
                 <input id="modif_contactos" name="modif_contactos" value="0" type="hidden">
         </form>
 

@@ -92,7 +92,7 @@ $idcontacto=$_GET["idcontacto"];
                                                 {
                                               ?>
                                                         <option value="<?php echo mysql_result($res_o,$contador,"id_operadora")?>"><?php echo mysql_result($res_o,$contador,"nombre")?></option>
-                                            <? $contador++;
+                                            <?php $contador++;
                                             } ?>
                                         </select>
                                    </td>
@@ -148,8 +148,8 @@ $idcontacto=$_GET["idcontacto"];
               </tr>
             </table>
               <input id="modif" name="modif" value="0" type="hidden">
-             <input id="idproveedor" name="idproveedor" value="<? echo $idproveedor;?>" type="hidden">
-             <input id="idcontacto" name="idcontacto" value="<? echo $idcontacto;?>" type="hidden">
+             <input id="idproveedor" name="idproveedor" value="<?php echo $idproveedor;?>" type="hidden">
+             <input id="idcontacto" name="idcontacto" value="<?php echo $idcontacto;?>" type="hidden">
             </form>
         </div>
     </div>

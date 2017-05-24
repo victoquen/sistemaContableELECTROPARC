@@ -73,16 +73,16 @@ $retorno=0;
                     $email=mysql_result($rs_lineas,$i,"email");
                    
                     if ($i % 2) { $fondolinea="itemParTabla"; } else { $fondolinea="itemImparTabla"; } ?>
-                        <tr class="<? echo $fondolinea?>" style="height: 5px">
+                        <tr class="<?php echo $fondolinea?>" style="height: 5px">
 
-                                            <td align="center" width="16%"><? echo $cargo?></td>
-                                            <td align="center" width="32%"><? echo $nombre?></td>
-                                            <td align="center" width="16%"><? echo $linea?></td>
-                                            <td align="center" width="16%"><? echo $email?></td>
+                                            <td align="center" width="16%"><?php echo $cargo?></td>
+                                            <td align="center" width="32%"><?php echo $nombre?></td>
+                                            <td align="center" width="16%"><?php echo $linea?></td>
+                                            <td align="center" width="16%"><?php echo $email?></td>
                                             <td align="center" width="5%"><a href="javascript:agregar_movil(<?php echo $codproveedortmp?>,<?php echo $numcontacto?>)"><img width="22" height="16" src="../img/movil.gif" border="0" title="Telefonos"></a></td>
                                             <td align="center" width="5%"><a href="javascript:eliminar_linea(<?php echo $codproveedortmp?>,<?php echo $numcontacto?>)"><img src="../img/eliminar.png" border="0"></a></td>
                                     </tr>
-            <? } ?>
+            <?php } ?>
             </table>
       </div>
    </div>

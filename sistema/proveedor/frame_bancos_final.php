@@ -82,16 +82,16 @@ if ($modif<>1) {
                     }
                     
                     if ($i % 2) { $fondolinea="itemParTabla"; } else { $fondolinea="itemImparTabla"; } ?>
-                        <tr class="<? echo $fondolinea?>" style="height: 5px">
+                        <tr class="<?php echo $fondolinea?>" style="height: 5px">
 
-                            <td align="center" width="16%"><? echo $banco?></td>
-                            <td align="center" width="32%"><? echo $titular?></td>
-                            <td align="center" width="16%"><? echo $numero?></td>
-                            <td align="center" width="16%"><? echo $tipocuenta?></td>
+                            <td align="center" width="16%"><?php echo $banco?></td>
+                            <td align="center" width="32%"><?php echo $titular?></td>
+                            <td align="center" width="16%"><?php echo $numero?></td>
+                            <td align="center" width="16%"><?php echo $tipocuenta?></td>
                             <td align="center" width="5%"><a href="javascript:eliminar_linea(<?php echo $idproveedor?>,<?php echo $idbanco?>)"><img src="../img/eliminar.png" border="0"></a></td>
                             <td align="center" width="5%"><a href="javascript:modificar_banco(<?php echo $idproveedor?>,<?php echo $idbanco?>)"><img src="../img/modificar.png" border="0"></a></td>
                         </tr>
-            <? } ?>
+            <?php } ?>
             </table>
       </div>
    </div>

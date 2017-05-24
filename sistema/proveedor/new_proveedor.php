@@ -193,7 +193,7 @@ $codproveedortmp=mysql_insert_id();
 
                     <div id="botonBusqueda">
                          <input id="origen" name="origen" value="<?php echo $origen?>" type="hidden">
-                         <input id="codproveedortmp" name="codproveedortmp" value="<? echo $codproveedortmp;?>" type="hidden">
+                         <input id="codproveedortmp" name="codproveedortmp" value="<?php echo $codproveedortmp;?>" type="hidden">
                         <input id="accion" name="accion" value="alta" type="hidden">
                         <input id="id" name="Zid" value="" type="hidden">
                     </div>
@@ -232,7 +232,7 @@ $codproveedortmp=mysql_insert_id();
 
                                                      <?} else {?>
                                                         <option value="<?php echo mysql_result($res_o,$contador,"id_operadora")?>"><?php echo mysql_result($res_o,$contador,"nombre")?></option>
-                                            <? }$contador++;
+                                            <?php }$contador++;
                                             } ?>
                                         </select>
                                          &nbsp;
@@ -267,7 +267,7 @@ $codproveedortmp=mysql_insert_id();
                     </div>
 
                               
-             <input id="codproveedortmp" name="codproveedortmp" value="<? echo $codproveedortmp;?>" type="hidden">
+             <input id="codproveedortmp" name="codproveedortmp" value="<?php echo $codproveedortmp;?>" type="hidden">
             </form>
 
 <!--- FIN FORMULARIO TELEFONOS OFICINA------------------------------------------------------------------------------------->
@@ -301,7 +301,7 @@ $codproveedortmp=mysql_insert_id();
                                                     
                                             ?>                                                    
                                                <option value="<?php echo mysql_result($res_b,$contador,"id_banco")?>"><?php echo mysql_result($res_b,$contador,"nombre")?></option>
-                                            <? $contador++;
+                                            <?php $contador++;
                                             } ?>
                                         </select>
                                          &nbsp;
@@ -346,7 +346,7 @@ $codproveedortmp=mysql_insert_id();
                     </div>
 
                              
-             <input id="codproveedortmp" name="codproveedortmp" value="<? echo $codproveedortmp;?>" type="hidden">
+             <input id="codproveedortmp" name="codproveedortmp" value="<?php echo $codproveedortmp;?>" type="hidden">
             </form>
 
 <!--- FIN FORMULARIO BANCOS ------------------------------------------------------------------------------------->
@@ -419,7 +419,7 @@ $codproveedortmp=mysql_insert_id();
 
 
                     </div>
-             <input id="codproveedortmp" name="codproveedortmp" value="<? echo $codproveedortmp;?>" type="hidden">
+             <input id="codproveedortmp" name="codproveedortmp" value="<?php echo $codproveedortmp;?>" type="hidden">
             </form>
 
 <!--- FIN FORMULARIO CONTACTOS------------------------------------------------------------------------------------->

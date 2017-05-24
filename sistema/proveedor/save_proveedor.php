@@ -262,33 +262,33 @@ if ($accion=="baja") {
 					<table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0>
 						<tr>
                                                     <td width="15%">CI/RUC</td>
-                                                    <td width="43%"><?echo $ci_ruc?></td>
+                                                    <td width="43%"><?php echo $ci_ruc?></td>
                                                 </tr>
 
                                                 <tr>
                                                     <td width="15%">Empresa</td>
-                                                    <td width="43%"><?echo $empresa?></td>
+                                                    <td width="43%"><?php echo $empresa?></td>
 
                                                 </tr>
                                                  <tr>
                                                     <td width="15%">Represenante Legal</td>
-                                                    <td width="43%"><?echo $representante?></td>
+                                                    <td width="43%"><?php echo $representante?></td>
                                                 </tr>                                                 
                                                 <tr>
                                                     <td width="15%">Email</td>
-                                                    <td width="43%"><?echo $email?></td>
+                                                    <td width="43%"><?php echo $email?></td>
                                                 </tr>
                                                 <tr>
                                                     <td width="15%">Web</td>
-                                                    <td width="43%"><?echo $web?></td>
+                                                    <td width="43%"><?php echo $web?></td>
                                                 </tr>
                                                 <tr>
                                                     <td width="17%">Direcci&oacute;n</td>
-                                                    <td width="43%"><?echo $direccion?></td>
+                                                    <td width="43%"><?php echo $direccion?></td>
                                                 </tr>
                                                 <tr>
                                                     <td width="15%">Lugar/Ciudad</td>
-                                                    <td width="43%"><?echo $lugar?></td>
+                                                    <td width="43%"><?php echo $lugar?></td>
                                                 </tr>
 					</table>
                                <!-- Inicio TELEFONOS OFICINA---------------------------------------------------->
@@ -318,9 +318,9 @@ if ($accion=="baja") {
 
                                     ?>
                                     <tr>
-                                        <td width="15%" align="center"><?echo mysql_result($rs_fono,$contador,'numero')?></td>
-                                        <td width="15%" align="center"><?echo mysql_result($rs_operadora,0,'nombre')?></td>
-                                        <td width="20%" align="center"><?echo mysql_result($rs_fono,$contador,'descripcion')?></td>
+                                        <td width="15%" align="center"><?php echo mysql_result($rs_fono,$contador,'numero')?></td>
+                                        <td width="15%" align="center"><?php echo mysql_result($rs_operadora,0,'nombre')?></td>
+                                        <td width="20%" align="center"><?php echo mysql_result($rs_fono,$contador,'descripcion')?></td>
                                     </tr>
                                     <?
                                                 $contador++;
@@ -368,10 +368,10 @@ if ($accion=="baja") {
                                                 $rs_nombanco=mysql_query($query_nombanco,$conn);
                                     ?>
                                     <tr>
-                                        <td width="14%" align="center"><?echo mysql_result($rs_nombanco,0,'nombre')?></td>
-                                        <td width="28%" align="center"><?echo mysql_result($rs_banco,$contador,'titular')?></td>
-                                        <td width="14%" align="center"><?echo mysql_result($rs_banco,$contador,'numero_cuenta')?></td>
-                                        <td width="14%" align="center"><?echo $tipo_cuenta?></td>
+                                        <td width="14%" align="center"><?php echo mysql_result($rs_nombanco,0,'nombre')?></td>
+                                        <td width="28%" align="center"><?php echo mysql_result($rs_banco,$contador,'titular')?></td>
+                                        <td width="14%" align="center"><?php echo mysql_result($rs_banco,$contador,'numero_cuenta')?></td>
+                                        <td width="14%" align="center"><?php echo $tipo_cuenta?></td>
                                     </tr>
                                     <?
                                                 $contador++;
@@ -407,10 +407,10 @@ if ($accion=="baja") {
 
                                     ?>
                                     <tr>
-                                        <td width="14%" align="center"><?echo mysql_result($rs_contacto,$contador,'cargo')?></td>
-                                        <td width="30%" align="center"><?echo mysql_result($rs_contacto,$contador,'nombre')?></td>
-                                        <td width="13%" align="center"><?echo mysql_result($rs_contacto,$contador,'linea')?></td>
-                                        <td width="13%" align="center"><?echo mysql_result($rs_contacto,$contador,'email')?></td>
+                                        <td width="14%" align="center"><?php echo mysql_result($rs_contacto,$contador,'cargo')?></td>
+                                        <td width="30%" align="center"><?php echo mysql_result($rs_contacto,$contador,'nombre')?></td>
+                                        <td width="13%" align="center"><?php echo mysql_result($rs_contacto,$contador,'linea')?></td>
+                                        <td width="13%" align="center"><?php echo mysql_result($rs_contacto,$contador,'email')?></td>
                                     </tr>
                                     <tr><td colspan="4" align="center">
                                                 <table class="fuente8" width="70%" cellspacing=0 cellpadding=3 border=0>
@@ -473,7 +473,7 @@ if ($accion=="baja") {
 			  </div>
 				<div id="botonBusqueda">
                                      <?if ($origen=="factura"){?>
-					<img src="../img/botonaceptar.jpg" width="85" height="22" onClick="ingreso_factura(<?php echo $validacion?>,'<? echo $idproveedor?>','<?echo $empresa?>','<?echo $ci_ruc?>')" border="1" onMouseOver="style.cursor=cursor">
+					<img src="../img/botonaceptar.jpg" width="85" height="22" onClick="ingreso_factura(<?php echo $validacion?>,'<?php echo $idproveedor?>','<?php echo $empresa?>','<?php echo $ci_ruc?>')" border="1" onMouseOver="style.cursor=cursor">
                                      <?}else{?>
                                         <img src="../img/botonaceptar.jpg" width="85" height="22" onClick="aceptar(<?php echo $validacion?>)" border="1" onMouseOver="style.cursor=cursor">
                                      <?}?>

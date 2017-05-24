@@ -1,4 +1,4 @@
-<?
+<?php
 include_once '../conexion/conexion.php';
 include_once 'class/proveedor.php';
 
@@ -56,7 +56,7 @@ $row = $proveedor->get_proveedor_id($conn, $idproveedor);
                         
                         "bProcessing": true,
                         "bServerSide": true,
-                        "sAjaxSource": "processing_producto_proveedor.php?idproveedor=<?  echo $idproveedor;?>",
+                        "sAjaxSource": "processing_producto_proveedor.php?idproveedor=<?php  echo $idproveedor;?>",
                         "sPaginationType": "full_numbers",
 
                         
@@ -135,33 +135,33 @@ $row = $proveedor->get_proveedor_id($conn, $idproveedor);
                         <table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0>
                             <tr>
                                 <td width="15%">CI/RUC</td>
-                                <td width="43%"><? echo $row["ci_ruc"] ?></td>
+                                <td width="43%"><?php echo $row["ci_ruc"] ?></td>
                             </tr>
 
                             <tr>
                                 <td width="15%">Empresa</td>
-                                <td width="43%"><? echo $row["empresa"] ?></td>
+                                <td width="43%"><?php echo $row["empresa"] ?></td>
 
                             </tr>
                             <tr>
                                 <td width="15%">Represenante Legal</td>
-                                <td width="43%"><? echo $row["representante"] ?></td>
+                                <td width="43%"><?php echo $row["representante"] ?></td>
                             </tr>                                                
                             <tr>
                                 <td width="15%">Email</td>
-                                <td width="43%"><? echo $row["email"] ?></td>
+                                <td width="43%"><?php echo $row["email"] ?></td>
                             </tr>
                             <tr>
                                 <td width="15%">Web</td>
-                                <td width="43%"><? echo $row["web"] ?></td>
+                                <td width="43%"><?php echo $row["web"] ?></td>
                             </tr>
                             <tr>
                                 <td width="15%">Direcci&oacute;n</td>
-                                <td width="43%"><? echo $row["direccion"] ?></td>
+                                <td width="43%"><?php echo $row["direccion"] ?></td>
                             </tr>
                             <tr>
                                 <td width="15%">Lugar/Ciudad</td>
-                                <td width="43%"><? echo $row["lugar"] ?></td>
+                                <td width="43%"><?php echo $row["lugar"] ?></td>
                             </tr>
                         </table>
 
@@ -189,9 +189,9 @@ if (mysql_num_rows($rs_fono) > 0) {
                                 $rs_operadora = mysql_query($query_operadora, $conn);
                                 ?>
                                     <tr>
-                                        <td width="15%" align="center"><? echo mysql_result($rs_fono, $contador, 'numero') ?></td>
-                                        <td width="15%" align="center"><? echo mysql_result($rs_operadora, 0, 'nombre') ?></td>
-                                        <td width="20%" align="center"><? echo mysql_result($rs_fono, $contador, 'descripcion') ?></td>
+                                        <td width="15%" align="center"><?php echo mysql_result($rs_fono, $contador, 'numero') ?></td>
+                                        <td width="15%" align="center"><?php echo mysql_result($rs_operadora, 0, 'nombre') ?></td>
+                                        <td width="20%" align="center"><?php echo mysql_result($rs_fono, $contador, 'descripcion') ?></td>
                                     </tr>
                                     <?
                                     $contador++;
@@ -234,10 +234,10 @@ if (mysql_num_rows($rs_fono) > 0) {
                                 $rs_nombanco = mysql_query($query_nombanco, $conn);
                                 ?>
                                     <tr>
-                                        <td width="14%" align="center"><? echo mysql_result($rs_nombanco, 0, 'nombre') ?></td>
-                                        <td width="28%" align="center"><? echo mysql_result($rs_banco, $contador, 'titular') ?></td>
-                                        <td width="14%" align="center"><? echo mysql_result($rs_banco, $contador, 'numero_cuenta') ?></td>
-                                        <td width="14%" align="center"><? echo $tipo_cuenta ?></td>
+                                        <td width="14%" align="center"><?php echo mysql_result($rs_nombanco, 0, 'nombre') ?></td>
+                                        <td width="28%" align="center"><?php echo mysql_result($rs_banco, $contador, 'titular') ?></td>
+                                        <td width="14%" align="center"><?php echo mysql_result($rs_banco, $contador, 'numero_cuenta') ?></td>
+                                        <td width="14%" align="center"><?php echo $tipo_cuenta ?></td>
                                     </tr>
                                     <?
                                     $contador++;
@@ -270,10 +270,10 @@ if (mysql_num_rows($rs_contacto) > 0) {
         $id_contacto = mysql_result($rs_contacto, $contador, 'id_contacto');
         ?>
                                     <tr>
-                                        <td width="14%" align="center"><? echo mysql_result($rs_contacto, $contador, 'cargo') ?></td>
-                                        <td width="30%" align="center"><? echo mysql_result($rs_contacto, $contador, 'nombre') ?></td>
-                                        <td width="13%" align="center"><? echo mysql_result($rs_contacto, $contador, 'linea') ?></td>
-                                        <td width="13%" align="center"><? echo mysql_result($rs_contacto, $contador, 'email') ?></td>
+                                        <td width="14%" align="center"><?php echo mysql_result($rs_contacto, $contador, 'cargo') ?></td>
+                                        <td width="30%" align="center"><?php echo mysql_result($rs_contacto, $contador, 'nombre') ?></td>
+                                        <td width="13%" align="center"><?php echo mysql_result($rs_contacto, $contador, 'linea') ?></td>
+                                        <td width="13%" align="center"><?php echo mysql_result($rs_contacto, $contador, 'email') ?></td>
                                     </tr>
                                     <tr><td colspan="4" align="center">
                                             <table class="fuente8" width="70%" cellspacing=0 cellpadding=3 border=0>
