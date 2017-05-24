@@ -179,7 +179,7 @@ if (mysql_num_rows($rs_fono) > 0) {
                                     <td width="15%">OPERADORA</td>
                                     <td width="20%">DESCRIPCION</td>
                                 </tr>
-                            <?
+                            <?php
                             $contador = 0;
                             $num_rows_fono = mysql_num_rows($rs_fono);
                             while ($contador < $num_rows_fono) {
@@ -193,7 +193,7 @@ if (mysql_num_rows($rs_fono) > 0) {
                                         <td width="15%" align="center"><?php echo mysql_result($rs_operadora, 0, 'nombre') ?></td>
                                         <td width="20%" align="center"><?php echo mysql_result($rs_fono, $contador, 'descripcion') ?></td>
                                     </tr>
-                                    <?
+                                    <?php
                                     $contador++;
                                 }
                             }
@@ -218,7 +218,7 @@ if (mysql_num_rows($rs_fono) > 0) {
                                     <td width="14%">TIPO CUENTA</td>
 
                                 </tr>
-                            <?
+                            <?php
                             $contador = 0;
                             $num_rows_banco = mysql_num_rows($rs_banco);
                             while ($contador < $num_rows_banco) {
@@ -239,7 +239,7 @@ if (mysql_num_rows($rs_fono) > 0) {
                                         <td width="14%" align="center"><?php echo mysql_result($rs_banco, $contador, 'numero_cuenta') ?></td>
                                         <td width="14%" align="center"><?php echo $tipo_cuenta ?></td>
                                     </tr>
-                                    <?
+                                    <?php
                                     $contador++;
                                 }
                             }
@@ -263,7 +263,7 @@ if (mysql_num_rows($rs_contacto) > 0) {
                                     <td width="13%">LINEA</td>
                                     <td width="13%">EMAIL</td>                                           
                                 </tr>
-    <?
+    <?php
     $contador = 0;
     $num_rows_contacto = mysql_num_rows($rs_contacto);
     while ($contador < $num_rows_contacto) {
@@ -277,9 +277,9 @@ if (mysql_num_rows($rs_contacto) > 0) {
                                     </tr>
                                     <tr><td colspan="4" align="center">
                                             <table class="fuente8" width="70%" cellspacing=0 cellpadding=3 border=0>
-        <?
+        <?php
         ?>
-                                    <?
+                                    <?php
                                     //Inicio TELEFONOS CONTACTO---------------------------------
                                     $query_contactofono = "SELECT numero, operadora, descripcion FROM proveedorcontactofono WHERE id_proveedor='$idproveedor' AND id_contacto='$id_contacto'";
                                     $rs_contactofono = mysql_query($query_contactofono, $conn);
@@ -291,7 +291,7 @@ if (mysql_num_rows($rs_contacto) > 0) {
                                                         <tr>
                                                             <td width="70%">
                                                                 <BLOCKQUOTE>
-                <?
+                <?php
                 $id_operadora = mysql_result($rs_contactofono, $cont, 'operadora');
                 $query_operadora = "SELECT nombre FROM operadora WHERE id_operadora='$id_operadora'";
                 $rs_operadora = mysql_query($query_operadora, $conn);
@@ -300,7 +300,7 @@ if (mysql_num_rows($rs_contacto) > 0) {
                                                                 </BLOCKQUOTE>
                                                             </td>
                                                         </tr>
-                                                        <?
+                                                        <?php
                                                         $cont++;
                                                     }
                                                 }
@@ -309,18 +309,18 @@ if (mysql_num_rows($rs_contacto) > 0) {
                                             </table>
 
 
-        <?
+        <?php
         $contador++;
         ?>
 
                                         </td></tr>
                                     <tr><td colspan="4"><hr/></td></tr>
-                                                            <?
+                                                            <?php
                                                         }
                                                         ?>
 
                             </table>
-                                            <?
+                                            <?php
                                         }
                                         ?>
 

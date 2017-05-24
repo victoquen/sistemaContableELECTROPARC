@@ -1,4 +1,4 @@
-<?php
+<?php 
 include ("../conexion/conexion.php");
 $usuario = new ServidorBaseDatos();
 $conn = $usuario->getConexion();
@@ -96,17 +96,17 @@ body {
                    <td width="10%">
                        <select id="banco"  class="comboMedio" NAME="banco">
                             <option value="0">Seleccionar banco</option>
-                            <?php
+                            <?php 
                             $contador=0;
                             while ($contador < mysql_num_rows($res_b))
                                 {
                                     if(mysql_result($res_b,$contador,"id_banco")==mysql_result($rs_f,0,"banco"))
                                     {
                             ?>
-                                <option selected value="<?php echo mysql_result($res_b,$contador,"id_banco")?>"><?php echo mysql_result($res_b,$contador,"nombre")?></option>
-                             <?}else{?>
-                               <option value="<?php echo mysql_result($res_b,$contador,"id_banco")?>"><?php echo mysql_result($res_b,$contador,"nombre")?></option>
-                            <?php }$contador++;
+                                <option selected value="<?php  echo mysql_result($res_b,$contador,"id_banco")?>"><?php  echo mysql_result($res_b,$contador,"nombre")?></option>
+                             <?php }else{?>
+                               <option value="<?php  echo mysql_result($res_b,$contador,"id_banco")?>"><?php  echo mysql_result($res_b,$contador,"nombre")?></option>
+                            <?php  }$contador++;
                             } ?>
                       </select>
                 </td>
@@ -114,23 +114,23 @@ body {
                
               <tr>
                  <td width="5%">Titular Cuenta:</td>
-                 <td width="10%"><input NAME="titular" type="text" value="<?php echo  mysql_result($rs_f,0,"titular")?>" class="cajaMedia" id="titular" size="45" maxlength="45"></td>
+                 <td width="10%"><input NAME="titular" type="text" value="<?php  echo  mysql_result($rs_f,0,"titular")?>" class="cajaMedia" id="titular" size="45" maxlength="45"></td>
               </tr>
               <tr>
                  <td width="5%">Numero Cuenta:</td>
-                 <td width="10%"><input NAME="numero_cuenta" type="text" value="<?php echo  mysql_result($rs_f,0,"numero_cuenta")?>" class="cajaPequena" id="numero_cuenta" maxlength="13"></td>
+                 <td width="10%"><input NAME="numero_cuenta" type="text" value="<?php  echo  mysql_result($rs_f,0,"numero_cuenta")?>" class="cajaPequena" id="numero_cuenta" maxlength="13"></td>
               </tr>
               <tr>
                  <td width="5%">Tipo Cuenta:
                  <td width="10%">
                     <select id="tipo" class="comboMedio" name="tipo">
-                        <?if (mysql_result($rs_f,0,"tipo_cuenta")==1){?>
+                        <?php if (mysql_result($rs_f,0,"tipo_cuenta")==1){?>
                             <option selected value="1">Cuenta Corriente</option>
                             <option value="2">Cuenta de Ahorros</option>
-                         <?}else{?>
+                         <?php }else{ ?>
                              <option value="1">Cuenta Corriente</option>
                              <option selected value="2">Cuenta de Ahorros</option>
-                         <?}?>
+                         <?php }?>
                     </select>
                  </td>
             </tr>
@@ -143,7 +143,7 @@ body {
         <table width="100%" border="0">
           <tr>
             <td><div align="center">
-              <img src="../img/botonaceptar.jpg"  onClick="guardar_banco(<?php echo  $idproveedor?>)" border="1" onMouseOver="style.cursor=cursor">
+              <img src="../img/botonaceptar.jpg"  onClick="guardar_banco(<?php  echo  $idproveedor?>)" border="1" onMouseOver="style.cursor=cursor">
               <img src="../img/botoncerrar.jpg" width="70" height="22" onClick="window.close()" border="1" onMouseOver="style.cursor=cursor">
               
             </div></td>
@@ -153,8 +153,8 @@ body {
                 <ilayer width="0" height="0" id="frame_datos" name="frame_datos"></ilayer>
         </iframe>
 
-       <input id="idproveedor" name="idproveedor" value="<?php echo $idproveedor?>" type="hidden">
-       <input id="idbanco" name="idbanco" value="<?php echo $idbanco?>" type="hidden">
+       <input id="idproveedor" name="idproveedor" value="<?php  echo $idproveedor?>" type="hidden">
+       <input id="idbanco" name="idbanco" value="<?php  echo $idbanco?>" type="hidden">
 
         </form>
 
