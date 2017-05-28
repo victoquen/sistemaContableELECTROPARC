@@ -59,7 +59,7 @@ class Transferencialinea
 
     public function get_id($conn, $id)
     {
-        $rows;
+
         $query="SELECT id_transferencia, id_bodegaorigen, id_bodegadestino, id_producto, cantidad FROM transferencialinea WHERE id_transferencialinea ='$id'";
         $result = mysql_query($query, $conn);
         $row = mysql_fetch_assoc($result);

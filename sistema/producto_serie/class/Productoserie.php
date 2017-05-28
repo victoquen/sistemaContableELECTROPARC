@@ -65,6 +65,14 @@ class Productoserie
         return $result;
     }
 
+    public function transferencia($conn, $id_productobodega, $id)
+    {
+        $query = "UPDATE productoserie 
+                  SET id_productobodega = '$id_productobodega'
+                  WHERE id ='$id'";
+        $result = mysql_query($query, $conn);
+        return $result;
+    }
 
     public function get_id($conn, $id)
     {

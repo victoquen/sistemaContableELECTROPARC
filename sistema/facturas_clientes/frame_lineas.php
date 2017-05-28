@@ -59,6 +59,8 @@ if ($retorno == 0) {
     $iva = $_POST["iva"];
     $costo = $_POST["costo"];
 
+    
+
    
 
     $sel_insert = "INSERT INTO factulineatmp (codfactura,numlinea,id_articulo,cantidad,costo,precio,importe,dcto,iva)

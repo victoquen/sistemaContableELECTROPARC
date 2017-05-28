@@ -75,10 +75,13 @@ if ($accion == "alta") {
             $utilidad = mysql_result($rs_tmp, $contador, "utilidad");
             $idbodega = mysql_result($rs_tmp, $contador, "id_bodega");
 
+            //SERIES SPLIT *********************************************************************************************
             $seriestemp = mysql_result($rs_tmp, $contador, "series");
             $series = split("----", $seriestemp);
+            //**********************************************************************************************************
             
             $idlinea = $factulineap->save_factulinea($conn, $idfactura, $id_producto, $cantidad, $costo, $dcto, $subtotal, $iva, $utilidad, $idbodega);
+
 
 
             $query_bodega = "SELECT id_productobodega, stock FROM productobodega WHERE id_producto = '$id_producto' AND id_bodega = '$idbodega'";
@@ -87,8 +90,6 @@ if ($accion == "alta") {
             $id_productobodega = mysql_result($rs_bodega, 0, "id_productobodega");
 
             // INGRESO SERIES PRODUCTO *********************************************************************************
-
-
             foreach ($series as $s) {
                 $serie = new Productoserie();
                 $res_serie = $serie->save($conn, $id_productobodega, $s, $idlinea);

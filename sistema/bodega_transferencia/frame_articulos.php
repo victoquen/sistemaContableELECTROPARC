@@ -101,10 +101,27 @@ header('Pragma: no-cache');
 </head>
 <script language="javascript">
 
-function pon_prefijo(codarticulo,nombre,idarticulo,iva,pvp) {
+    function removeOptions(obj) {
+        while (obj.options.length) {
+            obj.remove(0);
+        }
+    }
+
+function pon_prefijo(codarticulo,nombre,idarticulo,iva,pvp,seriess) {
 	parent.opener.document.formulario_lineas.codarticulo.value=codarticulo;
 	parent.opener.document.formulario_lineas.descripcion.value=nombre;
 	parent.opener.document.formulario_lineas.idarticulo.value=idarticulo;
+
+    removeOptions(parent.opener.document.formulario_lineas.series);
+    for (obj in seriess) {
+        // Create an Option object
+        var opt = document.createElement("option");
+        // Add an Option object to Drop Down/List Box
+        parent.opener.document.formulario_lineas.series.options.add(opt);
+        // Assign text and value to Option object
+        opt.text = seriess[obj];
+        opt.value = obj;
+    }
        
 		
 	parent.opener.activar_subgrupo('bodegas.php?idproducto='+idarticulo ,'cbobodegaorigen');

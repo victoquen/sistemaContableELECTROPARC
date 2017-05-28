@@ -37,7 +37,6 @@ class Transferencia
 
     public function get_id($conn, $id)
     {
-        $rows;
         $query="SELECT fecha
                 FROM transferencia
                 WHERE id_transferencia ='$id' AND borrado = 0";
@@ -48,7 +47,6 @@ class Transferencia
 
     public function get_borrado_id($conn, $id)
     {
-        $rows;
         $query="SELECT fecha
                 FROM transferencia
                 WHERE id_transferencia ='$id' AND borrado = 1";

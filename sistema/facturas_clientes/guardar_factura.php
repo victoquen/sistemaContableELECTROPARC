@@ -1,5 +1,5 @@
 ﻿<?php
-//error_reporting(0);
+error_reporting(0);
 include("../js/fechas.php");
 include("../conexion/conexion.php");
 $usuario = new ServidorBaseDatos();
@@ -394,7 +394,7 @@ if ($accion == "alta") {
 
             // UPDATE SERIES PRODUCTO *********************************************************************************
 
-            $series= $array_productos[$contador]["series"];
+            $series = $array_productos[$contador]["series"];
             foreach ($series as $s) {
                 $serie = new Productoserie();
                 $res_serie = $serie->vendido($conn, $s, $idlinea);
@@ -413,7 +413,7 @@ if ($accion == "alta") {
 
         }
 
-        if($credito == 1){
+        if ($credito == 1) {
             echo "<script language=\"javascript\">";
             echo "localStorage.setItem(\"idFactura\",$idfactura);";
             echo "localStorage.setItem(\"idCliente\", $idcliente);";
@@ -519,8 +519,6 @@ if ($accion == "modificar") {
     include("class/facturas.php");
     $factura = new Factura();
     $result = $factura->update_factura($conn, $idfactura, $idcliente, $codfactura, $serie1, $serie2, $autorizacion, $fecha, $descuento, $iva0, $iva12, $importeiva, $flete, $totalfactura, $remision, $codigo_retencion, $ret_iva, $ret_fuente, $idfacturero);
-
-
 
 
     if ($result) {
@@ -1009,12 +1007,12 @@ if ($accion == "modificar") {
                         ?>
                         <tr>
                             <td width="11%">Total Factura</td>
-                            <td><input type="text" id="total_factura" name="Rtotal_factura" class="cajaPequena"
+                            <td><input type="text" id="Rtotal_factura" name="Rtotal_factura" class="cajaPequena"
                                        style="text-align: right; background-color: yellow" disabled="true"
                                        value="<?php echo $totalfactura ?>"/> &#36;</td>
                             <td width="14%">Entidad Bancaria</td>
                             <td width="35%"><select id="acbobanco" class="comboGrande" NAME="acbobanco" disabled="true">
-                                    <option value="0">Seleccione una entidad bancaria</option>
+                                    <option value="1">Seleccione una entidad bancaria</option>
                                     <?php
                                     while ($contador < mysql_num_rows($res_b)) { ?>
                                         <option
@@ -1028,7 +1026,7 @@ if ($accion == "modificar") {
                         <tr>
 
                             <td>- Ret. Iva</td>
-                            <td>-<input type="text" id="ret_iva" name="Rret-iva" readonly="true" class="cajaPequena"
+                            <td>-<input type="text" id="ret_iva" name="ret_iva" readonly="true" class="cajaPequena"
                                         style="text-align: right; background-color: lightpink"
                                         value="<?php echo $ret_iva ?>"/> &#36;</td>
 
@@ -1086,6 +1084,7 @@ if ($accion == "modificar") {
             <input type="hidden" name="accion" id="accion" value="insertar">
             <input type="hidden" name="idcliente" id="codcliente" value="<?php echo $idcliente ?>">
             <input type="hidden" name="idfactura" id="idfactura" value="<?php echo $idfactura ?>">
+
             </form>
             <br>
             <div id="frmBusqueda">
