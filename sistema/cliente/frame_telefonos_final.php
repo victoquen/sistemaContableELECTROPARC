@@ -24,7 +24,7 @@ function modificar_fono(idcliente,idtelefono)
 </script>
 <link href="../estilos/estilos.css" type="text/css" rel="stylesheet">
 <body>
-<?php 
+<?php  
 include ("../conexion/conexion.php");
 $usuario = new ServidorBaseDatos();
 $conn = $usuario->getConexion();
@@ -57,7 +57,7 @@ if ($modif<>1) {
 
                 <div align="center">
                     <table class="fuente8" width="55%" cellspacing=0 cellpadding=0 border=0 ID="Table1">
-            <?php
+            <?php 
             $sel_lineas="SELECT a.id_telefono,a.numero,a.descripcion, b.nombre
                         FROM clientefono a INNER JOIN operadora b ON a.operadora=b.id_operadora
                         WHERE a.id_cliente = $idcliente ORDER BY a.id_telefono DESC";
@@ -71,15 +71,15 @@ if ($modif<>1) {
                     $operadora=mysql_result($rs_lineas,$i,"nombre");
                     
                     if ($i % 2) { $fondolinea="itemParTabla"; } else { $fondolinea="itemImparTabla"; } ?>
-                        <tr class="<? echo $fondolinea?>" style="height: 5px">
+                        <tr class="<?php  echo $fondolinea?>" style="height: 5px">
 
-                                            <td align="center" width="15%"><? echo $numero?></td>
-                                            <td align="center" width="15%"><? echo $operadora?></td>
-                                            <td align="center" width="25%"><? echo $descripcion?></td>
-                                            <td align="center" width="5%"><a href="javascript:eliminar_fono(<?php echo $idcliente?>,<?php echo $idtelefono?>)"><img src="../img/eliminar.png" border="0"></a></td>
-                                            <td align="center" width="5%"><a href="javascript:modificar_fono(<?php echo $idcliente?>,<?php echo $idtelefono?>)"><img src="../img/modificar.png" border="0"></a></td>
+                                            <td align="center" width="15%"><?php  echo $numero?></td>
+                                            <td align="center" width="15%"><?php  echo $operadora?></td>
+                                            <td align="center" width="25%"><?php  echo $descripcion?></td>
+                                            <td align="center" width="5%"><a href="javascript:eliminar_fono(<?php  echo $idcliente?>,<?php  echo $idtelefono?>)"><img src="../img/eliminar.png" border="0"></a></td>
+                                            <td align="center" width="5%"><a href="javascript:modificar_fono(<?php  echo $idcliente?>,<?php  echo $idtelefono?>)"><img src="../img/modificar.png" border="0"></a></td>
                         </tr>
-            <? } ?>
+            <?php  } ?>
             </table>
                 </div>
       </div>

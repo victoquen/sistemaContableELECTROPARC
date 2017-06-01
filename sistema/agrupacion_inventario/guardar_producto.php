@@ -278,11 +278,11 @@ function ingreso_factura_compra(validacion,codarticulo,nombre,idarticulo,iva)
 					    </tr>
                                             <tr>
                                                     <td width="15%">GRAVA IVA:</td>
-                                                    <?if ($iva==0){?>
+                                                    <?php if ($iva==0){?>
                                                         <td width="85%" colspan="2">NO</td>
-                                                    <?}  else {?>
+                                                    <?php }  else {?>
                                                         <td width="85%" colspan="2">SI</td>
-                                                    <?}?>
+                                                    <?php }?>
 					    </tr>
 
                                             <tr>
@@ -315,7 +315,7 @@ function ingreso_factura_compra(validacion,codarticulo,nombre,idarticulo,iva)
                                                 <td>Aplicaci&oacute;n</td>
 						  <td colspan="2"><?php echo $aplicacion?></td>
 					  </tr>
-                                          <?
+                                          <?php
                                             $quer="SELECT empresa FROM proveedor WHERE id_proveedor=$proveedor";
                                             $res=mysql_query($quer,$conn);
                                           ?>
@@ -325,17 +325,17 @@ function ingreso_factura_compra(validacion,codarticulo,nombre,idarticulo,iva)
 						  <td colspan="2"><?php echo mysql_result($res,0,"empresa")?></td>
 					  </tr>
 
-                                          <?
+                                          <?php
                                             $quer="SELECT nombre FROM grupo WHERE id_grupo=$grupo";
                                             $res=mysql_query($quer,$conn);
                                           ?>
 
                                           <tr>
                                               <td>Grupo</td>
-                                              <td><?echo mysql_result($res,0,"nombre")?></td>
+                                              <td><?php echo  mysql_result($res,0,"nombre")?></td>
                                           </tr>
 
-                                           <?
+                                           <?php
                                             $quer="SELECT nombre FROM subgrupo WHERE id_subgrupo=$subgrupo";
                                             $res=mysql_query($quer,$conn);
                                           ?>
@@ -343,7 +343,7 @@ function ingreso_factura_compra(validacion,codarticulo,nombre,idarticulo,iva)
 
                                            <tr>
                                               <td>Subgrupo</td>
-                                              <td><?echo mysql_result($res,0,"nombre")?></td>
+                                              <td><?php echo  mysql_result($res,0,"nombre")?></td>
                                           </tr>
 					</table>
 
@@ -358,7 +358,7 @@ function ingreso_factura_compra(validacion,codarticulo,nombre,idarticulo,iva)
 					</table>
                                         <table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0 ID="Table1">
 
-					  <? //$sel_lineas="SELECT factulinea.*,articulos.*,familias.nombre as nombrefamilia FROM factulinea,articulos,familias WHERE factulinea.codfactura='$codfactura' AND factulinea.codigo=articulos.codarticulo AND factulinea.codfamilia=articulos.codfamilia AND articulos.codfamilia=familias.codfamilia ORDER BY factulinea.numlinea ASC";
+					  <?php //$sel_lineas="SELECT factulinea.*,articulos.*,familias.nombre as nombrefamilia FROM factulinea,articulos,familias WHERE factulinea.codfactura='$codfactura' AND factulinea.codigo=articulos.codarticulo AND factulinea.codfamilia=articulos.codfamilia AND articulos.codfamilia=familias.codfamilia ORDER BY factulinea.numlinea ASC";
                                                 $sel_lineas="SELECT b.codigo as codigo, b.nombre as nombre, b.costo as costo, b.pvp as pvp, b.iva as iva
                                                                 FROM producto_transformacion a INNER JOIN producto b ON a.id_producto=b.id_producto
                                                                 WHERE a.id_transformacion = $idproducto ORDER BY b.nombre ASC";
@@ -382,27 +382,27 @@ function ingreso_factura_compra(validacion,codarticulo,nombre,idarticulo,iva)
                                                             $iva_linea="SI";
                                                         }
 							if ($i % 2) { $fondolinea="itemParTabla"; } else { $fondolinea="itemImparTabla"; } ?>
-									<tr class="<? echo $fondolinea?>">
+									<tr class="<?php echo $fondolinea?>">
 
-                                                                                <td width="10%"><? echo $codarticulo_linea?></td>
-                                                                                <td width="35%" align="center"><? echo $descripcion_linea?></td>
-                                                                                <td width="8%" class="aCentro"><? echo $costo_linea?></td>
-                                                                                <td width="8%" class="aCentro"><? echo $pvp_linea?></td>
-                                                                                <td width="8%" class="aCentro"><? echo $iva_linea?></td>
+                                                                                <td width="10%"><?php echo $codarticulo_linea?></td>
+                                                                                <td width="35%" align="center"><?php echo $descripcion_linea?></td>
+                                                                                <td width="8%" class="aCentro"><?php echo $costo_linea?></td>
+                                                                                <td width="8%" class="aCentro"><?php echo $pvp_linea?></td>
+                                                                                <td width="8%" class="aCentro"><?php echo $iva_linea?></td>
 									</tr>
-					<? } ?>
+					<?php } ?>
 					</table>
 
 			  </div>
 				<div id="botonBusqueda">
-                                     <?if ($origen=="factura"){?>
-                                        <img src="../img/botonaceptar.jpg" width="85" height="22" onClick="ingreso_factura_venta(<?php echo $validacion?>,'<?echo $codigo?>','<?echo $nombre?>','<?echo $pvp?>','<?echo $idproducto?>','<?echo $costo?>','<?echo $stock?>','<?echo $iva?>',<?echo $op?>)" border="1" onMouseOver="style.cursor=cursor">
-                                    <?}else{
+                                     <?php if ($origen=="factura"){?>
+                                        <img src="../img/botonaceptar.jpg" width="85" height="22" onClick="ingreso_factura_venta(<?php echo $validacion?>,'<?php echo  $codigo?>','<?php echo  $nombre?>','<?php echo  $pvp?>','<?php echo  $idproducto?>','<?php echo  $costo?>','<?php echo  $stock?>','<?php echo  $iva?>',<?php echo  $op?>)" border="1" onMouseOver="style.cursor=cursor">
+                                    <?php }else{
                                             if ($origen=="facturacompra"){ ?>
-                                                 <img src="../img/botonaceptar.jpg" width="85" height="22" onClick="ingreso_factura_compra(<?php echo $validacion?>,'<?echo $codigo?>','<?echo $nombre?>','<?echo $idproducto?>','<?echo $iva?>')" border="1" onMouseOver="style.cursor=cursor">
-                                            <?}else{?>
+                                                 <img src="../img/botonaceptar.jpg" width="85" height="22" onClick="ingreso_factura_compra(<?php echo $validacion?>,'<?php echo  $codigo?>','<?php echo  $nombre?>','<?php echo  $idproducto?>','<?php echo  $iva?>')" border="1" onMouseOver="style.cursor=cursor">
+                                            <?php }else{?>
                                                 <img src="../img/botonaceptar.jpg" width="85" height="22" onClick="aceptar(<?php echo $validacion?>)" border="1" onMouseOver="style.cursor=cursor">
-                                    <?}}?>
+                                    <?php }}?>
                                 </div>
 			 </div>
 		  </div>

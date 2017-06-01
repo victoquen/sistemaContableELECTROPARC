@@ -708,7 +708,7 @@ if ($accion == "modificar") {
         }
 
         function imprimir(idfactura) {
-            window.open("../imprimir/imprimir_factura_venta.php?idfactura=" + idfactura);
+            window.open("../imprimir/imprimir_factura_electroparc.php?idfactura=" + idfactura);
         }
 
 

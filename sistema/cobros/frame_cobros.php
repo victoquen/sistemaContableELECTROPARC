@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 include ("../js/fechas.php");
 $hoy=date("d/m/Y");
@@ -27,11 +27,11 @@ if ($accion=="ver") {
             ?>
             <script>
 
-                var valor1=<?php echo $importe;?>;
+                var valor1=<?php  echo $importe;?>;
                 parent.document.getElementById("pendiente").value=valor1;
 
             </script>
-            <?php
+            <?php 
         }       
 }
 if ($accion=="eliminado") {
@@ -44,16 +44,16 @@ if ($accion=="eliminado") {
             <script>
 
                 
-                parent.document.getElementById("pendiente").value=<?php echo $importe;?>;
+                parent.document.getElementById("pendiente").value=<?php  echo $importe;?>;
                 
-                <?php 
+                <?php  
                 $act_factura="UPDATE facturas SET estado='0' WHERE id_factura='$idfactura'";
                 $rs_act=mysql_query($act_factura,$conn);
                 ?>
                 parent.document.getElementById("cboEstados").value=0;
 
             </script>
-            <?php
+            <?php 
         }
 }
 
@@ -97,14 +97,14 @@ if ($accion=="insertar") {
 	parent.document.getElementById("Rimporte").value="";
 	parent.document.getElementById("acbobanco").value="0";
 	parent.document.getElementById("AcboFP").value="0";
-	parent.document.getElementById("fechacobro").value="<?php echo $hoy?>";
-	var importe=<?php echo $importe?>;
+	parent.document.getElementById("fechacobro").value="<?php  echo $hoy?>";
+	var importe=<?php  echo $importe?>;
 	var total=parent.document.getElementById("pendiente").value - parseFloat(importe);
 	var original=parseFloat(total);
 	var result=Math.round(original*100)/100 ;
 	parent.document.getElementById("pendiente").value=result;
         
-            <?php 
+            <?php  
                 $select_facturas="SELECT totalfactura, ret_iva, ret_fuente FROM facturas  WHERE facturas.id_factura=$idfactura";
                 $rs_facturas=mysql_query($select_facturas,$conn);
                 $totalfactura=mysql_result($rs_facturas,0,"totalfactura");
@@ -128,7 +128,7 @@ if ($accion=="insertar") {
                 }
             ?>
                                   
-	</script><?php
+	</script><?php 
 }
 
 $query_busqueda="SELECT count(*) as filas FROM cobros,cliente WHERE cobros.id_cliente=cliente.id_cliente AND cobros.id_factura='$idfactura' order BY id_cobro DESC";
@@ -153,7 +153,7 @@ $filas=mysql_result($rs_busqueda,0,"filas");
             }
 		
 		function ver_cobros(idfactura) {
-			parent.location.href="ver_cobros.php?idfactura=" + idfactura + "&cadena_busqueda=<? echo $cadena_busqueda?>";
+			parent.location.href="ver_cobros.php?idfactura=" + idfactura + "&cadena_busqueda=<?php  echo $cadena_busqueda?>";
 		}
 		
 		</script>
@@ -165,20 +165,20 @@ $filas=mysql_result($rs_busqueda,0,"filas");
                             
 
 			<form name="form1" id="form1">		
-				<?php	if ($filas > 0) { ?>
-						<?php $sel_resultado="SELECT cobros.id_cobro, cobros.id_factura, cobros.fechacobro, cobros.importe, formapago.nombre as nombrefp, cobros.id_banco, cobros.observaciones FROM facturas,cobros,cliente,formapago WHERE cobros.id_factura='$idfactura' AND cobros.id_factura=facturas.id_factura AND cobros.id_cliente=cliente.id_cliente AND cobros.id_formapago=formapago.id_formapago ORDER BY cobros.id_cobro DESC";
+				<?php 	if ($filas > 0) { ?>
+						<?php  $sel_resultado="SELECT cobros.id_cobro, cobros.id_factura, cobros.fechacobro, cobros.importe, formapago.nombre as nombrefp, cobros.id_banco, cobros.observaciones FROM facturas,cobros,cliente,formapago WHERE cobros.id_factura='$idfactura' AND cobros.id_factura=facturas.id_factura AND cobros.id_cliente=cliente.id_cliente AND cobros.id_formapago=formapago.id_formapago ORDER BY cobros.id_cobro DESC";
 						   $res_resultado=mysql_query($sel_resultado, $conn);
 						   $contador=0;				   
 						   while ($contador < mysql_num_rows($res_resultado)) { 
 								if ($contador % 2) { $fondolinea="itemParTabla"; } else { $fondolinea="itemImparTabla"; }?>
-						<tr class="<?php echo $fondolinea?>">
-							<td class="aCentro" width="5%"><?php echo $contador+1;?></td>
-							<td width="13%"><div align="center"><?php echo implota(mysql_result($res_resultado,$contador,"fechacobro"))?></div></td>
-							<td width="13%"><div align="center"><?php echo number_format(mysql_result($res_resultado,$contador,"importe"),2,",",".")?></div></td>
-							<td width="20%"><div align="center"><?php echo mysql_result($res_resultado,$contador,"nombrefp")?></div></td>
+						<tr class="<?php  echo $fondolinea?>">
+							<td class="aCentro" width="5%"><?php  echo $contador+1;?></td>
+							<td width="13%"><div align="center"><?php  echo implota(mysql_result($res_resultado,$contador,"fechacobro"))?></div></td>
+							<td width="13%"><div align="center"><?php  echo number_format(mysql_result($res_resultado,$contador,"importe"),2,",",".")?></div></td>
+							<td width="20%"><div align="center"><?php  echo mysql_result($res_resultado,$contador,"nombrefp")?></div></td>
 							<td class="aDerecha" width="19%">
                                                             <div align="center">
-                                                                <?php
+                                                                <?php 
                                                                     if(mysql_result($res_resultado,$contador,"id_banco")==0)
                                                                         echo "---";
                                                                     else {
@@ -190,20 +190,20 @@ $filas=mysql_result($rs_busqueda,0,"filas");
                                                             </div>
                                                         </td>
 							
-							<td width="5%"><div align="center"><a href="#"><img src="../img/observaciones.png" width="16" height="16" border="0" onClick="abreVentana('<?php echo mysql_result($res_resultado,$contador,"observaciones")?>')" title="Ver Observaciones"></a></div></td>
-							<td width="5%"><div align="center"><a href="#"><img src="../img/eliminar.png" width="16" height="16" border="0" onClick="eliminar('<?php echo mysql_result($res_resultado,$contador,"id_factura")?>','<?php echo mysql_result($res_resultado,$contador,"id_cobro")?>','<?php echo mysql_result($res_resultado,$contador,"fechacobro")?>','<?php echo mysql_result($res_resultado,$contador,"importe")?>')" title="Eliminar"></a></div></td>
+							<td width="5%"><div align="center"><a href="#"><img src="../img/observaciones.png" width="16" height="16" border="0" onClick="abreVentana('<?php  echo mysql_result($res_resultado,$contador,"observaciones")?>')" title="Ver Observaciones"></a></div></td>
+							<td width="5%"><div align="center"><a href="#"><img src="../img/eliminar.png" width="16" height="16" border="0" onClick="eliminar('<?php  echo mysql_result($res_resultado,$contador,"id_factura")?>','<?php  echo mysql_result($res_resultado,$contador,"id_cobro")?>','<?php  echo mysql_result($res_resultado,$contador,"fechacobro")?>','<?php  echo mysql_result($res_resultado,$contador,"importe")?>')" title="Eliminar"></a></div></td>
 						</tr>
-						<?php $contador++;
+						<?php  $contador++;
 							}
 						?>			
 					</table>
-					<?php } else { ?>
+					<?php  } else { ?>
 					<table class="fuente8" width="100%" cellspacing=0 cellpadding=3 border=0>
 						<tr>
-							<td width="100%" class="mensaje"><?php echo "Todav&iacute;a no se ha producido ning&uacute;n cobro de esta factura.";?></td>
+							<td width="100%" class="mensaje"><?php  echo "Todav&iacute;a no se ha producido ning&uacute;n cobro de esta factura.";?></td>
 					    </tr>
 					</table>					
-					<?php } ?>
+					<?php  } ?>
 					</form>
                            
 				</div>

@@ -1,4 +1,4 @@
-<?php 
+<?php  
 
 $hoy=date("d/m/Y");
 $hora=date("H:i:s");
@@ -44,12 +44,12 @@ $conn = $usuario->getConexion();
 						</tr>
 						<tr>
 							<td width="14%">Fecha</td>
-						    <td width="36%"><input NAME="fecha" type="text" class="cajaPequena" id="fecha" size="12" maxlength="12" value="<? echo $hoy?>" readonly="yes"></td>
+						    <td width="36%"><input NAME="fecha" type="text" class="cajaPequena" id="fecha" size="12" maxlength="12" value="<?php  echo $hoy?>" readonly="yes"></td>
 				            <td width="50%"></td>
 						</tr>
 						<tr>
 							<td width="14%">Hora</td>
-						    <td width="36%"><input NAME="hora" type="text" class="cajaPequena" id="hora" size="12" maxlength="12" value="<? echo $hora?>" readonly="yes"></td>
+						    <td width="36%"><input NAME="hora" type="text" class="cajaPequena" id="hora" size="12" maxlength="12" value="<?php  echo $hora?>" readonly="yes"></td>
 				            <td width="50%"></td>
 						</tr>							
 					</table>

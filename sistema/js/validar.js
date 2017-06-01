@@ -3,6 +3,7 @@ funciones de javascript para comprobar formularios
 funcion para comprobar CI ecuatoriana
 
 */
+
 function validar(formulario,mandar) {
 	var campos  = formulario.getElementsByTagName("input");
 	var listaErrores = document.getElementById("lista-errores");

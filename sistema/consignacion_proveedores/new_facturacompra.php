@@ -1,4 +1,4 @@
-<?php 
+<?php  
 include ("../conexion/conexion.php");
 
 $usuario = new ServidorBaseDatos();
@@ -360,11 +360,11 @@ $codfacturatmp=mysql_insert_id();
                                                         </td>-->
                                                     
 						</tr>
-						<? $hoy=date("d/m/Y"); ?>
+						<?php  $hoy=date("d/m/Y"); ?>
 						<tr>
                                                     <td width="6%">Fecha</td>
                                                     <td width="27%" >
-                                                        <input NAME="fecha" type="text" class="cajaPequena" id="fecha" size="10" maxlength="10" value="<? echo $hoy?>" readonly> <img src="../img/calendario.png" name="Image1" id="Image1" width="16" height="16" border="0" id="Image1" onMouseOver="this.style.cursor='pointer'">
+                                                        <input NAME="fecha" type="text" class="cajaPequena" id="fecha" size="10" maxlength="10" value="<?php  echo $hoy?>" readonly> <img src="../img/calendario.png" name="Image1" id="Image1" width="16" height="16" border="0" id="Image1" onMouseOver="this.style.cursor='pointer'">
                                                     <script type="text/javascript">
                                                                                     Calendar.setup(
                                                                                       {
@@ -414,12 +414,12 @@ $codfacturatmp=mysql_insert_id();
 						</tr>
 					</table>										
 			  </div>
-			  <!--<input id="codfacturatmp" name="codfacturatmp" value="<? echo $codfacturatmp?>" type="hidden">
-			  <input id="baseimpuestos2" name="baseimpuestos2" value="<? echo $baseimpuestos?>" type="hidden">
-			  <input id="baseimponible2" name="baseimponible2" value="<? echo $baseimponible?>" type="hidden">
-			  <input id="preciototal2" name="preciototal2" value="<? echo $preciototal?>" type="hidden">
-                          <input id="baseretencion2" name="baseretencion2" value="<?echo $baseretencion?>" type="hidden">-->
-                         <input id="codfacturatmp" name="codfacturatmp" value="<? echo $codfacturatmp?>" type="hidden">
+			  <!--<input id="codfacturatmp" name="codfacturatmp" value="<?php  echo $codfacturatmp?>" type="hidden">
+			  <input id="baseimpuestos2" name="baseimpuestos2" value="<?php  echo $baseimpuestos?>" type="hidden">
+			  <input id="baseimponible2" name="baseimponible2" value="<?php  echo $baseimponible?>" type="hidden">
+			  <input id="preciototal2" name="preciototal2" value="<?php  echo $preciototal?>" type="hidden">
+                          <input id="baseretencion2" name="baseretencion2" value="<?php echo $baseretencion?>" type="hidden">-->
+                         <input id="codfacturatmp" name="codfacturatmp" value="<?php  echo $codfacturatmp?>" type="hidden">
                           <input id="iva02" name="iva02" value="0" type="hidden">
                           <input id="iva122" name="iva122" value="0" type="hidden">
                           <input id="descuentototal2" name="descuentototal2" value="0" type="hidden">
@@ -470,8 +470,8 @@ $codfacturatmp=mysql_insert_id();
                                   </tr>                                                                       
 				</table>
 				</div>
-				<input name="idarticulo" value="<? echo $idarticulo?>" type="hidden" id="idarticulo">
-                               <!-- <input name="costo" value="<? //echo $costo?>" type="hidden" id="costo">-->
+				<input name="idarticulo" value="<?php  echo $idarticulo?>" type="hidden" id="idarticulo">
+                               <!-- <input name="costo" value="<?php  //echo $costo?>" type="hidden" id="costo">-->
 				<br>
 				<div id="frmBusqueda">
 				<table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0 ID="Table1">
@@ -524,9 +524,9 @@ $codfacturatmp=mysql_insert_id();
                                               <div align="center">
                                                     <img src="../img/botonaceptar.jpg" width="85" height="22" onClick="validar_cabecera()" border="1" onMouseOver="style.cursor=cursor">
                                                     <img src="../img/botoncancelar.jpg" width="85" height="22" onClick="cancelar()" border="1" onMouseOver="style.cursor=cursor">
-                                                <!--<input id="codfamilia" name="codfamilia" value="<? echo $codfamilia?>" type="hidden">-->
-                                                    <input id="codfacturatmp" name="codfacturatmp" value="<? echo $codfacturatmp?>" type="hidden">
-                                                    <input id="preciototal2" name="preciototal2" value="<? echo $preciototal?>" type="hidden">
+                                                <!--<input id="codfamilia" name="codfamilia" value="<?php  echo $codfamilia?>" type="hidden">-->
+                                                    <input id="codfacturatmp" name="codfacturatmp" value="<?php  echo $codfacturatmp?>" type="hidden">
+                                                    <input id="preciototal2" name="preciototal2" value="<?php  echo $preciototal?>" type="hidden">
 
 
                                                     <input class="cajaTotales" name="descuentototal" type="hidden" id="descuentototal" size="12" value=0 align="right" onchange="restar_descuento()">

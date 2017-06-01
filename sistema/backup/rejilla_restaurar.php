@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 error_reporting(0);
 
@@ -32,11 +32,11 @@ $filas=mysql_result($rs_busqueda,0,"filas");
 		<script language="javascript">
 		
 		function restaurar(id,archivo) {
-			parent.location.href="restaurar_copia.php?id=" + id + "&archivo="+archivo+"&cadena_busqueda=<? echo $cadena_busqueda?>";
+			parent.location.href="restaurar_copia.php?id=" + id + "&archivo="+archivo+"&cadena_busqueda=<?php  echo $cadena_busqueda?>";
 		}
 		
 		function eliminar(id,archivo) {
-			parent.location.href="eliminar_copia.php?id=" + id + "&archivo="+archivo+"&cadena_busqueda=<? echo $cadena_busqueda?>";
+			parent.location.href="eliminar_copia.php?id=" + id + "&archivo="+archivo+"&cadena_busqueda=<?php  echo $cadena_busqueda?>";
 		}
 
 		function inicio() {
@@ -68,37 +68,37 @@ $filas=mysql_result($rs_busqueda,0,"filas");
 			<div id="zonaContenido">
 			<div align="center">
 			<table class="fuente8" width="90%" cellspacing=0 cellpadding=3 border=0 ID="Table1">
-			<input type="hidden" name="numfilas" id="numfilas" value="<? echo $filas?>">
-				<? $iniciopagina=$_POST["iniciopagina"];
+			<input type="hidden" name="numfilas" id="numfilas" value="<?php  echo $filas?>">
+				<?php  $iniciopagina=$_POST["iniciopagina"];
 				if (empty($iniciopagina)) { $iniciopagina=$_GET["iniciopagina"]; } else { $iniciopagina=$iniciopagina-1;}
 				if (empty($iniciopagina)) { $iniciopagina=0; }
 				if ($iniciopagina>$filas) { $iniciopagina=0; }
 					if ($filas > 0) { ?>
-						<? $sel_resultado="SELECT * FROM tabbackup WHERE ".$where;
+						<?php  $sel_resultado="SELECT * FROM tabbackup WHERE ".$where;
 						   $sel_resultado=$sel_resultado."  limit ".$iniciopagina.",10";						   
 						   $res_resultado=mysql_query($sel_resultado,$conn);
 						   $contador=0;
 						   while ($contador < mysql_num_rows($res_resultado)) { 
 								 if ($contador % 2) { $fondolinea="itemParTabla"; } else { $fondolinea="itemImparTabla"; }?>
-						<tr class="<?php echo $fondolinea?>">
-							<td class="aCentro" width="6%"><? echo $contador+1;?></td>
-							<td width="50%"><div align="center"><? echo mysql_result($res_resultado,$contador,"denominacion")?></div></td>
-							<td width="16%"><div align="center"><? echo implota(mysql_result($res_resultado,$contador,"fecha"))?></div></td>
-							<td width="16%"><div align="center"><? echo mysql_result($res_resultado,$contador,"hora")?></div></td>
-							<td width="6%"><div align="center"><a href="#"><img src="../img/restaurar.png" width="16" height="16" border="0" onClick="restaurar(<?php echo mysql_result($res_resultado,$contador,"id")?>,'<?php echo mysql_result($res_resultado,$contador,"archivo")?>')" title="Restaurar"></a></div></td>
-							<td width="6%"><div align="center"><a href="#"><img src="../img/eliminar.png" width="16" height="16" border="0" onClick="eliminar(<?php echo mysql_result($res_resultado,$contador,"id")?>,'<?php echo mysql_result($res_resultado,$contador,"archivo")?>')" title="Eliminar"></a></div></td>
+						<tr class="<?php  echo $fondolinea?>">
+							<td class="aCentro" width="6%"><?php  echo $contador+1;?></td>
+							<td width="50%"><div align="center"><?php  echo mysql_result($res_resultado,$contador,"denominacion")?></div></td>
+							<td width="16%"><div align="center"><?php  echo implota(mysql_result($res_resultado,$contador,"fecha"))?></div></td>
+							<td width="16%"><div align="center"><?php  echo mysql_result($res_resultado,$contador,"hora")?></div></td>
+							<td width="6%"><div align="center"><a href="#"><img src="../img/restaurar.png" width="16" height="16" border="0" onClick="restaurar(<?php  echo mysql_result($res_resultado,$contador,"id")?>,'<?php  echo mysql_result($res_resultado,$contador,"archivo")?>')" title="Restaurar"></a></div></td>
+							<td width="6%"><div align="center"><a href="#"><img src="../img/eliminar.png" width="16" height="16" border="0" onClick="eliminar(<?php  echo mysql_result($res_resultado,$contador,"id")?>,'<?php  echo mysql_result($res_resultado,$contador,"archivo")?>')" title="Eliminar"></a></div></td>
 						</tr>
-						<? $contador++;
+						<?php  $contador++;
 							}
 						?>			
 					</table>
-					<? } else { ?>
+					<?php  } else { ?>
 					<table class="fuente8" width="85%" cellspacing=0 cellpadding=3 border=0>
 						<tr>
-							<td width="100%" class="mensaje"><?php echo "No hay ninguna copia de seguridad que cumpla con los criterios de b&uacute;squeda";?></td>
+							<td width="100%" class="mensaje"><?php  echo "No hay ninguna copia de seguridad que cumpla con los criterios de b&uacute;squeda";?></td>
 					    </tr>
 					</table>					
-					<? } ?>					
+					<?php  } ?>					
 				</div>
 			</div>
 		  </div>			

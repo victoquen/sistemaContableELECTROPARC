@@ -1,4 +1,4 @@
-<?php 
+<?php  
 include ("../conexion/conexion.php");
 $usuario = new ServidorBaseDatos();
 $conn = $usuario->getConexion();
@@ -126,7 +126,7 @@ body {
 -->
 </style></head>
 
-<body onload="carga(<?php echo $idarticulo;?>,<?php echo $idbodegaorigen?>)">
+<body onload="carga(<?php  echo $idarticulo;?>,<?php  echo $idbodegaorigen?>)">
     <div id="pagina">
 	<div id="zonaContenido">
 		<div align="center">
@@ -139,7 +139,7 @@ body {
           <table class="fuente8" width="95%" id="tabla_resultado" name="tabla_resultado" align="center">
                 <tr>
                   <td>Producto:</td>
-                  <td><strong><?php  echo mysql_result($rs_l,0,'nombre')?></strong></td>
+                  <td><strong><?php   echo mysql_result($rs_l,0,'nombre')?></strong></td>
                 </tr>
 				
 				<td>Bodega Origen</td>
@@ -152,27 +152,27 @@ body {
 				<tr>
 					<td>Bodega Destino</td>
 					<td>
-					<?php 
+					<?php  
 						$idproducto = mysql_result($rs_l,0,'idarticulo');
 						$queryb = "SELECT b.id_bodega as idbodega, b.nombre as nombre FROM bodega b";
 							   $resb = mysql_query($queryb, $conn);?>
 					
 						<select name="cbobodegadestino" id="cbobodegadestino" class="comboMedio" >
 						
-						<?php
+						<?php 
 						
 								$contador=0;
 								while ($contador < mysql_num_rows($resb))
 								{
 									if(mysql_result($resb,$contador,"idbodega")==$idbodegadestino)
 									{?>
-										<option selected value="<?php echo mysql_result($resb,$contador,"idbodega")?>"><?php echo mysql_result($resb,$contador,"nombre");?></option>
+										<option selected value="<?php  echo mysql_result($resb,$contador,"idbodega")?>"><?php  echo mysql_result($resb,$contador,"nombre");?></option>
 									   
 
 
-									 <?php } else {?>
-										<option  value="<?php echo mysql_result($resb,$contador,"idbodega")?>"><?php echo mysql_result($resb,$contador,"nombre");?></option>
-								<?php }$contador++;
+									 <?php  } else {?>
+										<option  value="<?php  echo mysql_result($resb,$contador,"idbodega")?>"><?php  echo mysql_result($resb,$contador,"nombre");?></option>
+								<?php  }$contador++;
 								} ?>
 						
 						
@@ -182,7 +182,7 @@ body {
 				</tr>
                 <tr>
                     <td width="5%">Cantidad:</td>
-                    <td width="40%"><input NAME="cantidad" type="text" class="cajaPequena" id="cantidad" value="<?php echo mysql_result($rs_l,0,'cantidad');?>" maxlength="13" onChange="actualizar_importe()"></td>
+                    <td width="40%"><input NAME="cantidad" type="text" class="cajaPequena" id="cantidad" value="<?php  echo mysql_result($rs_l,0,'cantidad');?>" maxlength="13" onChange="actualizar_importe()"></td>
                 </tr>
               
 
@@ -205,8 +205,8 @@ body {
                 <ilayer width="0" height="0" id="frame_datos" name="frame_datos"></ilayer>
         </iframe>
            
-       <input id="transferenciatmp" name="transferenciatmp" value="<?php  echo $transferenciatmp?>" type="hidden">
-       <input id="numlinea" name="numlinea" value="<?php  echo $numlinea?>" type="hidden">
+       <input id="transferenciatmp" name="transferenciatmp" value="<?php   echo $transferenciatmp?>" type="hidden">
+       <input id="numlinea" name="numlinea" value="<?php   echo $numlinea?>" type="hidden">
 
         </form>
 

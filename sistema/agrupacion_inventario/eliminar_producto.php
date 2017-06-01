@@ -1,4 +1,4 @@
-<?
+<?php
 
 $idproducto=$_REQUEST["idproducto"];
 
@@ -17,15 +17,15 @@ $row = $producto->get_producto_id($conn, $idproducto);
 		<title>Principal</title>
 		<link href="../estilos/estilos.css" type="text/css" rel="stylesheet">
 		<script language="javascript">
-		
+
 		function aceptar(idproducto) {
 			location.href="save_producto.php?idproducto=" + idproducto + "&accion=baja";
 		}
-		
+
 		function cancelar() {
 			location.href="index.php";
 		}
-		
+
 		var cursor;
 		if (document.all) {
 		// Está utilizando EXPLORER
@@ -34,7 +34,7 @@ $row = $producto->get_producto_id($conn, $idproducto);
 		// Está utilizando MOZILLA/NETSCAPE
 		cursor='pointer';
 		}
-		
+
 		</script>
 	</head>
 	<body>
@@ -54,11 +54,11 @@ $row = $producto->get_producto_id($conn, $idproducto);
 					    </tr>
                                             <tr>
                                                 <td>GRAVA IVA</td>
-                                                <?if ($row["iva"]==0){?>
+                                                <?php if ($row["iva"]==0){?>
                                                     <td>No</td>
-                                                <?}else{?>
+                                                <?php }else{?>
                                                     <td>Si</td>
-                                                <?}?>
+                                                <?php }?>
                                             </tr>
                                             <tr>
                                                 <td width="15%"><strong>Stock</strong></td>
@@ -76,16 +76,16 @@ $row = $producto->get_producto_id($conn, $idproducto);
                                                 <td width="15%"><strong>PVP</strong></td>
                                                 <td width="85%" colspan="2"><?php echo $row['pvp']?></td>
 					    </tr>
-                                           
+
                                             <tr>
                                                 <td width="15%"><strong>Composici&oacute;n</strong></td>
                                                 <td width="85%" colspan="2"><?php echo $row['composicion']?></td>
 					    </tr>
-                                            
+
 					</table>
 			  </div>
 				<div id="botonBusqueda">
-					<img src="../img/botonaceptar.jpg" width="85" height="22" onClick="aceptar(<? echo $idproducto?>)" border="1" onMouseOver="style.cursor=cursor">
+					<img src="../img/botonaceptar.jpg" width="85" height="22" onClick="aceptar(<?php echo $idproducto?>)" border="1" onMouseOver="style.cursor=cursor">
 					<img src="../img/botoncancelar.jpg" width="85" height="22" onClick="cancelar()" border="1" onMouseOver="style.cursor=cursor">
 			  </div>
 			  </div>

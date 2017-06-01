@@ -1,4 +1,4 @@
-<?
+<?php 
 
 $idcliente=$_REQUEST["idcliente"];
 
@@ -47,43 +47,43 @@ $row = $cliente->get_cliente_id($conn, $idcliente);
 					<table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0>
                                                 <tr>
 							<td width="15%">Nombre</td>
-						    <td width="85%" colspan="2"><?php echo $row['nombre']?></td>
+						    <td width="85%" colspan="2"><?php  echo $row['nombre']?></td>
                                                 </tr>
 						<tr>
 							<td width="15%">CI/RUC</td>
-							<td width="85%" colspan="2"><?php echo $row['ci_ruc']?></td>
+							<td width="85%" colspan="2"><?php  echo $row['ci_ruc']?></td>
                                                 </tr>
 
-                                                <?php
+                                                <?php 
 
                                                     $rtipo = $cliente->get_nombretipo($row['codigo_tipocliente'],$conn);
                                                 ?>
                                                 <tr>
                                                     <td width="15%"><strong>Tipo</strong></td>
-                                                    <td width="85%" colspan="2"><?php echo $rtipo['nombre']?></td>
+                                                    <td width="85%" colspan="2"><?php  echo $rtipo['nombre']?></td>
                                                 </tr>
                                                 
                                                 <tr>
 							<td width="15%">Email</td>
-						    <td width="85%" colspan="2"><?php echo $row['email']?></td>
+						    <td width="85%" colspan="2"><?php  echo $row['email']?></td>
                                                 </tr>
                                                 <tr>
                                                     <td width="15%">Direcci&oacute;n</td>
-						    <td width="85%" colspan="2"><?php echo $row['direccion']?></td>
+						    <td width="85%" colspan="2"><?php  echo $row['direccion']?></td>
                                                 </tr>
                                                 <tr>
                                                     <td width="15%">Lugar/Ciudad</td>
-						    <td width="85%" colspan="2"><?php echo $row['lugar']?></td>
+						    <td width="85%" colspan="2"><?php  echo $row['lugar']?></td>
                                                 </tr>
                                                 <tr>
                                                     <td width="15%">Credito</td>
-						    <td width="85%" colspan="2"><?php echo $row['credito']?></td>
+						    <td width="85%" colspan="2"><?php  echo $row['credito']?></td>
                                                 </tr>
 
                                                 <tr>
                                                     <td colspan="2">Tel&eacute;fono(s):</td>
                                                 </tr>
-                                                <?php
+                                                <?php 
                                                     $query_fono="SELECT numero, operadora, descripcion FROM clientefono WHERE id_cliente='$idcliente'";
                                                     $rs_fono=mysql_query($query_fono,$conn);
                                                     if($rs_fono)
@@ -97,7 +97,7 @@ $row = $cliente->get_cliente_id($conn, $idcliente);
                                                 <tr>
                                                     <td colspan="2">
                                                         <BLOCKQUOTE>
-                                                        <?
+                                                        <?php 
                                                             $id_operadora=mysql_result($rs_fono,$contador,'operadora');
                                                             $query_operadora="SELECT nombre FROM operadora WHERE id_operadora='$id_operadora'";
                                                             $rs_operadora=mysql_query($query_operadora,$conn);
@@ -106,7 +106,7 @@ $row = $cliente->get_cliente_id($conn, $idcliente);
                                                         </BLOCKQUOTE>
                                                     </td>
                                                 </tr>
-                                                <?
+                                                <?php 
                                                             $contador++;
                                                          }
                                                     }
@@ -115,7 +115,7 @@ $row = $cliente->get_cliente_id($conn, $idcliente);
 					</table>
 			  </div>
 				<div id="botonBusqueda">
-					<img src="../img/botonaceptar.jpg" width="85" height="22" onClick="aceptar(<? echo $idcliente?>)" border="1" onMouseOver="style.cursor=cursor">
+					<img src="../img/botonaceptar.jpg" width="85" height="22" onClick="aceptar(<?php  echo $idcliente?>)" border="1" onMouseOver="style.cursor=cursor">
 					<img src="../img/botoncancelar.jpg" width="85" height="22" onClick="cancelar()" border="1" onMouseOver="style.cursor=cursor">
 			  </div>
 			  </div>

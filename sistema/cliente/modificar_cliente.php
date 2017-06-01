@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 $idcliente = $_GET["idcliente"];
 
@@ -97,7 +97,7 @@ if ($row['image'] === "") {
                     <table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0>
                         <tr>
                             <td>ID</td>
-                            <td><?php echo $idcliente ?></td>
+                            <td><?php  echo $idcliente ?></td>
                             <td width="42%" rowspan="7" align="left" valign="top">
                                 <ul id="lista-errores"></ul>
                             </td>
@@ -105,22 +105,22 @@ if ($row['image'] === "") {
                         <tr>
                             <td width="15%">Apellidos - Nombres</td>
                             <td width="43%"><input NAME="Anombres" type="text" class="cajaGrande" id="nombre"
-                                                   value="<?php echo $row['nombre'] ?>" size="44"></td>
+                                                   value="<?php  echo $row['nombre'] ?>" size="44"></td>
 
                         </tr>
 
                         <tr>
                             <td width="15%">Empresa</td>
                             <td width="43%"><input NAME="aempresa" type="text" class="cajaGrande" id="empresa"
-                                                   value="<?php echo $row['empresa'] ?>" size="50"></td>
+                                                   value="<?php  echo $row['empresa'] ?>" size="50"></td>
                         </tr>
 
                         <tr>
                             <td width="15%">CI/RUC</td>
                             <td width="43%"><input NAME="Vci_ruc" type="text" class="cajaGrande" id="cogigo"
-                                                   value="<?php echo $row['ci_ruc'] ?>" size="45" maxlength="45"></td>
+                                                   value="<?php  echo $row['ci_ruc'] ?>" size="45" maxlength="45"></td>
                         </tr>
-                        <?php
+                        <?php 
 
                         $rows = $cliente->listado_tipocliente($conn);
                         //$rtipo= $cliente->get_nombretipo();
@@ -129,18 +129,18 @@ if ($row['image'] === "") {
                             <td width="17%">Tipo</td>
                             <td><select id="cboFamilias" name="Acbotipos" class="comboGrande">
                                     <option value="0">Seleccione un Tipo</option>
-                                    <?php
+                                    <?php 
                                     foreach ($rows as $rowaux => $value) {
                                         if ($rows[$rowaux]['codigo_tipocliente'] == $row['codigo_tipocliente']) {
                                             ?>
                                             <option selected="true"
-                                                    value="<?php echo $rows[$rowaux]['codigo_tipocliente'] ?>"><?php echo $rows[$rowaux]['nombre'] ?></option>
-                                            <?
+                                                    value="<?php  echo $rows[$rowaux]['codigo_tipocliente'] ?>"><?php  echo $rows[$rowaux]['nombre'] ?></option>
+                                            <?php 
                                         } else {
                                             ?>
                                             <option
-                                                value="<?php echo $rows[$rowaux]['codigo_tipocliente'] ?>"><?php echo $rows[$rowaux]['nombre'] ?></option>
-                                            <?
+                                                value="<?php  echo $rows[$rowaux]['codigo_tipocliente'] ?>"><?php  echo $rows[$rowaux]['nombre'] ?></option>
+                                            <?php 
                                         }
                                     }
                                     ?>
@@ -151,29 +151,29 @@ if ($row['image'] === "") {
                         <tr>
                             <td width="15%">Email</td>
                             <td width="43%"><input NAME="aemail" id="email" type="text" class="cajaGrande1"
-                                                   value="<?php echo $row['email'] ?>" size="35" maxlength="50"></td>
+                                                   value="<?php  echo $row['email'] ?>" size="35" maxlength="50"></td>
                         </tr>
                         <tr>
                             <td width="17%">Direcci&oacute;n</td>
                             <td><textarea name="adireccion" cols="41" rows="2" id="direccion"
-                                          class="areaTexto"><?php echo $row['direccion'] ?></textarea></td>
+                                          class="areaTexto"><?php  echo $row['direccion'] ?></textarea></td>
                         </tr>
                         <tr>
                             <td width="15%">Lugar/Ciudad</td>
                             <td width="43%"><input NAME="alugar" id="lugar" type="text" class="cajaGrande"
-                                                   value="<?php echo $row['lugar'] ?>" size="35" maxlength="50"></td>
+                                                   value="<?php  echo $row['lugar'] ?>" size="35" maxlength="50"></td>
                         </tr>
                         <tr>
                             <td width="15%">Acreedor a Cr&eacute;dito</td>
                             <td width="43%">
                                 <select id="credito" name="acredito" class="comboPequeno">
-                                    <? if ($row['credito'] == "NO") { ?>
+                                    <?php  if ($row['credito'] == "NO") { ?>
                                         <option value="0" selected>No</option>
                                         <option value="1">Si</option>
-                                    <? } else { ?>
+                                    <?php  } else { ?>
                                         <option value="0">No</option>
                                         <option value="1" selected>Si</option>
-                                    <? } ?>
+                                    <?php  } ?>
                                 </select>
                             </td>
                         </tr>
@@ -189,7 +189,7 @@ if ($row['image'] === "") {
                         <tr>
                             <td></td>
                             <td>
-                                <img id="image" name="image" src="fotografias/<?php echo $row['image']; ?>"
+                                <img id="image" name="image" src="fotografias/<?php  echo $row['image']; ?>"
                                      alt="your image" width="150"
                                      height="200"/>
                             </td>
@@ -200,8 +200,8 @@ if ($row['image'] === "") {
 
                 <input id="accion" name="accion" value="modificar" type="hidden">
                 <input id="id" name="id" value="" type="hidden">
-                <input id="idcliente" name="idcliente" value="<?php echo $idcliente ?>" type="hidden">
-                <input id="userpic" name="userpic" value="<?php echo $row['image']; ?>" type="hidden"/>
+                <input id="idcliente" name="idcliente" value="<?php  echo $idcliente ?>" type="hidden">
+                <input id="userpic" name="userpic" value="<?php  echo $row['image']; ?>" type="hidden"/>
             </div>
             </form>
 
@@ -212,7 +212,7 @@ if ($row['image'] === "") {
                     <div id="tituloForm" class="header">TELEFONOS</div>
                     <table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0>
 
-                        <?php
+                        <?php 
 
                         $query_o = "SELECT * FROM operadora WHERE borrado=0 ORDER BY nombre ASC";
                         $res_o = mysql_query($query_o, $conn);
@@ -225,12 +225,12 @@ if ($row['image'] === "") {
                                 Operadora:&nbsp;
                                 <select id="operadora" class="comboMedio" NAME="operadora">
                                     <option value="0">Seleccionar operadora</option>
-                                    <?php
+                                    <?php 
                                     $contador = 0;
                                     while ($contador < mysql_num_rows($res_o)) { ?>
                                         <option
-                                            value="<?php echo mysql_result($res_o, $contador, "id_operadora") ?>"><?php echo mysql_result($res_o, $contador, "nombre") ?></option>
-                                        <? $contador++;
+                                            value="<?php  echo mysql_result($res_o, $contador, "id_operadora") ?>"><?php  echo mysql_result($res_o, $contador, "nombre") ?></option>
+                                        <?php  $contador++;
                                     } ?>
                                 </select>
                                 &nbsp;
@@ -278,7 +278,7 @@ if ($row['image'] === "") {
 
 
             </div>
-            <input id="idcliente" name="idcliente" value="<?php echo $idcliente ?>" type="hidden">
+            <input id="idcliente" name="idcliente" value="<?php  echo $idcliente ?>" type="hidden">
             <input id="modif" name="modif" value="0" type="hidden">
             </form>
 

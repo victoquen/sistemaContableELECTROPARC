@@ -1,4 +1,4 @@
-<?
+<?php 
 error_reporting(0);
 
 include ("../js/fechas.php");
@@ -75,12 +75,12 @@ if ($resultado) {
 		<div id="pagina">
 			<div id="zonaContenido">
 				<div align="center">
-				<div id="tituloForm" class="header"><?php echo $cabecera2?></div>
+				<div id="tituloForm" class="header"><?php  echo $cabecera2?></div>
 				<div id="frmBusqueda">
 					<table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0>
 						<tr>
 							<td width="15%"></td>
-							<td width="85%" colspan="2" class="mensaje"><?php echo $mensaje;?></td>
+							<td width="85%" colspan="2" class="mensaje"><?php  echo $mensaje;?></td>
 					    </tr>
 
 						<tr>
@@ -89,11 +89,11 @@ if ($resultado) {
 					    </tr>
 						<tr>
 							<td width="15%">Fecha</td>
-						    <td width="85%" colspan="2"><?php echo $fecha?></td>
+						    <td width="85%" colspan="2"><?php  echo $fecha?></td>
 					    </tr>
 						<tr>
 							<td width="15%">Hora</td>
-						    <td width="85%" colspan="2"><?php echo $hora?></td>
+						    <td width="85%" colspan="2"><?php  echo $hora?></td>
 					    </tr>							
 					</table>
 			  </div>

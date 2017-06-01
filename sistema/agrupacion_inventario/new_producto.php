@@ -1,4 +1,4 @@
-<?php 
+<?php  
 include ("../conexion/conexion.php");
 
 $usuario = new ServidorBaseDatos();
@@ -206,20 +206,20 @@ $codproductotmp=mysql_insert_id();
 
                                             <tr>
                                                 <td width="9%">Proveedor</td>
-                                                <?
+                                                <?php 
                                                     $query_prov="SELECT id_proveedor, empresa FROM proveedor";
                                                     $result_prov=mysql_query($query_prov,$conn);
                                                 ?>
                                                 <td width="35%">
                                                     <select name="Aproveedor" id="proveedor" class="comboGrande">
                                                         <option value="0">Seleccionar Proveedor</option>
-                                                    <?
+                                                    <?php 
                                                         $contador=0;
                                                         while ($contador<mysql_num_rows($result_prov))
                                                         {
                                                     ?>
-                                                        <option value="<?echo mysql_result($result_prov,$contador,"id_proveedor")?>"><?echo mysql_result($result_prov,$contador,"empresa")?></option>
-                                                     <?
+                                                        <option value="<?php echo mysql_result($result_prov,$contador,"id_proveedor")?>"><?php echo mysql_result($result_prov,$contador,"empresa")?></option>
+                                                     <?php 
                                                         $contador++;
                                                         }
                                                     ?>
@@ -232,20 +232,20 @@ $codproductotmp=mysql_insert_id();
                                             </tr>
                                             <tr>
                                                 <td>Grupo</td>
-                                                <?
+                                                <?php 
                                                     $query_grupo="SELECT id_grupo, nombre FROM grupo";
                                                     $result_grupo=mysql_query($query_grupo,$conn);
                                                 ?>
                                                 <td>
                                                     <select name="Agrupo" id="grupo" class="comboGrande" onchange="activar_subgrupo('subgrupo.php?grupo='+this.value,'subgrupo')">
                                                         <option value="0">Seleccionar Grupo</option>
-                                                    <?
+                                                    <?php 
                                                         $contador1=0;
                                                         while ($contador1<mysql_num_rows($result_grupo))
                                                         {
                                                     ?>
-                                                        <option value="<?echo mysql_result($result_grupo,$contador1,"id_grupo")?>"><?echo mysql_result($result_grupo,$contador1,"nombre")?></option>
-                                                     <?
+                                                        <option value="<?php echo mysql_result($result_grupo,$contador1,"id_grupo")?>"><?php echo mysql_result($result_grupo,$contador1,"nombre")?></option>
+                                                     <?php 
                                                         $contador1++;
                                                         }
                                                     ?>
@@ -253,7 +253,7 @@ $codproductotmp=mysql_insert_id();
                                                 </td>
 
                                                 <td>Subgrupo</td>
-                                                <?
+                                                <?php 
                                                     //$id_grupo="<script> document.write(opc)</script>";
 
                                                 ?>
@@ -270,7 +270,7 @@ $codproductotmp=mysql_insert_id();
 
 
 
-                         <input id="codproductotmp" name="codproductotmp" value="<? echo $codproductotmp?>" type="hidden">
+                         <input id="codproductotmp" name="codproductotmp" value="<?php  echo $codproductotmp?>" type="hidden">
                           
                           
 			  <input id="accion" name="accion" value="alta" type="hidden">
@@ -296,10 +296,10 @@ $codproductotmp=mysql_insert_id();
 				  </tr>				                                                                                                       
 				</table>
 				</div>
-                                   <input name="idarticulo" value="<? echo $idarticulo?>" type="hidden" id="idarticulo">
-                                   <input name="costo_articulo" value="<? echo $costo?>" type="hidden" id="costo_articulo">
-                                   <input name="pvp_articulo" value="<? echo $pvp?>" type="hidden" id="pvp_articulo">
-                                   <input name="iva_articulo" value="<? echo $iva?>" type="hidden" id="iva_articulo">
+                                   <input name="idarticulo" value="<?php  echo $idarticulo?>" type="hidden" id="idarticulo">
+                                   <input name="costo_articulo" value="<?php  echo $costo?>" type="hidden" id="costo_articulo">
+                                   <input name="pvp_articulo" value="<?php  echo $pvp?>" type="hidden" id="pvp_articulo">
+                                   <input name="iva_articulo" value="<?php  echo $iva?>" type="hidden" id="iva_articulo">
 				<br>
 				<div id="frmBusqueda">
 				<table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0 ID="Table1">
@@ -329,8 +329,8 @@ $codproductotmp=mysql_insert_id();
                                               <div align="center">
                                                     <img src="../img/botonaceptar.jpg" width="85" height="22" onClick="validar_cabecera()" border="1" onMouseOver="style.cursor=cursor">
                                                     <img src="../img/botoncancelar.jpg" width="85" height="22" onClick="cancelar()" border="1" onMouseOver="style.cursor=cursor">
-                                                <!--<input id="codfamilia" name="codfamilia" value="<? echo $codfamilia?>" type="hidden">-->
-                                                    <input id="codproductotmp" name="codproductotmp" value="<? echo $codproductotmp?>" type="hidden">
+                                                <!--<input id="codfamilia" name="codfamilia" value="<?php  echo $codfamilia?>" type="hidden">-->
+                                                    <input id="codproductotmp" name="codproductotmp" value="<?php  echo $codproductotmp?>" type="hidden">
                                                    
                                               </div>
                                             </div>

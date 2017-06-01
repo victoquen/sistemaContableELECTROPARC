@@ -5,12 +5,12 @@ header('Pragma: no-cache');
 <html>
 <head>
 </head>
-<? include ("../conexion/conexion.php");
+<?php include ("../conexion/conexion.php");
 $usuario = new ServidorBaseDatos();
 $conn = $usuario->getConexion();
  ?>
 <body>
-<?
+<?php
 	$estado=$_GET["estado"];
 	$idfactura=$_GET["idfactura"];
 	$act_factura="UPDATE facturas SET estado='$estado' WHERE id_factura='$idfactura'";

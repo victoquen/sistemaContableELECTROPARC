@@ -20,11 +20,11 @@ var cursor;
 		<div align="center">
 			<div id="tituloForm" class="header">Observaciones</div>
 			<div id="frmBusqueda">
-<? $observaciones=$_GET["observaciones"]; ?>
+<?php $observaciones=$_GET["observaciones"]; ?>
 <table width="100%" border="0">
   <tr>
     <td><div align="center">
-      <textarea name="observaciones" cols="30" rows="5" class="areaTexto" readonly="readonly"><? echo $observaciones?></textarea>
+      <textarea name="observaciones" cols="30" rows="5" class="areaTexto" readonly="readonly"><?php echo $observaciones?></textarea>
     </div></td>
   </tr>
 </table>

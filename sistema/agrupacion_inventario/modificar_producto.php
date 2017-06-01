@@ -1,4 +1,4 @@
-<?php  
+<?php   
 
 $idproducto=$_GET["idproducto"];
 
@@ -185,70 +185,70 @@ function validar_cabecera()
 					<table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0>
 						<tr>
 							<td>ID</td>
-							<td><?php echo $idproducto?></td>
+							<td><?php  echo $idproducto?></td>
 						  
 						</tr>
                                                 <tr>
                                                     <td width="15%">Codigo</td>
-                                                    <td width="43%"><input readonly NAME="Acodigo" type="text" class="cajaMedia" id="cogigo" value="<?php echo $row['codigo']?>" size="45" maxlength="45"></td>
+                                                    <td width="43%"><input readonly NAME="Acodigo" type="text" class="cajaMedia" id="cogigo" value="<?php  echo $row['codigo']?>" size="45" maxlength="45"></td>
 
                                                     <td width="15%">Nombre</td>
-                                                    <td width="43%"><input readonly NAME="Anombre" type="text" class="cajaGrande" id="nombre" value="<?php echo $row['nombre']?>" size="45" maxlength="45"></td>
+                                                    <td width="43%"><input readonly NAME="Anombre" type="text" class="cajaGrande" id="nombre" value="<?php  echo $row['nombre']?>" size="45" maxlength="45"></td>
                                                 </tr>
 						                                                                                               
                                                 
                                                 <tr style="background: lightblue">
                                                     <td width="15%">Stock</td>
-                                                    <td width="43%"><?echo $row['stock']?> + <input NAME="Nstock" type="text" class="cajaPequena" id="stock" value="0" size="15" maxlength="45" ></td>
+                                                    <td width="43%"><?php echo $row['stock']?> + <input NAME="Nstock" type="text" class="cajaPequena" id="stock" value="0" size="15" maxlength="45" ></td>
                                                 </tr>
                                                
                                                 <tr>
                                                     <td width="15%">Costo</td>
-                                                    <td width="43%"><input NAME="qcosto" type="text" class="cajaPequena" id="costo" value="<?php echo $row['costo']?>" size="15" maxlength="45" value="0"></td>
+                                                    <td width="43%"><input NAME="qcosto" type="text" class="cajaPequena" id="costo" value="<?php  echo $row['costo']?>" size="15" maxlength="45" value="0"></td>
 
                                                     
                                                     <td width="15%">PVP</td>
-                                                    <td width="43%"><input NAME="Qpvp" type="text" class="cajaPequena" id="pvp" value="<?php echo $row['pvp']?>" size="15" maxlength="45"></td>
+                                                    <td width="43%"><input NAME="Qpvp" type="text" class="cajaPequena" id="pvp" value="<?php  echo $row['pvp']?>" size="15" maxlength="45"></td>
                                                 </tr>
                                               
 												<tr>
                                                     <td width="15%">Utilidad</td>
-                                                    <td width="43%"><input NAME="qutilidad" type="text" class="cajaPequena" id="utilidad" size="15" maxlength="45" value="<?php echo $row['utilidad']?>">%</td>
+                                                    <td width="43%"><input NAME="qutilidad" type="text" class="cajaPequena" id="utilidad" size="15" maxlength="45" value="<?php  echo $row['utilidad']?>">%</td>
                                                 </tr>
 											  
                                                 
                                                 <tr>
                                                     <td width="15%">Composici&oacute;n</td>
-                                                    <td><textarea disabled name="acomposicion" cols="41" rows="2" id="composicion" class="areaTexto"><?php echo $row['composicion']?></textarea></td>
+                                                    <td><textarea disabled name="acomposicion" cols="41" rows="2" id="composicion" class="areaTexto"><?php  echo $row['composicion']?></textarea></td>
 
                                                     <td width="15%">Aplicaci&oacute;n</td>
-                                                    <td><textarea disabled name="aplicacion" cols="41" rows="2" id="aplicacion" class="areaTexto"><?php echo $row['aplicacion']?></textarea></td>
+                                                    <td><textarea disabled name="aplicacion" cols="41" rows="2" id="aplicacion" class="areaTexto"><?php  echo $row['aplicacion']?></textarea></td>
                                                 </tr>
                                                
                                                 <tr>
                                                     <td width="15%">Proveedor</td>                                                    
-                                                       <?
+                                                       <?php 
                                                         $query_prov="SELECT id_proveedor, empresa FROM proveedor";
                                                         $result_prov=mysql_query($query_prov,$conn);
                                                     ?>
                                                     <td width="43%">
                                                         <select disabled name="Aproveedor" id="proveedor" class="comboGrande">
                                                             <option value="0">Seleccionar Proveedor</option>
-                                                        <?
+                                                        <?php 
                                                             $contador=0;
                                                             while ($contador<mysql_num_rows($result_prov))
                                                             {
                                                                 if($row['proveedor']== mysql_result($result_prov,$contador,"id_proveedor"))
                                                                 {
                                                         ?>
-                                                                <option selected value="<?echo mysql_result($result_prov,$contador,"id_proveedor")?>"><?echo mysql_result($result_prov,$contador,"empresa")?></option>
-                                                        <?
+                                                                <option selected value="<?php echo mysql_result($result_prov,$contador,"id_proveedor")?>"><?php echo mysql_result($result_prov,$contador,"empresa")?></option>
+                                                        <?php 
                                                                 }
                                                                 else
                                                                 {
                                                         ?>
-                                                                <option value="<?echo mysql_result($result_prov,$contador,"id_proveedor")?>"><?echo mysql_result($result_prov,$contador,"empresa")?></option>
-                                                         <?
+                                                                <option value="<?php echo mysql_result($result_prov,$contador,"id_proveedor")?>"><?php echo mysql_result($result_prov,$contador,"empresa")?></option>
+                                                         <?php 
                                                                 }
                                                             $contador++;
                                                             }
@@ -262,14 +262,14 @@ function validar_cabecera()
 
                                                  <tr>
                                                     <td>Grupo</td>
-                                                    <?
+                                                    <?php 
                                                         $query_grupo="SELECT id_grupo, nombre FROM grupo";
                                                         $result_grupo=mysql_query($query_grupo,$conn);
                                                     ?>
                                                     <td>
                                                         <select disabled name="Agrupo" id="grupo" class="comboGrande" onchange="activar_subgrupo('subgrupo.php?grupo='+this.value,'subgrupo')">
                                                             <option value="0">Seleccionar Grupo</option>
-                                                        <?
+                                                        <?php 
                                                             $contador1=0;
                                                             while ($contador1<mysql_num_rows($result_grupo))
                                                             {
@@ -277,14 +277,14 @@ function validar_cabecera()
                                                                 {
 
                                                         ?>
-                                                            <option selected value="<?echo mysql_result($result_grupo,$contador1,"id_grupo")?>"><?echo mysql_result($result_grupo,$contador1,"nombre")?></option>
-                                                        <?
+                                                            <option selected value="<?php echo mysql_result($result_grupo,$contador1,"id_grupo")?>"><?php echo mysql_result($result_grupo,$contador1,"nombre")?></option>
+                                                        <?php 
                                                                 }
                                                                 else
                                                                 {
                                                         ?>
-                                                            <option value="<?echo mysql_result($result_grupo,$contador1,"id_grupo")?>"><?echo mysql_result($result_grupo,$contador1,"nombre")?></option>
-                                                         <?
+                                                            <option value="<?php echo mysql_result($result_grupo,$contador1,"id_grupo")?>"><?php echo mysql_result($result_grupo,$contador1,"nombre")?></option>
+                                                         <?php 
                                                                 }
                                                             $contador1++;
                                                             }
@@ -294,13 +294,13 @@ function validar_cabecera()
 
                                                      <td>Subgrupo</td>
                                                     <td>
-                                                        <?
+                                                        <?php 
                                                             $query_subgrupo="SELECT id_subgrupo, nombre FROM subgrupo WHERE id_grupo=".$row['grupo'];
                                                             $result_subgrupo=mysql_query($query_subgrupo,$conn);
                                                         ?>
                                                         <select disabled name="Asubgrupo" id="subgrupo" class="comboGrande" >
 
-                                                         <?
+                                                         <?php 
                                                             $contador2=0;
                                                             while ($contador2<mysql_num_rows($result_subgrupo))
                                                             {
@@ -308,14 +308,14 @@ function validar_cabecera()
                                                                 {
 
                                                         ?>
-                                                            <option selected value="<?echo mysql_result($result_subgrupo,$contador2,"id_subgrupo")?>"><?echo mysql_result($result_subgrupo,$contador2,"nombre")?></option>
-                                                        <?
+                                                            <option selected value="<?php echo mysql_result($result_subgrupo,$contador2,"id_subgrupo")?>"><?php echo mysql_result($result_subgrupo,$contador2,"nombre")?></option>
+                                                        <?php 
                                                                 }
                                                                 else
                                                                 {
                                                         ?>
-                                                            <option value="<?echo mysql_result($result_subgrupo,$contador2,"id_grupo")?>"><?echo mysql_result($result_subgrupo,$contador2,"nombre")?></option>
-                                                         <?
+                                                            <option value="<?php echo mysql_result($result_subgrupo,$contador2,"id_grupo")?>"><?php echo mysql_result($result_subgrupo,$contador2,"nombre")?></option>
+                                                         <?php 
                                                                 }
                                                             $contador2++;
                                                             }
@@ -330,7 +330,7 @@ function validar_cabecera()
 
                                         <input id="accion" name="accion" value="modificar" type="hidden">
 					<input id="id" name="id" value="" type="hidden">
-                                        <input id="idproducto" name="idproducto" value="<?php echo $idproducto?>" type="hidden">
+                                        <input id="idproducto" name="idproducto" value="<?php  echo $idproducto?>" type="hidden">
 
                                      </form>
 
@@ -388,14 +388,14 @@ function validar_cabecera()
                                 </div>
 
 
-                               <input name="idarticulo" value="<? echo $idarticulo?>" type="hidden" id="idarticulo">
-                               <input name="costo_articulo" value="<? echo $costo?>" type="hidden" id="costo_articulo">
-                               <input name="pvp_articulo" value="<? echo $pvp?>" type="hidden" id="pvp_articulo">
-                               <input name="iva_articulo" value="<? echo $iva?>" type="hidden" id="iva_articulo">
+                               <input name="idarticulo" value="<?php  echo $idarticulo?>" type="hidden" id="idarticulo">
+                               <input name="costo_articulo" value="<?php  echo $costo?>" type="hidden" id="costo_articulo">
+                               <input name="pvp_articulo" value="<?php  echo $pvp?>" type="hidden" id="pvp_articulo">
+                               <input name="iva_articulo" value="<?php  echo $iva?>" type="hidden" id="iva_articulo">
 
                                <input id="modif" name="modif" value="0" type="hidden">
 
-                               <input id="idproducto" name="idproducto" value="<?php echo $idproducto?>" type="hidden">
+                               <input id="idproducto" name="idproducto" value="<?php  echo $idproducto?>" type="hidden">
 
                           </form>
 		  </div>

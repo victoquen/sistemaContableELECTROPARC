@@ -255,7 +255,7 @@ for ($i = 0; $i < mysql_num_rows($rs_lineas); $i++) {
 				<td width="8%" class="aCentro"><?php  echo $subtotal?></td>
 				<td width="8%" class="aCentro"><?php  echo $iva?></td>
 				<td width="3%"><a href="javascript:eliminar_linea(<?php  echo $idfactura?>,<?php  echo $id_factulineap?>,<?php  echo $subtotal ?>,<?php  echo $iva?>,<?php  echo $descuento?>, <?php echo $idbodega?>)"><img src="../img/eliminar.png" border="0"></a></td>
-                                <td width="3%"><a href="javascript:modificar_linea(<?php  echo $idfactura?>,<?php  echo $id_factulineap?>,<?php  echo $subtotal ?>,<?php  echo $iva?>,<?php  echo $descuento?>, <?php  echo $utilidad?>, <?php echo $idbodega?>)"><img src="../img/modificar.png" border="0"></a></td>
+                                <td width="3%"><a href="javascript:modificar_linea(<?php  echo $idfactura;?>,<?php  echo $id_factulineap;?>,<?php  echo $subtotal; ?>,<?php  echo $iva;?>,<?php  echo $descuento;?>, <?php  echo $utilidad;?>, <?php echo $idbodega;?>)"><img src="../img/modificar.png" border="0"></a></td>
 			</tr>
 <?php  } ?>
 </table>

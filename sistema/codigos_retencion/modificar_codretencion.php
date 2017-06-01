@@ -70,7 +70,7 @@ $row = $reten->get_codretencion_id($conn, $idcodretencion);
                                     <td width="15%">Tipo</td>
 									<td>
 									<select id="Acbotipos" name="Acbotipos" class="comboGrande">
-										<?php if($row[tipo] == "RENTA"){?>
+										<?php if($row['tipo'] == "RENTA"){?>
 										<option selected value="RENTA">Retenci&oacute;n a la fuente</option>
 										<option value="IVA">Retenci&oacute;n IVA</option>
 										<?php } else {?>

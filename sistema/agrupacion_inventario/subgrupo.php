@@ -1,4 +1,4 @@
-<?
+<?php
     include_once '../conexion/conexion.php';
     
     $usuario = new ServidorBaseDatos();

@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 include_once '../conexion/conexion.php';
 include_once 'class/cliente.php';
@@ -126,7 +126,7 @@ $codclientetmp=mysql_insert_id();
                                     <td width="43%"><input NAME="Vci_ruc" type="text" class="cajaGrande" id="ci_ruc" size="13" maxlength="13"></td>
                                 </tr>
 
-                                <?php                                    
+                                <?php                                     
                                     $cliente= new Cliente();
                                     $rows = $cliente->listado_tipocliente($conn);
                                 ?>
@@ -134,12 +134,12 @@ $codclientetmp=mysql_insert_id();
                                     <td width="17%">Tipo de Cliente</td>
                                     <td><select id="Acbotipos" name="Acbotipos" class="comboGrande">
                                             <option value="0">Seleccione un Tipo</option>
-                                            <?php
+                                            <?php 
                                                 foreach ($rows as $row => $value)
                                                 {
                                             ?>
-                                            <option value="<?php echo $rows[$row]['codigo_tipocliente']?>"><?php echo $rows[$row]['nombre']?></option>
-                                            <?
+                                            <option value="<?php  echo $rows[$row]['codigo_tipocliente']?>"><?php  echo $rows[$row]['nombre']?></option>
+                                            <?php 
                                                 }
                                             ?>
                                         </select>
@@ -183,9 +183,9 @@ $codclientetmp=mysql_insert_id();
                     </div>
 
                     <div id="botonBusqueda">
-                         <input id="origen" name="origen" value="<?php echo $origen?>" type="hidden">
+                         <input id="origen" name="origen" value="<?php  echo $origen?>" type="hidden">
                         <input id="accion" name="accion" value="alta" type="hidden">
-                        <input id="codclientetmp" name="codclientetmp" value="<? echo $codclientetmp;?>" type="hidden">
+                        <input id="codclientetmp" name="codclientetmp" value="<?php  echo $codclientetmp;?>" type="hidden">
                         <input id="id" name="Zid" value="" type="hidden">
                     </div>
             </form>
@@ -197,7 +197,7 @@ $codclientetmp=mysql_insert_id();
                             <div id="tituloForm" class="header">TELEFONOS</div>
                             <table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0>
 
-                                 <?php
+                                 <?php 
 
                                     $query_o="SELECT * FROM operadora WHERE borrado=0 ORDER BY nombre ASC";
                                     $res_o=mysql_query($query_o,$conn);
@@ -210,11 +210,11 @@ $codclientetmp=mysql_insert_id();
                                          Operadora:&nbsp;
                                         <select id="operadora"  class="comboMedio" NAME="operadora">
                                             <option value="0">Seleccionar operadora</option>
-                                            <?php
+                                            <?php 
                                             $contador=0;
                                             while ($contador < mysql_num_rows($res_o)) { ?>
-                                            <option value="<?php echo mysql_result($res_o,$contador,"id_operadora")?>"><?php echo mysql_result($res_o,$contador,"nombre")?></option>
-                                            <? $contador++;
+                                            <option value="<?php  echo mysql_result($res_o,$contador,"id_operadora")?>"><?php  echo mysql_result($res_o,$contador,"nombre")?></option>
+                                            <?php  $contador++;
                                             } ?>
                                         </select>
                                          &nbsp;
@@ -249,18 +249,18 @@ $codclientetmp=mysql_insert_id();
                     </div>
 
                     <div id="botonBusqueda">
-                        <?if ($origen=="factura"){?>
+                        <?php if ($origen=="factura"){?>
                        
                         <img src="../img/botonaceptar.jpg" width="85" height="22" onClick="validar_formulario(formulario,true)" border="1" onMouseOver="style.cursor=cursor">
-                        <?}else{?>
+                        <?php }else{?>
                         <img src="../img/botonaceptar.jpg" width="85" height="22" onClick="validar_formulario(formulario,true)" border="1" onMouseOver="style.cursor=cursor">
                         <img src="../img/botonlimpiar.jpg" width="69" height="22" onClick="limpiar()" border="1" onMouseOver="style.cursor=cursor">
                         <img src="../img/botoncancelar.jpg" width="85" height="22" onClick="cancelar()" border="1" onMouseOver="style.cursor=cursor">
-                        <?}?>
+                        <?php }?>
                         
                        
                     </div>
-             <input id="codclientetmp" name="codclientetmp" value="<? echo $codclientetmp;?>" type="hidden">
+             <input id="codclientetmp" name="codclientetmp" value="<?php  echo $codclientetmp;?>" type="hidden">
             </form>
 <!--- FIN FORMULARIO TELEFONOS CLIENTE------------------------------------------------------------------------------------->
 

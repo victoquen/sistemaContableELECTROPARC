@@ -1,4 +1,4 @@
-<?php
+<?php 
 include_once '../conexion/conexion.php';
 $usuario = new ServidorBaseDatos();
 $conn = $usuario->getConexion();
@@ -78,7 +78,7 @@ error_reporting(0);
 					<table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0>					
 						<tr>
 						  <td>Fecha de inicio</td>
-						  <td><input id="fechainicio" type="text" class="cajaPequena" NAME="fechainicio" maxlength="10" value="<? echo $hoy?>" readonly><img src="../img/calendario.png" name="Image1" id="Image1" width="16" height="16" border="0" id="Image1" onMouseOver="this.style.cursor='pointer'" title="Calendario">
+						  <td><input id="fechainicio" type="text" class="cajaPequena" NAME="fechainicio" maxlength="10" value="<?php  echo $hoy?>" readonly><img src="../img/calendario.png" name="Image1" id="Image1" width="16" height="16" border="0" id="Image1" onMouseOver="this.style.cursor='pointer'" title="Calendario">
         <script type="text/javascript">
 					Calendar.setup(
 					  {
@@ -94,7 +94,7 @@ error_reporting(0);
 					  </tr>
 					  <tr>
 						  <td>Fecha de fin</td>
-						  <td><input id="fechafin" type="text" class="cajaPequena" NAME="fechafin" maxlength="10" value="<? echo $hoy?>" readonly><img src="../img/calendario.png" name="Image2" id="Image2" width="16" height="16" border="0" id="Image2" onMouseOver="this.style.cursor='pointer'" title="Calendario">
+						  <td><input id="fechafin" type="text" class="cajaPequena" NAME="fechafin" maxlength="10" value="<?php  echo $hoy?>" readonly><img src="../img/calendario.png" name="Image2" id="Image2" width="16" height="16" border="0" id="Image2" onMouseOver="this.style.cursor='pointer'" title="Calendario">
         <script type="text/javascript">
 					Calendar.setup(
 					  {

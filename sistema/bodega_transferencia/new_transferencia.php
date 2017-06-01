@@ -1,4 +1,4 @@
-<?php
+<?php 
 include("../conexion/conexion.php");
 
 //get datos SESSION
@@ -91,7 +91,7 @@ $obligatorio_serie = 1;
             if (document.getElementById("cbobodegaorigen").value == 0) mensaje += "  - Escoger Bodega Origen\n";
             if (document.getElementById("cbobodegadestino").value == 0) mensaje += "  - Escoger Bodega Destinossss\n";
 
-            if(<?php echo $obligatorio_serie?> == 1){
+            if(<?php  echo $obligatorio_serie?> == 1){
 
                 var numProducto = document.getElementById("cantidad").value;
                 var theSelect = document.getElementById('series');
@@ -173,12 +173,12 @@ $obligatorio_serie = 1;
                     <table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0>
 
 
-                        <?php $hoy = date("d/m/Y"); ?>
+                        <?php  $hoy = date("d/m/Y"); ?>
                         <tr>
                             <td>Fecha</td>
                             <td>
                                 <input NAME="fecha" type="text" class="cajaPequena" id="fecha" size="10" maxlength="10"
-                                       value="<?php echo $hoy ?>" readonly> <img src="../img/calendario.png"
+                                       value="<?php  echo $hoy ?>" readonly> <img src="../img/calendario.png"
                                                                                  name="Image1" id="Image1" width="16"
                                                                                  height="16" border="0" id="Image1"
                                                                                  onMouseOver="this.style.cursor='pointer'">
@@ -197,7 +197,7 @@ $obligatorio_serie = 1;
                     </table>
             </div>
 
-            <input id="transferenciatmp" name="transferenciatmp" value="<?php echo $transferenciatmp ?>" type="hidden">
+            <input id="transferenciatmp" name="transferenciatmp" value="<?php  echo $transferenciatmp ?>" type="hidden">
 
 
             <input id="accion" name="accion" value="alta" type="hidden">
@@ -245,23 +245,23 @@ $obligatorio_serie = 1;
                                 <select name="cbobodegaorigen" id="cbobodegaorigen" class="comboMedio"></select>
                             </td>
                             <td>
-                                <?php
+                                <?php 
                                 $queryb = "SELECT b.id_bodega as idbodega, b.nombre as nombre FROM bodega b ";
                                 $resb = mysql_query($queryb, $conn); ?>
 
                                 Bodega Destino:
                                 <select name="cbobodegadestino" id="cbobodegadestino" class="comboMedio">
                                     <option value="0">Escoger</option>
-                                    <?php
+                                    <?php 
 
                                     $contador = 0;
                                     while ($contador < mysql_num_rows($resb)) {
                                         if (mysql_result($resb, $contador, "idbodega") != $id_bodega) {
                                             ?>
                                             <option
-                                                value="<?php echo mysql_result($resb, $contador, "idbodega") ?>"><?php echo mysql_result($resb, $contador, "nombre"); ?></option>
+                                                value="<?php  echo mysql_result($resb, $contador, "idbodega") ?>"><?php  echo mysql_result($resb, $contador, "nombre"); ?></option>
 
-                                        <?php }
+                                        <?php  }
                                         $contador++;
                                     } ?>
 
@@ -277,7 +277,7 @@ $obligatorio_serie = 1;
                         </tr>
                     </table>
             </div>
-            <input name="idarticulo" value="<?php echo $idarticulo ?>" type="hidden" id="idarticulo">
+            <input name="idarticulo" value="<?php  echo $idarticulo ?>" type="hidden" id="idarticulo">
 
             <br>
             <div id="frmBusqueda">
@@ -314,7 +314,7 @@ $obligatorio_serie = 1;
                                      border="1" onMouseOver="style.cursor=cursor">
 
                                 <input id="transferenciatmp" name="transferenciatmp"
-                                       value="<?php echo $transferenciatmp ?>" type="hidden">
+                                       value="<?php  echo $transferenciatmp ?>" type="hidden">
 
                             </div>
                         </div>

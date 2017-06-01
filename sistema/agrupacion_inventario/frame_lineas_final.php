@@ -83,17 +83,17 @@ for ($i = 0; $i < mysql_num_rows($rs_lineas); $i++) {
 	if ($i % 2) { $fondolinea="itemParTabla"; } else { $fondolinea="itemImparTabla"; }
 
 ?>
-			<tr class="<? echo $fondolinea?>">
+			<tr class="<?php echo $fondolinea?>">
 				
-				<td width="10%"><? echo $codarticulo?></td>
-                                <td width="35%" align="center"><? echo $descripcion?></td>
-				<td width="8%" class="aCentro"><? echo $costo?></td>
-				<td width="8%" class="aCentro"><? echo $pvp?></td>
-				<td width="8%" class="aCentro"><? echo $iva?></td>
+				<td width="10%"><?php echo $codarticulo?></td>
+                                <td width="35%" align="center"><?php echo $descripcion?></td>
+				<td width="8%" class="aCentro"><?php echo $costo?></td>
+				<td width="8%" class="aCentro"><?php echo $pvp?></td>
+				<td width="8%" class="aCentro"><?php echo $iva?></td>
 
 				<td width="3%"><a href="javascript:eliminar_linea(<?php echo $idproducto?>,<?php echo $idarticulo?>,<?php echo $costo?>,<?php echo $pvp?>)"><img src="../img/eliminar.png" border="0"></a></td>
 			</tr>
-<? } ?>
+<?php } ?>
 </table>
 <iframe id="frame_datos" name="frame_datos" width="0%" height="0" frameborder="0">
 	<ilayer width="0" height="0" id="frame_datos" name="frame_datos"></ilayer>

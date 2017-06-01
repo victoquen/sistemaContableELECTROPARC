@@ -1,4 +1,4 @@
-<?
+<?php
 
 $idbanco=$_REQUEST["idbanco"];
 
@@ -52,7 +52,7 @@ $row = $banco->get_banco_id($conn, $idbanco);
 					</table>
 			  </div>
 				<div id="botonBusqueda">
-					<img src="../img/botonaceptar.jpg" width="85" height="22" onClick="aceptar(<? echo $idbanco?>)" border="1" onMouseOver="style.cursor=cursor">
+					<img src="../img/botonaceptar.jpg" width="85" height="22" onClick="aceptar(<?php echo $idbanco?>)" border="1" onMouseOver="style.cursor=cursor">
 					<img src="../img/botoncancelar.jpg" width="85" height="22" onClick="cancelar()" border="1" onMouseOver="style.cursor=cursor">
 			  </div>
 			  </div>

@@ -19,8 +19,7 @@ if ($accion != "baja") {
 $minimo = 0;
 
 if ($accion == "alta") {
-
-
+    
     include("class/transferencia.php");
     $transferencia = new Transferencia();
 

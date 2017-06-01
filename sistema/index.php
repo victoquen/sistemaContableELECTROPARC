@@ -81,6 +81,7 @@
                 [null, 'Mantenimientos', null, null, 'mantenimientos',
                     [null, 'RUC', './ruc/index.php', 'principal', 'RUC'],
                     [null, 'Usuarios', './usuario/index.php', 'principal', 'Usuarios'],
+                    [null, 'IVA %', './porcentaje_iva/index.php', 'principal', 'IVA %'],
 					[null, 'Codigos Retencion', './codigos_retencion/index.php', 'principal', 'Retenciones'],
                     [null, 'Bancos', './bancos/index.php', 'principal', 'bancos'],                    
                     [null, 'Datos Retencionero', './retencionero/index.php', 'principal', 'retencionero'],

@@ -1,4 +1,4 @@
-<?
+<?php 
 
 include ("../js/fechas.php");
 include ("../conexion/conexion.php");
@@ -244,37 +244,37 @@ if ($accion=="baja") {
 		<div id="pagina">
 			<div id="zonaContenido">
 				<div align="center">
-				<div id="tituloForm" class="header"><?php echo $cabecera2?></div>
+				<div id="tituloForm" class="header"><?php  echo $cabecera2?></div>
 				<div id="frmBusqueda">
 					<table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0>
 						<tr>
 							<td width="15%"></td>
-							<td width="85%" colspan="2" class="mensaje"><?php echo $mensaje;?></td>
+							<td width="85%" colspan="2" class="mensaje"><?php  echo $mensaje;?></td>
 					    </tr>
-						<? if ($minimo==1) { ?>
+						<?php  if ($minimo==1) { ?>
 						<tr>
 							<td width="15%"></td>
-							<td width="85%" colspan="2" class="mensajeminimo">Los siguientes productos se encuentran sin stock:<br><?php echo $mensaje_minimo ."</ul>"?></td>
+							<td width="85%" colspan="2" class="mensajeminimo">Los siguientes productos se encuentran sin stock:<br><?php  echo $mensaje_minimo ."</ul>"?></td>
 					    </tr>
-						<? } 
+						<?php  } 
 						 $sel_proveedor="SELECT * FROM proveedor WHERE id_proveedor='$idproveedor'";
 						  $rs_proveedor=mysql_query($sel_proveedor,$conn); ?>
 						<tr>
 							<td width="15%">proveedor</td>
-							<td width="85%" colspan="2"><?php echo mysql_result($rs_proveedor,0,"empresa");?></td>
+							<td width="85%" colspan="2"><?php  echo mysql_result($rs_proveedor,0,"empresa");?></td>
 					    </tr>
 						<tr>
 							<td width="15%">CI / RUC</td>
-						    <td width="85%" colspan="2"><?php echo mysql_result($rs_proveedor,0,"ci_ruc");?></td>
+						    <td width="85%" colspan="2"><?php  echo mysql_result($rs_proveedor,0,"ci_ruc");?></td>
 					    </tr>
 						<tr>
 						  <td>Direcci&oacute;n</td>
-						  <td colspan="2"><?php echo mysql_result($rs_proveedor,0,"direccion"); ?></td>
+						  <td colspan="2"><?php  echo mysql_result($rs_proveedor,0,"direccion"); ?></td>
 					  </tr>
 <!--                                          <tr>
 						  <td>Tipo Comprobante</td>
 						  <td colspan="2">
-                                                    <?php
+                                                    <?php 
                                                             switch ($tipo_comprobante)
                                                             {
                                                                 case 1: echo "FACTURA";
@@ -289,20 +289,20 @@ if ($accion=="baja") {
 					  </tr>-->
                                           <tr>
 						  <td>No. Factura</td>
-						  <td colspan="2"><?php echo $serie1."--".$serie2."--".$codfactura?></td>
+						  <td colspan="2"><?php  echo $serie1."--".$serie2."--".$codfactura?></td>
 					  </tr>
                                           <tr>
                                               <td>Autorizaci&oacute;n</td>
-						  <td colspan="2"><?php echo $autorizacion."- ".$totalfactura."- ".$importeiva?></td>
+						  <td colspan="2"><?php  echo $autorizacion."- ".$totalfactura."- ".$importeiva?></td>
 					  </tr>
 					  <tr>
 						  <td>Fecha</td>
-						  <td colspan="2"><?php echo implota($fecha)?></td>
+						  <td colspan="2"><?php  echo implota($fecha)?></td>
 					  </tr>
 <!--					  <tr>
                                                 <td>Cr&eacute;dito</td>
 						  <td colspan="2">
-                                                    <?php
+                                                    <?php 
                                                         if ($credito==1)
                                                             echo "Si --- <b>PLAZO: </b> ".($plazo*30);
                                                         else
@@ -313,7 +313,7 @@ if ($accion=="baja") {
                                           <tr>
                                                   <td>Sujeta a Retenci&oacute;n</td>
 						  <td colspan="2">
-                                                    <?php
+                                                    <?php 
                                                         if ($retencion==1)
                                                             echo "Si";
                                                         else
@@ -338,7 +338,7 @@ if ($accion=="baja") {
 					</table>
 					<table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0 ID="Table1">
                                             
-					  <? //$sel_lineas="SELECT factulinea.*,articulos.*,familias.nombre as nombrefamilia FROM factulinea,articulos,familias WHERE factulinea.codfactura='$codfactura' AND factulinea.codigo=articulos.codarticulo AND factulinea.codfamilia=articulos.codfamilia AND articulos.codfamilia=familias.codfamilia ORDER BY factulinea.numlinea ASC";
+					  <?php  //$sel_lineas="SELECT factulinea.*,articulos.*,familias.nombre as nombrefamilia FROM factulinea,articulos,familias WHERE factulinea.codfactura='$codfactura' AND factulinea.codigo=articulos.codarticulo AND factulinea.codfamilia=articulos.codfamilia AND articulos.codfamilia=familias.codfamilia ORDER BY factulinea.numlinea ASC";
                                                 $sel_lineas="SELECT b.codigo as codigo, b.nombre as nombre, a.cantidad as cantidad, a.costo as costo, a.subtotal as subtotal, a.dcto as dcto, a.iva as iva FROM factulineap_consig a INNER JOIN producto b ON a.id_producto=b.id_producto WHERE a.id_facturap = '$idfactura'";
                                                 $rs_lineas=mysql_query($sel_lineas,$conn);
 						for ($i = 0; $i < mysql_num_rows($rs_lineas); $i++) {							
@@ -350,16 +350,16 @@ if ($accion=="baja") {
                                                         $descuento_ind=mysql_result($rs_lineas,$i,"dcto");
                                                         $iva=mysql_result($rs_lineas, $i, "iva");
 							if ($i % 2) { $fondolinea="itemParTabla"; } else { $fondolinea="itemImparTabla"; } ?>
-									<tr class="<? echo $fondolinea?>">
+									<tr class="<?php  echo $fondolinea?>">
 										
-                                                                                <td width="5%"><? echo $codarticulo?></td>
-                                                                                <td width="41%" align="center"><? echo $descripcion?></td>
-                                                                                <td width="5%"><? echo $cantidad?></td>
-                                                                                <td width="8%" class="aCentro" align="center"><? echo $costo?></td>                                                                                
-                                                                                <td width="8%" class="aCentro" align="center"><? echo $subtotal?></td>
-                                                                                <td width="8%" class="aCentro" align="center"><? echo $iva?></td>
+                                                                                <td width="5%"><?php  echo $codarticulo?></td>
+                                                                                <td width="41%" align="center"><?php  echo $descripcion?></td>
+                                                                                <td width="5%"><?php  echo $cantidad?></td>
+                                                                                <td width="8%" class="aCentro" align="center"><?php  echo $costo?></td>                                                                                
+                                                                                <td width="8%" class="aCentro" align="center"><?php  echo $subtotal?></td>
+                                                                                <td width="8%" class="aCentro" align="center"><?php  echo $iva?></td>
 									</tr>
-					<? } ?>
+					<?php  } ?>
 					</table>
 			  </div>
 
@@ -367,46 +367,46 @@ if ($accion=="baja") {
 					<table width="25%" border=0 align="right" cellpadding=3 cellspacing=0 class="fuente8">
 						<tr>
 							<td width="15%">Subtotal:</td>
-							<td width="15%"><?php echo number_format($baseimponible,4);?> &#36;</td>
+							<td width="15%"><?php  echo number_format($baseimponible,4);?> &#36;</td>
 						</tr>
 <!--                                                <tr>
 							<td width="15%">Dcto.:</td>
-							<td width="15%"><?php echo number_format($descuento,4);?> &#36;</td>
+							<td width="15%"><?php  echo number_format($descuento,4);?> &#36;</td>
 						</tr>
                                                 <tr>
 							<td width="15%">IVA 0:</td>
-							<td width="15%"><?php echo number_format($iva0,4);?> &#36;</td>
+							<td width="15%"><?php  echo number_format($iva0,4);?> &#36;</td>
 						</tr>
                                                 <tr>
 							<td width="15%">IVA 12:</td>
-							<td width="15%"><?php echo number_format($iva12,4);?> &#36;</td>
+							<td width="15%"><?php  echo number_format($iva12,4);?> &#36;</td>
 						</tr>-->
 						<tr>
 							<td width="15%">Total IVA:</td>
-							<td width="15%"><?php echo number_format($importeiva,4);?> &#36;</td>
+							<td width="15%"><?php  echo number_format($importeiva,4);?> &#36;</td>
 						</tr>
 <!--                                                 <tr>
                                                         <td width="15%">Flete:</td>
-							<td width="15%"><?php echo $flete?> &#36;</td>
+							<td width="15%"><?php  echo $flete?> &#36;</td>
 						</tr>-->
 						<tr>
 							<td width="15%">Total:</td>
-							<td width="15%"><?php echo $totalfactura?> &#36;</td>
+							<td width="15%"><?php  echo $totalfactura?> &#36;</td>
 						</tr>
 					</table>
 			  </div>
 				<div id="botonBusqueda">
 					<div align="center">
-                                            <? if ($accion=="alta")
+                                            <?php  if ($accion=="alta")
                                             {
                                              ?>
-<!--                                                <img src="../img/botonretencion_hacer.jpg" width="85" height="22" onClick="aceptar_retencion(<?echo $validacion?>,'<? echo $accion?>',<? echo $idfactura?>)" border="1" onMouseOver="style.cursor=cursor">-->
-<!--                                                <img src="../img/botonpagar.png" width="85" height="22" onClick="aceptar(<?echo $validacion?>,'<? echo $accion?>',<? echo $idfactura?>)" border="1" onMouseOver="style.cursor=cursor">-->
-                                                <img src="../img/botonaceptar.jpg" width="85" height="22" onClick="aceptar(<?echo $validacion?>,'<? echo $accion?>',<? echo $idfactura?>)" border="1" onMouseOver="style.cursor=cursor">
-                                            <? } else{?>
-                                                <img src="../img/botonaceptar.jpg" width="85" height="22" onClick="aceptar(<?echo $validacion?>,'<? echo $accion?>',<? echo $idfactura?>)" border="1" onMouseOver="style.cursor=cursor">
-                                             <?}?>
-                                         <!--<img src="../img/botonimprimir.jpg" width="79" height="22" border="1" onClick="imprimir(<? echo $codfactura?>)" onMouseOver="style.cursor=cursor">-->
+<!--                                                <img src="../img/botonretencion_hacer.jpg" width="85" height="22" onClick="aceptar_retencion(<?php echo $validacion?>,'<?php  echo $accion?>',<?php  echo $idfactura?>)" border="1" onMouseOver="style.cursor=cursor">-->
+<!--                                                <img src="../img/botonpagar.png" width="85" height="22" onClick="aceptar(<?php echo $validacion?>,'<?php  echo $accion?>',<?php  echo $idfactura?>)" border="1" onMouseOver="style.cursor=cursor">-->
+                                                <img src="../img/botonaceptar.jpg" width="85" height="22" onClick="aceptar(<?php echo $validacion?>,'<?php  echo $accion?>',<?php  echo $idfactura?>)" border="1" onMouseOver="style.cursor=cursor">
+                                            <?php  } else{?>
+                                                <img src="../img/botonaceptar.jpg" width="85" height="22" onClick="aceptar(<?php echo $validacion?>,'<?php  echo $accion?>',<?php  echo $idfactura?>)" border="1" onMouseOver="style.cursor=cursor">
+                                             <?php }?>
+                                         <!--<img src="../img/botonimprimir.jpg" width="79" height="22" border="1" onClick="imprimir(<?php  echo $codfactura?>)" onMouseOver="style.cursor=cursor">-->
 				        </div>
 					</div>
 			  </div>

@@ -63,7 +63,7 @@ $idfacturero = mysql_result($rs_query, 0, "id_facturero");
             }
 
             function imprimir(idfactura) {
-            window.open("../imprimir/imprimir_factura_venta.php?idfactura=" + idfactura);
+            window.open("../imprimir/imprimir_factura_electroparc.php?idfactura=" + idfactura);
             }
 
         </script>
@@ -169,7 +169,7 @@ $rs_cliente = mysql_query($sel_cliente, $conn);
                                     $fondolinea = "itemImparTabla";
                                 }
                                 ?>
-                                <tr class="<? echo $fondolinea?>">
+                                <tr class="<?php echo $fondolinea?>">
                                     <td width="16%"><?php echo $codarticulo ?></td>
                                     <td width="37%"><?php echo $descripcion ?></td>
                                     <td width="5%"><?php echo $cantidad ?></td>
@@ -220,8 +220,8 @@ $rs_cliente = mysql_query($sel_cliente, $conn);
                     </div>
                     <div id="botonBusqueda">
                         <div align="center">
-                            <img src="../img/botonaceptar.jpg" width="85" height="22" onClick="aceptar( <? echo $idfactura ?> )" border="1" onMouseOver="style.cursor = cursor">
-                            <img src="../img/botonimprimir.jpg" width="79" height="22" border="1" onClick="imprimir( <? echo $idfactura ?> )" onMouseOver="style.cursor = cursor">
+                            <img src="../img/botonaceptar.jpg" width="85" height="22" onClick="aceptar( <?php echo $idfactura ?> )" border="1" onMouseOver="style.cursor = cursor">
+                            <img src="../img/botonimprimir.jpg" width="79" height="22" border="1" onClick="imprimir( <?php echo $idfactura ?> )" onMouseOver="style.cursor = cursor">
                         </div>
                     </div>
                 </div>

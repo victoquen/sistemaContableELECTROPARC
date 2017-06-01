@@ -1,4 +1,4 @@
-<?php
+<?php 
 include_once 'class/cliente.php';
 include_once '../conexion/conexion.php';
 $usuario = new ServidorBaseDatos();
@@ -230,50 +230,50 @@ if ($accion == "baja") {
 <div id="pagina">
     <div id="zonaContenido">
         <div align="center">
-            <div id="tituloForm" class="header"><?php echo $cabecera2 ?></div>
+            <div id="tituloForm" class="header"><?php  echo $cabecera2 ?></div>
             <div id="frmBusqueda">
                 <table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0>
                     <tr>
                         <td width="15%"></td>
-                        <td width="85%" colspan="2" class="mensaje"><?php echo $mensaje; ?>--<?php echo $errMSG ?></td>
+                        <td width="85%" colspan="2" class="mensaje"><?php  echo $mensaje; ?>--<?php  echo $errMSG ?></td>
                     </tr>
                     <tr>
                         <td width="15%">Nombre</td>
-                        <td width="85%" colspan="2"><?php echo $nombre ?></td>
+                        <td width="85%" colspan="2"><?php  echo $nombre ?></td>
                     </tr>
                     <tr>
                         <td width="15%">Empresa</td>
-                        <td width="85%" colspan="2"><?php echo $empresa ?></td>
+                        <td width="85%" colspan="2"><?php  echo $empresa ?></td>
                     </tr>
                     <tr>
                         <td width="15%">CI/RUC</td>
-                        <td width="85%" colspan="2"><?php echo $ci_ruc ?></td>
+                        <td width="85%" colspan="2"><?php  echo $ci_ruc ?></td>
                     </tr>
                     <tr>
                         <td width="15%">Tipo</td>
-                        <td width="85%" colspan="2"><?php echo $nombre_tipo ?></td>
+                        <td width="85%" colspan="2"><?php  echo $nombre_tipo ?></td>
                     </tr>
                     <tr>
                         <td width="15%">Email</td>
-                        <td width="85%" colspan="2"><?php echo $email ?></td>
+                        <td width="85%" colspan="2"><?php  echo $email ?></td>
                     </tr>
                     <tr>
                         <td width="15%">Direcci&oacute;n</td>
-                        <td width="85%" colspan="2"><?php echo $direccion ?></td>
+                        <td width="85%" colspan="2"><?php  echo $direccion ?></td>
                     </tr>
                     <tr>
                         <td width="15%">Lugar</td>
-                        <td width="85%" colspan="2"><?php echo $lugar ?></td>
+                        <td width="85%" colspan="2"><?php  echo $lugar ?></td>
                     </tr>
                     <tr>
                         <td width="15%">Credito</td>
-                        <td width="85%" colspan="2"><?php echo $credito_nombre ?></td>
+                        <td width="85%" colspan="2"><?php  echo $credito_nombre ?></td>
                     </tr>
 
                     <tr>
                         <td colspan="2" width="100%">Tel&eacute;fono(s):</td>
                     </tr>
-                    <?php
+                    <?php 
                     $query_fono = "SELECT numero, operadora, descripcion FROM clientefono WHERE id_cliente='$idcliente'";
                     $rs_fono = mysql_query($query_fono, $conn);
                     if ($rs_fono) {
@@ -285,7 +285,7 @@ if ($accion == "baja") {
                             <tr>
                                 <td colspan="2" width="100%">
                                     <BLOCKQUOTE>
-                                        <?
+                                        <?php 
                                         $id_operadora = mysql_result($rs_fono, $contador, 'operadora');
                                         $query_operadora = "SELECT nombre FROM operadora WHERE id_operadora='$id_operadora'";
                                         $rs_operadora = mysql_query($query_operadora, $conn);
@@ -294,7 +294,7 @@ if ($accion == "baja") {
                                     </BLOCKQUOTE>
                                 </td>
                             </tr>
-                            <?
+                            <?php 
                             $contador++;
                         }
                     }
@@ -302,21 +302,21 @@ if ($accion == "baja") {
                     <tr>
                         <td></td>
                         <td>
-                            <img src="fotografias/<?php echo $userpic; ?>" class="img-rounded" width="150px"
+                            <img src="fotografias/<?php  echo $userpic; ?>" class="img-rounded" width="150px"
                                  height="200px"/>
                         </td>
                     </tr>
                 </table>
             </div>
             <div id="botonBusqueda">
-                <? if ($origen == "factura") { ?>
+                <?php  if ($origen == "factura") { ?>
                     <img src="../img/botonaceptar.jpg" width="85" height="22"
-                         onClick="ingreso_factura(<?php echo $validacion ?>,'<? echo $idcliente ?>','<? echo $nombre ?>','<? echo $ci_ruc ?>','<? echo $nombre_tipo ?>')"
+                         onClick="ingreso_factura(<?php  echo $validacion ?>,'<?php  echo $idcliente ?>','<?php  echo $nombre ?>','<?php  echo $ci_ruc ?>','<?php  echo $nombre_tipo ?>')"
                          border="1" onMouseOver="style.cursor=cursor">
-                <? } else { ?>
+                <?php  } else { ?>
                     <img src="../img/botonaceptar.jpg" width="85" height="22"
-                         onClick="aceptar(<?php echo $validacion ?>)" border="1" onMouseOver="style.cursor=cursor">
-                <? } ?>
+                         onClick="aceptar(<?php  echo $validacion ?>)" border="1" onMouseOver="style.cursor=cursor">
+                <?php  } ?>
             </div>
         </div>
     </div>

@@ -1,4 +1,4 @@
-<?
+<?php 
 include ("../conexion/conexion.php");
 $usuario = new ServidorBaseDatos();
 $conn = $usuario->getConexion();
@@ -85,30 +85,30 @@ body {
           <table class="fuente8" width="95%" id="tabla_resultado" name="tabla_resultado" align="center">
                 <tr>
                     <td width="5%">Numero Telf:</td>
-                    <td width="10%"><input NAME="numero" type="text" class="cajaPequena" id="numero" value="<?echo mysql_result($rs_f,0,'numero');?>" maxlength="13"></td>
+                    <td width="10%"><input NAME="numero" type="text" class="cajaPequena" id="numero" value="<?php echo mysql_result($rs_f,0,'numero');?>" maxlength="13"></td>
                 </tr>
                 <tr>
                     <td width="5%">Operadora:</td>
                     <td width="10%">
                         <select id="operadora"  class="comboMedio" NAME="operadora">
-                                <?php
+                                <?php 
                                 $contador=0;
                                 while ($contador < mysql_num_rows($res_o))
                                 {
                                     if(mysql_result($res_o,$contador,"id_operadora")==mysql_result($rs_f,0,"operadora"))
                                     {
                                 ?>
-                                    <option selected value="<?php echo mysql_result($res_o,$contador,"id_operadora")?>"><?php echo mysql_result($res_o,$contador,"nombre")?></option>
-                                <?}else{?>
-                                    <option value="<?php echo mysql_result($res_o,$contador,"id_operadora")?>"><?php echo mysql_result($res_o,$contador,"nombre")?></option>
-                                <? }$contador++;
+                                    <option selected value="<?php  echo mysql_result($res_o,$contador,"id_operadora")?>"><?php  echo mysql_result($res_o,$contador,"nombre")?></option>
+                                <?php }else{?>
+                                    <option value="<?php  echo mysql_result($res_o,$contador,"id_operadora")?>"><?php  echo mysql_result($res_o,$contador,"nombre")?></option>
+                                <?php  }$contador++;
                                 } ?>
                        </select>
                     </td>
                 </tr>
                 <tr>
                     <td width="5%"> Descripci&oacute;n:</td>
-                    <td width="10%"><input NAME="descripcion" type="text" class="cajaMedia" id="descripcion" value="<?echo mysql_result($rs_f,0,"descripcion");?>" size="45" maxlength="45"></td>
+                    <td width="10%"><input NAME="descripcion" type="text" class="cajaMedia" id="descripcion" value="<?php echo mysql_result($rs_f,0,"descripcion");?>" size="45" maxlength="45"></td>
                 </tr>
         </table>
         
@@ -119,7 +119,7 @@ body {
         <table width="100%" border="0">
           <tr>
             <td><div align="center">
-              <img src="../img/botonaceptar.jpg"  onClick="guardar_telefono(<?echo $idcliente?>)" border="1" onMouseOver="style.cursor=cursor">
+              <img src="../img/botonaceptar.jpg"  onClick="guardar_telefono(<?php echo $idcliente?>)" border="1" onMouseOver="style.cursor=cursor">
               <img src="../img/botoncerrar.jpg" width="70" height="22" onClick="window.close()" border="1" onMouseOver="style.cursor=cursor">
               
             </div></td>
@@ -129,8 +129,8 @@ body {
                 <ilayer width="0" height="0" id="frame_datos" name="frame_datos"></ilayer>
         </iframe>
 
-       <input id="idcliente" name="idcliente" value="<?php echo $idcliente?>" type="hidden">
-       <input id="idtelefono" name="idtelefono" value="<?php echo $idtelefono?>" type="hidden">
+       <input id="idcliente" name="idcliente" value="<?php  echo $idcliente?>" type="hidden">
+       <input id="idtelefono" name="idtelefono" value="<?php  echo $idtelefono?>" type="hidden">
 
         </form>
 
