@@ -37,7 +37,25 @@ $row = $reten->get_iva_id($conn, $id);
 		function limpiar() {
 			document.getElementById("formulario").reset();
 		}
-	
+
+		function validarForm(){
+			var mensaje = "";
+
+
+			if (document.getElementById("porcentaje").value == "") mensaje += "  - Ingresar procentaje\n";
+			if (document.getElementById("Acbotipos").value == "") mensaje += "  - Escoger activo\n";
+
+			if (mensaje != "") {
+				alert("Atencion, se han detectado las siguientes incorrecciones:\n\n" + mensaje);
+			} else {
+
+				document.getElementById("formulario").submit();
+				document.getElementById("porcentaje").value = "";
+				document.getElementById("Acbotipos").value = 0;
+
+			}
+
+		}
 		</script>
 	</head>
 	<body>
@@ -56,7 +74,7 @@ $row = $reten->get_iva_id($conn, $id);
 
 						<tr>
 							<td width="15%">Codigo</td>
-							<td width="43%"><input NAME="Qporcentaje" type="text" class="cajaPequena" id="Qporcentaje" value="<?php echo $row['porcentaje']?>" size="45" maxlength="45"></td>
+							<td width="43%"><input NAME="porcentaje" type="text" class="cajaPequena" id="porcentaje" value="<?php echo $row['porcentaje']?>" size="45" maxlength="45"></td>
 						</tr>	
 
 						<tr>
@@ -76,12 +94,12 @@ $row = $reten->get_iva_id($conn, $id);
 					</table>
 			  </div>
 				<div id="botonBusqueda">
-					<img src="../img/botonaceptar.jpg" width="85" height="22" onClick="validar(formulario,true)" border="1" onMouseOver="style.cursor=cursor">
+					<img src="../img/botonaceptar.jpg" width="85" height="22" onClick="validarForm()" border="1" onMouseOver="style.cursor=cursor">
 					<img src="../img/botonlimpiar.jpg" width="69" height="22" onClick="limpiar()" border="1" onMouseOver="style.cursor=cursor">
 					<img src="../img/botoncancelar.jpg" width="85" height="22" onClick="cancelar()" border="1" onMouseOver="style.cursor=cursor">
 					<input id="accion" name="accion" value="modificar" type="hidden">
 					<input id="id" name="id" value="" type="hidden">
-					<input id="idcodretencion" name="idcodretencion" value="<?php echo $id;?>" type="hidden">
+					<input id="id" name="id" value="<?php echo $id;?>" type="hidden">
 			  </div>
 			  </form>
 		  </div>

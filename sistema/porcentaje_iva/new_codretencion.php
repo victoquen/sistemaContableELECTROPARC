@@ -23,7 +23,26 @@
         function limpiar() {
                 document.getElementById("formulario").reset();
         }
+            
 
+            function validarForm(){
+                var mensaje = "";
+
+
+                if (document.getElementById("porcentaje").value == "") mensaje += "  - Ingresar procentaje\n";
+                if (document.getElementById("Acbotipos").value == "") mensaje += "  - Escoger activo\n";
+
+                if (mensaje != "") {
+                    alert("Atencion, se han detectado las siguientes incorrecciones:\n\n" + mensaje);
+                } else {
+
+                    document.getElementById("formulario").submit();
+                    document.getElementById("porcentaje").value = "";
+                    document.getElementById("Acbotipos").value = 0;
+
+                }
+
+        }
         </script>
     </head>
     <body>
@@ -37,7 +56,7 @@
 
 								<tr>
                                     <td width="15%">Porcentaje</td>
-                                    <td width="43%"><input NAME="Qporcentaje" type="text" class="cajaPequena" id="Qporcentaje" size="45" maxlength="45" value=0></td>
+                                    <td width="43%"><input NAME="porcentaje" type="text" class="cajaPequena" id="porcentaje" size="45" maxlength="45" ></td>
                                 </tr>
 								<tr>
                                     <td width="15%">Activo</td>
@@ -53,7 +72,7 @@
                     </div>
 
                     <div id="botonBusqueda">
-                        <img src="../img/botonaceptar.jpg" width="85" height="22" onClick="validar(formulario,true)" border="1" onMouseOver="style.cursor=cursor">
+                        <img src="../img/botonaceptar.jpg" width="85" height="22" onClick="validarForm()" border="1" onMouseOver="style.cursor=cursor">
                         <img src="../img/botonlimpiar.jpg" width="69" height="22" onClick="limpiar()" border="1" onMouseOver="style.cursor=cursor">
                         <img src="../img/botoncancelar.jpg" width="85" height="22" onClick="cancelar()" border="1" onMouseOver="style.cursor=cursor">
                         <input id="accion" name="accion" value="alta" type="hidden">

@@ -20,7 +20,7 @@ if (!isset($accion))
 if($accion!="baja")
 {
 
-	$porcentaje = $_POST["Qporcentaje"];
+	$porcentaje = $_POST["porcentaje"];
 	$activo = $_POST["Acbotipos"];
 }
 

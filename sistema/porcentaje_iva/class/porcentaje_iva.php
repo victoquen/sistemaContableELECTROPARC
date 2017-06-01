@@ -46,10 +46,10 @@ class Porcentaje_iva
     public function update($conn, $id, $porcentaje, $activo)
     {
 
-       /* if($activo==1){
+       if($activo==1){
             $querya = "UPDATE iva SET   activo = '0'";
             $resulta= mysql_query($querya, $conn);
-        }*/
+        }
        
         $query = "UPDATE iva SET   porcentaje = '$porcentaje', activo = '$activo'
                   WHERE id = '$id'";
