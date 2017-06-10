@@ -1,4 +1,4 @@
-<?php
+<?php 
 include ("../js/fechas.php");
 include ("../conexion/conexion.php");
 error_reporting(0);
@@ -121,7 +121,7 @@ $res_clie=mysql_query($query_clie,$conn);
                 }
 		</script>
 	</head>
-        <body onload="inicio('<?php echo $aceptacion?>','<?php echo $mensaje_aceptacion?>')" >
+        <body onload="inicio('<?php  echo $aceptacion?>','<?php  echo $mensaje_aceptacion?>')" >
 		<div id="pagina">
 			<div id="zonaContenido">
 				<div align="center">
@@ -132,14 +132,14 @@ $res_clie=mysql_query($query_clie,$conn);
                                                 <tr>
                                                     <td width="10%">No. remision</td>
                                                     <td>
-                                                        <input NAME="serie1" type="text" class="cajaMinima" id="serie1" value="<?echo $serie1?>" readonly>
-                                                        <input NAME="serie2" type="text" class="cajaMinima" id="serie2" value="<?echo $serie2?>" readonly>
-                                                        <input NAME="codremision" type="text" class="cajaPequena" id="codremision" value="<?echo $maximo?>" readonly>
+                                                        <input NAME="serie1" type="text" class="cajaMinima" id="serie1" value="<?php echo $serie1?>" readonly>
+                                                        <input NAME="serie2" type="text" class="cajaMinima" id="serie2" value="<?php echo $serie2?>" readonly>
+                                                        <input NAME="codremision" type="text" class="cajaPequena" id="codremision" value="<?php echo $maximo?>" readonly>
 
                                                     </td>
                                                     <td width="5%">Autorizaci&oacute;n</td>
                                                     <td colspan="2">
-                                                        <input NAME="autorizacion" type="text" class="cajaPequena" id="autorizacion" value="<?echo $autorizacion?>" readonly>
+                                                        <input NAME="autorizacion" type="text" class="cajaPequena" id="autorizacion" value="<?php echo $autorizacion?>" readonly>
                                                     </td>
                                                     
                                                 </tr>
@@ -148,21 +148,21 @@ $res_clie=mysql_query($query_clie,$conn);
 
                                                 <tr>
                                                     <td width="12%">No. Comprobante</td>
-                                                    <td><input NAME="numero_comprobante" type="text" class="cajaMedia" id="numero_comprobante" value="<?echo mysql_result($res_clie,0,"serie1")." - ".mysql_result($res_clie,0,"serie2")."  # ".mysql_result($res_clie,0,"codigo_factura")?>" readonly></td>
+                                                    <td><input NAME="numero_comprobante" type="text" class="cajaMedia" id="numero_comprobante" value="<?php echo mysql_result($res_clie,0,"serie1")." - ".mysql_result($res_clie,0,"serie2")."  # ".mysql_result($res_clie,0,"codigo_factura")?>" readonly></td>
                                                 <tr/>
                                                 <tr>
                                                     <td width="12%">Fecha de Emisi&oacute;n</td>
-                                                    <td><input name="fecha_emision" id="fecha_emision" type="text" class="cajaPequena" value="<?echo implota(mysql_result($res_clie,0,"fecha"))?>" readonly></td>
+                                                    <td><input name="fecha_emision" id="fecha_emision" type="text" class="cajaPequena" value="<?php echo implota(mysql_result($res_clie,0,"fecha"))?>" readonly></td>
                                                 </tr>
 
                                                 <tr><td colspan="4"><hr/></td></tr>
 
                                                 <tr>
                                                     <td width="12%">Fecha Inicio Traslado</td>
-                                                    <td><input name="fecha_inicio" id="fecha_inicio" type="text" class="cajaPequena" value="<?echo implota(mysql_result($res_clie,0,"fecha"))?>" readonly></td>
+                                                    <td><input name="fecha_inicio" id="fecha_inicio" type="text" class="cajaPequena" value="<?php echo implota(mysql_result($res_clie,0,"fecha"))?>" readonly></td>
                                                 </tr>
 
-                                                <? $hoy=date("d/m/Y"); ?>
+                                                <?php  $hoy=date("d/m/Y"); ?>
                                                 <tr>
                                                     <td width="12%">Fecha Fin Traslado</td>
                                                     <td>
@@ -193,7 +193,7 @@ $res_clie=mysql_query($query_clie,$conn);
 
 						<tr>
                                                     <td width="10%">Fecha Emision</td>
-                                                    <td><input name="fecha_emision" id="fecha_emision" type="text" class="cajaPequena" value="<?echo implota(mysql_result($res_clie,0,"fecha"))?>" readonly></td>
+                                                    <td><input name="fecha_emision" id="fecha_emision" type="text" class="cajaPequena" value="<?php echo implota(mysql_result($res_clie,0,"fecha"))?>" readonly></td>
 						</tr>
                                                 <tr>
                                                     <td width="10%">Punto Partida</td>
@@ -203,17 +203,17 @@ $res_clie=mysql_query($query_clie,$conn);
 
                                                 <tr>
                                                     <td width="10%">NOMBRE</td>
-						    <td width="27%"><input NAME="nombre_clie" type="text" class="cajaGrande" id="nombre_clie" value="<?echo mysql_result($res_clie,0,"nombre")?>" readonly></td>
+						    <td width="27%"><input NAME="nombre_clie" type="text" class="cajaGrande" id="nombre_clie" value="<?php echo mysql_result($res_clie,0,"nombre")?>" readonly></td>
 						</tr>
 
                                                 <tr>
                                                     <td>CI/RUC</td>
-                                                    <td width="27%"><input NAME="ci_clie" type="text" class="cajaMedia" id="ci_clie" value="<?echo mysql_result($res_clie,0,"ci_ruc")?>" readonly></td>
+                                                    <td width="27%"><input NAME="ci_clie" type="text" class="cajaMedia" id="ci_clie" value="<?php echo mysql_result($res_clie,0,"ci_ruc")?>" readonly></td>
                                                 </tr>
 
 						<tr>
                                                     <td width="10%">Punto LLegada</td>
-						    <td width="27%"><input NAME="punto_llegada" type="text" class="cajagrande" id="punto_llegada" size="10" maxlength="10" value="<? echo mysql_result($res_clie,0,"lugar")." -- ". mysql_result($res_clie,0,"direccion") ?>" readonly></td>
+						    <td width="27%"><input NAME="punto_llegada" type="text" class="cajagrande" id="punto_llegada" size="10" maxlength="10" value="<?php  echo mysql_result($res_clie,0,"lugar")." -- ". mysql_result($res_clie,0,"direccion") ?>" readonly></td>
                                                 </tr>
 
                                                 <tr><td colspan="4"><hr/></td></tr>
@@ -228,7 +228,7 @@ $res_clie=mysql_query($query_clie,$conn);
                                                 </tr>
 					</table>
 
-                                    <? $query_productos="SELECT f.cantidad as cantidad, p.nombre as nombre
+                                    <?php  $query_productos="SELECT f.cantidad as cantidad, p.nombre as nombre
                                                          FROM factulinea as f INNER JOIN producto as p ON f.id_producto = p.id_producto
                                                          WHERE f.id_factura = $id_factura";
 
@@ -242,19 +242,19 @@ $res_clie=mysql_query($query_clie,$conn);
                                             <th width="10%">CANTIDADES</th>
                                             <th width="90%">DESCRIPCION</th>
                                         </tr>
-                                        <?
+                                        <?php 
                                         while ( $aRow = mysql_fetch_array( $res_prod ) )
                                         {
                                         ?>
                                             <tr>
                                                 <td align="center">
-                                                    <? echo $aRow["cantidad"]?>
+                                                    <?php  echo $aRow["cantidad"]?>
                                                 </td>
                                                 <td align="center">
-                                                    <? echo $aRow["nombre"]?>
+                                                    <?php  echo $aRow["nombre"]?>
                                                 </td>
                                             </tr>
-                                        <?
+                                        <?php 
                                         }
                                         ?>
                                     </table>
@@ -275,7 +275,7 @@ $res_clie=mysql_query($query_clie,$conn);
 			  		<!--<iframe id="frame_datos" name="frame_datos" width="0" height="0" frameborder="0">
 					<ilayer width="0" height="0" id="frame_datos" name="frame_datos"></ilayer>
 					</iframe>-->
-                                <input id="idfactura" name="idfactura" value="<?echo $id_factura?>" type="hidden">
+                                <input id="idfactura" name="idfactura" value="<?php echo $id_factura?>" type="hidden">
                                 <input id="accion" name="accion" value="alta" type="hidden">
 			  </form>
 			 </div>

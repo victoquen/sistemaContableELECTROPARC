@@ -1,4 +1,4 @@
-<?php
+<?php 
 include_once '../conexion/conexion.php';
 
 $usuario = new ServidorBaseDatos();
@@ -127,26 +127,26 @@ $op = $_GET["op"];
                         <tr>
                             <td>Bodega</td>
                             <td>
-                                <?php
+                                <?php 
 
                                 $queryb = "SELECT b.id_bodega as idbodega, b.nombre as nombre FROM bodega b ";
                                 $resb = mysql_query($queryb, $conn); ?>
 
                                 <select name="Acbobodega" id="Acbobodega" class="comboGrande">
-                                    <?php
+                                    <?php 
 
                                     $contador = 0;
                                     while ($contador < mysql_num_rows($resb)) {
                                         if (mysql_result($resb, $contador, "idbodega") == $bodega1) {
                                             ?>
                                             <option selected
-                                                    value="<?php echo mysql_result($resb, $contador, "idbodega") ?>"><?php echo mysql_result($resb, $contador, "nombre"); ?></option>
+                                                    value="<?php  echo mysql_result($resb, $contador, "idbodega") ?>"><?php  echo mysql_result($resb, $contador, "nombre"); ?></option>
 
 
-                                        <?php } else { ?>
+                                        <?php  } else { ?>
                                             <option
-                                                value="<?php echo mysql_result($resb, $contador, "idbodega") ?>"><?php echo mysql_result($resb, $contador, "nombre"); ?></option>
-                                        <?php }
+                                                value="<?php  echo mysql_result($resb, $contador, "idbodega") ?>"><?php  echo mysql_result($resb, $contador, "nombre"); ?></option>
+                                        <?php  }
                                         $contador++;
                                     } ?>
 
@@ -167,13 +167,13 @@ $op = $_GET["op"];
                         <tr>
                             <td width="15%">Stock</td>
 
-                            <?php if (($origen == "factura") || ($origen == "facturacompra")) { ?>
+                            <?php  if (($origen == "factura") || ($origen == "facturacompra")) { ?>
                                 <td width="43%"><input disabled="true" NAME="Rstock" type="text" class="cajaPequena"
                                                        id="stock" size="15" maxlength="45" value="0"></td>
-                            <?php } else { ?>
+                            <?php  } else { ?>
                                 <td width="43%"><input NAME="Rstock" type="text" class="cajaPequena" id="stock"
                                                        size="15" maxlength="45" value="0"></td>
-                            <?php } ?>
+                            <?php  } ?>
                         </tr>
                         <tr>
                             <td width="15%">Stock Consignacion</td>
@@ -209,20 +209,20 @@ $op = $_GET["op"];
                         </tr>
                         <tr>
                             <td width="15%">Proveedor</td>
-                            <?
+                            <?php 
                             $query_prov = "SELECT id_proveedor, empresa FROM proveedor";
                             $result_prov = mysql_query($query_prov, $conn);
                             ?>
                             <td width="43%">
                                 <select name="Aproveedor" id="proveedor" class="comboGrande">
                                     <option value="0">Seleccionar Proveedor</option>
-                                    <?
+                                    <?php 
                                     $contador = 0;
                                     while ($contador < mysql_num_rows($result_prov)) {
                                         ?>
                                         <option
-                                            value="<? echo mysql_result($result_prov, $contador, "id_proveedor") ?>"><? echo mysql_result($result_prov, $contador, "empresa") ?></option>
-                                        <?
+                                            value="<?php  echo mysql_result($result_prov, $contador, "id_proveedor") ?>"><?php  echo mysql_result($result_prov, $contador, "empresa") ?></option>
+                                        <?php 
                                         $contador++;
                                     }
                                     ?>
@@ -232,7 +232,7 @@ $op = $_GET["op"];
                         </tr>
                         <tr>
                             <td>Grupo</td>
-                            <?
+                            <?php 
                             $query_grupo = "SELECT id_grupo, nombre FROM grupo";
                             $result_grupo = mysql_query($query_grupo, $conn);
                             ?>
@@ -240,13 +240,13 @@ $op = $_GET["op"];
                                 <select name="Agrupo" id="grupo" class="comboGrande"
                                         onchange="activar_subgrupo('subgrupo.php?grupo='+this.value,'subgrupo')">
                                     <option value="0">Seleccionar Grupo</option>
-                                    <?
+                                    <?php 
                                     $contador1 = 0;
                                     while ($contador1 < mysql_num_rows($result_grupo)) {
                                         ?>
                                         <option
-                                            value="<? echo mysql_result($result_grupo, $contador1, "id_grupo") ?>"><? echo mysql_result($result_grupo, $contador1, "nombre") ?></option>
-                                        <?
+                                            value="<?php  echo mysql_result($result_grupo, $contador1, "id_grupo") ?>"><?php  echo mysql_result($result_grupo, $contador1, "nombre") ?></option>
+                                        <?php 
                                         $contador1++;
                                     }
                                     ?>
@@ -256,7 +256,7 @@ $op = $_GET["op"];
 
                         <tr>
                             <td>Subgrupo</td>
-                            <?
+                            <?php 
                             //$id_grupo="<script> document.write(opc)</script>";
 
                             ?>
@@ -274,20 +274,20 @@ $op = $_GET["op"];
 
             <div id="botonBusqueda">
 
-                <?php if (($origen == "factura") || ($origen == "facturacompra")) { ?>
+                <?php  if (($origen == "factura") || ($origen == "facturacompra")) { ?>
                     <img src="../img/botonaceptar.jpg" width="85" height="22" onClick="validar(formulario,true)"
                          border="1" onMouseOver="style.cursor=cursor">
-                <?php } else { ?>
+                <?php  } else { ?>
                     <img src="../img/botonaceptar.jpg" width="85" height="22" onClick="validar(formulario,true)"
                          border="1" onMouseOver="style.cursor=cursor">
                     <img src="../img/botonlimpiar.jpg" width="69" height="22" onClick="limpiar()" border="1"
                          onMouseOver="style.cursor=cursor">
                     <img src="../img/botoncancelar.jpg" width="85" height="22" onClick="cancelar()" border="1"
                          onMouseOver="style.cursor=cursor">
-                <?php } ?>
+                <?php  } ?>
 
-                <input id="origen" name="origen" value="<?php echo $origen ?>" type="hidden">
-                <input id="op" name="op" value="<?php echo $op ?>" type="hidden">
+                <input id="origen" name="origen" value="<?php  echo $origen ?>" type="hidden">
+                <input id="op" name="op" value="<?php  echo $op ?>" type="hidden">
                 <input id="accion" name="accion" value="alta" type="hidden">
                 <input id="id" name="Zid" value="" type="hidden">
 

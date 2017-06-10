@@ -38,7 +38,7 @@ function eliminar_linea(codfacturatmp,numlinea,importe,descuento,iva)
 </script>
 <link href="../estilos/estilos.css" type="text/css" rel="stylesheet">
 <body>
-<?php 
+<?php  
 include ("../conexion/conexion.php");
 $usuario = new ServidorBaseDatos();
 $conn = $usuario->getConexion();
@@ -71,7 +71,7 @@ $retorno=0;
 ?>
      
             <table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=1 ID="Table1">
-            <?php
+            <?php 
             $sel_lineas="SELECT b.codigo as codigo, b.nombre as nombre, a.numlinea as numlinea, a.cantidad as cantidad, a.precio as precio, a.importe as importe, a.dcto as dcto, a.iva as iva
                         FROM proforlineatmp a INNER JOIN producto b ON a.id_articulo=b.id_producto
                         WHERE a.codfactura = $codfacturatmp ORDER BY a.numlinea ASC";
@@ -88,18 +88,18 @@ $retorno=0;
                     $descuento=mysql_result($rs_lineas,$i,"dcto");
                     $iva=mysql_result($rs_lineas, $i, "iva");
                     if ($i % 2) { $fondolinea="itemParTabla"; } else { $fondolinea="itemImparTabla"; } ?>
-                                    <tr class="<?php echo $fondolinea?>">
+                                    <tr class="<?php  echo $fondolinea?>">
 
-                                            <td width="18%"><? echo $codarticulo?></td>
-                                            <td width="41%"><? echo $descripcion?></td>
-                                            <td width="5%"><? echo $cantidad?></td>
-                                            <td width="8%" class="aCentro"><? echo $precio?></td>
-                                            <td width="7%" class="aCentro"><? echo $importe?></td>
-                                            <td width="8%" class="aCentro"><? echo $descuento?></td>
-                                            <td width="8%" class="aCentro"><? echo $iva?></td>
-                                            <td width="3%"><a href="javascript:eliminar_linea(<?php echo $codfacturatmp?>,<?php echo $numlinea?>,<?php echo $importe ?>,<?php echo $descuento?>,<?php echo $iva?>)"><img src="../img/eliminar.png" border="0"></a></td>
+                                            <td width="18%"><?php  echo $codarticulo?></td>
+                                            <td width="41%"><?php  echo $descripcion?></td>
+                                            <td width="5%"><?php  echo $cantidad?></td>
+                                            <td width="8%" class="aCentro"><?php  echo $precio?></td>
+                                            <td width="7%" class="aCentro"><?php  echo $importe?></td>
+                                            <td width="8%" class="aCentro"><?php  echo $descuento?></td>
+                                            <td width="8%" class="aCentro"><?php  echo $iva?></td>
+                                            <td width="3%"><a href="javascript:eliminar_linea(<?php  echo $codfacturatmp?>,<?php  echo $numlinea?>,<?php  echo $importe ?>,<?php  echo $descuento?>,<?php  echo $iva?>)"><img src="../img/eliminar.png" border="0"></a></td>
                                     </tr>
-            <? } ?>
+            <?php  } ?>
             </table>
     
 <iframe id="frame_datos" name="frame_datos" width="0%" height="0" frameborder="0">

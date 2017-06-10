@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 include ("../js/fechas.php");
 include_once '../conexion/conexion.php';
@@ -61,7 +61,7 @@ $filas=mysql_result($rs_busqueda,0,"filas");
                         "bFilter": false,
                         "bProcessing": true,
                         "bServerSide": true,
-                        "sAjaxSource": "processing_librodiario.php?fecha_inicio=<?echo $fechainicio?>&fecha_fin=<?echo $fechafin?>",
+                        "sAjaxSource": "processing_librodiario.php?fecha_inicio=<?php echo $fechainicio?>&fecha_fin=<?php echo $fechafin?>",
                         "sPaginationType": "full_numbers",
 
                        "sDom": 'T<"clear">lfrtip',
@@ -130,11 +130,11 @@ $filas=mysql_result($rs_busqueda,0,"filas");
 
                                 <thead>
                                     <tr>
-                                        <?php if($fechainicio != $fechafin) {?>
-                                        <th colspan="8"><span style="font-size: 12px">PERIODO DESDE: <?php echo implota($fechainicio)?> ---------- HASTA: <?php echo implota($fechafin)?></span></th>
-                                        <?php } else {?>
-                                        <th colspan="8"><span style="font-size: 12px">FECHA: <?php echo implota($fechafin)?></span></th>
-                                        <?php }?>
+                                        <?php  if($fechainicio != $fechafin) {?>
+                                        <th colspan="8"><span style="font-size: 12px">PERIODO DESDE: <?php  echo implota($fechainicio)?> ---------- HASTA: <?php  echo implota($fechafin)?></span></th>
+                                        <?php  } else {?>
+                                        <th colspan="8"><span style="font-size: 12px">FECHA: <?php  echo implota($fechafin)?></span></th>
+                                        <?php  }?>
                                     </tr>
                                     <tr>
                                         

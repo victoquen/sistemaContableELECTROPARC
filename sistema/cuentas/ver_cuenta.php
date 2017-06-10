@@ -1,4 +1,4 @@
-<?
+<?php 
 include_once '../conexion/conexion.php';
 include_once 'class/cuenta.php';
 
@@ -43,11 +43,11 @@ $row = $cuenta->get_cuenta_id($conn, $idcuenta);
 					<table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0>                                            
                                             <tr>
                                                 <td width="15%"><strong>Nombre</strong></td>
-                                                <td width="85%" colspan="2"><?php echo $row['nombre']?></td>
+                                                <td width="85%" colspan="2"><?php  echo $row['nombre']?></td>
 					    </tr>  
                                             <tr>
                                                 <td width="15%"><strong>Es Gasto</strong></td>
-                                                <?php 
+                                                <?php  
                                                     if($row['gasto']==0)
                                                     {
                                                         $esGasto="No";
@@ -57,7 +57,7 @@ $row = $cuenta->get_cuenta_id($conn, $idcuenta);
                                                          $esGasto="Si";
                                                     }
                                                 ?>
-                                                <td width="85%" colspan="2"><?php echo $esGasto;?></td>
+                                                <td width="85%" colspan="2"><?php  echo $esGasto;?></td>
 					    </tr>
 											
 					</table>

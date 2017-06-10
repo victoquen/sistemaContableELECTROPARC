@@ -1,4 +1,4 @@
-<?
+<?php 
 include_once '../conexion/conexion.php';
 include_once 'class/producto.php';
  error_reporting(0);
@@ -54,87 +54,87 @@ $row = $producto->get_producto_id($conn, $idproducto);
 					<table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0>
                                             <tr>
                                                 <td width="15%"><strong>C&oacute;digo</strong></td>
-                                                <td width="85%" colspan="2"><?php echo $row['codigo']?></td>
+                                                <td width="85%" colspan="2"><?php  echo $row['codigo']?></td>
 					    </tr>
                                             <tr>
                                                 <td width="15%"><strong>Nombre</strong></td>
-                                                <td width="85%" colspan="2"><?php echo $row['nombre']?></td>
+                                                <td width="85%" colspan="2"><?php  echo $row['nombre']?></td>
 					    </tr>
                                             <tr>
                                                 <td>GRAVA IVA</td>
-                                                <?if ($row["iva"]==0){?>
+                                                <?php if ($row["iva"]==0){?>
                                                     <td>No</td>
-                                                <?}else{?>
+                                                <?php }else{?>
                                                     <td>Si</td>
-                                                <?}?>
+                                                <?php }?>
                                             </tr>
                                             <tr>
                                                 <td width="15%"><strong>Stock</strong></td>
-                                                <td width="85%" colspan="2"><?php echo $row['stock']?></td>
+                                                <td width="85%" colspan="2"><?php  echo $row['stock']?></td>
 					    </tr>
                                              <tr>
                                                 <td width="15%"><strong>Stock Consig.</strong></td>
-                                                <td width="85%" colspan="2"><?php echo $row['stock_consignacion']?></td>
+                                                <td width="85%" colspan="2"><?php  echo $row['stock_consignacion']?></td>
 					    </tr>
                                             <tr>
                                                 <td width="15%"><strong>Costo</strong></td>
-                                                <td width="85%" colspan="2"><?php echo $row['costo']?></td>
+                                                <td width="85%" colspan="2"><?php  echo $row['costo']?></td>
 					    </tr>
                                             <tr>
                                                 <td width="15%"><strong>PVP</strong></td>
-                                                <td width="85%" colspan="2"><?php echo $row['pvp']?></td>
+                                                <td width="85%" colspan="2"><?php  echo $row['pvp']?></td>
 					    </tr>
 						
 						<tr>
                                                 <td width="15%"><strong>Utilidad</strong></td>
-                                                <td width="85%" colspan="2"><?php echo $row['utilidad']?>%</td>
+                                                <td width="85%" colspan="2"><?php  echo $row['utilidad']?>%</td>
 					    </tr>
                                             
                                             <tr>
                                                 <td width="15%"><strong>Composici&oacute;n</strong></td>
-                                                <td width="85%" colspan="2"><?php echo $row['composicion']?></td>
+                                                <td width="85%" colspan="2"><?php  echo $row['composicion']?></td>
 					    </tr>
                                             <tr>
                                                 <td width="15%"><strong>Aplicaci&oacute;n</strong></td>
-                                                <td width="85%" colspan="2"><?php echo $row['aplicacion']?></td>
+                                                <td width="85%" colspan="2"><?php  echo $row['aplicacion']?></td>
 					    </tr>
 
-                                             <?
+                                             <?php 
                                                 $proveedor=$row['proveedor'];
                                                 $quer="SELECT empresa FROM proveedor WHERE id_proveedor=$proveedor";
                                                 $res=mysql_query($quer,$conn);
                                             ?>
                                             <tr>
                                                 <td width="15%"><strong>Proveedor</strong></td>
-                                                <td width="85%" colspan="2"><?php echo mysql_result($res,0,"empresa")?></td>
+                                                <td width="85%" colspan="2"><?php  echo mysql_result($res,0,"empresa")?></td>
 					    </tr>
 
-                                            <?
+                                            <?php 
                                                 $grupo=$row['grupo'];
                                                 $quer="SELECT nombre FROM grupo WHERE id_grupo=$grupo";
                                                 $res=mysql_query($quer,$conn);
                                             ?>
                                             <tr>
                                                 <td width="15%"><strong>Grupo</strong></td>
-                                                <td width="85%" colspan="2"><?php echo mysql_result($res,0,"nombre")?></td>
+                                                <td width="85%" colspan="2"><?php  echo mysql_result($res,0,"nombre")?></td>
 					    </tr>
 
-                                            <?
+                                            <?php 
                                                 $subgrupo=$row['subgrupo'];
                                                 $quer="SELECT nombre FROM subgrupo WHERE id_subgrupo=$subgrupo";
                                                 $res=mysql_query($quer,$conn);
                                             ?>
                                             <tr>
                                                 <td width="15%"><strong>Subgrupo</strong></td>
-                                                <td width="85%" colspan="2"><?php echo mysql_result($res,0,"nombre")?></td>
+                                                <td width="85%" colspan="2"><?php  echo mysql_result($res,0,"nombre")?></td>
 					    </tr>
 
 											
 					</table>
                                 </div>
 				<div id="botonBusqueda">
-                                        <img src='../img/botonmodificar.jpg' border='1' width='85' height='22' border='1' title='Modificar' onClick='modificar_producto(<?echo $idproducto?>)' onMouseOver='style.cursor=cursor'>
-<!--					<img src='../img/botoneliminar.jpg' border='1' width='85' height='22' border='1' title='Eliminar' onClick='eliminar_producto(<?echo $idproducto?>)' onMouseOver='style.cursor=cursor'>-->
+                                        <img src='../img/botonmodificar.jpg' border='1' width='85' height='22' border='1' title='Modificar' onClick='modificar_producto(<?php echo $idproducto?>)' onMouseOver='style.cursor=cursor'>
+<!--					<img src='../img/botoneliminar.jpg' border='1' width='85' height='22' border='1' title='Eliminar' onClick='eliminar_producto(<?php echo $idproducto?>)' onMouseOver='style.cursor=cursor'>-->
                                         <img src="../img/botonaceptar.jpg" width="85" height="22" onClick="aceptar()" border="1" onMouseOver="style.cursor=cursor">
 
 			  </div>

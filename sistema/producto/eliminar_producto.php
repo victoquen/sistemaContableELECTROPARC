@@ -1,4 +1,4 @@
-<?
+<?php 
 
 $idproducto=$_REQUEST["idproducto"];
 
@@ -47,55 +47,55 @@ $row = $producto->get_producto_id($conn, $idproducto);
                                             <tr>
                                                 <td width="15%">Producto Gasto: </td>                                                    
                                                 <td width="43%">                                                    
-                                                    <?php if($row['gasto']==0) {?>
+                                                    <?php  if($row['gasto']==0) {?>
                                                     No
-                                                    <?php } else {?>
+                                                    <?php  } else {?>
                                                     Si
-                                                    <?php }?>                                                                                    
+                                                    <?php  }?>                                                                                    
                                                 </td>
                                             </tr>
                                              <tr>
                                                 <td width="15%"><strong>C&oacute;digo</strong></td>
-                                                <td width="85%" colspan="2"><?php echo $row['codigo']?></td>
+                                                <td width="85%" colspan="2"><?php  echo $row['codigo']?></td>
 					    </tr>
                                             <tr>
                                                 <td width="15%"><strong>Nombre</strong></td>
-                                                <td width="85%" colspan="2"><?php echo $row['nombre']?></td>
+                                                <td width="85%" colspan="2"><?php  echo $row['nombre']?></td>
 					    </tr>
                                             <tr>
                                                 <td>GRAVA IVA</td>
-                                                <?if ($row["iva"]==0){?>
+                                                <?php if ($row["iva"]==0){?>
                                                     <td>No</td>
-                                                <?}else{?>
+                                                <?php }else{?>
                                                     <td>Si</td>
-                                                <?}?>
+                                                <?php }?>
                                             </tr>
                                             <tr>
                                                 <td width="15%"><strong>Stock</strong></td>
-                                                <td width="85%" colspan="2"><?php echo $row['stock']?></td>
+                                                <td width="85%" colspan="2"><?php  echo $row['stock']?></td>
 					    </tr>
                                             <tr>
                                                 <td width="15%"><strong>Stock Consignacion</strong></td>
-                                                <td width="85%" colspan="2"><?php echo $row['stock_consignacion']?></td>
+                                                <td width="85%" colspan="2"><?php  echo $row['stock_consignacion']?></td>
 					    </tr>
                                             <tr>
                                                 <td width="15%"><strong>Costo</strong></td>
-                                                <td width="85%" colspan="2"><?php echo $row['costo']?></td>
+                                                <td width="85%" colspan="2"><?php  echo $row['costo']?></td>
 					    </tr>
                                             <tr>
                                                 <td width="15%"><strong>PVP</strong></td>
-                                                <td width="85%" colspan="2"><?php echo $row['pvp']?></td>
+                                                <td width="85%" colspan="2"><?php  echo $row['pvp']?></td>
 					    </tr>
                                            
                                             <tr>
                                                 <td width="15%"><strong>Composici&oacute;n</strong></td>
-                                                <td width="85%" colspan="2"><?php echo $row['composicion']?></td>
+                                                <td width="85%" colspan="2"><?php  echo $row['composicion']?></td>
 					    </tr>
                                             
 					</table>
 			  </div>
 				<div id="botonBusqueda">
-					<img src="../img/botonaceptar.jpg" width="85" height="22" onClick="aceptar(<? echo $idproducto?>)" border="1" onMouseOver="style.cursor=cursor">
+					<img src="../img/botonaceptar.jpg" width="85" height="22" onClick="aceptar(<?php  echo $idproducto?>)" border="1" onMouseOver="style.cursor=cursor">
 					<img src="../img/botoncancelar.jpg" width="85" height="22" onClick="cancelar()" border="1" onMouseOver="style.cursor=cursor">
 			  </div>
 			  </div>

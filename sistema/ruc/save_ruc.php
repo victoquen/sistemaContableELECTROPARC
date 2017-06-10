@@ -1,4 +1,4 @@
-<?php
+<?php 
 include_once 'class/ruc.php';
 include_once '../conexion/conexion.php';
 include ("../js/fechas.php");
@@ -87,17 +87,17 @@ if ($accion == "baja") {
         <div id="pagina">
             <div id="zonaContenido">
                 <div align="center">
-                    <div id="tituloForm" class="header"><?php echo $cabecera2 ?>--<?php echo $mensaje ?></div>
+                    <div id="tituloForm" class="header"><?php  echo $cabecera2 ?>--<?php  echo $mensaje ?></div>
                     <div id="frmBusqueda">
                         <table class="fuente8" width="30%" cellspacing=0 cellpadding=3 border=0>
                             <tr>
                                 <td width="15%"><b>RUC</b></td>
-                                <td width="43%"><?php echo $idinformante ?></td>
+                                <td width="43%"><?php  echo $idinformante ?></td>
                             </tr>
 
                             <tr>
                                 <td width="15%"><b>RAZON SOCIAL</b></td>
-                                <td width="43%"><?php echo $razonsocial ?></td>
+                                <td width="43%"><?php  echo $razonsocial ?></td>
 
                             </tr>
 
@@ -117,7 +117,7 @@ if ($accion == "baja") {
                             </tr>
                             
                             
-                        <?php
+                        <?php 
                         $sel_lineas = "SELECT a.id_facturero, a.id_ruc,a.serie1,a.serie2, a.autorizacion, a.inicio,a.fin, a.fecha_caducidad
                                                 FROM facturero a 
                                                 WHERE a.id_ruc = $idruc";
@@ -139,17 +139,17 @@ if ($accion == "baja") {
                                 $fondolinea = "itemParTabla";
                             }
                             ?>
-                                <tr class="<?php echo $fondolinea ?>" style="height: 5px">
+                                <tr class="<?php  echo $fondolinea ?>" style="height: 5px">
 
-                                    <td align="center" width="10%"><?php echo $establecimiento ?></td>
-                                    <td align="center" width="10%"><?php echo $tiposervicio ?></td>                                           
-                                    <td align="center" width="10%"><?php echo $serieinicio ?></td>
-                                    <td align="center" width="10%"><?php echo $seriefin ?></td>
-                                    <td align="center" width="10%"><?php echo $autorizacion ?></td>   
-                                    <td align="center" width="10%"><?php echo $fecha_caducidad ?></td>                                            
+                                    <td align="center" width="10%"><?php  echo $establecimiento ?></td>
+                                    <td align="center" width="10%"><?php  echo $tiposervicio ?></td>                                           
+                                    <td align="center" width="10%"><?php  echo $serieinicio ?></td>
+                                    <td align="center" width="10%"><?php  echo $seriefin ?></td>
+                                    <td align="center" width="10%"><?php  echo $autorizacion ?></td>   
+                                    <td align="center" width="10%"><?php  echo $fecha_caducidad ?></td>                                            
                                     
                                 </tr>
-                            <?php } ?>
+                            <?php  } ?>
                                 
                                 
                         </table>
@@ -165,7 +165,7 @@ if ($accion == "baja") {
 
                     </div>
                     <div id="botonBusqueda">                                    					                                    
-                        <img src="../img/botonaceptar.jpg" width="85" height="22" onClick="aceptar(<?php echo $validacion ?>)" border="1" onMouseOver="style.cursor = cursor">
+                        <img src="../img/botonaceptar.jpg" width="85" height="22" onClick="aceptar(<?php  echo $validacion ?>)" border="1" onMouseOver="style.cursor = cursor">
 
                     </div>
                 </div>

@@ -1,4 +1,4 @@
-<?php
+<?php 
 include ("../js/fechas.php");
 include ("../conexion/conexion.php");
 
@@ -361,7 +361,7 @@ $res_reten = mysql_query($query_reten, $conn);
 
 		</script>
 	</head>
-        <body onload="inicio('<?php echo $aceptacion?>','<?php echo $mensaje_aceptacion?>')" >
+        <body onload="inicio('<?php  echo $aceptacion?>','<?php  echo $mensaje_aceptacion?>')" >
 		<div id="pagina">
 			<div id="zonaContenido">
 				<div align="center">
@@ -372,36 +372,36 @@ $res_reten = mysql_query($query_reten, $conn);
                                                 <tr>
                                                     <td width="10%">No. retencion</td>
                                                     <td>
-                                                        <input NAME="serie1" type="text" class="cajaMinima" id="serie1" value="<?echo $serie1?>" readonly>
-                                                        <input NAME="serie2" type="text" class="cajaMinima" id="serie2" value="<?echo $serie2?>" readonly>
-                                                        <input NAME="codretencion" type="text" class="cajaPequena" id="codretencion" value="<?echo $maximo?>">
+                                                        <input NAME="serie1" type="text" class="cajaMinima" id="serie1" value="<?php echo $serie1?>" readonly>
+                                                        <input NAME="serie2" type="text" class="cajaMinima" id="serie2" value="<?php echo $serie2?>" readonly>
+                                                        <input NAME="codretencion" type="text" class="cajaPequena" id="codretencion" value="<?php echo $maximo?>">
 
                                                     </td>
                                                     <td width="12%">Autorizaci&oacute;n</td>
                                                     <td colspan="2">
-                                                        <input NAME="autorizacion" type="text" class="cajaPequena" id="autorizacion" value="<?echo $autorizacion?>" readonly>
+                                                        <input NAME="autorizacion" type="text" class="cajaPequena" id="autorizacion" value="<?php echo $autorizacion?>" readonly>
                                                     </td>
                                                 </tr>                                               
 						<tr>
                                                     <td width="10%">Proveedor</td>
-                                                    <td width="27%"><input NAME="empresa" type="text" class="cajaGrande" id="empresa" value="<?echo mysql_result($res_prov,0,"empresa");?>" readonly></td>
+                                                    <td width="27%"><input NAME="empresa" type="text" class="cajaGrande" id="empresa" value="<?php echo mysql_result($res_prov,0,"empresa");?>" readonly></td>
                                                     <td width="12%">CI/RUC</td>
-                                                    <td  colspan="2"><input NAME="ci_ruc" type="text" class="cajaMedia" id="ci_ruc"  value="<?echo mysql_result($res_prov,0,"ci_ruc");?>" readonly></td>
+                                                    <td  colspan="2"><input NAME="ci_ruc" type="text" class="cajaMedia" id="ci_ruc"  value="<?php echo mysql_result($res_prov,0,"ci_ruc");?>" readonly></td>
 						</tr>
                                                 <tr>
                                                     <td width="10%">Direcci&oacute;n</td>
-						    <td width="27%"><input NAME="direccion" type="text" class="cajaGrande" id="direccion" value="<?echo mysql_result($res_prov,0,"direccion");?>" readonly></td>
+						    <td width="27%"><input NAME="direccion" type="text" class="cajaGrande" id="direccion" value="<?php echo mysql_result($res_prov,0,"direccion");?>" readonly></td>
                                                     <td width="12%">Telf.:</td>
-                                                    <td  colspan="1"><input NAME="telefono" type="text" class="cajaMedia" id="telefono" value="<?echo mysql_result($res_fono,0,"numero");?>" readonly></td>
+                                                    <td  colspan="1"><input NAME="telefono" type="text" class="cajaMedia" id="telefono" value="<?php echo mysql_result($res_fono,0,"numero");?>" readonly></td>
                                                     <td width="12%" align="center">No. Comprobante</td>
 						</tr>
-						<?$fecha_factura=mysql_result($res_prov,0,'fecha')?>
+						<?php $fecha_factura=mysql_result($res_prov,0,'fecha')?>
 						<tr>
                                                     <td width="10%">Fecha</td>
-						    <td width="27%"><input NAME="fecha" type="text" class="cajaPequena" id="fecha" size="10" maxlength="10" value="<? echo implota($fecha_factura) ?>" readonly></td>
+						    <td width="27%"><input NAME="fecha" type="text" class="cajaPequena" id="fecha" size="10" maxlength="10" value="<?php  echo implota($fecha_factura) ?>" readonly></td>
                                                     
                                                     <td width="12%">Tipo Comprobante</td>
-                                                    <?php
+                                                    <?php 
                                                         $tipocomprob= mysql_result($res_prov,0,"tipocomprobante");
                                                         switch ($tipocomprob)
                                                         {
@@ -419,10 +419,10 @@ $res_reten = mysql_query($query_reten, $conn);
                                                                     break;
                                                         }
                                                     ?>
-                                                    <td ><input NAME="tipo_comprobante" type="text" class="cajaMedia" id="tipo_comprobante" value="<?echo $comprobante;?>" readonly></td>
+                                                    <td ><input NAME="tipo_comprobante" type="text" class="cajaMedia" id="tipo_comprobante" value="<?php echo $comprobante;?>" readonly></td>
 
                                                     
-                                                    <td align="center"><input style="text-align: center" NAME="numero_comprobante" type="text" class="cajaGrande" id="numero_comprobante" value="<?echo mysql_result($res_prov,0,"serie1")." - ".mysql_result($res_prov,0,"serie2")."  # ".mysql_result($res_prov,0,"codigo_factura")?>" readonly></td>
+                                                    <td align="center"><input style="text-align: center" NAME="numero_comprobante" type="text" class="cajaGrande" id="numero_comprobante" value="<?php echo mysql_result($res_prov,0,"serie1")." - ".mysql_result($res_prov,0,"serie2")."  # ".mysql_result($res_prov,0,"codigo_factura")?>" readonly></td>
                                                         
                                                 </tr>
                                                 <tr>
@@ -448,7 +448,7 @@ $res_reten = mysql_query($query_reten, $conn);
                                             <td width="4%"></td>
                                         </tr>
 
-                                        <?
+                                        <?php 
                                             $year=date ("Y");
                                         ?>
 
@@ -456,19 +456,19 @@ $res_reten = mysql_query($query_reten, $conn);
                                         <!--INICIO ITEM No. 1 de la retencion----------------------------------------------------------------- -->
 
                                         <tr class="itemImparTabla">
-                                            <td width="15%"><input NAME="ejercicio1" id="ejercicio1" type="text" class="cajaMedia" value="<?echo $year?>"></td>
+                                            <td width="15%"><input NAME="ejercicio1" id="ejercicio1" type="text" class="cajaMedia" value="<?php echo $year?>"></td>
                                             <td width="15%"><input NAME="base1" id="base1" type="text" class="cajaMedia" value="0" onchange="calcular_porc(1)"></td>
                                             <td width="15%">
                                                 <select style="background: #dddddd" name="impuesto1" id="impuesto1" class="comboGrande" onchange="activar_codigo(1,this.selectedIndex)">
                                                     													
 													<option value="0"></option>
-													<?php 
+													<?php  
 														$contador = 0;
 														while ($contador<mysql_num_rows($res_reten))
 														{													
 													?>
-													<option value="<?php echo mysql_result($res_reten,$contador,"codigo") ."*". mysql_result($res_reten,$contador,"porcentaje") ."*". mysql_result($res_reten,$contador,"tipo") ?>"><?php echo mysql_result($res_reten,$contador,"nombre")?></option>
-													<?php
+													<option value="<?php  echo mysql_result($res_reten,$contador,"codigo") ."*". mysql_result($res_reten,$contador,"porcentaje") ."*". mysql_result($res_reten,$contador,"tipo") ?>"><?php  echo mysql_result($res_reten,$contador,"nombre")?></option>
+													<?php 
 															$contador++;
 														}
 													?>													
@@ -485,18 +485,18 @@ $res_reten = mysql_query($query_reten, $conn);
                                         <!--************************************************************************************************ -->
                                         <!--INICIO ITEM No. 2 de la retencion----------------------------------------------------------------- -->
                                         <tr class="itemImparTabla">
-                                            <td width="15%"><input NAME="ejercicio2" id="ejercicio2" type="text" class="cajaMedia" value="<?echo $year?>"></td>
+                                            <td width="15%"><input NAME="ejercicio2" id="ejercicio2" type="text" class="cajaMedia" value="<?php echo $year?>"></td>
                                             <td width="15%"><input NAME="base2" id="base2" type="text" class="cajaMedia" value="0" onchange="calcular_porc(2)"></td>
                                             <td width="15%">
                                                 <select style="background: #dddddd" name="impuesto2" id="impuesto2" class="comboGrande" onchange="activar_codigo(2,this.selectedIndex)">
                                                     <option value="0"></option>
-													<?php 
+													<?php  
 														$contador = 0;
 														while ($contador<mysql_num_rows($res_reten))
 														{													
 													?>
-													<option value="<?php echo mysql_result($res_reten,$contador,"codigo") ."*". mysql_result($res_reten,$contador,"porcentaje") ."*". mysql_result($res_reten,$contador,"tipo") ?>"><?php echo mysql_result($res_reten,$contador,"nombre")?></option>
-													<?php
+													<option value="<?php  echo mysql_result($res_reten,$contador,"codigo") ."*". mysql_result($res_reten,$contador,"porcentaje") ."*". mysql_result($res_reten,$contador,"tipo") ?>"><?php  echo mysql_result($res_reten,$contador,"nombre")?></option>
+													<?php 
 															$contador++;
 														}
 													?>	
@@ -515,18 +515,18 @@ $res_reten = mysql_query($query_reten, $conn);
                                         <!--************************************************************************************************ -->
                                         <!--INICIO ITEM No. 3 de la retencion----------------------------------------------------------------- -->
                                         <tr class="itemImparTabla">
-                                            <td width="15%"><input NAME="ejercicio3" id="ejercicio3" type="text" class="cajaMedia" value="<?echo $year?>"></td>
+                                            <td width="15%"><input NAME="ejercicio3" id="ejercicio3" type="text" class="cajaMedia" value="<?php echo $year?>"></td>
                                             <td width="15%"><input NAME="base3" id="base3" type="text" class="cajaMedia" value="0" onchange="calcular_porc(3)"></td>
                                             <td width="15%">
                                                 <select style="background: #dddddd" name="impuesto3" id="impuesto3" class="comboGrande" onchange="activar_codigo(3,this.selectedIndex)">
                                                     <option value="0"></option>
-													<?php 
+													<?php  
 														$contador = 0;
 														while ($contador<mysql_num_rows($res_reten))
 														{													
 													?>
-													<option value="<?php echo mysql_result($res_reten,$contador,"codigo") ."*". mysql_result($res_reten,$contador,"porcentaje") ."*". mysql_result($res_reten,$contador,"tipo") ?>"><?php echo mysql_result($res_reten,$contador,"nombre")?></option>
-													<?php
+													<option value="<?php  echo mysql_result($res_reten,$contador,"codigo") ."*". mysql_result($res_reten,$contador,"porcentaje") ."*". mysql_result($res_reten,$contador,"tipo") ?>"><?php  echo mysql_result($res_reten,$contador,"nombre")?></option>
+													<?php 
 															$contador++;
 														}
 													?>	
@@ -545,18 +545,18 @@ $res_reten = mysql_query($query_reten, $conn);
                                         <!--************************************************************************************************ -->
                                         <!--INICIO ITEM No. 4 de la retencion----------------------------------------------------------------- -->
                                          <tr class="itemImparTabla">
-                                            <td width="15%"><input NAME="ejercicio4" id="ejercicio4" type="text" class="cajaMedia" value="<?echo $year?>"></td>
+                                            <td width="15%"><input NAME="ejercicio4" id="ejercicio4" type="text" class="cajaMedia" value="<?php echo $year?>"></td>
                                             <td width="15%"><input NAME="base4" id="base4" type="text" class="cajaMedia" value="0" onchange="calcular_porc(4)"></td>
                                             <td width="15%">
                                                 <select style="background: #ffffff" name="impuesto4" id="impuesto4" class="comboGrande" onchange="activar_codigo(4,this.selectedIndex)">
                                                     <option value="0"></option>
-													<?php 
+													<?php  
 														$contador = 0;
 														while ($contador<mysql_num_rows($res_reten))
 														{													
 													?>
-													<option value="<?php echo mysql_result($res_reten,$contador,"codigo") ."*". mysql_result($res_reten,$contador,"porcentaje") ."*". mysql_result($res_reten,$contador,"tipo") ?>"><?php echo mysql_result($res_reten,$contador,"nombre")?></option>
-													<?php
+													<option value="<?php  echo mysql_result($res_reten,$contador,"codigo") ."*". mysql_result($res_reten,$contador,"porcentaje") ."*". mysql_result($res_reten,$contador,"tipo") ?>"><?php  echo mysql_result($res_reten,$contador,"nombre")?></option>
+													<?php 
 															$contador++;
 														}
 													?>	
@@ -574,18 +574,18 @@ $res_reten = mysql_query($query_reten, $conn);
                                         <!--************************************************************************************************ -->
                                         <!--INICIO ITEM No. 5 de la retencion----------------------------------------------------------------- -->
                                          <tr class="itemImparTabla">
-                                            <td width="15%"><input NAME="ejercicio5" id="ejercicio5" type="text" class="cajaMedia" value="<?echo $year?>"></td>
+                                            <td width="15%"><input NAME="ejercicio5" id="ejercicio5" type="text" class="cajaMedia" value="<?php echo $year?>"></td>
                                             <td width="15%"><input NAME="base5" id="base5" type="text" class="cajaMedia" value="0" onchange="calcular_porc(5)"></td>
                                             <td width="15%">
                                                 <select style="background: #ffffff" name="impuesto5" id="impuesto5" class="comboGrande" onchange="activar_codigo(5,this.selectedIndex)">
                                                     <option value="0"></option>
-													<?php 
+													<?php  
 														$contador = 0;
 														while ($contador<mysql_num_rows($res_reten))
 														{													
 													?>
-													<option value="<?php echo mysql_result($res_reten,$contador,"codigo") ."*". mysql_result($res_reten,$contador,"porcentaje") ."*". mysql_result($res_reten,$contador,"tipo") ?>"><?php echo mysql_result($res_reten,$contador,"nombre")?></option>
-													<?php
+													<option value="<?php  echo mysql_result($res_reten,$contador,"codigo") ."*". mysql_result($res_reten,$contador,"porcentaje") ."*". mysql_result($res_reten,$contador,"tipo") ?>"><?php  echo mysql_result($res_reten,$contador,"nombre")?></option>
+													<?php 
 															$contador++;
 														}
 													?>	
@@ -633,7 +633,7 @@ $res_reten = mysql_query($query_reten, $conn);
 			  		<!--<iframe id="frame_datos" name="frame_datos" width="0" height="0" frameborder="0">
 					<ilayer width="0" height="0" id="frame_datos" name="frame_datos"></ilayer>
 					</iframe>-->
-                                <input id="idfactura" name="idfactura" value="<?echo $id_factura?>" type="hidden">
+                                <input id="idfactura" name="idfactura" value="<?php echo $id_factura?>" type="hidden">
                                 <input id="accion" name="accion" value="alta" type="hidden">
 			  </form>
 			 </div>

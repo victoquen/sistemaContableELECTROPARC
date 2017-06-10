@@ -1,6 +1,6 @@
 <?php
-//include ("../conectar.php");
-//error_reporting(0);
+include ("../conectar.php");
+error_reporting(0);
 ?>
 <html>
 	<head>

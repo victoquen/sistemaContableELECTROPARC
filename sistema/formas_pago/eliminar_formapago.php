@@ -1,4 +1,4 @@
-<?
+<?php 
 
 $idformapago=$_REQUEST["idformapago"];
 
@@ -47,12 +47,12 @@ $row = $formapago->get_formapago_id($conn, $idformapago);
 					<table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0>   
                                             <tr>
                                                 <td width="15%"><strong>Nombre</strong></td>
-                                                <td width="85%" colspan="2"><?php echo $row['nombre']?></td>
+                                                <td width="85%" colspan="2"><?php  echo $row['nombre']?></td>
 					    </tr>                                            
 					</table>
 			  </div>
 				<div id="botonBusqueda">
-					<img src="../img/botonaceptar.jpg" width="85" height="22" onClick="aceptar(<? echo $idformapago?>)" border="1" onMouseOver="style.cursor=cursor">
+					<img src="../img/botonaceptar.jpg" width="85" height="22" onClick="aceptar(<?php  echo $idformapago?>)" border="1" onMouseOver="style.cursor=cursor">
 					<img src="../img/botoncancelar.jpg" width="85" height="22" onClick="cancelar()" border="1" onMouseOver="style.cursor=cursor">
 			  </div>
 			  </div>

@@ -1,4 +1,4 @@
-<?php
+<?php 
 error_reporting(0);
 include ("../conexion/conexion.php");
 include ("../js/fechas.php");
@@ -119,7 +119,7 @@ body {
                         Establecimiento:
                     </td>
                     <td width="15%">                                        
-                        <input NAME="establecimiento" value="<?php echo mysql_result($rs_f,0,"serie1");?>" type="text" class="cajaPequena" id="establecimiento" size="3" maxlength="3">
+                        <input NAME="establecimiento" value="<?php  echo mysql_result($rs_f,0,"serie1");?>" type="text" class="cajaPequena" id="establecimiento" size="3" maxlength="3">
                     </td>
                 </tr>
                 <tr>
@@ -127,7 +127,7 @@ body {
                         Tipo Servicio:
                     </td>
                     <td>                                        
-                        <input NAME="tiposervicio" value="<?php echo mysql_result($rs_f,0,"serie2");?>" type="text" class="cajaPequena" id="tiposervicio" size="3" maxlength="3">
+                        <input NAME="tiposervicio" value="<?php  echo mysql_result($rs_f,0,"serie2");?>" type="text" class="cajaPequena" id="tiposervicio" size="3" maxlength="3">
                     </td>
                 </tr>
                 <tr>
@@ -135,7 +135,7 @@ body {
                         Serie Inicio:
                     </td>
                     <td width="15%">
-                        <input NAME="serieinicio" value="<?php echo mysql_result($rs_f,0,"inicio");?>" type="text" class="cajaMedia" id="serieinicio" size="20" maxlength="20">
+                        <input NAME="serieinicio" value="<?php  echo mysql_result($rs_f,0,"inicio");?>" type="text" class="cajaMedia" id="serieinicio" size="20" maxlength="20">
                     </td>
                 </tr>
                 <tr>
@@ -143,7 +143,7 @@ body {
                         Serie Fin:
                     </td>
                     <td>
-                        <input NAME="seriefin" value="<?php echo mysql_result($rs_f,0,"fin");?>" type="text" class="cajaMedia" id="seriefin" size="20" maxlength="20">
+                        <input NAME="seriefin" value="<?php  echo mysql_result($rs_f,0,"fin");?>" type="text" class="cajaMedia" id="seriefin" size="20" maxlength="20">
                     </td>
                 </tr>
                 <tr>
@@ -151,13 +151,13 @@ body {
                         Autorizaci&oacute;n:
                     </td>
                     <td width="15%">
-                        <input NAME="autorizacion" value="<?php echo mysql_result($rs_f,0,"autorizacion");?>" type="text" class="cajaMedia" id="autorizacion" size="20" maxlength="20">
+                        <input NAME="autorizacion" value="<?php  echo mysql_result($rs_f,0,"autorizacion");?>" type="text" class="cajaMedia" id="autorizacion" size="20" maxlength="20">
                     </td>                                   
                 </tr>   
                 
                 <tr>
                     <td >Fecha Vencto.:</td>
-                    <td ><input NAME="fecha_caducidad" value="<?php echo implota(mysql_result($rs_f,0,"fecha_caducidad"));?>" type="text" class="cajaPequena" id="fecha_caducidad" size="10" maxlength="10"  readonly> <img src="../img/calendario.png" name="Image1" id="Image1" width="16" height="16" border="0" id="Image1" onMouseOver="this.style.cursor = 'pointer'">
+                    <td ><input NAME="fecha_caducidad" value="<?php  echo implota(mysql_result($rs_f,0,"fecha_caducidad"));?>" type="text" class="cajaPequena" id="fecha_caducidad" size="10" maxlength="10"  readonly> <img src="../img/calendario.png" name="Image1" id="Image1" width="16" height="16" border="0" id="Image1" onMouseOver="this.style.cursor = 'pointer'">
                         <script type="text/javascript">
                             Calendar.setup(
                                     {
@@ -179,7 +179,7 @@ body {
         <table width="100%" border="0">
           <tr>
             <td><div align="center">
-              <img src="../img/botonaceptar.jpg"  onClick="guardar_facturero(<?php echo $idruc?>)" border="1" onMouseOver="style.cursor=cursor">
+              <img src="../img/botonaceptar.jpg"  onClick="guardar_facturero(<?php  echo $idruc?>)" border="1" onMouseOver="style.cursor=cursor">
               <img src="../img/botoncerrar.jpg" width="70" height="22" onClick="window.close()" border="1" onMouseOver="style.cursor=cursor">
               
             </div></td>
@@ -189,8 +189,8 @@ body {
                 <ilayer width="0" height="0" id="frame_datos" name="frame_datos"></ilayer>
         </iframe>
 
-       <input id="idproveedor" name="idruc" value="<?php echo $idruc?>" type="hidden">
-       <input id="idtelefono" name="idfacturero" value="<?php echo $idfacturero?>" type="hidden">
+       <input id="idproveedor" name="idruc" value="<?php  echo $idruc?>" type="hidden">
+       <input id="idtelefono" name="idfacturero" value="<?php  echo $idfacturero?>" type="hidden">
 
         </form>
 

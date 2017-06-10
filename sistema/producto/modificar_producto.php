@@ -1,4 +1,4 @@
-<?php  
+<?php   
 
 $idproducto=$_GET["idproducto"];
 
@@ -118,7 +118,7 @@ $row = $producto->get_producto_id($conn, $idproducto);
                         
                         "bProcessing": true,
                         "bServerSide": true,
-                        "sAjaxSource": "processing_bodega_producto.php?idproducto=<?php echo $idproducto;?>",
+                        "sAjaxSource": "processing_bodega_producto.php?idproducto=<?php  echo $idproducto;?>",
                         "sPaginationType": "full_numbers",
 
 
@@ -186,46 +186,46 @@ $row = $producto->get_producto_id($conn, $idproducto);
 					<table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0>
 						<tr>
 							<td>ID</td>
-							<td><?php echo $idproducto?></td>
+							<td><?php  echo $idproducto?></td>
 						    <td width="42%" rowspan="14" align="left" valign="top"><ul id="lista-errores"></ul></td>
 						</tr>
                                                 <tr>
                                                     <td width="15%">Producto Gasto: </td>                                                    
                                                     <td width="43%">
                                                         <select NAME="Agasto" id="gasto" class="comboGrande">
-                                                            <?php if($row['gasto']==0) {?>
+                                                            <?php  if($row['gasto']==0) {?>
                                                             
                                                             <option value="no" selected>No</option>
                                                             <option value="si">Si</option>
-                                                            <?php } else {?>
+                                                            <?php  } else {?>
                                                             <option value="no">No</option>
                                                             <option value="si" selected>Si</option> 
-                                                            <?php }?>
+                                                            <?php  }?>
                                                         </select>                                       
                                                     </td>
 
                                                 </tr>
                                                 <tr>
                                                     <td width="15%">Codigo</td>
-                                                    <td width="43%"><input NAME="Acodigo" type="text" class="cajaGrande" id="cogigo" value="<?php echo $row['codigo']?>" size="45" maxlength="45"></td>
+                                                    <td width="43%"><input NAME="Acodigo" type="text" class="cajaGrande" id="cogigo" value="<?php  echo $row['codigo']?>" size="45" maxlength="45"></td>
                                                 </tr>
 
 						<tr>
                                                     <td width="15%">Nombre</td>
-                                                    <td width="43%"><input NAME="Anombre" type="text" class="cajaGrande" id="nombre" value="<?php echo $row['nombre']?>" size="45" ></td>
+                                                    <td width="43%"><input NAME="Anombre" type="text" class="cajaGrande" id="nombre" value="<?php  echo $row['nombre']?>" size="45" ></td>
                                                 </tr>
 
                                                 <tr>
                                                     <td width="15%">GRAVA IVA</td>
                                                     <td width="43%">
                                                         <select NAME="iva" id="iva" class="comboPequeno">
-                                                            <?if ($row["iva"]==0){?>
+                                                            <?php if ($row["iva"]==0){?>
                                                                 <option selected value="0">No</option>
                                                                 <option value="1">Si</option>
-                                                            <?}  else {?>
+                                                            <?php }  else {?>
                                                                 <option value="0">No</option>
                                                                 <option selected value="1">Si</option>
-                                                            <?}?>
+                                                            <?php }?>
                                                         </select>  
                                                     </td>
                                                 </tr>
@@ -234,70 +234,70 @@ $row = $producto->get_producto_id($conn, $idproducto);
                             <td width="15%">PRODUCTO ESPECIAL</td>
                             <td width="43%">
                                 <select NAME="especial" id="especial" class="comboPequeno">
-                                    <?if ($row["moto"]==0){?>
+                                    <?php if ($row["moto"]==0){?>
                                         <option selected value="0">No</option>
                                         <option value="1">Si</option>
-                                    <?}  else {?>
+                                    <?php }  else {?>
                                         <option value="0">No</option>
                                         <option selected value="1">Si</option>
-                                    <?}?>
+                                    <?php }?>
                                 </select>
                             </td>
                         </tr>
                                                 <tr>
                                                     <td width="15%">Stock</td>
-                                                    <td width="43%"> <?php echo $row['stock']?></td>   
+                                                    <td width="43%"> <?php  echo $row['stock']?></td>   
                                                 </tr>
                                                 <tr>
                                                     <td width="15%">Stock Consignacion</td>
-                                                    <td width="43%"><input NAME="astock_consignacion" type="text" class="cajaPequena" id="stock_consignacion" value="<?php echo $row['stock_consignacion']?>" size="15" maxlength="45"></td>
+                                                    <td width="43%"><input NAME="astock_consignacion" type="text" class="cajaPequena" id="stock_consignacion" value="<?php  echo $row['stock_consignacion']?>" size="15" maxlength="45"></td>
                                                 </tr>
                                                 <tr>
                                                     <td width="15%">Costo</td>
-                                                    <td width="43%"><input NAME="qcosto" type="text" class="cajaPequena" id="costo" value="<?php echo $row['costo']?>" size="15" maxlength="45" value="0"></td>
+                                                    <td width="43%"><input NAME="qcosto" type="text" class="cajaPequena" id="costo" value="<?php  echo $row['costo']?>" size="15" maxlength="45" value="0"></td>
                                                 </tr>
                                                 <tr>
                                                     <td width="15%">PVP</td>
-                                                    <td width="43%"><input NAME="Qpvp" type="text" class="cajaPequena" id="pvp" value="<?php echo $row['pvp']?>" size="15" maxlength="45"></td>
+                                                    <td width="43%"><input NAME="Qpvp" type="text" class="cajaPequena" id="pvp" value="<?php  echo $row['pvp']?>" size="15" maxlength="45"></td>
                                                 </tr>
                                                 
                                                 <tr>
                                                     <td width="15%">Utilidad</td>
-                                                    <td width="43%"><input NAME="qutilidad" type="text" class="cajaPequena" id="utilidad" size="15" maxlength="45" value="<?php echo $row['utilidad']?>">%</td>
+                                                    <td width="43%"><input NAME="qutilidad" type="text" class="cajaPequena" id="utilidad" size="15" maxlength="45" value="<?php  echo $row['utilidad']?>">%</td>
                                                 </tr>
                                                 
                                                 <tr>
                                                     <td width="17%">Composici&oacute;n</td>
-                                                    <td><textarea name="acomposicion" cols="41" rows="2" id="composicion" class="areaTexto"><?php echo $row['composicion']?></textarea></td>
+                                                    <td><textarea name="acomposicion" cols="41" rows="2" id="composicion" class="areaTexto"><?php  echo $row['composicion']?></textarea></td>
                                                 </tr>
                                                 <tr>
                                                     <td width="17%">Aplicaci&oacute;n</td>
-                                                    <td><textarea name="aplicacion" cols="41" rows="2" id="aplicacion" class="areaTexto"><?php echo $row['aplicacion']?></textarea></td>
+                                                    <td><textarea name="aplicacion" cols="41" rows="2" id="aplicacion" class="areaTexto"><?php  echo $row['aplicacion']?></textarea></td>
                                                 </tr>
                                                 <tr>
                                                     <td width="15%">Proveedor</td>                                                    
-                                                       <?
+                                                       <?php 
                                                         $query_prov="SELECT id_proveedor, empresa FROM proveedor";
                                                         $result_prov=mysql_query($query_prov,$conn);
                                                     ?>
                                                     <td width="43%">
                                                         <select name="Aproveedor" id="proveedor" class="comboGrande">
                                                             <option value="0">Seleccionar Proveedor</option>
-                                                        <?
+                                                        <?php 
                                                             $contador=0;
                                                             while ($contador<mysql_num_rows($result_prov))
                                                             {
                                                                 if($row['proveedor']== mysql_result($result_prov,$contador,"id_proveedor"))
                                                                 {
                                                         ?>
-                                                                <option selected value="<?echo mysql_result($result_prov,$contador,"id_proveedor")?>"><?echo mysql_result($result_prov,$contador,"empresa")?></option>
-                                                        <?
+                                                                <option selected value="<?php echo mysql_result($result_prov,$contador,"id_proveedor")?>"><?php echo mysql_result($result_prov,$contador,"empresa")?></option>
+                                                        <?php 
                                                                 }
                                                                 else
                                                                 {
                                                         ?>
-                                                                <option value="<?echo mysql_result($result_prov,$contador,"id_proveedor")?>"><?echo mysql_result($result_prov,$contador,"empresa")?></option>
-                                                         <?
+                                                                <option value="<?php echo mysql_result($result_prov,$contador,"id_proveedor")?>"><?php echo mysql_result($result_prov,$contador,"empresa")?></option>
+                                                         <?php 
                                                                 }
                                                             $contador++;
                                                             }
@@ -311,14 +311,14 @@ $row = $producto->get_producto_id($conn, $idproducto);
 
                                                  <tr>
                                                     <td>Grupo</td>
-                                                    <?
+                                                    <?php 
                                                         $query_grupo="SELECT id_grupo, nombre FROM grupo";
                                                         $result_grupo=mysql_query($query_grupo,$conn);
                                                     ?>
                                                     <td>
                                                         <select name="Agrupo" id="grupo" class="comboGrande" onchange="activar_subgrupo('subgrupo.php?grupo='+this.value,'subgrupo')">
                                                             <option value="0">Seleccionar Grupo</option>
-                                                        <?
+                                                        <?php 
                                                             $contador1=0;
                                                             while ($contador1<mysql_num_rows($result_grupo))
                                                             {
@@ -326,14 +326,14 @@ $row = $producto->get_producto_id($conn, $idproducto);
                                                                 {
 
                                                         ?>
-                                                            <option selected value="<?echo mysql_result($result_grupo,$contador1,"id_grupo")?>"><?echo mysql_result($result_grupo,$contador1,"nombre")?></option>
-                                                        <?
+                                                            <option selected value="<?php echo mysql_result($result_grupo,$contador1,"id_grupo")?>"><?php echo mysql_result($result_grupo,$contador1,"nombre")?></option>
+                                                        <?php 
                                                                 }
                                                                 else
                                                                 {
                                                         ?>
-                                                            <option value="<?echo mysql_result($result_grupo,$contador1,"id_grupo")?>"><?echo mysql_result($result_grupo,$contador1,"nombre")?></option>
-                                                         <?
+                                                            <option value="<?php echo mysql_result($result_grupo,$contador1,"id_grupo")?>"><?php echo mysql_result($result_grupo,$contador1,"nombre")?></option>
+                                                         <?php 
                                                                 }
                                                             $contador1++;
                                                             }
@@ -346,13 +346,13 @@ $row = $producto->get_producto_id($conn, $idproducto);
                                                 <tr>
                                                     <td>Subgrupo</td>
                                                     <td>
-                                                        <?
+                                                        <?php 
                                                             $query_subgrupo="SELECT id_subgrupo, nombre FROM subgrupo WHERE id_grupo=".$row['grupo'];
                                                             $result_subgrupo=mysql_query($query_subgrupo,$conn);
                                                         ?>
                                                         <select name="Asubgrupo" id="subgrupo" class="comboGrande" >
 
-                                                         <?
+                                                         <?php 
                                                             $contador2=0;
                                                             while ($contador2<mysql_num_rows($result_subgrupo))
                                                             {
@@ -360,14 +360,14 @@ $row = $producto->get_producto_id($conn, $idproducto);
                                                                 {
 
                                                         ?>
-                                                            <option selected value="<?echo mysql_result($result_subgrupo,$contador2,"id_subgrupo")?>"><?echo mysql_result($result_subgrupo,$contador2,"nombre")?></option>
-                                                        <?
+                                                            <option selected value="<?php echo mysql_result($result_subgrupo,$contador2,"id_subgrupo")?>"><?php echo mysql_result($result_subgrupo,$contador2,"nombre")?></option>
+                                                        <?php 
                                                                 }
                                                                 else
                                                                 {
                                                         ?>
-                                                            <option value="<?echo mysql_result($result_subgrupo,$contador2,"id_grupo")?>"><?echo mysql_result($result_subgrupo,$contador2,"nombre")?></option>
-                                                         <?
+                                                            <option value="<?php echo mysql_result($result_subgrupo,$contador2,"id_grupo")?>"><?php echo mysql_result($result_subgrupo,$contador2,"nombre")?></option>
+                                                         <?php 
                                                                 }
                                                             $contador2++;
                                                             }
@@ -385,8 +385,8 @@ $row = $producto->get_producto_id($conn, $idproducto);
 					<img src="../img/botoncancelar.jpg" width="85" height="22" onClick="cancelar()" border="1" onMouseOver="style.cursor=cursor">
 					<input id="accion" name="accion" value="modificar" type="hidden">
 					<input id="id" name="id" value="" type="hidden">
-					<input id="idproducto" name="idproducto" value="<?php echo $idproducto?>" type="hidden">
-					<input  NAME="Rstock" id="stock" value="<?php echo $row['stock']?>" type="hidden">
+					<input id="idproducto" name="idproducto" value="<?php  echo $idproducto?>" type="hidden">
+					<input  NAME="Rstock" id="stock" value="<?php  echo $row['stock']?>" type="hidden">
 			  </div>
 			  </form>
 			  

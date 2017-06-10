@@ -1,4 +1,4 @@
-<?php
+<?php 
 include_once 'class/usuario.php';
 include_once '../conexion/conexion.php';
 $usuario = new ServidorBaseDatos();
@@ -132,39 +132,39 @@ if ($accion == "baja") {
 <div id="pagina">
     <div id="zonaContenido">
         <div align="center">
-            <div id="tituloForm" class="header"><?php echo $cabecera2 ?></div>
+            <div id="tituloForm" class="header"><?php  echo $cabecera2 ?></div>
             <div id="frmBusqueda">
                 <table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0>
                     <tr>
                         <td width="15%"></td>
-                        <td width="85%" colspan="2" class="mensaje"><?php echo $mensaje; ?></td>
+                        <td width="85%" colspan="2" class="mensaje"><?php  echo $mensaje; ?></td>
                     </tr>
                     <tr>
                         <td width="15%">Nombre</td>
-                        <td width="85%" colspan="2"><?php echo $nombre ?></td>
+                        <td width="85%" colspan="2"><?php  echo $nombre ?></td>
                     </tr>
 
                     <tr>
                         <td width="15%"><strong>Password</strong></td>
-                        <td width="85%" colspan="2"><?php echo $password ?></td>
+                        <td width="85%" colspan="2"><?php  echo $password ?></td>
                     </tr>
                     <tr>
                         <td width="15%"><strong>Tipo</strong></td>
-                        <td width="85%" colspan="2"><?php echo $tipo ?></td>
+                        <td width="85%" colspan="2"><?php  echo $tipo ?></td>
                     </tr>
                     <tr>
                         <td width="15%"><strong>Facturero</strong></td>
-                        <td width="85%" colspan="2"><?php echo $leyendafacturero ?></td>
+                        <td width="85%" colspan="2"><?php  echo $leyendafacturero ?></td>
                     </tr>
                     <tr>
                         <td width="15%"><strong>Bodega-Sucursal</strong></td>
-                        <td width="85%" colspan="2"><?php echo $leyendabodega ?></td>
+                        <td width="85%" colspan="2"><?php  echo $leyendabodega ?></td>
                     </tr>
 
                 </table>
             </div>
             <div id="botonBusqueda">
-                <img src="../img/botonaceptar.jpg" width="85" height="22" onClick="aceptar(<?php echo $validacion ?>)"
+                <img src="../img/botonaceptar.jpg" width="85" height="22" onClick="aceptar(<?php  echo $validacion ?>)"
                      border="1" onMouseOver="style.cursor=cursor">
             </div>
         </div>

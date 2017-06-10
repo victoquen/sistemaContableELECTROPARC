@@ -84,9 +84,9 @@ if ($modif<>1) {
                                             <td align="center" width="32%"><?php echo $nombre?></td>
                                             <td align="center" width="16%"><?php echo $linea?></td>
                                             <td align="center" width="16%"><?php echo $email?></td>                                           
-                                            <td align="center" width="5%"><a href="javascript:eliminar_linea(<?php echo $idproveedor?>,<?php echo $idcontacto?>)"><img src="../img/eliminar.png" border="0"></a></td>
-                                            <td align="center" width="5%"><a href="javascript:modificar_contacto(<?php echo $idproveedor?>,<?php echo $idcontacto?>)"><img src="../img/modificar.png" border="0"></a></td>
-                                            <td align="center" width="5%"><a href="javascript:agregar_movil(<?php echo $idproveedor?>,<?php echo $idcontacto?>)"><img width="22" height="16" src="../img/movil.gif" border="0" title="Telefonos"></a></td>
+                                            <td align="center" width="5%"><a href="javascript:eliminar_linea(<?php echo $idproveedor;?>,<?php echo $idcontacto;?>)"><img src="../img/eliminar.png" border="0"></a></td>
+                                            <td align="center" width="5%"><a href="javascript:modificar_contacto(<?php echo $idproveedor;?>,<?php echo $idcontacto;?>)"><img src="../img/modificar.png" border="0"></a></td>
+                                            <td align="center" width="5%"><a href="javascript:agregar_movil(<?php echo $idproveedor;?>,<?php echo $idcontacto;?>)"><img width="22" height="16" src="../img/movil.gif" border="0" title="Telefonos"></a></td>
                                     </tr>
             <?php } ?>
             </table>

@@ -1,4 +1,4 @@
-<?php 
+<?php  
 
 include ("../js/fechas.php");
 include ("../conexion/conexion.php");
@@ -92,7 +92,7 @@ else
 				<div id="frmBusqueda">
 				<form id="formdatos" name="formdatos" method="post" action="guardar_pago.php">
 					<table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0>
-					<?php
+					<?php 
                                                 $codfactura=mysql_result($rs_facturas,0,"codigo_factura");
                                                 $serie1=mysql_result($rs_facturas,0,"serie1");
                                                 $serie2=mysql_result($rs_facturas,0,"serie2");
@@ -117,12 +117,12 @@ else
 						?>
 						<tr>
                                                     <td width="15%">Ci/Ruc Proveedor</td>
-						    <td width="43%"><?php echo $ci_ruc?></td>
+						    <td width="43%"><?php  echo $ci_ruc?></td>
 					        <td width="42%" rowspan="14" align="left" valign="top"></td>
 						</tr>
 						<tr>
                                                     <td width="15%">Proveedor</td>
-						    <td width="43%"><?php echo $nombre?></td>
+						    <td width="43%"><?php  echo $nombre?></td>
 					        <td width="42%" rowspan="14" align="left" valign="top"></td>
 						</tr>	
 						<tr>
@@ -130,9 +130,9 @@ else
                                                     <td>
                                                         <table class="fuente8" width="80%" cellspacing=0 cellpadding=3 border=0>
                                                             <tr>
-                                                                <td width="30%"><?php echo $serie1."--".$serie2."--".$codfactura?> </td>
+                                                                <td width="30%"><?php  echo $serie1."--".$serie2."--".$codfactura?> </td>
                                                                 <td width="20%">Autorizaci&oacute;n:</td>
-                                                                <td ><?php echo $autorizacion?></td>
+                                                                <td ><?php  echo $autorizacion?></td>
                                                             </tr>
                                                         </table>
                                                     </td>
@@ -145,9 +145,9 @@ else
                                                         <table class="fuente8" width="80%" cellspacing=0 cellpadding=3 border=0>
                                                             <tr>
                                                                 
-                                                                <td width="30%"><?php echo $fecha?></td>
+                                                                <td width="30%"><?php  echo $fecha?></td>
                                                                 <td width="20%">Fecha Venc.:</td>
-                                                                <td ><?php echo $fecha_venc?></td>
+                                                                <td ><?php  echo $fecha_venc?></td>
                                                             </tr>
                                                         </table>
                                                     </td>
@@ -155,28 +155,28 @@ else
 						</tr>
 						<tr>
                                                     <td width="15%">Total Factura</td>
-						    <td width="43%"><?php echo number_format($totalfactura,4)?></td>
+						    <td width="43%"><?php  echo number_format($totalfactura,4)?></td>
 					        <td width="42%" rowspan="14" align="left" valign="top"></td>
 						</tr>
                                                 <tr>
                                                     <td width="15%">Retencion</td>
-						    <td width="43%"><?php echo number_format($retencion,2)?></td>
+						    <td width="43%"><?php  echo number_format($retencion,2)?></td>
 					        <td width="42%" rowspan="14" align="left" valign="top"></td>
 						</tr>
-						<?php $pendiente=$totalfactura-$aportaciones - $retencion; ?>
+						<?php  $pendiente=$totalfactura-$aportaciones - $retencion; ?>
 						<tr>
 							<td width="15%">Pendiente por pagar</td>
-						    <td width="43%"><input type="text" name="pendiente" id="pendiente" value="<?php echo number_format($pendiente,4,".","")?>" readonly="yes" class="cajaTotales"> &#36;</td>
+						    <td width="43%"><input type="text" name="pendiente" id="pendiente" value="<?php  echo number_format($pendiente,4,".","")?>" readonly="yes" class="cajaTotales"> &#36;</td>
 					        <td width="42%" rowspan="14" align="left" valign="top"></td>
 						</tr>
 						<tr>
 							<td width="15%">Estado de la factura</td>
 						    <td width="43%"><select id="cboEstados" name="cboEstados" class="comboMedio" onChange="cambiar_estado()">
-								<?php if ($estado==0) { ?><option value="0" selected="selected">Sin Cobrar</option>
-								<option value="1">Cobrada</option><?php } else { ?>
+								<?php  if ($estado==0) { ?><option value="0" selected="selected">Sin Cobrar</option>
+								<option value="1">Cobrada</option><?php  } else { ?>
 								<option value="0">Sin Cobrar</option>
 								<option value="1" selected="selected">Cobrada</option>
-								<?php } ?> 			
+								<?php  } ?> 			
 								</select></td>
 					        <td width="42%" rowspan="14" align="left" valign="top"></td>
 						</tr>	
@@ -190,7 +190,7 @@ else
 					<table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0>
 						<tr>
                                                     <td width="15%">Fecha de pago</td>
-						    <td width="35%"><input id="fechacobro" type="text" class="cajaPequena" NAME="fechacobro" maxlength="10" value="<?php echo $hoy?>" readonly><img src="../img/calendario.png" name="Image1" id="Image1" width="16" height="16" border="0" id="Image1" onMouseOver="this.style.cursor='pointer'" title="Calendario">
+						    <td width="35%"><input id="fechacobro" type="text" class="cajaPequena" NAME="fechacobro" maxlength="10" value="<?php  echo $hoy?>" readonly><img src="../img/calendario.png" name="Image1" id="Image1" width="16" height="16" border="0" id="Image1" onMouseOver="this.style.cursor='pointer'" title="Calendario">
                                                     <script type="text/javascript">
                                                             Calendar.setup(
                                                               {
@@ -207,7 +207,7 @@ else
 						    <td width="35%"><input id="Rimporte" type="text" class="cajaPequena" NAME="Rimporte" maxlength="12"> &#36;</td>
                                                    <td width="50%" rowspan="14" align="left" valign="top"></td>
 						</tr>	
-						<?php
+						<?php 
 					  	$query_fp="SELECT * FROM formapago WHERE borrado=0 ORDER BY nombre ASC";
 						$res_fp=mysql_query($query_fp,$conn);
 						$contador=0;
@@ -217,10 +217,10 @@ else
                                                         <td width="35%"><select id="AcboFP" name="AcboFP" class="comboGrande" onchange="activar_bancos(this.selectedIndex)">
 							
 								<option value="0">Seleccione una forma de pago</option>
-								<?php
+								<?php 
 								while ($contador < mysql_num_rows($res_fp)) { ?>
-								<option value="<?php echo mysql_result($res_fp,$contador,"id_formapago")?>"><?php echo mysql_result($res_fp,$contador,"nombre")?></option>
-								<?php $contador++;
+								<option value="<?php  echo mysql_result($res_fp,$contador,"id_formapago")?>"><?php  echo mysql_result($res_fp,$contador,"nombre")?></option>
+								<?php  $contador++;
 								} ?>				
 								</select>							
                                                         </td>
@@ -228,7 +228,7 @@ else
 							<td width="50%" rowspan="14" align="left" valign="top"></td>
                                                 </tr>
 
-                                                <?php
+                                                <?php 
 					  	$query_b="SELECT * FROM banco WHERE borrado=0 ORDER BY nombre ASC";
 						$res_b=mysql_query($query_b,$conn);
 						$contador=0;
@@ -239,10 +239,10 @@ else
 							<td width="15%">Entidad Bancaria</td>
                                                         <td width="35%"><select id="acbobanco"  class="comboGrande" NAME="acbobanco" disabled="true">
                                                                     <option value="0">Seleccione una entidad bancaria</option>
-								<?php
+								<?php 
 								while ($contador < mysql_num_rows($res_b)) { ?>
-								<option value="<?php echo mysql_result($res_b,$contador,"id_banco")?>"><?php echo mysql_result($res_b,$contador,"nombre")?></option>
-								<?php $contador++;
+								<option value="<?php  echo mysql_result($res_b,$contador,"id_banco")?>"><?php  echo mysql_result($res_b,$contador,"nombre")?></option>
+								<?php  $contador++;
 								} ?>
 								</select>
                                                         </td>
@@ -273,8 +273,8 @@ else
 				<div id="botonBusqueda">
 					<input type="hidden" name="id" id="id">
 					<input type="hidden" name="accion" id="accion" value="insertar">
-					<input type="hidden" name="idproveedor" id="idproveedor" value="<? echo $idproveedor?>">
-					<input type="hidden" name="idfactura" id="idfactura" value="<? echo $idfactura?>">
+					<input type="hidden" name="idproveedor" id="idproveedor" value="<?php  echo $idproveedor?>">
+					<input type="hidden" name="idfactura" id="idfactura" value="<?php  echo $idfactura?>">
 					<img src="../img/botonaceptar.jpg" width="85" height="22" onClick="javascript:validar(formulario,true);" border="1" onMouseOver="style.cursor=cursor">
 					<img src="../img/botonvolver.jpg" width="85" height="22" onClick="cancelar()" border="1" onMouseOver="style.cursor=cursor">
 			  </div>
@@ -298,7 +298,7 @@ else
 				</table>
 				</div>
 					<div id="lineaResultado">
-					<iframe width="100%" height="250" id="frame_pagos" name="frame_pagos" frameborder="0" src="frame_pagos.php?accion=ver&idfactura=<?php echo $idfactura?>">
+					<iframe width="100%" height="250" id="frame_pagos" name="frame_pagos" frameborder="0" src="frame_pagos.php?accion=ver&idfactura=<?php  echo $idfactura?>">
 						<ilayer width="100%" height="250" id="frame_pagos" name="frame_pagos"></ilayer>
 					</iframe>
 					<iframe id="frame_datos" name="frame_datos" width="0" height="0" frameborder="0">

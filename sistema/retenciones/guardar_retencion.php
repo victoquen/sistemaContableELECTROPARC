@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 include ("../js/fechas.php");
 include ("../conexion/conexion.php");
@@ -317,41 +317,41 @@ if ($accion=="baja") {
 		<div id="pagina">
 			<div id="zonaContenido">
 				<div align="center">
-				<div id="tituloForm" class="header"><?php echo $cabecera2?></div>
+				<div id="tituloForm" class="header"><?php  echo $cabecera2?></div>
 				<div id="frmBusqueda">
 					<table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0>
                                             <tr>
 							<td width="15%"></td>
-							<td width="85%" colspan="5" class="mensaje"><?php echo $mensaje;?></td>
+							<td width="85%" colspan="5" class="mensaje"><?php  echo $mensaje;?></td>
 					    </tr>
 						<tr>
                                                     <td width="10%">No. retencion</td>
                                                     <td>
-                                                        <?php echo $serie1 ." - ".$serie2."  # ".$codretencion ?>                                                        
+                                                        <?php  echo $serie1 ." - ".$serie2."  # ".$codretencion ?>                                                        
                                                     </td>
                                                     <td width="12%">Autorizaci&oacute;n</td>
                                                     <td colspan="2">
-                                                        <?php echo $autorizacion?>
+                                                        <?php  echo $autorizacion?>
                                                     </td>
                                                 </tr>
 						<tr>
                                                     <td width="10%">Proveedor</td>
-                                                    <td width="27%"><?php echo $empresa?></td>
+                                                    <td width="27%"><?php  echo $empresa?></td>
                                                     <td width="12%">CI/RUC</td>
-                                                    <td  colspan="2"><?php echo $ci_ruc?></td>
+                                                    <td  colspan="2"><?php  echo $ci_ruc?></td>
 						</tr>
                                                 <tr>
                                                     <td width="10%">Direcci&oacute;n</td>
-						    <td width="27%"><?php echo $direccion?></td>
+						    <td width="27%"><?php  echo $direccion?></td>
                                                     <td width="12%">Telf.:</td>
-                                                    <td  colspan="2"><?php echo $telefono?></td>
+                                                    <td  colspan="2"><?php  echo $telefono?></td>
 						</tr>						
 						<tr>
                                                     <td width="10%">Fecha</td>
-						    <td width="27%"><?php echo implota($fecha)?></td>
+						    <td width="27%"><?php  echo implota($fecha)?></td>
 
                                                     <td width="12%">Tipo Comprobante</td>
-                                                    <?php
+                                                    <?php 
 
                                                         switch ($tipocomprobante)
                                                         {
@@ -369,15 +369,15 @@ if ($accion=="baja") {
                                                                     break;
                                                         }
                                                     ?>
-                                                    <td ><?php echo $comprobante?></td>
+                                                    <td ><?php  echo $comprobante?></td>
 
                                                     <td width="12%">No. Comprobante</td>
-                                                    <td><?php echo $numerocomprobante?></td>
+                                                    <td><?php  echo $numerocomprobante?></td>
 
                                                 </tr>
                                                 <tr>
                                                     <td>Concepto</td>
-                                                    <td colspan="5"><?php echo $concepto?></td>
+                                                    <td colspan="5"><?php  echo $concepto?></td>
                                                 </tr>
 					  <tr>
 						  <td></td>
@@ -397,7 +397,7 @@ if ($accion=="baja") {
 					</table>
 					<table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0 ID="Table1">
                                             
-					  <?php  //$sel_lineas="SELECT retenlinea.*,articulos.*,familias.nombre as nombrefamilia FROM retenlinea,articulos,familias WHERE retenlinea.codretencion='$codretencion' AND retenlinea.codigo=articulos.codarticulo AND retenlinea.codfamilia=articulos.codfamilia AND articulos.codfamilia=familias.codfamilia ORDER BY retenlinea.numlinea ASC";
+					  <?php   //$sel_lineas="SELECT retenlinea.*,articulos.*,familias.nombre as nombrefamilia FROM retenlinea,articulos,familias WHERE retenlinea.codretencion='$codretencion' AND retenlinea.codigo=articulos.codarticulo AND retenlinea.codfamilia=articulos.codfamilia AND articulos.codfamilia=familias.codfamilia ORDER BY retenlinea.numlinea ASC";
                                                 $sel_lineas="SELECT rt.ejercicio_fiscal as ejercicio_fiscal, rt.base_imponible as base_imponible, rt.impuesto as impuesto,
                                                             rt.codigo_impuesto as codigo_impuesto, rt.porcentaje_retencion as porcentaje_retencion,
                                                             rt.valor_retenido as valor_retenido
@@ -411,16 +411,16 @@ if ($accion=="baja") {
                                                         $porcentaje_retencion=mysql_result($rs_lineas,$i,"porcentaje_retencion");
                                                         $valor_retenido=mysql_result($rs_lineas,$i,"valor_retenido");
 							if ($i % 2) { $fondolinea="itemParTabla"; } else { $fondolinea="itemImparTabla"; } ?>
-									<tr class="<? echo $fondolinea?>">
+									<tr class="<?php  echo $fondolinea?>">
 										
-                                                                                <td width="16%" align="center"><?php echo $ejercicio_fiscal?></td>
-                                                                                <td width="16%" align="center"><?php echo number_format($base_imponible,2)?> &#36;</td>
-                                                                                <td width="35%"><?php echo $impuesto?></td>
-                                                                                <td width="8%" align="center"><?php echo $codigo_impuesto?></td>
-                                                                                <td width="8%" align="center"><?php echo $porcentaje_retencion?></td>
-                                                                                <td width="8%" align="center"><?php echo number_format($valor_retenido,2)?> &#36;</td>
+                                                                                <td width="16%" align="center"><?php  echo $ejercicio_fiscal?></td>
+                                                                                <td width="16%" align="center"><?php  echo number_format($base_imponible,2)?> &#36;</td>
+                                                                                <td width="35%"><?php  echo $impuesto?></td>
+                                                                                <td width="8%" align="center"><?php  echo $codigo_impuesto?></td>
+                                                                                <td width="8%" align="center"><?php  echo $porcentaje_retencion?></td>
+                                                                                <td width="8%" align="center"><?php  echo number_format($valor_retenido,2)?> &#36;</td>
 									</tr>
-					<?php } ?>
+					<?php  } ?>
 					</table>
 			  </div>
 
@@ -428,7 +428,7 @@ if ($accion=="baja") {
 					<table width="25%" border=0 align="right" cellpadding=3 cellspacing=0 class="fuente8">
 						<tr>
 							<td width="15%">Total:</td>
-							<td width="15%"><?php echo number_format($totalretencion,2);?> &#36;</td>
+							<td width="15%"><?php  echo number_format($totalretencion,2);?> &#36;</td>
 						</tr>
                                                 
                                                
@@ -437,9 +437,9 @@ if ($accion=="baja") {
 				<div id="botonBusqueda">
 					<div align="center">
                                             
-                                            <img src="../img/botonaceptar.jpg" width="85" height="22" onClick="aceptar(<?echo $validacion?>)" border="1" onMouseOver="style.cursor=cursor">
+                                            <img src="../img/botonaceptar.jpg" width="85" height="22" onClick="aceptar(<?php echo $validacion?>)" border="1" onMouseOver="style.cursor=cursor">
                                             
-					   <img src="../img/botonimprimir.jpg" width="79" height="22" border="1" onClick="imprimir(<? echo $idretencion?>)" onMouseOver="style.cursor=cursor">
+					   <img src="../img/botonimprimir.jpg" width="79" height="22" border="1" onClick="imprimir(<?php  echo $idretencion?>)" onMouseOver="style.cursor=cursor">
 				        </div>
 					</div>
 			  </div>

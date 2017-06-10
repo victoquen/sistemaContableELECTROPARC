@@ -1,4 +1,4 @@
-<?php  
+<?php   
 
 $idproveedor=$_GET["idproveedor"];
 
@@ -164,38 +164,38 @@ $row = $proveedor->get_proveedor_id($conn, $idproveedor);
 					<table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0>
 						<tr>
 							<td>ID</td>
-							<td><?php echo $idproveedor?></td>
+							<td><?php  echo $idproveedor?></td>
                                                         <td width="42%" rowspan="7" align="left" valign="top"><ul id="lista-errores"></ul></td>
 						</tr>
                                                <tr>
                                                     <td width="15%">CI/RUC</td>
-                                                    <td width="43%"><input NAME="Vci_ruc" type="text" class="cajaGrande" id="ci_ruc" value="<?php echo $row["ci_ruc"]?>" size="45" maxlength="45"></td>
+                                                    <td width="43%"><input NAME="Vci_ruc" type="text" class="cajaGrande" id="ci_ruc" value="<?php  echo $row["ci_ruc"]?>" size="45" maxlength="45"></td>
                                                 </tr>
 
                                                 <tr>
                                                     <td width="15%">Empresa</td>
-                                                    <td width="43%"><input NAME="Aempresa" type="text" class="cajaGrande" id="empresa" value="<?php echo $row["empresa"]?>" size="45" maxlength="45"></td>
+                                                    <td width="43%"><input NAME="Aempresa" type="text" class="cajaGrande" id="empresa" value="<?php  echo $row["empresa"]?>" size="45" maxlength="45"></td>
 
                                                 </tr>
                                                  <tr>
                                                     <td width="15%">Represenante Legal</td>
-                                                    <td width="43%"><input NAME="arepresentante" type="text" class="cajaGrande" id="representante" value="<?php echo $row["representante"]?>" size="45" maxlength="45"></td>
+                                                    <td width="43%"><input NAME="arepresentante" type="text" class="cajaGrande" id="representante" value="<?php  echo $row["representante"]?>" size="45" maxlength="45"></td>
                                                 </tr>                                                
                                                 <tr>
                                                     <td width="15%">Email</td>
-                                                    <td width="43%"><input NAME="aemail" id="email" type="text" class="cajaGrande1" value="<?php echo $row["email"]?>" size="35" maxlength="50" ></td>
+                                                    <td width="43%"><input NAME="aemail" id="email" type="text" class="cajaGrande1" value="<?php  echo $row["email"]?>" size="35" maxlength="50" ></td>
                                                 </tr>
                                                 <tr>
                                                     <td width="15%">Web</td>
-                                                    <td width="43%"><input NAME="aweb" id="web" type="text" class="cajaGrande1" value="<?php echo $row["web"]?>" size="35" maxlength="50" ></td>
+                                                    <td width="43%"><input NAME="aweb" id="web" type="text" class="cajaGrande1" value="<?php  echo $row["web"]?>" size="35" maxlength="50" ></td>
                                                 </tr>
                                                 <tr>
                                                     <td width="17%">Direcci&oacute;n</td>
-                                                    <td> <input NAME="adireccion" id="direccion"  class="cajaGrande1" size="500" maxlength="500" value="<?php echo $row["direccion"]?>"></td>
+                                                    <td> <input NAME="adireccion" id="direccion"  class="cajaGrande1" size="500" maxlength="500" value="<?php  echo $row["direccion"]?>"></td>
                                                 </tr>  
                                                 <tr>
                                                     <td width="17%">Lugar/Ciudad</td>
-                                                    <td width="43%"><input NAME="alugar" id="lugar" type="text" class="cajaGrande" size="35" maxlength="50" value="<?php echo $row["lugar"]?>"></td>
+                                                    <td width="43%"><input NAME="alugar" id="lugar" type="text" class="cajaGrande" size="35" maxlength="50" value="<?php  echo $row["lugar"]?>"></td>
                                                 </tr>
 					</table>
 			  </div>
@@ -205,7 +205,7 @@ $row = $proveedor->get_proveedor_id($conn, $idproveedor);
 					<img src="../img/botoncancelar.jpg" width="85" height="22" onClick="cancelar()" border="1" onMouseOver="style.cursor=cursor">
 					<input id="accion" name="accion" value="modificar" type="hidden">
 					<input id="id" name="id" value="" type="hidden">
-					<input id="idproveedor" name="idproveedor" value="<?php echo $idproveedor?>" type="hidden">
+					<input id="idproveedor" name="idproveedor" value="<?php  echo $idproveedor?>" type="hidden">
 			  </div>
 			  </form>
 
@@ -216,7 +216,7 @@ $row = $proveedor->get_proveedor_id($conn, $idproveedor);
                             <div id="tituloForm" class="header" style="background: #EFD279">OFICINA TELEFONOS</div>
                             <table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0 >
 
-                                 <?php
+                                 <?php 
 
                                     $query_o="SELECT * FROM operadora WHERE borrado=0 ORDER BY nombre ASC";
                                     $res_o=mysql_query($query_o,$conn);
@@ -229,18 +229,18 @@ $row = $proveedor->get_proveedor_id($conn, $idproveedor);
                                          Operadora:&nbsp;
                                         <select id="operadora"  class="comboMedio" NAME="operadora">
                                             <option value="0">Seleccionar operadora</option>
-                                            <?php
+                                            <?php 
                                             $contador=0;
                                             while ($contador < mysql_num_rows($res_o))
                                                 {
                                                     if(mysql_result($res_o,$contador,"nombre")=="FIJO")
                                                     {?>
-                                                        <option selected value="<?php echo mysql_result($res_o,$contador,"id_operadora")?>"><?php echo mysql_result($res_o,$contador,"nombre")?></option>
+                                                        <option selected value="<?php  echo mysql_result($res_o,$contador,"id_operadora")?>"><?php  echo mysql_result($res_o,$contador,"nombre")?></option>
 
 
-                                                     <?php } else {?>
-                                                        <option value="<?php echo mysql_result($res_o,$contador,"id_operadora")?>"><?php echo mysql_result($res_o,$contador,"nombre")?></option>
-                                            <?php }$contador++;
+                                                     <?php  } else {?>
+                                                        <option value="<?php  echo mysql_result($res_o,$contador,"id_operadora")?>"><?php  echo mysql_result($res_o,$contador,"nombre")?></option>
+                                            <?php  }$contador++;
                                             } ?>
                                         </select>
                                          &nbsp;
@@ -271,7 +271,7 @@ $row = $proveedor->get_proveedor_id($conn, $idproveedor);
 				</div>
                     </div>
 
-                <input id="idproveedor" name="idproveedor" value="<?php echo $idproveedor;?>" type="hidden">
+                <input id="idproveedor" name="idproveedor" value="<?php  echo $idproveedor;?>" type="hidden">
                 <input id="modif" name="modif" value="0" type="hidden">
             </form>
 
@@ -288,7 +288,7 @@ $row = $proveedor->get_proveedor_id($conn, $idproveedor);
                             <div id="tituloForm" class="header" style="background: #024769">BANCOS</div>
                             <table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0 >
 
-                                 <?php
+                                 <?php 
 
                                     $query_b="SELECT * FROM banco WHERE borrado=0 ORDER BY nombre ASC";
                                     $res_b=mysql_query($query_b,$conn);
@@ -299,14 +299,14 @@ $row = $proveedor->get_proveedor_id($conn, $idproveedor);
                                          Banco:&nbsp;
                                         <select id="banco"  class="comboMedio" NAME="banco">
                                             <option value="0">Seleccionar banco</option>
-                                            <?php
+                                            <?php 
                                             $contador=0;
                                             while ($contador < mysql_num_rows($res_b))
                                                 {
 
                                             ?>
-                                               <option value="<?php echo mysql_result($res_b,$contador,"id_banco")?>"><?php echo mysql_result($res_b,$contador,"nombre")?></option>
-                                            <?php $contador++;
+                                               <option value="<?php  echo mysql_result($res_b,$contador,"id_banco")?>"><?php  echo mysql_result($res_b,$contador,"nombre")?></option>
+                                            <?php  $contador++;
                                             } ?>
                                         </select>
                                          &nbsp;
@@ -352,7 +352,7 @@ $row = $proveedor->get_proveedor_id($conn, $idproveedor);
                     </div>
 
 
-                <input id="idproveedor" name="idproveedor" value="<?php echo $idproveedor;?>" type="hidden">
+                <input id="idproveedor" name="idproveedor" value="<?php  echo $idproveedor;?>" type="hidden">
                 <input id="modif_bancos" name="modif_bancos" value="0" type="hidden">
             </form>
 
@@ -411,7 +411,7 @@ $row = $proveedor->get_proveedor_id($conn, $idproveedor);
 				</div>
 
                     </div>
-                <input id="idproveedor" name="idproveedor" value="<?php echo $idproveedor;?>" type="hidden">
+                <input id="idproveedor" name="idproveedor" value="<?php  echo $idproveedor;?>" type="hidden">
                 <input id="modif_contactos" name="modif_contactos" value="0" type="hidden">
         </form>
 

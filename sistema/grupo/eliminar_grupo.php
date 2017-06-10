@@ -1,4 +1,4 @@
-<?
+<?php
 
 $idgrupo=$_REQUEST["idgrupo"];
 
@@ -56,7 +56,7 @@ $row = $grupo->get_grupo_id($conn, $idgrupo);
 					</table>
 			  </div>
 				<div id="botonBusqueda">
-					<img src="../img/botonaceptar.jpg" width="85" height="22" onClick="aceptar(<? echo $idgrupo?>)" border="1" onMouseOver="style.cursor=cursor">
+					<img src="../img/botonaceptar.jpg" width="85" height="22" onClick="aceptar(<?php echo $idgrupo?>)" border="1" onMouseOver="style.cursor=cursor">
 					<img src="../img/botoncancelar.jpg" width="85" height="22" onClick="cancelar()" border="1" onMouseOver="style.cursor=cursor">
 			  </div>
 			  </div>

@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 $idusuario = $_GET["idusuario"];
 
@@ -58,20 +58,20 @@ if ($row['id_facturero'] != -1) {
                     <table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0>
                         <tr>
                             <td>ID</td>
-                            <td><?php echo $idusuario ?></td>
+                            <td><?php  echo $idusuario ?></td>
                             <td width="42%" rowspan="14" align="left" valign="top">
                                 <ul id="lista-errores"></ul>
                             </td>
                         </tr>
                         <tr>
                             <td width="15%">Nombre</td>
-                            <td width="43%"><input NAME="Anombre" type="text"  id="nombre"  value="<?php echo $row['nombre'] ?>" size="45" maxlength="45"></td>
+                            <td width="43%"><input NAME="Anombre" type="text"  id="nombre"  value="<?php  echo $row['nombre'] ?>" size="45" maxlength="45"></td>
 
                         </tr>
 
                         <tr>
                             <td width="15%">Password</td>
-                            <td width="43%"><input NAME="Apassword" type="text"  id="password" value="<?php echo $row['password'] ?>" size="45" maxlength="45"></td>
+                            <td width="43%"><input NAME="Apassword" type="text"  id="password" value="<?php  echo $row['password'] ?>" size="45" maxlength="45"></td>
 
                         </tr>
 
@@ -79,20 +79,20 @@ if ($row['id_facturero'] != -1) {
                         <tr>
                             <td width="17%">Tipo de USUARIO</td>
                             <td><select id="Acbotipos" name="Acbotipos" class="comboGrande">
-                                    <?php if ($row['tipo'] == "administrador") { ?>
+                                    <?php  if ($row['tipo'] == "administrador") { ?>
                                         <option selected="true" value="administrador">administrador</option>
                                         <option value="facturacion">facturacion</option>
-                                    <?php } else { ?>
+                                    <?php  } else { ?>
                                         <option value="administrador">administrador</option>
                                         <option selected="true" value="facturacion">facturacion</option>
-                                    <?php } ?>
+                                    <?php  } ?>
 
 
                                 </select>
                             </td>
                         </tr>
 
-                        <?php
+                        <?php 
 
                         $query_o = "SELECT id_facturero, CONCAT( serie1,  '-', serie2 ) AS leyendafacturero FROM facturero ";
                         $res_o = mysql_query($query_o, $conn);
@@ -103,16 +103,16 @@ if ($row['id_facturero'] != -1) {
                             <td>
                                 <select id="Acbofacturero" class="comboMedio" NAME="Acbofacturero">
                                     <option selected="true" value="-1">CONTROL TOTAL</option>
-                                    <?php
+                                    <?php 
                                     $contador = 0;
                                     while ($contador < mysql_num_rows($res_o)) {
 
                                             if (mysql_result($res_o, $contador, "id_facturero") == $row['id_facturero']) {
                                                 ?>
-                                                <option selected="true" value="<?php echo mysql_result($res_o, $contador, "id_facturero") ?>"><?php echo mysql_result($res_o, $contador, "leyendafacturero") ?></option>
-                                            <?php } else { ?>
-                                                <option value="<?php echo mysql_result($res_o, $contador, "id_facturero") ?>"><?php echo mysql_result($res_o, $contador, "leyendafacturero") ?></option>
-                                                <?php
+                                                <option selected="true" value="<?php  echo mysql_result($res_o, $contador, "id_facturero") ?>"><?php  echo mysql_result($res_o, $contador, "leyendafacturero") ?></option>
+                                            <?php  } else { ?>
+                                                <option value="<?php  echo mysql_result($res_o, $contador, "id_facturero") ?>"><?php  echo mysql_result($res_o, $contador, "leyendafacturero") ?></option>
+                                                <?php 
                                             }
                                         $contador++;
                                     } ?>
@@ -122,7 +122,7 @@ if ($row['id_facturero'] != -1) {
                         </tr>
 
 
-                        <?php
+                        <?php 
 
                         $query_b= "SELECT id_bodega, nombre FROM bodega";
                         $res_b = mysql_query($query_b, $conn);
@@ -132,16 +132,16 @@ if ($row['id_facturero'] != -1) {
                             <td width="">Bodega-Sucursal:</td>
                             <td>
                                 <select id="Acbobodega" class="comboMedio" NAME="Acbobodega">
-                                    <?php
+                                    <?php 
                                     $contadorb = 0;
                                     while ($contadorb < mysql_num_rows($res_b)) {
 
                                         if (mysql_result($res_b, $contadorb, "id_bodega") == $row['id_bodega']) {
                                             ?>
-                                            <option selected="true" value="<?php echo mysql_result($res_b, $contadorb, "id_bodega") ?>"><?php echo mysql_result($res_b, $contadorb, "nombre") ?></option>
-                                        <?php } else { ?>
-                                            <option value="<?php echo mysql_result($res_b, $contadorb, "id_bodega") ?>"><?php echo mysql_result($res_b, $contadorb, "nombre") ?></option>
-                                            <?php
+                                            <option selected="true" value="<?php  echo mysql_result($res_b, $contadorb, "id_bodega") ?>"><?php  echo mysql_result($res_b, $contadorb, "nombre") ?></option>
+                                        <?php  } else { ?>
+                                            <option value="<?php  echo mysql_result($res_b, $contadorb, "id_bodega") ?>"><?php  echo mysql_result($res_b, $contadorb, "nombre") ?></option>
+                                            <?php 
                                         }
                                         $contadorb++;
                                     } ?>
@@ -160,7 +160,7 @@ if ($row['id_facturero'] != -1) {
                      onMouseOver="style.cursor=cursor">
                 <input id="accion" name="accion" value="modificar" type="hidden">
                 <input id="id" name="id" value="" type="hidden">
-                <input id="idusuario" name="idusuario" value="<?php echo $idusuario ?>" type="hidden">
+                <input id="idusuario" name="idusuario" value="<?php  echo $idusuario ?>" type="hidden">
             </div>
             </form>
         </div>

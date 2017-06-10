@@ -148,7 +148,7 @@ function actualizar(subtotal,iva,idfactura,descuento)
 </script>
 <link href="../estilos/estilos.css" type="text/css" rel="stylesheet">
 <body>
-<?php  
+<?php   
 include ("../conexion/conexion.php");
 $usuario = new ServidorBaseDatos();
 $conn = $usuario->getConexion();
@@ -217,7 +217,7 @@ if ($modif<>1) {
 }
 ?>
 <table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0 ID="Table1">
-<?php 
+<?php  
 $sel_lineas="SELECT b.codigo as codigo, b.nombre as nombre, a.id_factulineap as id_factulineap, a.cantidad as cantidad, a.costo as costo,
                     a.subtotal as subtotal, a.dcto as dcto, a.iva as iva, a.utilidad as utilidad, a.id_bodega as idbodega
                     FROM factulineap a INNER JOIN producto b ON a.id_producto=b.id_producto
@@ -244,20 +244,20 @@ for ($i = 0; $i < mysql_num_rows($rs_lineas); $i++) {
 		
 		
 	if ($i % 2) { $fondolinea="itemParTabla"; } else { $fondolinea="itemImparTabla"; } ?>
-			<tr class="<?php  echo $fondolinea?>">
+			<tr class="<?php   echo $fondolinea?>">
 				
-				<td width="10%"><?php  echo $codarticulo."-".$vv?></td>
-				<td width="41%" align="center"><?php  echo $descripcion?></td>
-				<td width="8%"><?php  echo $nombod?></td>
-				<td width="5%"><?php  echo $cantidad?></td>
-				<td width="9%" class="aCentro"><?php  echo $precio?></td>
-				<td width="8%" class="aCentro"><?php  echo $descuento?></td>
-				<td width="8%" class="aCentro"><?php  echo $subtotal?></td>
-				<td width="8%" class="aCentro"><?php  echo $iva?></td>
-				<td width="3%"><a href="javascript:eliminar_linea(<?php  echo $idfactura?>,<?php  echo $id_factulineap?>,<?php  echo $subtotal ?>,<?php  echo $iva?>,<?php  echo $descuento?>, <?php echo $idbodega?>)"><img src="../img/eliminar.png" border="0"></a></td>
-                                <td width="3%"><a href="javascript:modificar_linea(<?php  echo $idfactura?>,<?php  echo $id_factulineap?>,<?php  echo $subtotal ?>,<?php  echo $iva?>,<?php  echo $descuento?>, <?php  echo $utilidad?>, <?php echo $idbodega?>)"><img src="../img/modificar.png" border="0"></a></td>
+				<td width="10%"><?php   echo $codarticulo."-".$vv?></td>
+				<td width="41%" align="center"><?php   echo $descripcion?></td>
+				<td width="8%"><?php   echo $nombod?></td>
+				<td width="5%"><?php   echo $cantidad?></td>
+				<td width="9%" class="aCentro"><?php   echo $precio?></td>
+				<td width="8%" class="aCentro"><?php   echo $descuento?></td>
+				<td width="8%" class="aCentro"><?php   echo $subtotal?></td>
+				<td width="8%" class="aCentro"><?php   echo $iva?></td>
+				<td width="3%"><a href="javascript:eliminar_linea(<?php   echo $idfactura?>,<?php   echo $id_factulineap?>,<?php   echo $subtotal ?>,<?php   echo $iva?>,<?php   echo $descuento?>, <?php  echo $idbodega?>)"><img src="../img/eliminar.png" border="0"></a></td>
+                                <td width="3%"><a href="javascript:modificar_linea(<?php   echo $idfactura?>,<?php   echo $id_factulineap?>,<?php   echo $subtotal ?>,<?php   echo $iva?>,<?php   echo $descuento?>, <?php   echo $utilidad?>, <?php  echo $idbodega?>)"><img src="../img/modificar.png" border="0"></a></td>
 			</tr>
-<?php  } ?>
+<?php   } ?>
 </table>
 <iframe id="frame_datos" name="frame_datos" width="0%" height="0" frameborder="0">
 	<ilayer width="0" height="0" id="frame_datos" name="frame_datos"></ilayer>

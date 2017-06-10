@@ -1,4 +1,4 @@
-<?php
+<?php 
 header('Cache-Control: no-cache');
 header('Pragma: no-cache');
 
@@ -98,7 +98,7 @@ $op = $_POST["op"];
         function pon_prefijo(codarticulo, nombre, precio, idarticulo, costo, stock, stock_consignacion, iva, transformacion, precio_con_iva) {
             var password = null;
             var clave = "a";
-            var op =<? echo $op ?>;
+            var op =<?php  echo $op ?>;
             if (stock > 0)
             {
                 switch (op)

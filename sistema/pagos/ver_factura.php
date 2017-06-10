@@ -1,4 +1,4 @@
-<?
+<?php 
  
 include ("../js/fechas.php");
 include ("../conexion/conexion.php");
@@ -67,37 +67,37 @@ $baseimponible=$totalfactura-$flete-$importeiva+$descuento;
 				<div id="tituloForm" class="header">VER FACTURA </div>
 				<div id="frmBusqueda">
 					<table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0>
-						<?
+						<?php 
 						 $sel_proveedor="SELECT * FROM proveedor WHERE id_proveedor='$idproveedor'";
 						  $rs_proveedor=mysql_query($sel_proveedor,$conn); ?>
 						<tr>
 							<td width="15%">proveedor</td>
-							<td width="85%" colspan="2"><?php echo mysql_result($rs_proveedor,0,"empresa");?></td>
+							<td width="85%" colspan="2"><?php  echo mysql_result($rs_proveedor,0,"empresa");?></td>
 					    </tr>
 						<tr>
 							<td width="15%">CI / RUC</td>
-						    <td width="85%" colspan="2"><?php echo mysql_result($rs_proveedor,0,"ci_ruc");?></td>
+						    <td width="85%" colspan="2"><?php  echo mysql_result($rs_proveedor,0,"ci_ruc");?></td>
 					    </tr>
 						<tr>
 						  <td>Direcci&oacute;n</td>
-						  <td colspan="2"><?php echo mysql_result($rs_proveedor,0,"direccion"); ?></td>
+						  <td colspan="2"><?php  echo mysql_result($rs_proveedor,0,"direccion"); ?></td>
 					  </tr>
 						<tr>
 						  <td>No. de factura</td>
-						  <td colspan="2"><?php echo $serie1."--".$serie2."--".$codfactura?></td>
+						  <td colspan="2"><?php  echo $serie1."--".$serie2."--".$codfactura?></td>
 					  </tr>
                                           <tr>
                                               <td>Autorizaci&oacute;n</td>
-						  <td colspan="2"><?php echo $autorizacion?></td>
+						  <td colspan="2"><?php  echo $autorizacion?></td>
 					  </tr>
 					  <tr>
 						  <td>Fecha</td>
-						  <td colspan="2"><?php echo implota($fecha)?></td>
+						  <td colspan="2"><?php  echo implota($fecha)?></td>
 					  </tr>
 					  <tr>
                                                   <td>Cr&eacute;dito</td>
 						  <td colspan="2">
-                                                    <?php
+                                                    <?php 
                                                         if ($credito==1)
                                                             echo "Si --- <b>PLAZO: </b> ".($plazo*30);
                                                         else
@@ -107,7 +107,7 @@ $baseimponible=$totalfactura-$flete-$importeiva+$descuento;
 					  </tr>
                                           <tr>
 						  <td>Fecha Vencto.</td>
-						  <td colspan="2"><?php echo implota($fecha_venc)?></td>
+						  <td colspan="2"><?php  echo implota($fecha_venc)?></td>
 					  </tr>
 					  <tr>
 						  <td></td>
@@ -126,7 +126,7 @@ $baseimponible=$totalfactura-$flete-$importeiva+$descuento;
 						</tr>
 					</table>
 					<table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0 ID="Table1">
-					  <? $sel_lineas="SELECT b.codigo as codigo, b.nombre as nombre, a.cantidad as cantidad, a.costo as costo, a.subtotal as subtotal, a.dcto as dcto, a.iva as iva FROM factulineap a INNER JOIN producto b ON a.id_producto=b.id_producto WHERE a.id_facturap = '$idfactura'";
+					  <?php  $sel_lineas="SELECT b.codigo as codigo, b.nombre as nombre, a.cantidad as cantidad, a.costo as costo, a.subtotal as subtotal, a.dcto as dcto, a.iva as iva FROM factulineap a INNER JOIN producto b ON a.id_producto=b.id_producto WHERE a.id_facturap = '$idfactura'";
                                                 $rs_lineas=mysql_query($sel_lineas,$conn);
 						for ($i = 0; $i < mysql_num_rows($rs_lineas); $i++) {
 							$codarticulo=mysql_result($rs_lineas,$i,"codigo");
@@ -137,48 +137,48 @@ $baseimponible=$totalfactura-$flete-$importeiva+$descuento;
                                                         $descuento_ind=mysql_result($rs_lineas,$i,"dcto");
                                                         $iva=mysql_result($rs_lineas, $i, "iva");
 							if ($i % 2) { $fondolinea="itemParTabla"; } else { $fondolinea="itemImparTabla"; } ?>
-									<tr class="<? echo $fondolinea?>">
-										<td width="5%"><? echo $cantidad?></td>
-                                                                                <td width="18%"><? echo $codarticulo?></td>
-                                                                                <td width="40%"><? echo $descripcion?></td>
-                                                                                <td width="8%" class="aCentro" align="center"><? echo $costo?></td>
-                                                                                <!--<td width="8%" class="aCentro" align="center"><? echo $descuento_ind?></td>-->
-                                                                                <td width="8%" class="aCentro" align="center"><? echo $subtotal?></td>
-                                                                                <td width="8%" class="aCentro" align="center"><? echo $iva?></td>
+									<tr class="<?php  echo $fondolinea?>">
+										<td width="5%"><?php  echo $cantidad?></td>
+                                                                                <td width="18%"><?php  echo $codarticulo?></td>
+                                                                                <td width="40%"><?php  echo $descripcion?></td>
+                                                                                <td width="8%" class="aCentro" align="center"><?php  echo $costo?></td>
+                                                                                <!--<td width="8%" class="aCentro" align="center"><?php  echo $descuento_ind?></td>-->
+                                                                                <td width="8%" class="aCentro" align="center"><?php  echo $subtotal?></td>
+                                                                                <td width="8%" class="aCentro" align="center"><?php  echo $iva?></td>
 									</tr>
 
-					<? } ?>
+					<?php  } ?>
 					</table>
 			  </div>
 					<div id="frmBusqueda">
 					<table width="25%" border=0 align="right" cellpadding=3 cellspacing=0 class="fuente8">
 						<tr>
 							<td width="15%">Subtotal:</td>
-							<td width="15%"><?php echo number_format($baseimponible,2);?> &#36;</td>
+							<td width="15%"><?php  echo number_format($baseimponible,2);?> &#36;</td>
 						</tr>
                                                 <tr>
 							<td width="15%">Dcto.:</td>
-							<td width="15%"><?php echo number_format($descuento,2);?> &#36;</td>
+							<td width="15%"><?php  echo number_format($descuento,2);?> &#36;</td>
 						</tr>
                                                 <tr>
 							<td width="15%">IVA 0:</td>
-							<td width="15%"><?php echo number_format($iva0,2);?> &#36;</td>
+							<td width="15%"><?php  echo number_format($iva0,2);?> &#36;</td>
 						</tr>
                                                 <tr>
 							<td width="15%">IVA 12:</td>
-							<td width="15%"><?php echo number_format($iva12,2);?> &#36;</td>
+							<td width="15%"><?php  echo number_format($iva12,2);?> &#36;</td>
 						</tr>
 						<tr>
 							<td width="15%">Total IVA:</td>
-							<td width="15%"><?php echo number_format($importeiva,2);?> &#36;</td>
+							<td width="15%"><?php  echo number_format($importeiva,2);?> &#36;</td>
 						</tr>
                                                  <tr>
                                                         <td width="15%">Flete:</td>
-							<td width="15%"><?php echo $flete?> &#36;</td>
+							<td width="15%"><?php  echo $flete?> &#36;</td>
 						</tr>
 						<tr>
 							<td width="15%">Total:</td>
-							<td width="15%"><?php echo $totalfactura?> &#36;</td>
+							<td width="15%"><?php  echo $totalfactura?> &#36;</td>
 						</tr>
 
 					</table>
@@ -186,7 +186,7 @@ $baseimponible=$totalfactura-$flete-$importeiva+$descuento;
 				<div id="botonBusqueda">
 					<div align="center">
 					  <img src="../img/botonaceptar.jpg" width="85" height="22" onClick="aceptar()" border="1" onMouseOver="style.cursor=cursor">
-					 <!--<img src="../img/botonimprimir.jpg" width="79" height="22" border="1" onClick="imprimir(<? echo $idfactura?>)" onMouseOver="style.cursor=cursor">-->
+					 <!--<img src="../img/botonimprimir.jpg" width="79" height="22" border="1" onClick="imprimir(<?php  echo $idfactura?>)" onMouseOver="style.cursor=cursor">-->
 				        </div>
 					</div>
 			  </div>

@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 include_once '../conexion/conexion.php';
 include_once 'class/ruc.php';
@@ -136,12 +136,12 @@ $idruc = $row["id_ruc"];
                             <table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0>						
                                 <tr>
                                     <td width="8%">RUC: </td>
-                                    <td ><input NAME="Vidinformante" type="text" class="cajaGrande" id="idinformante" value="<?php echo $row["idinformante"] ?>" size="45" maxlength="45"></td>
+                                    <td ><input NAME="Vidinformante" type="text" class="cajaGrande" id="idinformante" value="<?php  echo $row["idinformante"] ?>" size="45" maxlength="45"></td>
                                 </tr>
 
                                 <tr>
                                     <td width="8%">RAZON SOCIAL:</td>
-                                    <td ><input NAME="Arazonsocial" type="text" class="cajaGrande" id="razonsocial" value="<?php echo $row["razonsocial"] ?>" size="45" maxlength="45"></td>
+                                    <td ><input NAME="Arazonsocial" type="text" class="cajaGrande" id="razonsocial" value="<?php  echo $row["razonsocial"] ?>" size="45" maxlength="45"></td>
 
                                 </tr>                                                 
                             </table>
@@ -151,7 +151,7 @@ $idruc = $row["id_ruc"];
                         
                         <input id="accion" name="accion" value="modificar" type="hidden">
                         <input id="id" name="id" value="" type="hidden">
-                        <input id="idruc" name="idruc" value="<?php echo $idruc; ?>" type="hidden">
+                        <input id="idruc" name="idruc" value="<?php  echo $idruc; ?>" type="hidden">
                     </div>
                     </form>
 
@@ -236,7 +236,7 @@ $idruc = $row["id_ruc"];
                         </div>
                     </div>
 
-                    <input id="idruc" name="idruc" value="<?php echo $idruc;?>" type="hidden">
+                    <input id="idruc" name="idruc" value="<?php  echo $idruc;?>" type="hidden">
                     <input id="modif" name="modif" value="0" type="hidden">
                     </form>
 

@@ -1,11 +1,11 @@
-<?php
+<?php 
 header('Cache-Control: no-cache');
 header('Pragma: no-cache'); 
 ?>
 <html>
 <head>
 </head>
-<?php 
+<?php  
 include ("../js/fechas.php");
 
 include ("../conexion/conexion.php");
@@ -13,7 +13,7 @@ $usuario = new ServidorBaseDatos();
 $conn = $usuario->getConexion();
 ?>
 <body>
-<?php
+<?php 
 	$idmov=$_GET["idmov"];
 	$idfactura=$_GET["idfactura"];
 	$fechacobro=$_GET["fechacobro"];

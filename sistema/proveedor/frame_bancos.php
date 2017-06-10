@@ -14,7 +14,7 @@ function eliminar_linea(codproveedortmp,numbanco)
 </script>
 <link href="../estilos/estilos.css" type="text/css" rel="stylesheet">
 <body>
-<?php
+<?php 
 
 error_reporting(0);
 include ("../conexion/conexion.php");
@@ -50,7 +50,7 @@ $retorno=0;
           
                 <div align="center">
                     <table class="fuente8" width="85%" cellspacing=0 cellpadding=3 border=0 ID="Table1">
-            <?php
+            <?php 
             $sel_lineas="SELECT a.numbanco, a.titular, a.numero_cuenta,a.tipo_cuenta, b.nombre
                         FROM proveedorbancotmp a INNER JOIN banco b ON a.banco=b.id_banco
                         WHERE a.idproveedor = $codproveedortmp ORDER BY a.numbanco DESC";
@@ -76,15 +76,15 @@ $retorno=0;
                     }
                     
                     if ($i % 2) { $fondolinea="itemParTabla"; } else { $fondolinea="itemImparTabla"; } ?>
-                        <tr class="<?php echo $fondolinea?>" style="height: 5px">
+                        <tr class="<?php  echo $fondolinea?>" style="height: 5px">
 
-                                            <td align="center" width="16%"><?php echo $banco?></td>
-                                            <td align="center" width="32%"><?php echo $titular?></td>
-                                            <td align="center" width="16%"><?php echo $numero?></td>
-                                            <td align="center" width="16%"><?php echo $tipocuenta?></td>
-                                            <td align="center" width="5%"><a href="javascript:eliminar_linea(<?php echo $codproveedortmp?>,<?php echo $numbanco?>)"><img src="../img/eliminar.png" border="0"></a></td>
+                                            <td align="center" width="16%"><?php  echo $banco?></td>
+                                            <td align="center" width="32%"><?php  echo $titular?></td>
+                                            <td align="center" width="16%"><?php  echo $numero?></td>
+                                            <td align="center" width="16%"><?php  echo $tipocuenta?></td>
+                                            <td align="center" width="5%"><a href="javascript:eliminar_linea(<?php  echo $codproveedortmpÑ?>,<?php  echo $numbancoÑ?>)"><img src="../img/eliminar.png" border="0"></a></td>
                                     </tr>
-            <?php } ?>
+            <?php  } ?>
             </table>
       </div>
    </div>

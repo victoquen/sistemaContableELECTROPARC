@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 include ("../js/fechas.php");
 include_once '../conexion/conexion.php';
@@ -73,7 +73,7 @@ $total_facturas=mysql_result($rs_totfact,0,"total");
                         
                         "bProcessing": true,
                         "bServerSide": true,
-                        "sAjaxSource": "processing_historialclienteventas.php?fecha_inicio=<?php echo $fechainicio?>&fecha_fin=<?php echo $fechafin?>&tipoCliente=<?php echo $tipoCliente?>",
+                        "sAjaxSource": "processing_historialclienteventas.php?fecha_inicio=<?php  echo $fechainicio?>&fecha_fin=<?php  echo $fechafin?>&tipoCliente=<?php  echo $tipoCliente?>",
                         "sPaginationType": "full_numbers",
                         "aoColumns": [
                                         { "asSorting": [ "desc", "asc" ] },
@@ -153,13 +153,13 @@ $total_facturas=mysql_result($rs_totfact,0,"total");
 
                                 <thead>
                                     <tr>
-                                        <?php if($fechainicio != $fechafin) {?>
-                                        <th colspan="3"><span style="font-size: 12px">PERIODO DESDE: <?php echo implota($fechainicio)?> ----- HASTA: <?php echo implota($fechafin)?></span></th>
-                                        <th colspan="7"><span style="font-size: 12px">TOTAL FACTURAS: $ <?php echo $total_facturas?></span></th>
-                                        <?php } else {?>
-                                        <th colspan="3"><span style="font-size: 12px">FECHA: <?php echo implota($fechafin)?></span></th>
-                                        <th colspan="7"><span style="font-size: 12px">TOTAL $ FACTURAS: $ <?php echo $total_facturas?></span></th>
-                                        <?php }?>
+                                        <?php  if($fechainicio != $fechafin) {?>
+                                        <th colspan="3"><span style="font-size: 12px">PERIODO DESDE: <?php  echo implota($fechainicio)?> ----- HASTA: <?php  echo implota($fechafin)?></span></th>
+                                        <th colspan="7"><span style="font-size: 12px">TOTAL FACTURAS: $ <?php  echo $total_facturas?></span></th>
+                                        <?php  } else {?>
+                                        <th colspan="3"><span style="font-size: 12px">FECHA: <?php  echo implota($fechafin)?></span></th>
+                                        <th colspan="7"><span style="font-size: 12px">TOTAL $ FACTURAS: $ <?php  echo $total_facturas?></span></th>
+                                        <?php  }?>
                                     </tr>
                                     <tr>
                                         

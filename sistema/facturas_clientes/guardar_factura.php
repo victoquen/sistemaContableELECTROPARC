@@ -1,4 +1,4 @@
-﻿<?php
+﻿<?php 
 error_reporting(0);
 include("../js/fechas.php");
 include("../conexion/conexion.php");
@@ -760,20 +760,20 @@ if ($accion == "modificar") {
 <div id="pagina">
     <div id="zonaContenido">
         <div align="center">
-            <div id="tituloForm" class="header"><?php echo $cabecera2 ?></div>
+            <div id="tituloForm" class="header"><?php  echo $cabecera2 ?></div>
             <div id="frmBusqueda">
                 <table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0>
                     <tr>
                         <td width="15%"></td>
-                        <td width="85%" colspan="3" class="mensaje"><?php echo $mensaje; ?></td>
+                        <td width="85%" colspan="3" class="mensaje"><?php  echo $mensaje; ?></td>
                     </tr>
-                    <?php if ($minimo == 1) { ?>
+                    <?php  if ($minimo == 1) { ?>
                         <tr>
                             <td width="15%"></td>
                             <td width="85%" colspan="3" class="mensajeminimo">Los siguientes productos se encuentran sin
-                                stock:<br><?php echo $mensaje_minimo . "</ul>" ?></td>
+                                stock:<br><?php  echo $mensaje_minimo . "</ul>" ?></td>
                         </tr>
-                    <?php }
+                    <?php  }
                     $sel_cliente = "SELECT c.nombre as nombre, c.ci_ruc as ci_ruc, c.direccion as direccion, tc.nombre as tipocliente
                                                                FROM cliente c INNER JOIN tipo_cliente tc ON c.codigo_tipocliente = tc.codigo_tipocliente 
                                                                WHERE id_cliente='$idcliente'";
@@ -781,36 +781,36 @@ if ($accion == "modificar") {
                     ?>
                     <tr>
                         <td width="15%">Cliente CI/RUC</td>
-                        <td width="35%"><?php echo mysql_result($rs_cliente, 0, "nombre") . " -- " . mysql_result($rs_cliente, 0, "ci_ruc"); ?></td>
+                        <td width="35%"><?php  echo mysql_result($rs_cliente, 0, "nombre") . " -- " . mysql_result($rs_cliente, 0, "ci_ruc"); ?></td>
                         <td width="15%">Tipo Cliente</td>
-                        <td width="35%"><?php echo $tipocliente ?></td>
+                        <td width="35%"><?php  echo $tipocliente ?></td>
                     </tr>
 
                     <tr>
                         <td>Guia Remisi&oacute;n</td>
-                        <td><?php if ($remision == 0) {
+                        <td><?php  if ($remision == 0) {
                                 echo "No";
                             } else {
                                 echo "Si";
                             } ?></td>
                         <td>Direcci&oacute;n</td>
-                        <td><?php echo mysql_result($rs_cliente, 0, "direccion"); ?></td>
+                        <td><?php  echo mysql_result($rs_cliente, 0, "direccion"); ?></td>
                     </tr>
                     <tr>
 
                     </tr>
                     <tr>
                         <td>No. Factura</td>
-                        <td><?php echo $serie1 . "--" . $serie2 . "--" . $codfactura ?></td>
+                        <td><?php  echo $serie1 . "--" . $serie2 . "--" . $codfactura ?></td>
                         <td>Autorizaci&oacute;n</td>
-                        <td><?php echo $autorizacion ?></td>
+                        <td><?php  echo $autorizacion ?></td>
                     </tr>
                     <tr>
                         <td>Fecha</td>
-                        <td><?php echo implota($fecha) ?></td>
+                        <td><?php  echo implota($fecha) ?></td>
                         <td>Cr&eacute;dito</td>
                         <td>
-                            <?php
+                            <?php 
                             if ($credito == 1)
                                 echo "Si --- <b>PLAZO: </b> " . ($plazo * 30);
                             else
@@ -821,19 +821,19 @@ if ($accion == "modificar") {
 
                     <tr>
                         <td width="15%">C&oacute;digo Retenci&oacute;n</td>
-                        <td width="5%"><?php echo $codigo_retencion ?></td>
+                        <td width="5%"><?php  echo $codigo_retencion ?></td>
                         <td width="1%"></td>
                     </tr>
 
                     <tr>
                         <td width="15%">Val. Ret. Iva:</td>
-                        <td width="5%"><?php echo $ret_iva ?> &#36;</td>
+                        <td width="5%"><?php  echo $ret_iva ?> &#36;</td>
                         <td width="1%"></td>
                     </tr>
 
                     <tr>
                         <td width="15%">Val. Ret. Fuente:</td>
-                        <td width="5%"><?php echo $ret_fuente ?> &#36;</td>
+                        <td width="5%"><?php  echo $ret_fuente ?> &#36;</td>
                         <td width="1%"></td>
                     </tr>
 
@@ -854,7 +854,7 @@ if ($accion == "modificar") {
                 </table>
                 <table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0 ID="Table1">
 
-                    <?php //$sel_lineas="SELECT factulinea.*,articulos.*,familias.nombre as nombrefamilia FROM factulinea,articulos,familias WHERE factulinea.codfactura='$codfactura' AND factulinea.codigo=articulos.codarticulo AND factulinea.codfamilia=articulos.codfamilia AND articulos.codfamilia=familias.codfamilia ORDER BY factulinea.numlinea ASC";
+                    <?php  //$sel_lineas="SELECT factulinea.*,articulos.*,familias.nombre as nombrefamilia FROM factulinea,articulos,familias WHERE factulinea.codfactura='$codfactura' AND factulinea.codigo=articulos.codarticulo AND factulinea.codfamilia=articulos.codfamilia AND articulos.codfamilia=familias.codfamilia ORDER BY factulinea.numlinea ASC";
                     $sel_lineas = "SELECT b.codigo as codigo, b.nombre as nombre, a.cantidad as cantidad, a.precio as precio, a.subtotal as subtotal, a.dcto as dcto, a.iva as iva FROM factulinea a INNER JOIN producto b ON a.id_producto=b.id_producto WHERE a.id_factura = '$idfactura'";
                     $rs_lineas = mysql_query($sel_lineas, $conn);
                     for ($i = 0; $i < mysql_num_rows($rs_lineas); $i++) {
@@ -870,18 +870,18 @@ if ($accion == "modificar") {
                         } else {
                             $fondolinea = "itemImparTabla";
                         } ?>
-                        <tr class="<?php echo $fondolinea ?>">
+                        <tr class="<?php  echo $fondolinea ?>">
 
-                            <td width="16%"><?php echo $codarticulo ?></td>
-                            <td width="36%"><?php echo $descripcion ?></td>
-                            <td width="5%"><?php echo $cantidad ?></td>
-                            <td width="8%" align="center"><?php echo $precio ?></td>
-                            <td width="8%" align="center"><?php echo $subtotal ?></td>
-                            <td width="8%" align="center"><?php echo $descuento_ind ?></td>
-                            <td width="8%" align="center"><?php echo $iva ?></td>
-                            <td width="8%" align="center"><?php echo(($subtotal - $descuento_ind) + $iva) ?></td>
+                            <td width="16%"><?php  echo $codarticulo ?></td>
+                            <td width="36%"><?php  echo $descripcion ?></td>
+                            <td width="5%"><?php  echo $cantidad ?></td>
+                            <td width="8%" align="center"><?php  echo $precio ?></td>
+                            <td width="8%" align="center"><?php  echo $subtotal ?></td>
+                            <td width="8%" align="center"><?php  echo $descuento_ind ?></td>
+                            <td width="8%" align="center"><?php  echo $iva ?></td>
+                            <td width="8%" align="center"><?php  echo(($subtotal - $descuento_ind) + $iva) ?></td>
                         </tr>
-                    <?php } ?>
+                    <?php  } ?>
                 </table>
             </div>
 
@@ -889,37 +889,37 @@ if ($accion == "modificar") {
                 <table width="25%" border=0 align="right" cellpadding=1 cellspacing=0 class="fuente8">
                     <tr>
                         <td width="15%">Subtotal:</td>
-                        <td width="5%" align="right"><?php echo number_format($baseimponible, 2); ?> &#36;</td>
+                        <td width="5%" align="right"><?php  echo number_format($baseimponible, 2); ?> &#36;</td>
                         <td width="3%"></td>
                     </tr>
                     <tr>
                         <td width="15%">Dcto.:</td>
-                        <td width="5%" align="right"><?php echo number_format($descuento, 2); ?> &#36;</td>
+                        <td width="5%" align="right"><?php  echo number_format($descuento, 2); ?> &#36;</td>
                         <td width="1%"></td>
                     </tr>
                     <tr>
                         <td width="15%">IVA 0:</td>
-                        <td width="5%" align="right"><?php echo number_format($iva0, 2); ?> &#36;</td>
+                        <td width="5%" align="right"><?php  echo number_format($iva0, 2); ?> &#36;</td>
                         <td width="1%"></td>
                     </tr>
                     <tr>
                         <td width="15%">IVA 12:</td>
-                        <td width="5%" align="right"><?php echo number_format($iva12, 2); ?> &#36;</td>
+                        <td width="5%" align="right"><?php  echo number_format($iva12, 2); ?> &#36;</td>
                         <td width="1%"></td>
                     </tr>
                     <tr>
                         <td width="15%">Total IVA:</td>
-                        <td width="5%" align="right"><?php echo number_format($importeiva, 2); ?> &#36;</td>
+                        <td width="5%" align="right"><?php  echo number_format($importeiva, 2); ?> &#36;</td>
                         <td width="1%"></td>
                     </tr>
                     <tr>
                         <td width="15%">Flete:</td>
-                        <td width="5%" align="right"><?php echo $flete ?> &#36;</td>
+                        <td width="5%" align="right"><?php  echo $flete ?> &#36;</td>
                         <td width="1%"></td>
                     </tr>
                     <tr>
                         <td width="15%">Total:</td>
-                        <td width="5%" align="right"><?php echo $totalfactura ?> &#36;</td>
+                        <td width="5%" align="right"><?php  echo $totalfactura ?> &#36;</td>
                         <td width="1%"></td>
                     </tr>
 
@@ -929,18 +929,18 @@ if ($accion == "modificar") {
             <div id="botonBusqueda">
                 <div align="center">
                     <!--
-                                                    <?php if ($accion == "alta") {
+                                                    <?php  if ($accion == "alta") {
                         ?>
-                                                    <img src="../img/botoncobrar.png" width="85" height="22" onClick="aceptar(<?php echo $validacion ?>,'<?php echo $accion ?>',<?php echo $idfactura ?>)" border="1" onMouseOver="style.cursor=cursor">
-                                                    <?php } else { ?>
-                                                    <img src="../img/botonaceptar.jpg" width="85" height="22" onClick="aceptar(<?php echo $validacion ?>,'<?php echo $accion ?>',<?php echo $idfactura ?>)" border="1" onMouseOver="style.cursor=cursor">
-                                                    <?php } ?>
+                                                    <img src="../img/botoncobrar.png" width="85" height="22" onClick="aceptar(<?php  echo $validacion ?>,'<?php  echo $accion ?>',<?php  echo $idfactura ?>)" border="1" onMouseOver="style.cursor=cursor">
+                                                    <?php  } else { ?>
+                                                    <img src="../img/botonaceptar.jpg" width="85" height="22" onClick="aceptar(<?php  echo $validacion ?>,'<?php  echo $accion ?>',<?php  echo $idfactura ?>)" border="1" onMouseOver="style.cursor=cursor">
+                                                    <?php  } ?>
                                                     -->
                     <img src="../img/botonaceptar.jpg" width="85" height="22"
-                         onClick="aceptar(<?php echo $validacion ?>,'<?php echo $accion ?>',<?php echo $idfactura ?>)"
+                         onClick="aceptar(<?php  echo $validacion ?>,'<?php  echo $accion ?>',<?php  echo $idfactura ?>)"
                          border="1" onMouseOver="style.cursor=cursor">
                     <img src="../img/botonimprimir.jpg" width="79" height="22" border="1"
-                         onClick="imprimir(<?php echo $idfactura ?>)" onMouseOver="style.cursor=cursor">
+                         onClick="imprimir(<?php  echo $idfactura ?>)" onMouseOver="style.cursor=cursor">
                 </div>
             </div>
 
@@ -956,7 +956,7 @@ if ($accion == "modificar") {
                 <form id="formulario" name="formulario" method="post" action="frame_cobros.php" target="frame_cobros">
                     <table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0>
 
-                        <?php
+                        <?php 
                         $hoy = date("d/m/Y");
 
                         $query_fp = "SELECT * FROM formapago WHERE borrado=0 ORDER BY nombre ASC";
@@ -966,7 +966,7 @@ if ($accion == "modificar") {
                         <tr>
                             <td width="14%">Fecha de cobro</td>
                             <td width="18%"><input id="fechacobro" type="text" class="cajaPequena" NAME="fechacobro"
-                                                   maxlength="10" value="<?php echo $hoy ?>" readonly><img
+                                                   maxlength="10" value="<?php  echo $hoy ?>" readonly><img
                                     src="../img/calendario.png" name="Image1" id="Image1" width="16" height="16"
                                     border="0" id="Image1" onMouseOver="this.style.cursor='pointer'" title="Calendario">
                                 <script type="text/javascript">
@@ -985,11 +985,11 @@ if ($accion == "modificar") {
                                                     onchange="activar_bancos(this.selectedIndex)">
 
                                     <option value="0">Seleccione una forma de pago</option>
-                                    <?php
+                                    <?php 
                                     while ($contador < mysql_num_rows($res_fp)) { ?>
                                         <option
-                                            value="<?php echo mysql_result($res_fp, $contador, "id_formapago") ?>"><?php echo mysql_result($res_fp, $contador, "nombre") ?></option>
-                                        <?php $contador++;
+                                            value="<?php  echo mysql_result($res_fp, $contador, "id_formapago") ?>"><?php  echo mysql_result($res_fp, $contador, "nombre") ?></option>
+                                        <?php  $contador++;
                                     } ?>
                                 </select>
                             </td>
@@ -1000,7 +1000,7 @@ if ($accion == "modificar") {
                             </td>
                         </tr>
 
-                        <?php
+                        <?php 
                         $query_b = "SELECT * FROM banco WHERE borrado=0 ORDER BY nombre ASC";
                         $res_b = mysql_query($query_b, $conn);
                         $contador = 0;
@@ -1009,15 +1009,15 @@ if ($accion == "modificar") {
                             <td width="11%">Total Factura</td>
                             <td><input type="text" id="Rtotal_factura" name="Rtotal_factura" class="cajaPequena"
                                        style="text-align: right; background-color: yellow" disabled="true"
-                                       value="<?php echo $totalfactura ?>"/> &#36;</td>
+                                       value="<?php  echo $totalfactura ?>"/> &#36;</td>
                             <td width="14%">Entidad Bancaria</td>
                             <td width="35%"><select id="acbobanco" class="comboGrande" NAME="acbobanco" disabled="true">
                                     <option value="1">Seleccione una entidad bancaria</option>
-                                    <?php
+                                    <?php 
                                     while ($contador < mysql_num_rows($res_b)) { ?>
                                         <option
-                                            value="<?php echo mysql_result($res_b, $contador, "id_banco") ?>"><?php echo mysql_result($res_b, $contador, "nombre") ?></option>
-                                        <?php $contador++;
+                                            value="<?php  echo mysql_result($res_b, $contador, "id_banco") ?>"><?php  echo mysql_result($res_b, $contador, "nombre") ?></option>
+                                        <?php  $contador++;
                                     } ?>
                                 </select>
                             </td>
@@ -1028,7 +1028,7 @@ if ($accion == "modificar") {
                             <td>- Ret. Iva</td>
                             <td>-<input type="text" id="ret_iva" name="ret_iva" readonly="true" class="cajaPequena"
                                         style="text-align: right; background-color: lightpink"
-                                        value="<?php echo $ret_iva ?>"/> &#36;</td>
+                                        value="<?php  echo $ret_iva ?>"/> &#36;</td>
 
 
                             <td width="11%">Observaciones</td>
@@ -1041,7 +1041,7 @@ if ($accion == "modificar") {
                             <td>- Ret. Fuente</td>
                             <td>-<input type="text" id="ret_fuente" name="Rret_fuente" class="cajaPequena"
                                         readonly="true" style="text-align: right; background-color: lightpink"
-                                        value="<?php echo $ret_fuente ?>"/> &#36;</td>
+                                        value="<?php  echo $ret_fuente ?>"/> &#36;</td>
                             <td colspan="2" align="center">
                                 <img src="../img/botonagregar.jpg" width="85" height="22"
                                      onClick="javascript:validar(formulario,true);" border="1"
@@ -1053,7 +1053,7 @@ if ($accion == "modificar") {
                             <td width="17%"><span style="font: bold; font-size: 10px">TOTAL A COBRAR</span></td>
                             <td><input id="Rimporte" type="text" class="cajaPequenaCobros" NAME="Rimporte"
                                        maxlength="12" onchange="calcular_cambio()" style="text-align: right;"
-                                       value="<?php echo($totalfactura - $ret_iva - $ret_fuente) ?>"><span
+                                       value="<?php  echo($totalfactura - $ret_iva - $ret_fuente) ?>"><span
                                     style="font: bold; font-size: 14px"> &#36;</span></td>
                             <td rowspan="3" style="background-color: activecaption" align="center">
                                 <img src="../img/pagoefectivo.png" width="80%" height="50%"
@@ -1082,8 +1082,8 @@ if ($accion == "modificar") {
             </div>
             <input type="hidden" name="id" id="id">
             <input type="hidden" name="accion" id="accion" value="insertar">
-            <input type="hidden" name="idcliente" id="codcliente" value="<?php echo $idcliente ?>">
-            <input type="hidden" name="idfactura" id="idfactura" value="<?php echo $idfactura ?>">
+            <input type="hidden" name="idcliente" id="codcliente" value="<?php  echo $idcliente ?>">
+            <input type="hidden" name="idfactura" id="idfactura" value="<?php  echo $idfactura ?>">
 
             </form>
             <br>
@@ -1104,7 +1104,7 @@ if ($accion == "modificar") {
                 </div>
                 <div id="lineaResultado">
                     <iframe width="100%" height="250" id="frame_cobros" name="frame_cobros" frameborder="0"
-                            src="frame_cobros.php?accion=ver&idfactura=<?php echo $idfactura ?>">
+                            src="frame_cobros.php?accion=ver&idfactura=<?php  echo $idfactura ?>">
                         <ilayer width="100%" height="250" id="frame_cobros" name="frame_cobros"></ilayer>
                     </iframe>
                     <iframe id="frame_datos" name="frame_datos" width="0" height="0" frameborder="0">

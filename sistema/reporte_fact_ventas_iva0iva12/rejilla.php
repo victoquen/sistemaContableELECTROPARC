@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 include ("../js/fechas.php");
 include_once '../conexion/conexion.php';
@@ -79,7 +79,7 @@ $total_factura=mysql_result($rs_totreten,0,"total_factura");
                         "bFilter": false,
                         "bProcessing": true,
                         "bServerSide": true,
-                        "sAjaxSource": "processing_ventas_iva0_12.php?fecha_inicio=<?php echo $fechainicio?>&fecha_fin=<?php echo $fechafin?>",
+                        "sAjaxSource": "processing_ventas_iva0_12.php?fecha_inicio=<?php  echo $fechainicio?>&fecha_fin=<?php  echo $fechafin?>",
                         "sPaginationType": "full_numbers",
 
                        /*"sDom": 'T<"clear">lfrtip',
@@ -149,13 +149,13 @@ $total_factura=mysql_result($rs_totreten,0,"total_factura");
 
                                 <thead>
                                     <tr>
-                                        <?php if($fechainicio != $fechafin) {?>
-                                        <th colspan="11"><span style="font-size: 12px">PERIODO DESDE: <?php echo implota($fechainicio)?> ----- HASTA: <?php echo implota($fechafin)?></span></th>
+                                        <?php  if($fechainicio != $fechafin) {?>
+                                        <th colspan="11"><span style="font-size: 12px">PERIODO DESDE: <?php  echo implota($fechainicio)?> ----- HASTA: <?php  echo implota($fechafin)?></span></th>
                                                                                                     
-                                        <?php } else {?>
-                                        <th colspan="7"><span style="font-size: 12px">FECHA: <?php echo implota($fechafin)?></span></th>
-                                        <th colspan="4"><span style="font-size: 12px">TOTAL RETENCIONES: $ <?php echo $total_retenciones?></span></th>
-                                        <?php }?>
+                                        <?php  } else {?>
+                                        <th colspan="7"><span style="font-size: 12px">FECHA: <?php  echo implota($fechafin)?></span></th>
+                                        <th colspan="4"><span style="font-size: 12px">TOTAL RETENCIONES: $ <?php  echo $total_retenciones?></span></th>
+                                        <?php  }?>
                                     </tr>
                                     <tr>
                                         
@@ -183,16 +183,16 @@ $total_factura=mysql_result($rs_totreten,0,"total_factura");
                                             <b><span style="font-size: 11px">TOTALES</span></b>
                                         </td>
                                         <td align="center">
-                                            <b><span style="font-size: 11px;">$ <?php echo $total_iva0?></span></b>
+                                            <b><span style="font-size: 11px;">$ <?php  echo $total_iva0?></span></b>
                                         </td>
                                         <td align="center">
-                                           <b> <span style="font-size: 11px;">$ <?php echo $total_iva12?></span></b>
+                                           <b> <span style="font-size: 11px;">$ <?php  echo $total_iva12?></span></b>
                                         </td>
                                         <td align="center">
-                                            <b><span style="font-size: 11px;">$ <?php echo $total_iva?></span></b>
+                                            <b><span style="font-size: 11px;">$ <?php  echo $total_iva?></span></b>
                                         </td>
                                         <td align="center">
-                                            <b><span style="font-size: 11px">$ <?php echo $total_factura?></span></b>
+                                            <b><span style="font-size: 11px">$ <?php  echo $total_factura?></span></b>
                                         </td>
                                     </tr>
                                 </tfoot>

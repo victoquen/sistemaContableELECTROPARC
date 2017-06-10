@@ -1,4 +1,4 @@
-<?php
+<?php 
 include("../conexion/conexion.php");
 
 $usuario = new ServidorBaseDatos();
@@ -156,7 +156,7 @@ $obligatorio_serie = 1;
 //
             if (document.getElementById("importe").value == "") mensaje += "  - Falta el importe\n";
 
-            if(<?php echo $obligatorio_serie?> == 1){
+            if(<?php  echo $obligatorio_serie?> == 1){
 
                 var theSelect = document.getElementById('series');
                 var options = theSelect.getElementsByTagName('OPTION');
@@ -471,24 +471,24 @@ $obligatorio_serie = 1;
                             </td>
                             <td>CUENTA:
                                 <select name="cbocuenta" id="cbocuenta" class="comboMedio">
-                                    <?php
+                                    <?php 
                                     $query_cuenta = "SELECT id_cuenta, nombre FROM cuenta WHERE gasto=0";
                                     $sel_query = mysql_query($query_cuenta, $conn);
                                     while ($row = mysql_fetch_array($sel_query)) {
 
                                         ?>
                                         <option
-                                            value="<?php echo $row['id_cuenta'] ?>"><?php echo $row['nombre'] ?></option>
-                                    <?php } ?>
+                                            value="<?php  echo $row['id_cuenta'] ?>"><?php  echo $row['nombre'] ?></option>
+                                    <?php  } ?>
                                 </select>
                             </td>
                         </tr>
-                        <?php $hoy = date("d/m/Y"); ?>
+                        <?php  $hoy = date("d/m/Y"); ?>
                         <tr>
                             <td width="6%">Fecha</td>
                             <td width="27%">
                                 <input NAME="fecha" type="text" class="cajaPequena" id="fecha" size="10" maxlength="10"
-                                       value="<?php echo $hoy ?>" readonly> <img src="../img/calendario.png"
+                                       value="<?php  echo $hoy ?>" readonly> <img src="../img/calendario.png"
                                                                                  name="Image1" id="Image1" width="16"
                                                                                  height="16" border="0" id="Image1"
                                                                                  onMouseOver="this.style.cursor='pointer'">
@@ -543,12 +543,12 @@ $obligatorio_serie = 1;
                         </tr>
                     </table>
             </div>
-            <!--<input id="codfacturatmp" name="codfacturatmp" value="<?php echo $codfacturatmp ?>" type="hidden">
-			  <input id="baseimpuestos2" name="baseimpuestos2" value="<?php echo $baseimpuestos ?>" type="hidden">
-			  <input id="baseimponible2" name="baseimponible2" value="<?php echo $baseimponible ?>" type="hidden">
-			  <input id="preciototal2" name="preciototal2" value="<?php echo $preciototal ?>" type="hidden">
-                          <input id="baseretencion2" name="baseretencion2" value="<?php echo $baseretencion ?>" type="hidden">-->
-            <input id="codfacturatmp" name="codfacturatmp" value="<?php echo $codfacturatmp ?>" type="hidden">
+            <!--<input id="codfacturatmp" name="codfacturatmp" value="<?php  echo $codfacturatmp ?>" type="hidden">
+			  <input id="baseimpuestos2" name="baseimpuestos2" value="<?php  echo $baseimpuestos ?>" type="hidden">
+			  <input id="baseimponible2" name="baseimponible2" value="<?php  echo $baseimponible ?>" type="hidden">
+			  <input id="preciototal2" name="preciototal2" value="<?php  echo $preciototal ?>" type="hidden">
+                          <input id="baseretencion2" name="baseretencion2" value="<?php  echo $baseretencion ?>" type="hidden">-->
+            <input id="codfacturatmp" name="codfacturatmp" value="<?php  echo $codfacturatmp ?>" type="hidden">
             <input id="iva02" name="iva02" value="0" type="hidden">
             <input id="iva122" name="iva122" value="0" type="hidden">
             <input id="iva0final" name="iva0final" value="0" type="hidden">
@@ -582,26 +582,26 @@ $obligatorio_serie = 1;
                                                    size="30" maxlength="30" readonly></td>
                                         <td>Bodega</td>
                                         <td>
-                                            <?php
+                                            <?php 
 
                                             $queryb = "SELECT b.id_bodega as idbodega, b.nombre as nombre FROM bodega b  WHERE b.id_bodega ='$id_bodega'";
                                             $resb = mysql_query($queryb, $conn); ?>
 
                                             <select name="cbobodega" id="cbobodega" class="comboMedio">
 
-                                                <?php
+                                                <?php 
 
                                                 $contador = 0;
                                                 while ($contador < mysql_num_rows($resb)) {
                                                     if (mysql_result($resb, $contador, "idbodega") == $bodega1) {
                                                         ?>
                                                         <option selected
-                                                                value="<?php echo mysql_result($resb, $contador, "idbodega") ?>"><?php echo mysql_result($resb, $contador, "nombre"); ?></option>
+                                                                value="<?php  echo mysql_result($resb, $contador, "idbodega") ?>"><?php  echo mysql_result($resb, $contador, "nombre"); ?></option>
 
-                                                    <?php } else { ?>
+                                                    <?php  } else { ?>
                                                         <option
-                                                            value="<?php echo mysql_result($resb, $contador, "idbodega") ?>"><?php echo mysql_result($resb, $contador, "nombre"); ?></option>
-                                                    <?php }
+                                                            value="<?php  echo mysql_result($resb, $contador, "idbodega") ?>"><?php  echo mysql_result($resb, $contador, "nombre"); ?></option>
+                                                    <?php  }
                                                     $contador++;
                                                 } ?>
 
@@ -657,11 +657,11 @@ $obligatorio_serie = 1;
                         <tr>
                             <td>
                                 Serie Obligatorio
-                                <?php if ($obligatorio_serie == 0) { ?>
+                                <?php  if ($obligatorio_serie == 0) { ?>
                                     <input type="radio" name="obligatorio" value="0" checked> NO
-                                <?php } else { ?>
+                                <?php  } else { ?>
                                     <input type="radio" name="obligatorio" value="1" checked> SI
-                                <?php } ?>
+                                <?php  } ?>
                             </td>
 
                         </tr>
@@ -683,8 +683,8 @@ $obligatorio_serie = 1;
                         </tr>
                     </table>
             </div>
-            <input name="idarticulo" value="<?php echo $idarticulo ?>" type="hidden" id="idarticulo">
-            <!-- <input name="costo" value="<?php //echo $costo?>" type="hidden" id="costo">-->
+            <input name="idarticulo" value="<?php  echo $idarticulo ?>" type="hidden" id="idarticulo">
+            <!-- <input name="costo" value="<?php  //echo $costo?>" type="hidden" id="costo">-->
             <br>
             <div id="frmBusqueda">
                 <table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0 ID="Table1">
@@ -742,7 +742,7 @@ $obligatorio_serie = 1;
 
 
                     <tr>
-                        <td class="busqueda" align="right">IVA <?php echo $ivaporcetaje; ?>%</td>
+                        <td class="busqueda" align="right">IVA <?php  echo $ivaporcetaje; ?>%</td>
                         <td align="right">
                             <div align="center">
                                 <input class="cajaTotales" name="iva12" type="text" id="iva12" size="12" align="right"
@@ -791,10 +791,10 @@ $obligatorio_serie = 1;
                                      border="1" onMouseOver="style.cursor=cursor">
                                 <img src="../img/botoncancelar.jpg" width="85" height="22" onClick="cancelar()"
                                      border="1" onMouseOver="style.cursor=cursor">
-                                <!--<input id="codfamilia" name="codfamilia" value="<?php echo $codfamilia ?>" type="hidden">-->
-                                <input id="codfacturatmp" name="codfacturatmp" value="<?php echo $codfacturatmp ?>"
+                                <!--<input id="codfamilia" name="codfamilia" value="<?php  echo $codfamilia ?>" type="hidden">-->
+                                <input id="codfacturatmp" name="codfacturatmp" value="<?php  echo $codfacturatmp ?>"
                                        type="hidden">
-                                <input id="preciototal2" name="preciototal2" value="<?php echo $preciototal ?>"
+                                <input id="preciototal2" name="preciototal2" value="<?php  echo $preciototal ?>"
                                        type="hidden">
                             </div>
                         </div>

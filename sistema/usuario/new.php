@@ -1,4 +1,4 @@
-<?php
+<?php 
 include_once '../conexion/conexion.php';
 
 $db = new ServidorBaseDatos();
@@ -67,7 +67,7 @@ $conn = $db->getConexion();
                                     </td>
                                 </tr>
 
-                                <?php
+                                <?php 
 
                                 $query_o = "SELECT id_facturero, CONCAT( serie1,  '-', serie2 ) AS leyendafacturero FROM facturero ";
                                 $res_o = mysql_query($query_o, $conn);
@@ -79,20 +79,20 @@ $conn = $db->getConexion();
                                         <select id="Acbofacturero" class="comboMedio" NAME="Acbofacturero">
                                             <option  value="">Escoger Facturero</option>
                                             <option  value="-1">CONTROL TOTAL</option>
-                                            <?php
+                                            <?php 
                                             $contador = 0;
                                             while ($contador < mysql_num_rows($res_o)) {
                                                 ?>
                                                 <option
-                                                    value="<?php echo mysql_result($res_o, $contador, "id_facturero") ?>"><?php echo mysql_result($res_o, $contador, "leyendafacturero") ?></option>
-                                                <?php $contador++;
+                                                    value="<?php  echo mysql_result($res_o, $contador, "id_facturero") ?>"><?php  echo mysql_result($res_o, $contador, "leyendafacturero") ?></option>
+                                                <?php  $contador++;
                                             }?>
                                         </select>
 
                                     </td>
                                 </tr>
 
-                                <?php
+                                <?php 
 
                                 $query_b = "SELECT id_bodega, nombre FROM bodega";
                                 $res_b = mysql_query($query_b, $conn);
@@ -103,13 +103,13 @@ $conn = $db->getConexion();
                                     <td>
                                         <select id="Acbobodega" class="comboMedio" NAME="Acbobodega">
                                             <option  value="">Escoger Bodega-Sucursal</option>
-                                            <?php
+                                            <?php 
                                             $contadorb = 0;
                                             while ($contadorb < mysql_num_rows($res_b)) {
                                                 ?>
                                                 <option
-                                                    value="<?php echo mysql_result($res_b, $contadorb, "id_bodega") ?>"><?php echo mysql_result($res_b, $contadorb, "nombre") ?></option>
-                                                <?php $contadorb++;
+                                                    value="<?php  echo mysql_result($res_b, $contadorb, "id_bodega") ?>"><?php  echo mysql_result($res_b, $contadorb, "nombre") ?></option>
+                                                <?php  $contadorb++;
                                             }?>
                                         </select>
 

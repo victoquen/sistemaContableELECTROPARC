@@ -1,4 +1,4 @@
-<?
+<?php
 include ("../conexion/conexion.php");
 $usuario = new ServidorBaseDatos();
 $conn = $usuario->getConexion();

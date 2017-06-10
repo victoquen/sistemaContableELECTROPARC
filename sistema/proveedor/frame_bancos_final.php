@@ -20,7 +20,7 @@ function modificar_banco(idproveedor,idbanco)
 </script>
 <link href="../estilos/estilos.css" type="text/css" rel="stylesheet">
 <body>
-<?php
+<?php 
 
 error_reporting(0);
 include ("../conexion/conexion.php");
@@ -56,7 +56,7 @@ if ($modif<>1) {
           
                 <div align="center">
                     <table class="fuente8" width="85%" cellspacing=0 cellpadding=3 border=0 ID="Table1">
-            <?php
+            <?php 
             $sel_lineas="SELECT a.id_banco, a.titular, a.numero_cuenta,a.tipo_cuenta, b.nombre
                         FROM proveedorbanco a INNER JOIN banco b ON a.banco=b.id_banco
                         WHERE a.id_proveedor = $idproveedor ORDER BY a.id_banco DESC";
@@ -82,16 +82,16 @@ if ($modif<>1) {
                     }
                     
                     if ($i % 2) { $fondolinea="itemParTabla"; } else { $fondolinea="itemImparTabla"; } ?>
-                        <tr class="<?php echo $fondolinea?>" style="height: 5px">
+                        <tr class="<?php  echo $fondolinea?>" style="height: 5px">
 
-                            <td align="center" width="16%"><?php echo $banco?></td>
-                            <td align="center" width="32%"><?php echo $titular?></td>
-                            <td align="center" width="16%"><?php echo $numero?></td>
-                            <td align="center" width="16%"><?php echo $tipocuenta?></td>
-                            <td align="center" width="5%"><a href="javascript:eliminar_linea(<?php echo $idproveedor?>,<?php echo $idbanco?>)"><img src="../img/eliminar.png" border="0"></a></td>
-                            <td align="center" width="5%"><a href="javascript:modificar_banco(<?php echo $idproveedor?>,<?php echo $idbanco?>)"><img src="../img/modificar.png" border="0"></a></td>
+                            <td align="center" width="16%"><?php  echo $banco?></td>
+                            <td align="center" width="32%"><?php  echo $titular?></td>
+                            <td align="center" width="16%"><?php  echo $numero?></td>
+                            <td align="center" width="16%"><?php  echo $tipocuenta?></td>
+                            <td align="center" width="5%"><a href="javascript:eliminar_linea(<?php  echo $idproveedor?>,<?php  echo $idbanco?>)"><img src="../img/eliminar.png" border="0"></a></td>
+                            <td align="center" width="5%"><a href="javascript:modificar_banco(<?php  echo $idproveedor?>,<?php  echo $idbanco?>)"><img src="../img/modificar.png" border="0"></a></td>
                         </tr>
-            <?php } ?>
+            <?php  } ?>
             </table>
       </div>
    </div>

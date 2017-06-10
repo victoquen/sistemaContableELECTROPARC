@@ -1,4 +1,4 @@
-<?php 
+<?php  
 include ("../js/fechas.php");
 include ("../conexion/conexion.php");
 $usuario = new ServidorBaseDatos();
@@ -382,20 +382,20 @@ $baseimponible=$totalfactura-$flete-$importeiva+$descuento;
                                                     <td width="6%">No. Factura</td>
 
                                                     <td>
-                                                        <input NAME="serie1" type="text" class="cajaMinima" id="serie1" maxlength="3" value="<?echo $serie1?>">
-                                                        <input NAME="serie2" type="text" class="cajaMinima" id="serie2" maxlength="3" value="<?echo $serie2?>">
-                                                        <input NAME="codfactura" type="text" class="cajaMedia" id="codfactura" maxlength="16" value="<?echo $codfactura?>">
+                                                        <input NAME="serie1" type="text" class="cajaMinima" id="serie1" maxlength="3" value="<?php echo $serie1?>">
+                                                        <input NAME="serie2" type="text" class="cajaMinima" id="serie2" maxlength="3" value="<?php echo $serie2?>">
+                                                        <input NAME="codfactura" type="text" class="cajaMedia" id="codfactura" maxlength="16" value="<?php echo $codfactura?>">
 
                                                     </td>
                                                     <td width="6%">Autorizaci&oacute;n</td>
                                                     <td colspan="2">
-                                                        <input NAME="autorizacion" type="text" class="cajaPequena" id="autorizacion" maxlength="12" value="<?echo $autorizacion?>">
+                                                        <input NAME="autorizacion" type="text" class="cajaPequena" id="autorizacion" maxlength="12" value="<?php echo $autorizacion?>">
                                                     </td>
 
 
                                                 </tr>
 
-                                                <?
+                                                <?php 
 						 $sel_proveedor="SELECT * FROM proveedor WHERE id_proveedor='$idproveedor'";
 						  $rs_proveedor=mysql_query($sel_proveedor,$conn);
                                                 ?>
@@ -403,20 +403,20 @@ $baseimponible=$totalfactura-$flete-$importeiva+$descuento;
 
                                                 <tr>
 							<td width="6%">Proveedor</td>
-                                                        <td width="35%"><input NAME="nombre" type="text" class="cajaGrande" id="nombre" size="45" maxlength="45" onClick="abreVentana()" readonly value="<?php echo mysql_result($rs_proveedor,0,"empresa");?>">
+                                                        <td width="35%"><input NAME="nombre" type="text" class="cajaGrande" id="nombre" size="45" maxlength="45" onClick="abreVentana()" readonly value="<?php  echo mysql_result($rs_proveedor,0,"empresa");?>">
                                                         <img src="../img/ver.png" width="16" height="16" onClick="abreVentana()" title="Buscar cliente" onMouseOver="style.cursor=cursor"></td>
 
                                                         <td width="3%">CI/RUC</td>
-                                                    <td colspan="2"><input NAME="ci_ruc" type="text" class="cajaMedia" id="ci_ruc" size="20" maxlength="15" readonly value="<?php echo mysql_result($rs_proveedor,0,"ci_ruc");?>"></td>
+                                                    <td colspan="2"><input NAME="ci_ruc" type="text" class="cajaMedia" id="ci_ruc" size="20" maxlength="15" readonly value="<?php  echo mysql_result($rs_proveedor,0,"ci_ruc");?>"></td>
                                                        
                                                 </tr>
 						<tr>
                                                     <td width="6%">Cod. Proveedor</td>
-                                                    <td ><input NAME="codproveedor" type="text" class="cajaPequena" id="codproveedor" size="6" maxlength="5" readonly value="<?php echo mysql_result($rs_proveedor,0,"id_proveedor");?>" ></td>
+                                                    <td ><input NAME="codproveedor" type="text" class="cajaPequena" id="codproveedor" size="6" maxlength="5" readonly value="<?php  echo mysql_result($rs_proveedor,0,"id_proveedor");?>" ></td>
                                                     <td width="6%">Tipo Comprobante</td>
                                                     <td>
                                                         <select name="cbotipocomprobante" id="cbotipocomprobante" class="comboMedio" >
-                                                            <?php
+                                                            <?php 
                                                                 switch ($tipo_comprobante)
                                                                 {
                                                                     case 1:
@@ -424,21 +424,21 @@ $baseimponible=$totalfactura-$flete-$importeiva+$descuento;
                                                                             <option value="1" selected>Factura</option>
                                                                             <option value="2">Liquidaciones de  Compra</option>
                                                                             <option value="3">Nota de Venta</option>
-                                                            <?
+                                                            <?php 
                                                                         break;
                                                                     case 2:
                                                             ?>
                                                                             <option value="1">Factura</option>
                                                                             <option value="2">Liquidaciones de  Compra</option>
                                                                             <option value="3" selected>Nota de Venta</option>
-                                                            <?
+                                                            <?php 
                                                                         break;
                                                                     case 3:
                                                             ?>
                                                                             <option value="1">Factura</option>
                                                                             <option value="2" selected>Liquidaciones de  Compra</option>
                                                                             <option value="3">Nota de Venta</option>
-                                                            <?
+                                                            <?php 
                                                                         break;
                                                                 }
                                                             ?>                                             
@@ -447,18 +447,18 @@ $baseimponible=$totalfactura-$flete-$importeiva+$descuento;
                                                     
                                                     <td>CUENTA:
                                                         <select name="cbocuenta" id="cbocuenta" class="comboMedio" >
-                                                        <?php 
+                                                        <?php  
                                                             $query_cuenta="SELECT id_cuenta, nombre FROM cuenta WHERE gasto=1";
                                                             $sel_query=mysql_query($query_cuenta, $conn);
                                                             while ($row = mysql_fetch_array($sel_query)) {
                                                                 if($row['id_cuenta']==$cuenta)
                                                                 {
                                                         ?>
-                                                                    <option selected value="<?php echo $row['id_cuenta']?>"><?php echo $row['nombre']?></option>
-                                                          <?php } else {?>
-                                                                    <option value="<?php echo $row['id_cuenta']?>"><?php echo $row['nombre']?></option>
-                                                              <?php }?>
-                                                        <?php }?>
+                                                                    <option selected value="<?php  echo $row['id_cuenta']?>"><?php  echo $row['nombre']?></option>
+                                                          <?php  } else {?>
+                                                                    <option value="<?php  echo $row['id_cuenta']?>"><?php  echo $row['nombre']?></option>
+                                                              <?php  }?>
+                                                        <?php  }?>
                                                         </select>                                                    
                                                     </td>
                                                     
@@ -469,7 +469,7 @@ $baseimponible=$totalfactura-$flete-$importeiva+$descuento;
 						<tr>
                                                     <td width="6%">Fecha</td>
                                                     <td width="27%" >
-                                                        <input NAME="fecha" type="text" class="cajaPequena" id="fecha" size="10" maxlength="10" value="<?php echo implota($fecha)?>" readonly> <img src="../img/calendario.png" name="Image1" id="Image1" width="16" height="16" border="0" id="Image1" onMouseOver="this.style.cursor='pointer'">
+                                                        <input NAME="fecha" type="text" class="cajaPequena" id="fecha" size="10" maxlength="10" value="<?php  echo implota($fecha)?>" readonly> <img src="../img/calendario.png" name="Image1" id="Image1" width="16" height="16" border="0" id="Image1" onMouseOver="this.style.cursor='pointer'">
                                                     <script type="text/javascript">
                                                                                     Calendar.setup(
                                                                                       {
@@ -484,27 +484,27 @@ $baseimponible=$totalfactura-$flete-$importeiva+$descuento;
                                                     <td width="6%">CREDITO</td>
                                                         <td>
                                                             <select name="cbocredito" id="cbocredito" class="comboPequeno" onchange="activar_plazo(this.selectedIndex)">
-                                                                <?
+                                                                <?php 
                                                                     if ($credito==1)
                                                                     {
                                                                 ?>
                                                                         <option value="0">No</option>
                                                                         <option value="1" selected>Si</option>
 
-                                                                <?
+                                                                <?php 
                                                                     }
                                                                     else
                                                                     {
                                                                 ?>
                                                                         <option value="0" selected>No</option>
                                                                         <option value="1">Si</option>
-                                                                <?
+                                                                <?php 
                                                                     }
                                                                 ?>
                                                             </select>
 
                                                             <select name="cboplazo" id="cboplazo" class="comboPequeno" disabled="true">
-                                                                <?php
+                                                                <?php 
                                                                     switch ($plazo)
                                                                     {
                                                                         case 0:
@@ -522,7 +522,7 @@ $baseimponible=$totalfactura-$flete-$importeiva+$descuento;
                                                                                 <option value="10">300 d&iacute;as</option>
                                                                                 <option value="11">330 d&iacute;as</option>
                                                                                 <option value="12">360 d&iacute;as</option>
-                                                                 <?
+                                                                 <?php 
                                                                                 break;
                                                                         case 1:
                                                                  ?>
@@ -539,7 +539,7 @@ $baseimponible=$totalfactura-$flete-$importeiva+$descuento;
                                                                                 <option value="10">300 d&iacute;as</option>
                                                                                 <option value="11">330 d&iacute;as</option>
                                                                                 <option value="12">360 d&iacute;as</option>
-                                                                 <?
+                                                                 <?php 
                                                                                 break;
                                                                         case 2:
                                                                  ?>
@@ -556,7 +556,7 @@ $baseimponible=$totalfactura-$flete-$importeiva+$descuento;
                                                                                 <option value="10">300 d&iacute;as</option>
                                                                                 <option value="11">330 d&iacute;as</option>
                                                                                 <option value="12">360 d&iacute;as</option>
-                                                                 <?
+                                                                 <?php 
                                                                                 break;
                                                                         case 3:
                                                                  ?>
@@ -573,7 +573,7 @@ $baseimponible=$totalfactura-$flete-$importeiva+$descuento;
                                                                                 <option value="10">300 d&iacute;as</option>
                                                                                 <option value="11">330 d&iacute;as</option>
                                                                                 <option value="12">360 d&iacute;as</option>
-                                                                 <?
+                                                                 <?php 
                                                                                 break;
                                                                         case 4:
                                                                  ?>
@@ -590,7 +590,7 @@ $baseimponible=$totalfactura-$flete-$importeiva+$descuento;
                                                                                 <option value="10">300 d&iacute;as</option>
                                                                                 <option value="11">330 d&iacute;as</option>
                                                                                 <option value="12">360 d&iacute;as</option>
-                                                                 <?
+                                                                 <?php 
                                                                                 break;
                                                                         case 5:
                                                                  ?>
@@ -607,7 +607,7 @@ $baseimponible=$totalfactura-$flete-$importeiva+$descuento;
                                                                                 <option value="10">300 d&iacute;as</option>
                                                                                 <option value="11">330 d&iacute;as</option>
                                                                                 <option value="12">360 d&iacute;as</option>
-                                                                 <?
+                                                                 <?php 
                                                                                 break;
                                                                         case 6:
                                                                  ?>
@@ -624,7 +624,7 @@ $baseimponible=$totalfactura-$flete-$importeiva+$descuento;
                                                                                 <option value="10">300 d&iacute;as</option>
                                                                                 <option value="11">330 d&iacute;as</option>
                                                                                 <option value="12">360 d&iacute;as</option>
-                                                                 <?
+                                                                 <?php 
                                                                                 break;
                                                                         case 7:
                                                                  ?>
@@ -641,7 +641,7 @@ $baseimponible=$totalfactura-$flete-$importeiva+$descuento;
                                                                                 <option value="10">300 d&iacute;as</option>
                                                                                 <option value="11">330 d&iacute;as</option>
                                                                                 <option value="12">360 d&iacute;as</option>
-                                                                 <?
+                                                                 <?php 
                                                                                 break;
                                                                         case 8:
                                                                  ?>
@@ -658,7 +658,7 @@ $baseimponible=$totalfactura-$flete-$importeiva+$descuento;
                                                                                 <option value="10">300 d&iacute;as</option>
                                                                                 <option value="11">330 d&iacute;as</option>
                                                                                 <option value="12">360 d&iacute;as</option>
-                                                                 <?
+                                                                 <?php 
                                                                                 break;
                                                                         case 9:
                                                                  ?>
@@ -675,7 +675,7 @@ $baseimponible=$totalfactura-$flete-$importeiva+$descuento;
                                                                                 <option value="10">300 d&iacute;as</option>
                                                                                 <option value="11">330 d&iacute;as</option>
                                                                                 <option value="12">360 d&iacute;as</option>
-                                                                 <?
+                                                                 <?php 
                                                                                 break;
                                                                         case 10:
                                                                  ?>
@@ -692,7 +692,7 @@ $baseimponible=$totalfactura-$flete-$importeiva+$descuento;
                                                                                 <option value="10" selected>300 d&iacute;as</option>
                                                                                 <option value="11">330 d&iacute;as</option>
                                                                                 <option value="12">360 d&iacute;as</option>
-                                                                 <?
+                                                                 <?php 
                                                                                 break;
                                                                         case 11:
                                                                  ?>
@@ -709,7 +709,7 @@ $baseimponible=$totalfactura-$flete-$importeiva+$descuento;
                                                                                 <option value="10">300 d&iacute;as</option>
                                                                                 <option value="11" selected>330 d&iacute;as</option>
                                                                                 <option value="12">360 d&iacute;as</option>
-                                                                 <?
+                                                                 <?php 
                                                                                 break;
                                                                         case 12:
                                                                  ?>
@@ -726,7 +726,7 @@ $baseimponible=$totalfactura-$flete-$importeiva+$descuento;
                                                                                 <option value="10">300 d&iacute;as</option>
                                                                                 <option value="11">330 d&iacute;as</option>
                                                                                 <option value="12" selected>360 d&iacute;as</option>
-                                                                  <?
+                                                                  <?php 
                                                                                 break;
                                                                     }
                                                                   ?>
@@ -736,14 +736,14 @@ $baseimponible=$totalfactura-$flete-$importeiva+$descuento;
 
                                                         <td>SUJETA A RETENCION:
                                                             <select name="cboretencion" id="cboretencion" class="comboPequeno">
-                                                                <?
+                                                                <?php 
                                                                     if ($retencion==1)
                                                                     {
                                                                 ?>
                                                                         <option value="0">No</option>
                                                                         <option value="1" selected>Si</option>
                                                                         
-                                                                <?
+                                                                <?php 
                                                                     }
                                                                     else
                                                                     {
@@ -751,7 +751,7 @@ $baseimponible=$totalfactura-$flete-$importeiva+$descuento;
                                                                         <option value="0" selected>No</option>
                                                                         <option value="1">Si</option>
                                                                         
-                                                                <?
+                                                                <?php 
                                                                     }
                                                                 ?>
                                                             </select>
@@ -763,21 +763,21 @@ $baseimponible=$totalfactura-$flete-$importeiva+$descuento;
 						</tr>
 					</table>										
 			  </div>
-			  <!--<input id="codfacturatmp" name="codfacturatmp" value="<? echo $codfacturatmp?>" type="hidden">
-			  <input id="baseimpuestos2" name="baseimpuestos2" value="<? echo $baseimpuestos?>" type="hidden">
-			  <input id="baseimponible2" name="baseimponible2" value="<? echo $baseimponible?>" type="hidden">
-			  <input id="preciototal2" name="preciototal2" value="<? echo $preciototal?>" type="hidden">
-                          <input id="baseretencion2" name="baseretencion2" value="<?echo $baseretencion?>" type="hidden">-->
-                         <input id="idfactura" name="idfactura" value="<? echo $idfactura?>" type="hidden">
+			  <!--<input id="codfacturatmp" name="codfacturatmp" value="<?php  echo $codfacturatmp?>" type="hidden">
+			  <input id="baseimpuestos2" name="baseimpuestos2" value="<?php  echo $baseimpuestos?>" type="hidden">
+			  <input id="baseimponible2" name="baseimponible2" value="<?php  echo $baseimponible?>" type="hidden">
+			  <input id="preciototal2" name="preciototal2" value="<?php  echo $preciototal?>" type="hidden">
+                          <input id="baseretencion2" name="baseretencion2" value="<?php echo $baseretencion?>" type="hidden">-->
+                         <input id="idfactura" name="idfactura" value="<?php  echo $idfactura?>" type="hidden">
                           <input id="iva02" name="iva02" type="hidden" >
                           <input id="iva122" name="iva122" value="0" type="hidden">
-                          <input id="iva0final" name="iva0final" value="<?echo $iva0?>" type="hidden">
-                          <input id="iva12final" name="iva12final" value="<?echo $iva12?>" type="hidden">
-                          <input id="descuentototal2" name="descuentototal2" value="<?echo $descuento?>" type="hidden">
-                          <input id="importeiva2" name="importeiva2" value="<?echo $importeiva?>" type="hidden">
-			  <input id="baseimponible2" name="baseimponible2" value="<?echo $baseimponible?>" type="hidden">
-                          <input id="flete2" name="flete2" value="<?echo $flete?>" type="hidden">
-			  <input id="preciototal2" name="preciototal2" value="<?echo $totalfactura?>" type="hidden">
+                          <input id="iva0final" name="iva0final" value="<?php echo $iva0?>" type="hidden">
+                          <input id="iva12final" name="iva12final" value="<?php echo $iva12?>" type="hidden">
+                          <input id="descuentototal2" name="descuentototal2" value="<?php echo $descuento?>" type="hidden">
+                          <input id="importeiva2" name="importeiva2" value="<?php echo $importeiva?>" type="hidden">
+			  <input id="baseimponible2" name="baseimponible2" value="<?php echo $baseimponible?>" type="hidden">
+                          <input id="flete2" name="flete2" value="<?php echo $flete?>" type="hidden">
+			  <input id="preciototal2" name="preciototal2" value="<?php echo $totalfactura?>" type="hidden">
                           
 			  <input id="accion" name="accion" value="modificar" type="hidden">
 			  </form>
@@ -827,8 +827,8 @@ $baseimponible=$totalfactura-$flete-$importeiva+$descuento;
                                   </tr>                                                                       
 				</table>
 				</div>
-				<input name="idarticulo" value="<? echo $idarticulo?>" type="hidden" id="idarticulo">
-                               <!-- <input name="costo" value="<? //echo $costo?>" type="hidden" id="costo">-->
+				<input name="idarticulo" value="<?php  echo $idarticulo?>" type="hidden" id="idarticulo">
+                               <!-- <input name="costo" value="<?php  //echo $costo?>" type="hidden" id="costo">-->
 				<br>
 				<div id="frmBusqueda">
 				<table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0 ID="Table1">
@@ -856,42 +856,42 @@ $baseimponible=$totalfactura-$flete-$importeiva+$descuento;
                                     <tr>
                                         <td width="27%" class="busqueda" align="right">Subtotal</td>
                                             <td width="73%" align="right"><div align="center">
-                                                    <input class="cajaTotales" name="baseimponible" type="text" id="baseimponible" size="12" align="right" readonly value="<?echo $baseimponible?>">
+                                                    <input class="cajaTotales" name="baseimponible" type="text" id="baseimponible" size="12" align="right" readonly value="<?php echo $baseimponible?>">
                                     &#36;</div></td>
                                       </tr>
 
                                        <tr>
                                         <td width="27%" class="busqueda" align="right">Descuento</td>
                                             <td width="73%" align="right"><div align="center">
-                                                    <input class="cajaTotales" name="descuentototal" type="text" id="descuentototal" size="12" align="right" onchange="restar_descuento()" value="<?echo $descuento?>">
+                                                    <input class="cajaTotales" name="descuentototal" type="text" id="descuentototal" size="12" align="right" onchange="restar_descuento()" value="<?php echo $descuento?>">
                                     &#36;</div></td>
                                       </tr>
 
                                       <tr>
                                         <td width="27%" class="busqueda" align="right">IVA 0%</td>
                                             <td width="73%" align="right"><div align="center">
-                                          <input class="cajaTotales" name="iva0" type="text" id="iva0" size="12" align="right" readonly value="<?echo $iva0?>">
+                                          <input class="cajaTotales" name="iva0" type="text" id="iva0" size="12" align="right" readonly value="<?php echo $iva0?>">
                                     &#36;</div></td>
                                       </tr>
 
 
                                       <tr>
-                                            <td class="busqueda" align="right">IVA <?php echo $ivaporcetaje;?>%</td>
+                                            <td class="busqueda" align="right">IVA <?php  echo $ivaporcetaje;?>%</td>
                                             <td align="right"><div align="center">
-                                          <input class="cajaTotales" name="iva12" type="text" id="iva12" size="12" align="right" readonly value="<?echo $iva12?>">
+                                          <input class="cajaTotales" name="iva12" type="text" id="iva12" size="12" align="right" readonly value="<?php echo $iva12?>">
                                     &#36;</div></td>
                                       </tr>
 
                                       <tr>
                                         <td width="27%" class="busqueda" align="right">Total IVA</td>
                                             <td width="73%" align="right"><div align="center">
-                                          <input class="cajaTotales" name="importeiva" type="text" id="importeiva" size="12" align="right" readonly value="<?echo $importeiva?>">
+                                          <input class="cajaTotales" name="importeiva" type="text" id="importeiva" size="12" align="right" readonly value="<?php echo $importeiva?>">
                                     &#36;</div></td>
                                       </tr>
                                       <tr>
                                         <td width="27%" class="busqueda" align="right">Flete</td>
                                             <td width="73%" align="right"><div align="center">
-                                                    <input class="cajaTotales" name="flete" type="text" id="flete" size="12" align="right" onchange="sumar_flete()" value="<?echo $flete?>">
+                                                    <input class="cajaTotales" name="flete" type="text" id="flete" size="12" align="right" onchange="sumar_flete()" value="<?php echo $flete?>">
                                     &#36;</div></td>
                                       </tr>
 
@@ -900,7 +900,7 @@ $baseimponible=$totalfactura-$flete-$importeiva+$descuento;
                                       <tr>
                                           <td class="busqueda" align="right">Precio Total </td>
                                             <td align="right"><div align="center">
-                                          <input class="cajaTotales" name="preciototal" type="text" id="preciototal" size="12" align="right" readonly value="<?echo $totalfactura?>">
+                                          <input class="cajaTotales" name="preciototal" type="text" id="preciototal" size="12" align="right" readonly value="<?php echo $totalfactura?>">
                                     &#36;</div></td>
                                       </tr>
                         </table>
@@ -913,9 +913,9 @@ $baseimponible=$totalfactura-$flete-$importeiva+$descuento;
                                                     <img src="../img/botonaceptar.jpg" width="85" height="22" onClick="validar_cabecera()" border="1" onMouseOver="style.cursor=cursor">
                                                     <img src="../img/botoncancelar.jpg" width="85" height="22" onClick="cancelar()" border="1" onMouseOver="style.cursor=cursor">
                                                 
-                                                    <input id="idfactura" name="idfactura" value="<? echo $idfactura?>" type="hidden">
+                                                    <input id="idfactura" name="idfactura" value="<?php  echo $idfactura?>" type="hidden">
                                                     <input id="modif" name="modif" value="0" type="hidden">
-                                                    <input id="preciototal2" name="preciototal2" value="<? echo $totalfactura?>" type="hidden">
+                                                    <input id="preciototal2" name="preciototal2" value="<?php  echo $totalfactura?>" type="hidden">
                                               </div>
                                             </div>
                                         </td>

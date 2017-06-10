@@ -1,4 +1,4 @@
-<?
+<?php 
 
 $idsubgrupo=$_REQUEST["idsubgrupo"];
 
@@ -49,20 +49,20 @@ $grupo= $subgrupo->get_nombregrupo($row['id_grupo'],$conn);
 					<table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0>
                                              <tr>
                                                 <td width="15%"><strong>C&oacute;digo</strong></td>
-                                                <td width="85%" colspan="2"><?php echo $row['codigo']?></td>
+                                                <td width="85%" colspan="2"><?php  echo $row['codigo']?></td>
 					    </tr>
                                             <tr>
                                                 <td width="15%"><strong>Nombre</strong></td>
-                                                <td width="85%" colspan="2"><?php echo $row['nombre']?></td>
+                                                <td width="85%" colspan="2"><?php  echo $row['nombre']?></td>
 					    </tr>
                                             <tr>
                                                 <td width="15%"><strong>Grupo</strong></td>
-                                                <td width="85%" colspan="2"><?php echo $grupo['nombre']?></td>
+                                                <td width="85%" colspan="2"><?php  echo $grupo['nombre']?></td>
 					    </tr>
 					</table>
 			  </div>
 				<div id="botonBusqueda">
-					<img src="../img/botonaceptar.jpg" width="85" height="22" onClick="aceptar(<? echo $idsubgrupo?>)" border="1" onMouseOver="style.cursor=cursor">
+					<img src="../img/botonaceptar.jpg" width="85" height="22" onClick="aceptar(<?php  echo $idsubgrupo?>)" border="1" onMouseOver="style.cursor=cursor">
 					<img src="../img/botoncancelar.jpg" width="85" height="22" onClick="cancelar()" border="1" onMouseOver="style.cursor=cursor">
 			  </div>
 			  </div>

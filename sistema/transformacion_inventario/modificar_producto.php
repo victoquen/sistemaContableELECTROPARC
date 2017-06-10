@@ -1,4 +1,4 @@
-<?php  
+<?php   
 
 $idproducto=$_GET["idproducto"];
 
@@ -137,7 +137,7 @@ $stockconsignacion_articulo=mysql_result($rs_articulo,0,"stock_consignacion");
 
 		</script>
 	</head>
-        <body onload="activar_subgrupo('bodegas.php?idproducto='+<?php echo $idarticulo;?> ,'Acbobodega')">
+        <body onload="activar_subgrupo('bodegas.php?idproducto='+<?php  echo $idarticulo;?> ,'Acbobodega')">
 		<div id="pagina">
 			<div id="zonaContenido">
 				<div align="center">
@@ -147,26 +147,26 @@ $stockconsignacion_articulo=mysql_result($rs_articulo,0,"stock_consignacion");
 					<table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0>
 						<tr>
 							<td>ID</td>
-							<td><?php echo $idproducto?></td>
+							<td><?php  echo $idproducto?></td>
 						    <td width="42%" rowspan="14" align="left" valign="top"><ul id="lista-errores"></ul></td>
 						</tr>
                                                 <tr>
                                                     <td width="15%">Codigo</td>
-                                                    <td width="43%"><input  NAME="Acodigo" type="text" class="cajaGrande" id="cogigo" value="<?php echo $row['codigo']?>" size="45" maxlength="45"></td>
+                                                    <td width="43%"><input  NAME="Acodigo" type="text" class="cajaGrande" id="cogigo" value="<?php  echo $row['codigo']?>" size="45" maxlength="45"></td>
                                                 </tr>
 
 						<tr>
                                                     <td width="15%">Nombre</td>
-                                                    <td width="43%"><input  NAME="Anombre" type="text" class="cajaGrande" id="nombre" value="<?php echo $row['nombre']?>" size="45" maxlength="45"></td>
+                                                    <td width="43%"><input  NAME="Anombre" type="text" class="cajaGrande" id="nombre" value="<?php  echo $row['nombre']?>" size="45" maxlength="45"></td>
                                                 </tr>
 
                                                  <tr style="background: lightblue">
                                                     <td>Producto Derivado</td>
                                                     <td>
-                                                        <input NAME="Anombrearticulo" type="text" class="cajaGrande" id="nombrearticulo" value="<?echo $nombre_articulo?>" size="15" maxlength="15" onClick="ventanaArticulos()" readonly>
+                                                        <input NAME="Anombrearticulo" type="text" class="cajaGrande" id="nombrearticulo" value="<?php echo $nombre_articulo?>" size="15" maxlength="15" onClick="ventanaArticulos()" readonly>
                                                         <img src="../img/ver.png" width="16" height="16" onClick="ventanaArticulos()" onMouseOver="style.cursor=cursor" title="Buscar articulos">
 														<br/>Bodega:<select name="Acbobodega" id="Acbobodega" class="comboMedio"  ></select>
-                                                        <br/>Costo:<input name="costo_aux" id="costo_aux" type="text" value="<?echo $costo_articulo?>" class="cajaPequena" readonly onchange="convertir()" value="0"> Pvp:<input name="pvp_aux" id="pvp_aux" value="<?echo $pvp_articulo?>" type="text" class="cajaPequena" readonly>
+                                                        <br/>Costo:<input name="costo_aux" id="costo_aux" type="text" value="<?php echo $costo_articulo?>" class="cajaPequena" readonly onchange="convertir()" value="0"> Pvp:<input name="pvp_aux" id="pvp_aux" value="<?php echo $pvp_articulo?>" type="text" class="cajaPequena" readonly>
                                                     </td>
                                                 </tr>
 
@@ -187,62 +187,62 @@ $stockconsignacion_articulo=mysql_result($rs_articulo,0,"stock_consignacion");
 
                                                 <tr>
                                                     <td width="15%">GRAVA IVA</td>                                                   
-                                                    <td width="43%"><input name="iva_show" type="text" class="cajaPequena" id="iva_show" value="<?echo $row['iva']?>" readonly></td>
+                                                    <td width="43%"><input name="iva_show" type="text" class="cajaPequena" id="iva_show" value="<?php echo $row['iva']?>" readonly></td>
                                                 </tr>
                                                 <tr>
                                                     <td width="15%">Stock</td>
-                                                    <td width="43%"><?echo $row['stock']?> + <input NAME="Astock" type="text" class="cajaPequena" id="stock" value="0" size="15" maxlength="45" readonly></td>
+                                                    <td width="43%"><?php echo $row['stock']?> + <input NAME="Astock" type="text" class="cajaPequena" id="stock" value="0" size="15" maxlength="45" readonly></td>
                                                 </tr>
                                                 <tr>
                                                     <td width="15%">Stock Consignacion</td>
-                                                    <td width="43%"><input NAME="astock_consignacion" type="text" class="cajaPequena" id="stock_consignacion" value="<?php echo $row['stock_consignacion']?>" size="15" maxlength="45"></td>
+                                                    <td width="43%"><input NAME="astock_consignacion" type="text" class="cajaPequena" id="stock_consignacion" value="<?php  echo $row['stock_consignacion']?>" size="15" maxlength="45"></td>
                                                 </tr>
                                                 <tr>
                                                     <td width="15%">Costo</td>
-                                                    <td width="43%"><input NAME="qcosto" type="text" class="cajaPequena" id="costo" value="<?php echo $row['costo']?>" size="15" maxlength="45" value="0"></td>
+                                                    <td width="43%"><input NAME="qcosto" type="text" class="cajaPequena" id="costo" value="<?php  echo $row['costo']?>" size="15" maxlength="45" value="0"></td>
                                                 </tr>
                                                 <tr>
                                                     <td width="15%">PVP</td>
-                                                    <td width="43%"><input NAME="Qpvp" type="text" class="cajaPequena" id="pvp" value="<?php echo $row['pvp']?>" size="15" maxlength="45"></td>
+                                                    <td width="43%"><input NAME="Qpvp" type="text" class="cajaPequena" id="pvp" value="<?php  echo $row['pvp']?>" size="15" maxlength="45"></td>
                                                 </tr>
 												
 												<tr>
                                                     <td width="15%">Utilidad</td>
-                                                    <td width="43%"><input NAME="qutilidad" type="text" class="cajaPequena" id="utilidad" size="15" maxlength="45" value="<?php echo $row['utilidad']?>">%</td>
+                                                    <td width="43%"><input NAME="qutilidad" type="text" class="cajaPequena" id="utilidad" size="15" maxlength="45" value="<?php  echo $row['utilidad']?>">%</td>
                                                 </tr>
                                                 
                                                 <tr>
                                                     <td width="17%">Composici&oacute;n</td>
-                                                    <td><textarea readonly name="acomposicion" cols="41" rows="2" id="composicion" class="areaTexto"><?php echo $row['composicion']?></textarea></td>
+                                                    <td><textarea readonly name="acomposicion" cols="41" rows="2" id="composicion" class="areaTexto"><?php  echo $row['composicion']?></textarea></td>
                                                 </tr>
                                                 <tr>
                                                     <td width="17%">Aplicaci&oacute;n</td>
-                                                    <td><textarea readonly name="aplicacion" cols="41" rows="2" id="aplicacion" class="areaTexto"><?php echo $row['aplicacion']?></textarea></td>
+                                                    <td><textarea readonly name="aplicacion" cols="41" rows="2" id="aplicacion" class="areaTexto"><?php  echo $row['aplicacion']?></textarea></td>
                                                 </tr>
                                                 <tr>
                                                     <td width="15%">Proveedor</td>                                                    
-                                                       <?
+                                                       <?php 
                                                         $query_prov="SELECT id_proveedor, empresa FROM proveedor";
                                                         $result_prov=mysql_query($query_prov,$conn);
                                                     ?>
                                                     <td width="43%">
                                                         <select disabled name="Aproveedor" id="proveedor" class="comboGrande">
                                                             <option value="0">Seleccionar Proveedor</option>
-                                                        <?
+                                                        <?php 
                                                             $contador=0;
                                                             while ($contador<mysql_num_rows($result_prov))
                                                             {
                                                                 if($row['proveedor']== mysql_result($result_prov,$contador,"id_proveedor"))
                                                                 {
                                                         ?>
-                                                                <option selected value="<?echo mysql_result($result_prov,$contador,"id_proveedor")?>"><?echo mysql_result($result_prov,$contador,"empresa")?></option>
-                                                        <?
+                                                                <option selected value="<?php echo mysql_result($result_prov,$contador,"id_proveedor")?>"><?php echo mysql_result($result_prov,$contador,"empresa")?></option>
+                                                        <?php 
                                                                 }
                                                                 else
                                                                 {
                                                         ?>
-                                                                <option value="<?echo mysql_result($result_prov,$contador,"id_proveedor")?>"><?echo mysql_result($result_prov,$contador,"empresa")?></option>
-                                                         <?
+                                                                <option value="<?php echo mysql_result($result_prov,$contador,"id_proveedor")?>"><?php echo mysql_result($result_prov,$contador,"empresa")?></option>
+                                                         <?php 
                                                                 }
                                                             $contador++;
                                                             }
@@ -256,14 +256,14 @@ $stockconsignacion_articulo=mysql_result($rs_articulo,0,"stock_consignacion");
 
                                                  <tr>
                                                     <td>Grupo</td>
-                                                    <?
+                                                    <?php 
                                                         $query_grupo="SELECT id_grupo, nombre FROM grupo";
                                                         $result_grupo=mysql_query($query_grupo,$conn);
                                                     ?>
                                                     <td>
                                                         <select disabled name="Agrupo" id="grupo" class="comboGrande" onchange="activar_subgrupo('subgrupo.php?grupo='+this.value,'subgrupo')">
                                                             <option value="0">Seleccionar Grupo</option>
-                                                        <?
+                                                        <?php 
                                                             $contador1=0;
                                                             while ($contador1<mysql_num_rows($result_grupo))
                                                             {
@@ -271,14 +271,14 @@ $stockconsignacion_articulo=mysql_result($rs_articulo,0,"stock_consignacion");
                                                                 {
 
                                                         ?>
-                                                            <option selected value="<?echo mysql_result($result_grupo,$contador1,"id_grupo")?>"><?echo mysql_result($result_grupo,$contador1,"nombre")?></option>
-                                                        <?
+                                                            <option selected value="<?php echo mysql_result($result_grupo,$contador1,"id_grupo")?>"><?php echo mysql_result($result_grupo,$contador1,"nombre")?></option>
+                                                        <?php 
                                                                 }
                                                                 else
                                                                 {
                                                         ?>
-                                                            <option value="<?echo mysql_result($result_grupo,$contador1,"id_grupo")?>"><?echo mysql_result($result_grupo,$contador1,"nombre")?></option>
-                                                         <?
+                                                            <option value="<?php echo mysql_result($result_grupo,$contador1,"id_grupo")?>"><?php echo mysql_result($result_grupo,$contador1,"nombre")?></option>
+                                                         <?php 
                                                                 }
                                                             $contador1++;
                                                             }
@@ -291,13 +291,13 @@ $stockconsignacion_articulo=mysql_result($rs_articulo,0,"stock_consignacion");
                                                 <tr>
                                                     <td>Subgrupo</td>
                                                     <td>
-                                                        <?
+                                                        <?php 
                                                             $query_subgrupo="SELECT id_subgrupo, nombre FROM subgrupo WHERE id_grupo=".$row['grupo'];
                                                             $result_subgrupo=mysql_query($query_subgrupo,$conn);
                                                         ?>
                                                         <select disabled name="Asubgrupo" id="subgrupo" class="comboGrande" >
 
-                                                         <?
+                                                         <?php 
                                                             $contador2=0;
                                                             while ($contador2<mysql_num_rows($result_subgrupo))
                                                             {
@@ -305,14 +305,14 @@ $stockconsignacion_articulo=mysql_result($rs_articulo,0,"stock_consignacion");
                                                                 {
 
                                                         ?>
-                                                            <option selected value="<?echo mysql_result($result_subgrupo,$contador2,"id_subgrupo")?>"><?echo mysql_result($result_subgrupo,$contador2,"nombre")?></option>
-                                                        <?
+                                                            <option selected value="<?php echo mysql_result($result_subgrupo,$contador2,"id_subgrupo")?>"><?php echo mysql_result($result_subgrupo,$contador2,"nombre")?></option>
+                                                        <?php 
                                                                 }
                                                                 else
                                                                 {
                                                         ?>
-                                                            <option value="<?echo mysql_result($result_subgrupo,$contador2,"id_grupo")?>"><?echo mysql_result($result_subgrupo,$contador2,"nombre")?></option>
-                                                         <?
+                                                            <option value="<?php echo mysql_result($result_subgrupo,$contador2,"id_grupo")?>"><?php echo mysql_result($result_subgrupo,$contador2,"nombre")?></option>
+                                                         <?php 
                                                                 }
                                                             $contador2++;
                                                             }
@@ -330,16 +330,16 @@ $stockconsignacion_articulo=mysql_result($rs_articulo,0,"stock_consignacion");
 					<img src="../img/botoncancelar.jpg" width="85" height="22" onClick="cancelar()" border="1" onMouseOver="style.cursor=cursor">
 
 
-                                        <input name="stock_producto" id="stock_producto" value="<?echo $stock_articulo?>" type="hidden">
-                                        <input name="stockconsignacion_producto" id="stockconsignacion_producto" value="<?echo $stockconsignacion_articulo?>" type="hidden">
-                                        <input name="id_producto" id="id_producto" value="<?echo $idarticulo?>" type="hidden">
-                                        <input name="iva" type="hidden" id="iva" value="<?echo $row['iva']?>">
+                                        <input name="stock_producto" id="stock_producto" value="<?php echo $stock_articulo?>" type="hidden">
+                                        <input name="stockconsignacion_producto" id="stockconsignacion_producto" value="<?php echo $stockconsignacion_articulo?>" type="hidden">
+                                        <input name="id_producto" id="id_producto" value="<?php echo $idarticulo?>" type="hidden">
+                                        <input name="iva" type="hidden" id="iva" value="<?php echo $row['iva']?>">
 
 
 
                                         <input id="accion" name="accion" value="modificar" type="hidden">
 					<input id="id" name="id" value="" type="hidden">
-					<input id="idproducto" name="idproducto" value="<?php echo $idproducto?>" type="hidden">
+					<input id="idproducto" name="idproducto" value="<?php  echo $idproducto?>" type="hidden">
 			  </div>
 			  </form>
 		  </div>

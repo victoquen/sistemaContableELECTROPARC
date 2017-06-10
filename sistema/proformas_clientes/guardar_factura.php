@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 include ("../js/fechas.php");
 include ("../conexion/conexion.php");
@@ -654,23 +654,23 @@ if ($accion=="modificar") {
 		
 		</script>
 	</head>
-        <body onload="imprimir(<? echo $idfactura?>)">
+        <body onload="imprimir(<?php  echo $idfactura?>)">
 		<div id="pagina">
 			<div id="zonaContenido">
 				<div align="center">
-				<div id="tituloForm" class="header"><?php echo $cabecera2?></div>
+				<div id="tituloForm" class="header"><?php  echo $cabecera2?></div>
 				<div id="frmBusqueda">
 					<table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0>
 						<tr>
 							<td width="15%"></td>
-							<td width="85%" colspan="3" class="mensaje"><?php echo $mensaje;?></td>
+							<td width="85%" colspan="3" class="mensaje"><?php  echo $mensaje;?></td>
 					    </tr>
-						<?php if ($minimo==1) { ?>
+						<?php  if ($minimo==1) { ?>
                                             <tr>
 							<td width="15%"></td>
-							<td width="85%" colspan="3" class="mensajeminimo">Los siguientes productos se encuentran sin stock:<br><?php echo $mensaje_minimo ."</ul>"?></td>
+							<td width="85%" colspan="3" class="mensajeminimo">Los siguientes productos se encuentran sin stock:<br><?php  echo $mensaje_minimo ."</ul>"?></td>
 					    </tr>
-                                            <?php } 
+                                            <?php  } 
                                                 $sel_cliente="SELECT c.nombre as nombre, c.ci_ruc as ci_ruc, c.direccion as direccion, tc.nombre as tipocliente
                                                                FROM cliente c INNER JOIN tipo_cliente tc ON c.codigo_tipocliente = tc.codigo_tipocliente 
                                                                WHERE id_cliente='$idcliente'";
@@ -678,32 +678,32 @@ if ($accion=="modificar") {
                                             ?>
                                             <tr>
                                                 <td width="15%">Cliente CI/RUC</td>
-                                                <td width="35%"><?php echo mysql_result($rs_cliente,0,"nombre")." -- ".mysql_result($rs_cliente,0,"ci_ruc");?></td>
+                                                <td width="35%"><?php  echo mysql_result($rs_cliente,0,"nombre")." -- ".mysql_result($rs_cliente,0,"ci_ruc");?></td>
                                                 <td width="15%">Tipo Cliente</td>
-                                                <td width="35%"><?php echo $tipocliente?></td>
+                                                <td width="35%"><?php  echo $tipocliente?></td>
 					    </tr>                                            
                                              
                                             <tr>
                                                 <td>Guia Remision</td>
-                                                <td><?php if($remision==0) {echo "No";} else {echo "Si";} ?></td>
+                                                <td><?php  if($remision==0) {echo "No";} else {echo "Si";} ?></td>
                                                 <td>Direcci&oacute;n</td>
-                                                <td><?php echo mysql_result($rs_cliente,0,"direccion"); ?></td>
+                                                <td><?php  echo mysql_result($rs_cliente,0,"direccion"); ?></td>
 					    </tr>
                                             <tr>
                                                 
                                             </tr>
                                             <tr>
                                                 <td>No. Factura</td>
-                                                <td><?php echo $serie1."--".$serie2."--".$codfactura?></td>
+                                                <td><?php  echo $serie1."--".$serie2."--".$codfactura?></td>
                                                 <td>Autorizaci&oacute;n</td>
-                                                <td><?php echo $autorizacion?></td>
+                                                <td><?php  echo $autorizacion?></td>
                                             </tr>                                           
                                             <tr>
                                                 <td>Fecha</td>
-                                                <td><?php echo implota($fecha)?></td>
+                                                <td><?php  echo implota($fecha)?></td>
                                                 <td>Cr&eacute;dito</td>
                                                 <td>
-                                                <?php
+                                                <?php 
                                                     if ($credito==1)
                                                         echo "Si --- <b>PLAZO: </b> ".($plazo*30);
                                                     else
@@ -728,7 +728,7 @@ if ($accion=="modificar") {
 					</table>
 					<table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0 ID="Table1">
                                             
-					  <?php //$sel_lineas="SELECT factulinea.*,articulos.*,familias.nombre as nombrefamilia FROM factulinea,articulos,familias WHERE factulinea.codfactura='$codfactura' AND factulinea.codigo=articulos.codarticulo AND factulinea.codfamilia=articulos.codfamilia AND articulos.codfamilia=familias.codfamilia ORDER BY factulinea.numlinea ASC";
+					  <?php  //$sel_lineas="SELECT factulinea.*,articulos.*,familias.nombre as nombrefamilia FROM factulinea,articulos,familias WHERE factulinea.codfactura='$codfactura' AND factulinea.codigo=articulos.codarticulo AND factulinea.codfamilia=articulos.codfamilia AND articulos.codfamilia=familias.codfamilia ORDER BY factulinea.numlinea ASC";
                                                 $sel_lineas="SELECT b.codigo as codigo, b.nombre as nombre, a.cantidad as cantidad, a.precio as precio, a.subtotal as subtotal, a.dcto as dcto, a.iva as iva FROM proforlinea a INNER JOIN producto b ON a.id_producto=b.id_producto WHERE a.id_factura = '$idfactura'";
                                                 $rs_lineas=mysql_query($sel_lineas,$conn);
 						for ($i = 0; $i < mysql_num_rows($rs_lineas); $i++) {							
@@ -740,18 +740,18 @@ if ($accion=="modificar") {
                                                         $descuento_ind=mysql_result($rs_lineas,$i,"dcto");
                                                         $iva=mysql_result($rs_lineas, $i, "iva");
 							if ($i % 2) { $fondolinea="itemParTabla"; } else { $fondolinea="itemImparTabla"; } ?>
-									<tr class="<? echo $fondolinea?>">
+									<tr class="<?php  echo $fondolinea?>">
 										
-                                                                                <td width="16%"><?php echo $codarticulo?></td>
-                                                                                <td width="36%"><?php echo $descripcion?></td>
-                                                                                <td width="5%"><?php echo $cantidad?></td>
-                                                                                <td width="8%" align="center"><?php echo $precio?></td>
-                                                                                <td width="8%" align="center"><?php echo $subtotal?></td>
-                                                                                <td width="8%" align="center"><?php echo $descuento_ind?></td>
-                                                                                <td width="8%" align="center"><?php echo $iva?></td>
-                                                                                <td width="8%" align="center"><?php echo (($subtotal-$descuento_ind)+$iva)?></td>
+                                                                                <td width="16%"><?php  echo $codarticulo?></td>
+                                                                                <td width="36%"><?php  echo $descripcion?></td>
+                                                                                <td width="5%"><?php  echo $cantidad?></td>
+                                                                                <td width="8%" align="center"><?php  echo $precio?></td>
+                                                                                <td width="8%" align="center"><?php  echo $subtotal?></td>
+                                                                                <td width="8%" align="center"><?php  echo $descuento_ind?></td>
+                                                                                <td width="8%" align="center"><?php  echo $iva?></td>
+                                                                                <td width="8%" align="center"><?php  echo (($subtotal-$descuento_ind)+$iva)?></td>
 									</tr>
-					<?php } ?>
+					<?php  } ?>
 					</table>
                                 </div>
 
@@ -759,37 +759,37 @@ if ($accion=="modificar") {
 					<table width="25%" border=0 align="right" cellpadding=1 cellspacing=0 class="fuente8">
 						<tr>
 							<td width="15%">Subtotal:</td>
-							<td width="5%" align="right"><?php echo number_format($baseimponible,2);?> &#36;</td>
+							<td width="5%" align="right"><?php  echo number_format($baseimponible,2);?> &#36;</td>
                                                         <td width="3%"></td>
 						</tr>
                                                 <tr>
 							<td width="15%">Dcto.:</td>
-							<td width="5%" align="right"><?php echo number_format($descuento,2);?> &#36;</td>
+							<td width="5%" align="right"><?php  echo number_format($descuento,2);?> &#36;</td>
                                                         <td width="1%"></td>
 						</tr>
                                                 <tr>
 							<td width="15%">IVA 0:</td>
-							<td width="5%" align="right"><?php echo number_format($iva0,2);?> &#36;</td>
+							<td width="5%" align="right"><?php  echo number_format($iva0,2);?> &#36;</td>
                                                         <td width="1%"></td>
 						</tr>
                                                 <tr>
 							<td width="15%">IVA 12:</td>
-							<td width="5%" align="right"><?php echo number_format($iva12,2);?> &#36;</td>
+							<td width="5%" align="right"><?php  echo number_format($iva12,2);?> &#36;</td>
                                                         <td width="1%"></td>
 						</tr>
 						<tr>
 							<td width="15%">Total IVA:</td>
-							<td width="5%" align="right"><?php echo number_format($importeiva,2);?> &#36;</td>
+							<td width="5%" align="right"><?php  echo number_format($importeiva,2);?> &#36;</td>
                                                         <td width="1%"></td>
 						</tr>
                                                  <tr>
                                                         <td width="15%">Flete:</td>
-							<td width="5%" align="right"><?php echo $flete?> &#36;</td>
+							<td width="5%" align="right"><?php  echo $flete?> &#36;</td>
                                                         <td width="1%"></td>
 						</tr>
 						<tr>
 							<td width="15%">Total:</td>
-							<td width="5%" align="right"><?php echo $totalfactura?> &#36;</td>
+							<td width="5%" align="right"><?php  echo $totalfactura?> &#36;</td>
                                                         <td width="1%"></td>
 						</tr>
                                                
@@ -798,16 +798,16 @@ if ($accion=="modificar") {
                                         <div id="botonBusqueda">
                                                 <div align="center">
                                                     <!--
-                                                    <? if ($accion=="alta")
+                                                    <?php  if ($accion=="alta")
                                                     {
                                                     ?>
-                                                    <img src="../img/botoncobrar.png" width="85" height="22" onClick="aceptar(<?echo $validacion?>,'<? echo $accion?>',<? echo $idfactura?>)" border="1" onMouseOver="style.cursor=cursor">
-                                                    <? } else{?>
-                                                    <img src="../img/botonaceptar.jpg" width="85" height="22" onClick="aceptar(<?echo $validacion?>,'<? echo $accion?>',<? echo $idfactura?>)" border="1" onMouseOver="style.cursor=cursor">
-                                                    <?}?>
+                                                    <img src="../img/botoncobrar.png" width="85" height="22" onClick="aceptar(<?php echo $validacion?>,'<?php  echo $accion?>',<?php  echo $idfactura?>)" border="1" onMouseOver="style.cursor=cursor">
+                                                    <?php  } else{?>
+                                                    <img src="../img/botonaceptar.jpg" width="85" height="22" onClick="aceptar(<?php echo $validacion?>,'<?php  echo $accion?>',<?php  echo $idfactura?>)" border="1" onMouseOver="style.cursor=cursor">
+                                                    <?php }?>
                                                     -->
-                                                <img src="../img/botonaceptar.jpg" width="85" height="22" onClick="aceptar(<?echo $validacion?>,'<? echo $accion?>',<? echo $idfactura?>)" border="1" onMouseOver="style.cursor=cursor">
-                                                <img src="../img/botonimprimir.jpg" width="79" height="22" border="1" onClick="imprimir(<? echo $idfactura?>)" onMouseOver="style.cursor=cursor">
+                                                <img src="../img/botonaceptar.jpg" width="85" height="22" onClick="aceptar(<?php echo $validacion?>,'<?php  echo $accion?>',<?php  echo $idfactura?>)" border="1" onMouseOver="style.cursor=cursor">
+                                                <img src="../img/botonimprimir.jpg" width="79" height="22" border="1" onClick="imprimir(<?php  echo $idfactura?>)" onMouseOver="style.cursor=cursor">
                                                 </div>
                                         </div>   
                                 

@@ -1,4 +1,4 @@
-<?php
+<?php 
 include_once 'class/retencionero.php';
 include_once '../conexion/conexion.php';
 include ("../js/fechas.php");
@@ -85,45 +85,45 @@ if ($accion=="modificar") {
 		<div id="pagina">
 			<div id="zonaContenido">
 				<div align="center">
-				<div id="tituloForm" class="header"><?php echo $cabecera2?></div>
+				<div id="tituloForm" class="header"><?php  echo $cabecera2?></div>
 				<div id="frmBusqueda">
 					<table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0>
 						<tr>
                                                     <td width="8%">Tipo Servicio</td>
-                                                   <td><?php echo $serie1?></td>
+                                                   <td><?php  echo $serie1?></td>
 
                                                 </tr>
                                                 <tr>
                                                     <td width="8%">No. Local</td>
-                                                    <td width="43%"><?php echo $serie2?></td>
+                                                    <td width="43%"><?php  echo $serie2?></td>
 
                                                 </tr>
                                                 <tr>
                                                     <td width="8%">Autorizaci&oacute;n</td>
-                                                    <td width="43%"><?php echo $autorizacion?></td>
+                                                    <td width="43%"><?php  echo $autorizacion?></td>
 
                                                 </tr>
                                                 <tr>
                                                     <td width="8%">Serie Inicio</td>
-                                                    <td width="43%"><?php echo $inicio?></td>
+                                                    <td width="43%"><?php  echo $inicio?></td>
 
                                                 </tr>
                                                 <tr>
                                                     <td width="8%">Serie Fin</td>
-                                                    <td width="43%"><?php echo $fin?></td>
+                                                    <td width="43%"><?php  echo $fin?></td>
 
                                                 </tr>
                                                 <tr>
 
                                                      <td width="8%">Fecha</td>
-						    <td width="43%"><? echo implota($fecha_caducidad)?></td>
+						    <td width="43%"><?php  echo implota($fecha_caducidad)?></td>
 
 
                                                 </tr>
 					</table>
 			  </div>
 				<div id="botonBusqueda">
-					<img src="../img/botonaceptar.jpg" width="85" height="22" onClick="aceptar(<?php echo $validacion?>)" border="1" onMouseOver="style.cursor=cursor">
+					<img src="../img/botonaceptar.jpg" width="85" height="22" onClick="aceptar(<?php  echo $validacion?>)" border="1" onMouseOver="style.cursor=cursor">
 			  </div>
 			 </div>
 		  </div>

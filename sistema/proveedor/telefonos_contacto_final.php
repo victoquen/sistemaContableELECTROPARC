@@ -5,7 +5,7 @@
     <link href="../estilos/estilos.css" type="text/css" rel="stylesheet">
 
 
-<?php
+<?php 
 
 error_reporting(0);
 include ("../conexion/conexion.php");
@@ -62,7 +62,7 @@ $idcontacto=$_GET["idcontacto"];
                             <div id="tituloForm" class="header">CONTACTO TELEFONOS</div>
                             <table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0 >
 
-                                 <?php
+                                 <?php 
 
                                     $query_o="SELECT * FROM operadora WHERE borrado=0 ORDER BY nombre ASC";
                                     $res_o=mysql_query($query_o,$conn);
@@ -86,13 +86,13 @@ $idcontacto=$_GET["idcontacto"];
                                     <td width="25%">
                                         <select id="operadora"  class="comboMedio" NAME="operadora">
                                             <option value="0">Seleccionar operadora</option>
-                                            <?php
+                                            <?php 
                                             $contador=0;
                                             while ($contador < mysql_num_rows($res_o))
                                                 {
                                               ?>
-                                                        <option value="<?php echo mysql_result($res_o,$contador,"id_operadora")?>"><?php echo mysql_result($res_o,$contador,"nombre")?></option>
-                                            <?php $contador++;
+                                                        <option value="<?php  echo mysql_result($res_o,$contador,"id_operadora")?>"><?php  echo mysql_result($res_o,$contador,"nombre")?></option>
+                                            <?php  $contador++;
                                             } ?>
                                         </select>
                                    </td>
@@ -148,8 +148,8 @@ $idcontacto=$_GET["idcontacto"];
               </tr>
             </table>
               <input id="modif" name="modif" value="0" type="hidden">
-             <input id="idproveedor" name="idproveedor" value="<?php echo $idproveedor;?>" type="hidden">
-             <input id="idcontacto" name="idcontacto" value="<?php echo $idcontacto;?>" type="hidden">
+             <input id="idproveedor" name="idproveedor" value="<?php  echo $idproveedor;?>" type="hidden">
+             <input id="idcontacto" name="idcontacto" value="<?php  echo $idcontacto;?>" type="hidden">
             </form>
         </div>
     </div>

@@ -23,7 +23,7 @@ function modificar_facturero(idruc,idfacturero)
 </script>
 <link href="../estilos/estilos.css" type="text/css" rel="stylesheet">
 <body>
-<?php
+<?php 
 
 error_reporting(0);
 include ("../js/fechas.php");
@@ -63,7 +63,7 @@ if ($modif<>1) {
                 <div align="center">
                    
                     <table class="fuente8" width="70%" cellspacing=0 cellpadding=3 border=0 ID="Table1">
-            <?php
+            <?php 
             $sel_lineas="SELECT a.id_facturero, a.id_ruc,a.serie1,a.serie2, a.autorizacion, a.inicio,a.fin, a.fecha_caducidad
                         FROM facturero a 
                         WHERE a.id_ruc = $idruc";
@@ -80,17 +80,17 @@ if ($modif<>1) {
                 $fecha_caducidad=implota(mysql_result($rs_lineas,$i,"fecha_caducidad"));
                     
                     if ($i % 2) { $fondolinea="itemImparTabla"; } else { $fondolinea="itemParTabla"; } ?>
-                        <tr class="<?php echo $fondolinea?>" style="height: 5px">
+                        <tr class="<?php  echo $fondolinea?>" style="height: 5px">
 
-                                            <td align="center" width="10%"><?php echo $establecimiento?></td>
-                                            <td align="center" width="10%"><?php echo $tiposervicio?></td>                                           
-                                            <td align="center" width="10%"><?php echo $serieinicio?></td>
-                                            <td align="center" width="10%"><?php echo $seriefin?></td>
-                                            <td align="center" width="10%"><?php echo $autorizacion?></td>   
-                                            <td align="center" width="10%"><?php echo $fecha_caducidad?></td>                                            
-                                            <td align="center" width="5%"><a href="javascript:modificar_facturero(<?php echo $idruc?>,<?php echo $idfacturero?>)"><img src="../img/modificar.png" border="0"></a></td>
+                                            <td align="center" width="10%"><?php  echo $establecimiento?></td>
+                                            <td align="center" width="10%"><?php  echo $tiposervicio?></td>                                           
+                                            <td align="center" width="10%"><?php  echo $serieinicio?></td>
+                                            <td align="center" width="10%"><?php  echo $seriefin?></td>
+                                            <td align="center" width="10%"><?php  echo $autorizacion?></td>   
+                                            <td align="center" width="10%"><?php  echo $fecha_caducidad?></td>                                            
+                                            <td align="center" width="5%"><a href="javascript:modificar_facturero(<?php  echo $idruc?>,<?php  echo $idfacturero?>)"><img src="../img/modificar.png" border="0"></a></td>
                                     </tr>
-            <?php } ?>
+            <?php  } ?>
             </table>
       </div>
    </div>

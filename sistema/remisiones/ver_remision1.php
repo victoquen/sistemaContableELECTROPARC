@@ -1,4 +1,4 @@
-<?
+<?php 
 include ("../js/fechas.php");
 include_once '../conexion/conexion.php';
 
@@ -65,31 +65,31 @@ $res_fono=mysql_query($query_fono,$conn);
                                                 <tr>
                                                     <td width="10%">No. retencion</td>
                                                     <td>
-                                                        <?echo mysql_result($res_ret,0,"serie1") ." - ".mysql_result($res_ret,0,"serie2")."  # ".mysql_result($res_ret,0,"codigo_retencion") ?>
+                                                        <?php echo mysql_result($res_ret,0,"serie1") ." - ".mysql_result($res_ret,0,"serie2")."  # ".mysql_result($res_ret,0,"codigo_retencion") ?>
                                                     </td>
                                                     <td width="12%">Autorizaci&oacute;n</td>
                                                     <td colspan="2">
-                                                        <?echo mysql_result($res_ret,0,"autorizacion")?>
+                                                        <?php echo mysql_result($res_ret,0,"autorizacion")?>
                                                     </td>
                                                 </tr>
 						<tr>
                                                     <td width="10%">Proveedor</td>
-                                                    <td width="27%"><?echo mysql_result($res_prov,0,"empresa")?></td>
+                                                    <td width="27%"><?php echo mysql_result($res_prov,0,"empresa")?></td>
                                                     <td width="12%">CI/RUC</td>
-                                                    <td  colspan="2"><?echo mysql_result($res_prov,0,"ci_ruc")?></td>
+                                                    <td  colspan="2"><?php echo mysql_result($res_prov,0,"ci_ruc")?></td>
 						</tr>
                                                 <tr>
                                                     <td width="10%">Direcci&oacute;n</td>
-						    <td width="27%"><?echo mysql_result($res_prov,0,"direccion")?></td>
+						    <td width="27%"><?php echo mysql_result($res_prov,0,"direccion")?></td>
                                                     <td width="12%">Telf.:</td>
-                                                    <td  colspan="2"><?echo mysql_result($res_fono,0,"numero")?></td>
+                                                    <td  colspan="2"><?php echo mysql_result($res_fono,0,"numero")?></td>
 						</tr>
 						<tr>
                                                     <td width="10%">Fecha</td>
-						    <td width="27%"><?echo implota(mysql_result($res_ret,0,"fecha"))?></td>
+						    <td width="27%"><?php echo implota(mysql_result($res_ret,0,"fecha"))?></td>
 
                                                     <td width="12%">Tipo Comprobante</td>
-                                                    <?
+                                                    <?php 
                                                         $tipocomprob= mysql_result($res_prov,0,"tipocomprobante");
                                                         switch ($tipocomprob)
                                                         {
@@ -107,15 +107,15 @@ $res_fono=mysql_query($query_fono,$conn);
                                                                     break;
                                                         }
                                                     ?>
-                                                    <td ><?echo $comprobante?></td>
+                                                    <td ><?php echo $comprobante?></td>
 
                                                     <td width="12%">No. Comprobante</td>
-                                                    <td><?echo mysql_result($res_prov,0,"serie1")." - ".mysql_result($res_prov,0,"serie2")."  # ".mysql_result($res_prov,0,"codigo_factura")?></td>
+                                                    <td><?php echo mysql_result($res_prov,0,"serie1")." - ".mysql_result($res_prov,0,"serie2")."  # ".mysql_result($res_prov,0,"codigo_factura")?></td>
 
                                                 </tr>
                                                 <tr>
                                                     <td>Concepto</td>
-                                                    <td colspan="5"><?echo mysql_result($res_ret,0,"concepto")?></td>
+                                                    <td colspan="5"><?php echo mysql_result($res_ret,0,"concepto")?></td>
                                                 </tr>
 					  <tr>
 						  <td></td>
@@ -135,7 +135,7 @@ $res_fono=mysql_query($query_fono,$conn);
 					</table>
 					<table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0 ID="Table1">
 
-					  <? 
+					  <?php  
                                                 $sel_lineas="SELECT rt.ejercicio_fiscal as ejercicio_fiscal, rt.base_imponible as base_imponible, rt.impuesto as impuesto,
                                                             rt.codigo_impuesto as codigo_impuesto, rt.porcentaje_retencion as porcentaje_retencion,
                                                             rt.valor_retenido as valor_retenido
@@ -149,16 +149,16 @@ $res_fono=mysql_query($query_fono,$conn);
                                                         $porcentaje_retencion=mysql_result($rs_lineas,$i,"porcentaje_retencion");
                                                         $valor_retenido=mysql_result($rs_lineas,$i,"valor_retenido");
 							if ($i % 2) { $fondolinea="itemParTabla"; } else { $fondolinea="itemImparTabla"; } ?>
-									<tr class="<? echo $fondolinea?>">
+									<tr class="<?php  echo $fondolinea?>">
 
-                                                                                <td width="16%" align="center"><? echo $ejercicio_fiscal?></td>
-                                                                                <td width="16%" align="center"><? echo number_format($base_imponible,2)?> &#36;</td>
-                                                                                <td width="35%"><? echo $impuesto?></td>
-                                                                                <td width="8%" align="center"><? echo $codigo_impuesto?></td>
-                                                                                <td width="8%" align="center"><? echo $porcentaje_retencion?></td>
-                                                                                <td width="8%" align="center"><? echo number_format($valor_retenido,2)?> &#36;</td>
+                                                                                <td width="16%" align="center"><?php  echo $ejercicio_fiscal?></td>
+                                                                                <td width="16%" align="center"><?php  echo number_format($base_imponible,2)?> &#36;</td>
+                                                                                <td width="35%"><?php  echo $impuesto?></td>
+                                                                                <td width="8%" align="center"><?php  echo $codigo_impuesto?></td>
+                                                                                <td width="8%" align="center"><?php  echo $porcentaje_retencion?></td>
+                                                                                <td width="8%" align="center"><?php  echo number_format($valor_retenido,2)?> &#36;</td>
 									</tr>
-					<? } ?>
+					<?php  } ?>
 					</table>
 			  </div>
 
@@ -166,7 +166,7 @@ $res_fono=mysql_query($query_fono,$conn);
 					<table width="15%" border=0 align="right" cellpadding=3 cellspacing=0 class="fuente8">
 						<tr>
 							<td width="15%">Total:</td>
-							<td width="15%"><?php echo number_format(mysql_result($res_ret,0,"totalretencion"),2);?> &#36;</td>
+							<td width="15%"><?php  echo number_format(mysql_result($res_ret,0,"totalretencion"),2);?> &#36;</td>
 						</tr>
 
 
@@ -177,7 +177,7 @@ $res_fono=mysql_query($query_fono,$conn);
 
                                             <img src="../img/botonaceptar.jpg" width="85" height="22" onClick="aceptar()" border="1" onMouseOver="style.cursor=cursor">
 
-                                            <img src="../img/botonimprimir.jpg" width="79" height="22" border="1" onClick="imprimir(<? echo $idretencion?>)" onMouseOver="style.cursor=cursor">
+                                            <img src="../img/botonimprimir.jpg" width="79" height="22" border="1" onClick="imprimir(<?php  echo $idretencion?>)" onMouseOver="style.cursor=cursor">
 				        </div>
 					</div>
 			  </div>

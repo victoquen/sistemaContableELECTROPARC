@@ -78,8 +78,8 @@ if ($modif<>1) {
                                             <td align="center" width="15%"><?php echo $numero?></td>
                                             <td align="center" width="15%"><?php echo $operadora?></td>
                                             <td align="center" width="25%"><?php echo $descripcion?></td>
-                                            <td align="center" width="5%"><a href="javascript:eliminar_linea(<?php echo $idproveedor?>,<?php echo $idcontacto?>,<?php echo $idtelefono?>)"><img src="../img/eliminar.png" border="0"></a></td>
-                                            <td align="center" width="5%"><a href="javascript:modificar_contactofono(<?php echo $idproveedor?>,<?php echo $idcontacto?>,<?php echo $idtelefono?>)"><img src="../img/modificar.png" border="0"></a></td>
+                                            <td align="center" width="5%"><a href="javascript:eliminar_linea(<?php echo $idproveedor;?>,<?php echo $idcontacto;?>,<?php echo $idtelefono;?>)"><img src="../img/eliminar.png" border="0"></a></td>
+                                            <td align="center" width="5%"><a href="javascript:modificar_contactofono(<?php echo $idproveedor;?>,<?php echo $idcontacto;?>,<?php echo $idtelefono;?>)"><img src="../img/modificar.png" border="0"></a></td>
                                     </tr>
             <?php } ?>
             </table>

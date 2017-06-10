@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 error_reporting(0);
 include ("../js/fechas.php");
@@ -191,20 +191,20 @@ $productos_sent = json_encode($productos_array);
         doc.setFontSize(11);
         //doc.text(x+100, y+25, '006515050505');//numfac
         doc.setFontSize(8);
-        doc.text(x+5, y+42, '<?php echo $nombre_cliente?>');//nombre cliente
+        doc.text(x+5, y+42, '<?php  echo $nombre_cliente?>');//nombre cliente
 
-        doc.text(x+103, y+45, '<?php echo $dia?>');//dia
+        doc.text(x+103, y+45, '<?php  echo $dia?>');//dia
 
-        doc.text(x+111, y+45, '<?php echo $mes?>');//mes
+        doc.text(x+111, y+45, '<?php  echo $mes?>');//mes
 
-        doc.text(x+120, y+45, '<?php echo $anio?>');//anio
-        var direccion = '<?php echo $direccion?>';//direccion
+        doc.text(x+120, y+45, '<?php  echo $anio?>');//anio
+        var direccion = '<?php  echo $direccion?>';//direccion
         var sub= direccion.substring(0,55);//direccion
         doc.text(x+5, y+50, sub);//direccion
         doc.text(x+80, y+50, '0987595254');//telefono
 
-        doc.text(x+5, y+60, '<?php echo $ci_ruc?>');//ci_ruc
-        doc.text(x+35, y+60, '<?php echo $fpdescripcion?>');//forma de pago
+        doc.text(x+5, y+60, '<?php  echo $ci_ruc?>');//ci_ruc
+        doc.text(x+35, y+60, '<?php  echo $fpdescripcion?>');//forma de pago
 
 
         doc.text(x+111, y+55, 'RIOBAMBA');//LUGAR
@@ -215,7 +215,7 @@ $productos_sent = json_encode($productos_array);
         var yy=y+78;
         doc.setFontSize(6);
 
-    var prod_array = (<?php echo $productos_sent;?>);
+    var prod_array = (<?php  echo $productos_sent;?>);
     var n = prod_array.length;
 
     for(var i=0;i<n;i++){

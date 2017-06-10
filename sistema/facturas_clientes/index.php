@@ -1,4 +1,4 @@
-<?php
+<?php 
 session_start();
 //id facturero segun el usuario de la sesion
 $id_facturero=$_SESSION['id_facturero'];
@@ -29,7 +29,7 @@ if($id_facturero == -1){
 		}
 		
 		function nuevo_facturaventa() {
-			location.href="new_facturaventa.php?idfacturero=<?php echo $id_facturero?>&tipo=<?php echo $tipo?>";
+			location.href="new_facturaventa.php?idfacturero=<?php  echo $id_facturero?>&tipo=<?php  echo $tipo?>";
 		}		
 		</script>
 	</head>

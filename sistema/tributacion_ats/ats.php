@@ -1,4 +1,4 @@
-<?php
+<?php 
 include ("../js/fechas.php");
 
 /* Database connection */
@@ -115,21 +115,21 @@ $razon_social = mysql_result($res_ruc, 0, "razonsocial");
                         <table class="fuente8" width="40%" cellspacing=0 cellpadding=3 border=0>
                             <tr>
                                 <td width ="10%"><b>MES:</b></td>
-                                <td width ="10%"><?php echo $mes_contable ?></td>
+                                <td width ="10%"><?php  echo $mes_contable ?></td>
                                 <td width = "20%"><b>RUC:</b></td>
-                                <td align = "left"><?php echo $id_informante ?></td>
+                                <td align = "left"><?php  echo $id_informante ?></td>
                             </tr>
                             <tr>
                                 <td><b>A&Ntilde;O:</b></td>
-                                <td><?php echo $ano ?></td>
+                                <td><?php  echo $ano ?></td>
 
                                 <td><b>RAZON SOCIAL:</b></td>
-                                <td><?php echo $razon_social ?></td>
+                                <td><?php  echo $razon_social ?></td>
                             </tr>
                         </table>
 
 
-                        <?php
+                        <?php 
                         $query_retencionero = "SELECT serie1, serie2, autorizacion FROM retencionero";
                         $res_retencionero = mysql_query($query_retencionero, $conn);
                         $serie1_retencionero = mysql_result($res_retencionero, 0, "serie1");
@@ -178,27 +178,27 @@ $razon_social = mysql_result($res_ruc, 0, "razonsocial");
                                 <td><b>ESTABLECIMIENTO</b></td>
                                 <td><b>SUBTOTAL</b></td>
                             </tr>
-<?php
+<?php 
 for ($auxi = 0; $auxi < count($array_factureroventas); $auxi++) {
     ?>    
 
                                 <tr>
-                                    <td><?php echo $array_factureroventas[$auxi]["establecimiento"]; ?></td>
-                                    <td><?php echo number_format($array_factureroventas[$auxi]["subtotal"], 2, ".", ""); ?></td>
+                                    <td><?php  echo $array_factureroventas[$auxi]["establecimiento"]; ?></td>
+                                    <td><?php  echo number_format($array_factureroventas[$auxi]["subtotal"], 2, ".", ""); ?></td>
                                 </tr>
 
-    <?php
+    <?php 
 }
 ?>
 
                             <tr>
                                 <td align="right"><b>TOTAL</b></td>
-                                <td><b><?php echo number_format($totalVentas, 2, ".", "") ?></b></td>
+                                <td><b><?php  echo number_format($totalVentas, 2, ".", "") ?></b></td>
                             </tr>
                         </table>
 
 
-<?php
+<?php 
 //creacion xml *****************************************************************
 $xml = new DomDocument('1.0', 'UTF-8');
 $iva = $xml->createElement('iva');
@@ -526,36 +526,36 @@ $base_retencio332=$basenograiva + $baseimponible +$iva12;
                             </tr>
                             <tr>
                                 <td><b>Base Imponible no objeto de IVA</b></td>
-                                <td><?php echo number_format($subtotal_basenogravaiva, 2, ".", ""); ?></td>
+                                <td><?php  echo number_format($subtotal_basenogravaiva, 2, ".", ""); ?></td>
                             </tr>
                             <tr>
                                 <td><b>Base Imponible tarifa 0% de IVA</b></td>
-                                <td><?php echo number_format($subtotal_baseimponible, 2, ".", ""); ?></td>
+                                <td><?php  echo number_format($subtotal_baseimponible, 2, ".", ""); ?></td>
                             </tr>
                             <tr>
                                 <td><b>Base Imponible gravada</b></td>
-                                <td><?php echo number_format($subtotal_baseimpgrav, 2, ".", ""); ?></td>
+                                <td><?php  echo number_format($subtotal_baseimpgrav, 2, ".", ""); ?></td>
                             </tr>
                             <tr>
-                                <td><b>Retención de IVA 30% bienes</b></td>
-                                <td><?php echo number_format($subtotal_valorretbienes, 2, ".", ""); ?></td>
+                                <td><b>Retenciï¿½n de IVA 30% bienes</b></td>
+                                <td><?php  echo number_format($subtotal_valorretbienes, 2, ".", ""); ?></td>
                             </tr>
                             <tr>                                
-                                <td><b>Retención de IVA 70% servicios</b></td>
-                                <td><?php echo number_format($subtotal_valorretservicios, 2, ".", ""); ?></td>
+                                <td><b>Retenciï¿½n de IVA 70% servicios</b></td>
+                                <td><?php  echo number_format($subtotal_valorretservicios, 2, ".", ""); ?></td>
                             </tr>
                             <tr>                                
-                                <td><b> Retención de IVA 100%</b></td>
-                                <td><?php echo number_format($subtotal_valretserv100, 2, ".", ""); ?></td>
+                                <td><b> Retenciï¿½n de IVA 100%</b></td>
+                                <td><?php  echo number_format($subtotal_valretserv100, 2, ".", ""); ?></td>
                             </tr>
                             <tr>                                
                                 <td><b>TOTAL Retenciones</b></td>
-                                <td><?php echo number_format($subtotal_retenciones, 2, ".", ""); ?></td>                                
+                                <td><?php  echo number_format($subtotal_retenciones, 2, ".", ""); ?></td>                                
                             </tr>
                         </table>
 
 
-<?php
+<?php 
 //inicio ventas ****************************************************************
 //ventas facturas tipoComprobante 18**********
 $query_ventas = "SELECT c.ci_ruc as ruc, COUNT(f.id_factura) as numerocomprobantes, SUM(f.iva0 + flete) as iva0, SUM(f.iva12) as iva12, SUM(f.iva) as importeiva, SUM(f.ret_iva) as retiva, SUM(f.ret_fuente) as retfuente
@@ -758,7 +758,7 @@ $xml->save('c:\ats\\' . $nombrearchivo . '.xml');
                             </tr>
                             <tr>
                                 <td><b>Total Anuladas</b></td>
-                                <td><?php echo $i; ?></td>                                                                
+                                <td><?php  echo $i; ?></td>                                                                
                             </tr>
                         </table>
 

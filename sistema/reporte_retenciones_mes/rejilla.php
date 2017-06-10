@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 include ("../js/fechas.php");
 include_once '../conexion/conexion.php';
@@ -69,7 +69,7 @@ $total_retenciones=mysql_result($rs_totreten,0,"total");
                         "bFilter": false,
                         "bProcessing": true,
                         "bServerSide": true,
-                        "sAjaxSource": "processing_retenciones.php?fecha_inicio=<?echo $fechainicio?>&fecha_fin=<?echo $fechafin?>",
+                        "sAjaxSource": "processing_retenciones.php?fecha_inicio=<?php echo $fechainicio?>&fecha_fin=<?php echo $fechafin?>",
                         "sPaginationType": "full_numbers",
 
                        "sDom": 'T<"clear">lfrtip',
@@ -138,13 +138,13 @@ $total_retenciones=mysql_result($rs_totreten,0,"total");
 
                                 <thead>
                                     <tr>
-                                        <?php if($fechainicio != $fechafin) {?>
-                                        <th colspan="5"><span style="font-size: 12px">PERIODO DESDE: <?php echo implota($fechainicio)?> ----- HASTA: <?php echo implota($fechafin)?></span></th>
-                                        <th colspan="4"><span style="font-size: 12px">TOTAL RETENCIONES: $ <?php echo $total_retenciones?></span></th>
-                                        <?php } else {?>
-                                        <th colspan="5"><span style="font-size: 12px">FECHA: <?php echo implota($fechafin)?></span></th>
-                                        <th colspan="4"><span style="font-size: 12px">TOTAL RETENCIONES: $ <?php echo $total_retenciones?></span></th>
-                                        <?php }?>
+                                        <?php  if($fechainicio != $fechafin) {?>
+                                        <th colspan="5"><span style="font-size: 12px">PERIODO DESDE: <?php  echo implota($fechainicio)?> ----- HASTA: <?php  echo implota($fechafin)?></span></th>
+                                        <th colspan="4"><span style="font-size: 12px">TOTAL RETENCIONES: $ <?php  echo $total_retenciones?></span></th>
+                                        <?php  } else {?>
+                                        <th colspan="5"><span style="font-size: 12px">FECHA: <?php  echo implota($fechafin)?></span></th>
+                                        <th colspan="4"><span style="font-size: 12px">TOTAL RETENCIONES: $ <?php  echo $total_retenciones?></span></th>
+                                        <?php  }?>
                                     </tr>
                                     <tr>
                                         

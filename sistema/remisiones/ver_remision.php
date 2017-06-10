@@ -1,4 +1,4 @@
-<?
+<?php 
 include ("../js/fechas.php");
 include_once '../conexion/conexion.php';
 
@@ -61,17 +61,17 @@ $res_clie=mysql_query($query_clie,$conn);
 					<table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0>
                                             <tr>
 							<td width="15%"></td>
-							<td width="85%" colspan="5" class="mensaje"><?php echo $mensaje;?></td>
+							<td width="85%" colspan="5" class="mensaje"><?php  echo $mensaje;?></td>
 					    </tr>
 						 <tr>
                                                     <td width="10%">No. remision</td>
                                                     <td>
-                                                        <?echo mysql_result($res_rem,0,"serie1")?> - <?echo mysql_result($res_rem,0,"serie2")?> # <?echo mysql_result($res_rem,0,"codigo_remision")?>
+                                                        <?php echo mysql_result($res_rem,0,"serie1")?> - <?php echo mysql_result($res_rem,0,"serie2")?> # <?php echo mysql_result($res_rem,0,"codigo_remision")?>
 
                                                     </td>
                                                     <td width="5%">Autorizaci&oacute;n</td>
                                                     <td colspan="2">
-                                                        <?echo mysql_result($res_rem,0,"autorizacion")?>
+                                                        <?php echo mysql_result($res_rem,0,"autorizacion")?>
                                                     </td>
 
                                                 </tr>
@@ -80,69 +80,69 @@ $res_clie=mysql_query($query_clie,$conn);
 
                                                 <tr>
                                                     <td width="12%">No. Comprobante</td>
-                                                    <td><?echo mysql_result($res_clie,0,"serie1")." - ".mysql_result($res_clie,0,"serie2")."  # ".mysql_result($res_clie,0,"codigo_factura")?></td>
+                                                    <td><?php echo mysql_result($res_clie,0,"serie1")." - ".mysql_result($res_clie,0,"serie2")."  # ".mysql_result($res_clie,0,"codigo_factura")?></td>
                                                 <tr/>
                                                 <tr>
                                                     <td width="12%">Fecha de Emisi&oacute;n</td>
-                                                    <td><?echo implota(mysql_result($res_clie,0,"fecha"))?></td>
+                                                    <td><?php echo implota(mysql_result($res_clie,0,"fecha"))?></td>
                                                 </tr>
 
                                                 <tr><td colspan="4"><hr/></td></tr>
 
                                                 <tr>
                                                     <td width="12%">Fecha Inicio Traslado</td>
-                                                    <td><?echo implota(mysql_result($res_clie,0,"fecha"))?></td>
+                                                    <td><?php echo implota(mysql_result($res_clie,0,"fecha"))?></td>
                                                 </tr>
 
 
                                                 <tr>
                                                     <td width="12%">Fecha Fin Traslado</td>
-                                                    <td><?echo implota(mysql_result($res_rem,0,"fecha_fin"))?> </td>
+                                                    <td><?php echo implota(mysql_result($res_rem,0,"fecha_fin"))?> </td>
                                                 </tr>
 
                                                 <tr>
                                                     <td>Motivo del Traslado:</td>
-                                                    <td><?echo mysql_result($res_rem,0,"motivo")?></td>
+                                                    <td><?php echo mysql_result($res_rem,0,"motivo")?></td>
                                                 </tr>
 
 						<tr>
                                                     <td width="10%">Fecha Emision</td>
-                                                    <td><?echo implota(mysql_result($res_clie,0,"fecha"))?></td>
+                                                    <td><?php echo implota(mysql_result($res_clie,0,"fecha"))?></td>
 						</tr>
                                                 <tr>
                                                     <td width="10%">Punto Partida</td>
-						    <td width="27%"><?echo mysql_result($res_rem,0,"punto_partida")?></td>
+						    <td width="27%"><?php echo mysql_result($res_rem,0,"punto_partida")?></td>
 						</tr>
                                                 <tr><td><b>DESTINATARIO</b></td></tr>
 
                                                 <tr>
                                                     <td width="10%">NOMBRE</td>
-						    <td width="27%"><?echo mysql_result($res_clie,0,"nombre")?></td>
+						    <td width="27%"><?php echo mysql_result($res_clie,0,"nombre")?></td>
 						</tr>
 
                                                 <tr>
                                                     <td>CI/RUC</td>
-                                                    <td width="27%"><?echo mysql_result($res_clie,0,"ci_ruc")?></td>
+                                                    <td width="27%"><?php echo mysql_result($res_clie,0,"ci_ruc")?></td>
                                                 </tr>
 
 						<tr>
                                                     <td width="10%">Punto LLegada</td>
-						    <td width="27%"><? echo mysql_result($res_clie,0,"lugar")." -- ". mysql_result($res_clie,0,"direccion") ?></td>
+						    <td width="27%"><?php  echo mysql_result($res_clie,0,"lugar")." -- ". mysql_result($res_clie,0,"direccion") ?></td>
                                                 </tr>
 
                                                 <tr><td colspan="4"><hr/></td></tr>
                                                 <tr><td colspan="2"><b>IDENTIFICACION PERSONA ENCARGADA TRANSPORTE</b></td></tr>
                                                 <tr>
                                                     <td>NOMBRE</td>
-                                                    <td width="27%"><?echo mysql_result($res_rem,0,"nombre_trans")?></td>
+                                                    <td width="27%"><?php echo mysql_result($res_rem,0,"nombre_trans")?></td>
                                                 </tr>
                                                 <tr>
                                                     <td>CI/RUC</td>
-                                                    <td width="27%"><?echo mysql_result($res_rem,0,"ci_trans")?></td>
+                                                    <td width="27%"><?php echo mysql_result($res_rem,0,"ci_trans")?></td>
                                                 </tr>
 					</table>
 
-                                    <? $query_productos="SELECT f.cantidad as cantidad, p.nombre as nombre
+                                    <?php  $query_productos="SELECT f.cantidad as cantidad, p.nombre as nombre
                                                          FROM factulinea as f INNER JOIN producto as p ON f.id_producto = p.id_producto
                                                          WHERE f.id_factura = $id_factura";
 
@@ -156,19 +156,19 @@ $res_clie=mysql_query($query_clie,$conn);
                                             <th width="10%">CANTIDADES</th>
                                             <th width="90%">DESCRIPCION</th>
                                         </tr>
-                                        <?
+                                        <?php 
                                         while ( $aRow = mysql_fetch_array( $res_prod ) )
                                         {
                                         ?>
                                             <tr>
                                                 <td align="center">
-                                                    <? echo $aRow["cantidad"]?>
+                                                    <?php  echo $aRow["cantidad"]?>
                                                 </td>
                                                 <td align="center">
-                                                    <? echo $aRow["nombre"]?>
+                                                    <?php  echo $aRow["nombre"]?>
                                                 </td>
                                             </tr>
-                                        <?
+                                        <?php 
                                         }
                                         ?>
                                     </table>
@@ -180,7 +180,7 @@ $res_clie=mysql_query($query_clie,$conn);
 
                                             <img src="../img/botonaceptar.jpg" width="85" height="22" onClick="aceptar()" border="1" onMouseOver="style.cursor=cursor">
 
-                                            <img src="../img/botonimprimir.jpg" width="79" height="22" border="1" onClick="imprimir(<? echo $idremision?>)" onMouseOver="style.cursor=cursor">
+                                            <img src="../img/botonimprimir.jpg" width="79" height="22" border="1" onClick="imprimir(<?php  echo $idremision?>)" onMouseOver="style.cursor=cursor">
 				        </div>
 					</div>
 			  </div>

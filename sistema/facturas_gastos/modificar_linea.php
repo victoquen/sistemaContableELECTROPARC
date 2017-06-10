@@ -1,4 +1,4 @@
-<?
+<?php 
 include ("../conexion/conexion.php");
 $usuario = new ServidorBaseDatos();
 $conn = $usuario->getConexion();
@@ -156,32 +156,32 @@ body {
           <table class="fuente8" width="95%" id="tabla_resultado" name="tabla_resultado" align="center">
                 <tr>
                   <td>Producto:</td>
-                  <td><strong><? echo mysql_result($rs_l,0,'nombre')?></strong></td>
+                  <td><strong><?php  echo mysql_result($rs_l,0,'nombre')?></strong></td>
                 </tr>
                 <tr>
                     <td width="5%">Cantidad:</td>
-                    <td width="40%"><input NAME="cantidad" type="text" class="cajaPequena" id="cantidad" value="<?echo mysql_result($rs_l,0,'cantidad');?>" maxlength="13" onChange="actualizar_importe()"></td>
+                    <td width="40%"><input NAME="cantidad" type="text" class="cajaPequena" id="cantidad" value="<?php echo mysql_result($rs_l,0,'cantidad');?>" maxlength="13" onChange="actualizar_importe()"></td>
                 </tr>
                 <tr>
                     <td width="5%">Precio:</td>
-                    <td width="40%"><input NAME="precio" type="text" class="cajaPequena" id="precio" value="<?echo mysql_result($rs_l,0,"costo");?>" size="45" maxlength="45" onChange="actualizar_importe()">&#36;</td>
+                    <td width="40%"><input NAME="precio" type="text" class="cajaPequena" id="precio" value="<?php echo mysql_result($rs_l,0,"costo");?>" size="45" maxlength="45" onChange="actualizar_importe()">&#36;</td>
                 </tr>
                 <tr>
                     <td>Dcto.:</td>
                     <td>
-                        <input NAME="descuento_porc" type="text" class="cajaMinima" id="descuento_porc" size="10" maxlength="10" onChange="actualizar_importe()" value="<?php echo $descuento_porc?>"> %
-                        <input NAME="descuento" type="text" class="cajaPequena2" id="descuento" size="10" maxlength="10" value="<?php echo $descuento?>" readonly="yes">&#36;
+                        <input NAME="descuento_porc" type="text" class="cajaMinima" id="descuento_porc" size="10" maxlength="10" onChange="actualizar_importe()" value="<?php  echo $descuento_porc?>"> %
+                        <input NAME="descuento" type="text" class="cajaPequena2" id="descuento" size="10" maxlength="10" value="<?php  echo $descuento?>" readonly="yes">&#36;
                     </td>
                 </tr>
                 <tr>
                     <td width="5%">Subtotal:</td>
-                    <td width="40%"><input NAME="importe" type="text" class="cajaPequena" id="importe" value="<?echo $importe;?>" maxlength="13"></td>
+                    <td width="40%"><input NAME="importe" type="text" class="cajaPequena" id="importe" value="<?php echo $importe;?>" maxlength="13"></td>
                 </tr>               
                 <tr>
                     <td width="5%">Iva:</td>
                     <td width="40%">
-                        <input NAME="ivaporc" type="text" class="cajaMinima" id="ivaporc" size="10" maxlength="10" onChange="suma_iva()" readonly value="<?echo $iva_porc?>">%
-                        <input NAME="iva" type="text" class="cajaMedia" id="iva" value="<?echo $iva;?>" size="45" maxlength="45">&#36;
+                        <input NAME="ivaporc" type="text" class="cajaMinima" id="ivaporc" size="10" maxlength="10" onChange="suma_iva()" readonly value="<?php echo $iva_porc?>">%
+                        <input NAME="iva" type="text" class="cajaMedia" id="iva" value="<?php echo $iva;?>" size="45" maxlength="45">&#36;
                     </td>
                 </tr>
 
@@ -194,7 +194,7 @@ body {
         <table width="100%" border="0">
           <tr>
             <td><div align="center">
-              <img src="../img/botonaceptar.jpg"  onClick="guardar_articulo(<?echo $importe_pasar?>,<?echo $iva_pasar?>,<?php echo $descuento_pasar?>)" border="1" onMouseOver="style.cursor=cursor">
+              <img src="../img/botonaceptar.jpg"  onClick="guardar_articulo(<?php echo $importe_pasar?>,<?php echo $iva_pasar?>,<?php  echo $descuento_pasar?>)" border="1" onMouseOver="style.cursor=cursor">
               <img src="../img/botoncerrar.jpg" width="70" height="22" onClick="window.close()" border="1" onMouseOver="style.cursor=cursor">
 
             </div></td>
@@ -203,11 +203,11 @@ body {
         <iframe id="frame_datos" name="frame_datos" width="0%" height="0" frameborder="0">
                 <ilayer width="0" height="0" id="frame_datos" name="frame_datos"></ilayer>
         </iframe>
-            <input id="importe_pasar" name="importe_pasar" value="<?echo $importe_pasar?>" type="hidden">
-            <input id="iva_pasar" name="iva_pasar" value="<?echo $iva_pasar?>" type="hidden">
-            <input id="descuento_pasar" name="descuento_pasar" value="<?echo $descuento_pasar?>" type="hidden">
-       <input id="idproveedor" name="codfactura" value="<?php echo $codfactura?>" type="hidden">
-       <input id="idtelefono" name="numlinea" value="<?php echo $numlinea?>" type="hidden">
+            <input id="importe_pasar" name="importe_pasar" value="<?php echo $importe_pasar?>" type="hidden">
+            <input id="iva_pasar" name="iva_pasar" value="<?php echo $iva_pasar?>" type="hidden">
+            <input id="descuento_pasar" name="descuento_pasar" value="<?php echo $descuento_pasar?>" type="hidden">
+       <input id="idproveedor" name="codfactura" value="<?php  echo $codfactura?>" type="hidden">
+       <input id="idtelefono" name="numlinea" value="<?php  echo $numlinea?>" type="hidden">
 
         </form>
 

@@ -1,4 +1,4 @@
-<?php  
+<?php   
 
 $idsubgrupo=$_GET["idsubgrupo"];
 
@@ -50,21 +50,21 @@ $row = $subgrupo->get_subgrupo_id($conn, $idsubgrupo);
 					<table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0>
 						<tr>
 							<td>ID</td>
-							<td><?php echo $idsubgrupo?></td>
+							<td><?php  echo $idsubgrupo?></td>
 						    <td width="42%" rowspan="14" align="left" valign="top"><ul id="lista-errores"></ul></td>
 						</tr>
                                                 <tr>
                                                     <td width="15%">Codigo</td>
-                                                    <td width="43%"><input NAME="Acodigo" type="text" class="cajaGrande" id="cogigo" value="<?php echo $row['codigo']?>" size="45" maxlength="45"></td>
+                                                    <td width="43%"><input NAME="Acodigo" type="text" class="cajaGrande" id="cogigo" value="<?php  echo $row['codigo']?>" size="45" maxlength="45"></td>
                                                 </tr>
 
 						<tr>
                                                     <td width="15%">Nombre</td>
-                                                    <td width="43%"><input NAME="Anombre" type="text" class="cajaGrande" id="nombre" value="<?php echo $row['nombre']?>" size="45" maxlength="45"></td>
+                                                    <td width="43%"><input NAME="Anombre" type="text" class="cajaGrande" id="nombre" value="<?php  echo $row['nombre']?>" size="45" maxlength="45"></td>
 
                                                 </tr>
 
-                                                 <?php
+                                                 <?php 
                                                     include_once '../conexion/conexion.php';
                                                     include_once 'class/subgrupo.php';
                                                     $usuario = new ServidorBaseDatos();
@@ -78,20 +78,20 @@ $row = $subgrupo->get_subgrupo_id($conn, $idsubgrupo);
                                                     <td width="17%">Familia</td>
                                                     <td><select id="cboFamilias" name="AcboGrupos" class="comboGrande">
                                                             <option value="0">Seleccione un Grupo</option>
-                                                            <?php
+                                                            <?php 
                                                                 foreach ($rows as $rowaux => $value)
                                                                 {
                                                                     if($rows[$rowaux]['id_grupo']==$rgrupo['id_grupo'])
                                                                     {
                                                             ?>
-                                                            <option selected="true" value="<?php echo $rows[$rowaux]['id_grupo']?>"><?php echo $rows[$rowaux]['nombre']?></option>
-                                                            <?
+                                                            <option selected="true" value="<?php  echo $rows[$rowaux]['id_grupo']?>"><?php  echo $rows[$rowaux]['nombre']?></option>
+                                                            <?php 
                                                                     }
                                                                     else
                                                                     {
                                                             ?>
-                                                            <option value="<?php echo $rows[$rowaux]['id_grupo']?>"><?php echo $rows[$rowaux]['nombre']?></option>
-                                                            <?
+                                                            <option value="<?php  echo $rows[$rowaux]['id_grupo']?>"><?php  echo $rows[$rowaux]['nombre']?></option>
+                                                            <?php 
                                                                     }
                                                                 }
                                                             ?>
@@ -106,7 +106,7 @@ $row = $subgrupo->get_subgrupo_id($conn, $idsubgrupo);
 					<img src="../img/botoncancelar.jpg" width="85" height="22" onClick="cancelar()" border="1" onMouseOver="style.cursor=cursor">
 					<input id="accion" name="accion" value="modificar" type="hidden">
 					<input id="id" name="id" value="" type="hidden">
-					<input id="idsubgrupo" name="idsubgrupo" value="<?php echo $idsubgrupo?>" type="hidden">
+					<input id="idsubgrupo" name="idsubgrupo" value="<?php  echo $idsubgrupo?>" type="hidden">
 			  </div>
 			  </form>
 		  </div>

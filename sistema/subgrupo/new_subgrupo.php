@@ -44,7 +44,7 @@
                                     <td width="43%"><input NAME="Anombre" type="text" class="cajaGrande" id="nombre" size="45" maxlength="45"></td>
 
                                 </tr>
-                                <?php
+                                <?php 
                                     include_once '../conexion/conexion.php';
                                     include_once 'class/subgrupo.php';
                                     $usuario = new ServidorBaseDatos();
@@ -57,12 +57,12 @@
                                     <td width="17%">Grupo</td>
                                     <td><select id="cboFamilias" name="AcboGrupos" class="comboGrande">
                                             <option value="0">Seleccione un Grupo</option>
-                                            <?php
+                                            <?php 
                                                 foreach ($rows as $row => $value)
                                                 {
                                             ?>
-                                            <option value="<?php echo $rows[$row]['id_grupo']?>"><?php echo $rows[$row]['nombre']?></option>
-                                            <?
+                                            <option value="<?php  echo $rows[$row]['id_grupo']?>"><?php  echo $rows[$row]['nombre']?></option>
+                                            <?php 
                                                 }
                                             ?>
                                         </select>

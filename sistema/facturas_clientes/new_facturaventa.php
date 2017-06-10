@@ -1,4 +1,4 @@
-﻿<?php
+﻿<?php 
 
 
 include("../conexion/conexion.php");
@@ -336,7 +336,7 @@ if (($maximo >= $inicio) && ($maximo <= $fin) && ($fechah <= $fechac)) {
         }
     </script>
 </head>
-<body onload="inicio('<?php echo $aceptacion ?>', '<?php echo $mensaje_aceptacion ?>')">
+<body onload="inicio('<?php  echo $aceptacion ?>', '<?php  echo $mensaje_aceptacion ?>')">
 <div id="pagina">
     <div id="zonaContenido">
         <div align="center">
@@ -361,21 +361,21 @@ if (($maximo >= $inicio) && ($maximo <= $fin) && ($fechah <= $fechac)) {
                             <td>
                                 <select id="facturero" class="comboMedio" NAME="facturero"
                                         onchange="cambio_facturero()">
-                                    <?php
+                                    <?php 
                                     $contador = 0;
                                     while ($contador < mysql_num_rows($res_o)) {
                                         if (mysql_result($res_o, $contador, "id_facturero") == $idfacturero_seleccionado) {
                                             ?>
                                             <option selected
-                                                    value="<?php echo mysql_result($res_o, $contador, "id_facturero") ?>"><?php echo mysql_result($res_o, $contador, "serie1") . '-' . mysql_result($res_o, $contador, "serie2") ?></option>
+                                                    value="<?php  echo mysql_result($res_o, $contador, "id_facturero") ?>"><?php  echo mysql_result($res_o, $contador, "serie1") . '-' . mysql_result($res_o, $contador, "serie2") ?></option>
 
 
-                                        <?php } else {
+                                        <?php  } else {
                                             if ($tipo == "administrador") {
                                                 ?>
                                                 <option
-                                                    value="<?php echo mysql_result($res_o, $contador, "id_facturero") ?>"><?php echo mysql_result($res_o, $contador, "serie1") . '-' . mysql_result($res_o, $contador, "serie2") ?></option>
-                                            <?php }
+                                                    value="<?php  echo mysql_result($res_o, $contador, "id_facturero") ?>"><?php  echo mysql_result($res_o, $contador, "serie1") . '-' . mysql_result($res_o, $contador, "serie2") ?></option>
+                                            <?php  }
                                         }
                                         $contador++;
                                     } ?>
@@ -394,7 +394,7 @@ if (($maximo >= $inicio) && ($maximo <= $fin) && ($fechah <= $fechac)) {
                             <td rowspan="2"><b>FACTURA</b></td>
                             <td rowspan="2">
                                 <input NAME="codfactura" type="text" class="cajaMinimaFactura" id="codfactura"
-                                       value="<?php echo $maximo ?>">
+                                       value="<?php  echo $maximo ?>">
                             </td>
                         </tr>
                         <tr>
@@ -416,11 +416,11 @@ if (($maximo >= $inicio) && ($maximo <= $fin) && ($fechah <= $fechac)) {
 
                         </tr>
 
-                        <?php $hoy = date("d/m/Y"); ?>
+                        <?php  $hoy = date("d/m/Y"); ?>
                         <tr>
                             <td>Fecha</td>
                             <td><input NAME="fecha" type="text" class="cajaPequena" id="fecha" size="10" maxlength="10"
-                                       value="<?php echo $hoy ?>" readonly> <img src="../img/calendario.png"
+                                       value="<?php  echo $hoy ?>" readonly> <img src="../img/calendario.png"
                                                                                  name="Image1" id="Image1" width="16"
                                                                                  height="16" border="0" id="Image1"
                                                                                  onMouseOver="this.style.cursor = 'pointer'">
@@ -468,10 +468,10 @@ if (($maximo >= $inicio) && ($maximo <= $fin) && ($fechah <= $fechac)) {
                     </table>
             </div>
 
-            <input NAME="serie1" type="hidden" id="serie1" value="<?php echo $serie1 ?>">
-            <input NAME="serie2" type="hidden" id="serie2" value="<?php echo $serie2 ?>">
-            <input NAME="autorizacion" type="hidden" id="autorizacion" value="<?php echo $autorizacion ?>">
-            <input name="idfact" id="idfact" type="hidden" value="<?php echo $idfacturero_seleccionado ?>">
+            <input NAME="serie1" type="hidden" id="serie1" value="<?php  echo $serie1 ?>">
+            <input NAME="serie2" type="hidden" id="serie2" value="<?php  echo $serie2 ?>">
+            <input NAME="autorizacion" type="hidden" id="autorizacion" value="<?php  echo $autorizacion ?>">
+            <input name="idfact" id="idfact" type="hidden" value="<?php  echo $idfacturero_seleccionado ?>">
             <!--
 
             <input id="accion" name="accion" value="alta" type="hidden">-->
@@ -534,7 +534,7 @@ if (($maximo >= $inicio) && ($maximo <= $fin) && ($fechah <= $fechac)) {
                                         <td>ADVERTENCIA! DEUDOR</td>
 
                                         <td><textarea id="facturasCadena" name="facturasCadena" cols="40" rows="3"
-                                                      readonly="true"><?php echo $debe ?></textarea></td>
+                                                      readonly="true"><?php  echo $debe ?></textarea></td>
                                     </tr>
                                 </table>
                             </td>
@@ -721,8 +721,8 @@ if (($maximo >= $inicio) && ($maximo <= $fin) && ($fechah <= $fechac)) {
                     <input NAME="ivaporc3" id="ivaporc3" type="hidden" onChange="suma_iva(3)">
                     <input NAME="iva3" id="iva3" type="hidden" value="0">
 
-                    <input name="idarticulo3" id="idarticulo3" value="<?php echo $idarticulo ?>" type="hidden">
-                    <input name="costo3" id="costo3" value="<?php echo $costo ?>" type="hidden">
+                    <input name="idarticulo3" id="idarticulo3" value="<?php  echo $idarticulo ?>" type="hidden">
+                    <input name="costo3" id="costo3" value="<?php  echo $costo ?>" type="hidden">
                     <input name="stock3" id="stock3" type="hidden">
 
                     <input name="transformacion3" id="transformacion3" type="hidden">
@@ -778,8 +778,8 @@ if (($maximo >= $inicio) && ($maximo <= $fin) && ($fechah <= $fechac)) {
                     <input NAME="ivaporc4" id="ivaporc4" type="hidden" onChange="suma_iva(4)">
                     <input NAME="iva4" id="iva4" type="hidden" value="0">
 
-                    <input name="idarticulo4" id="idarticulo4" value="<?php echo $idarticulo ?>" type="hidden">
-                    <input name="costo4" id="costo4" value="<?php echo $costo ?>" type="hidden">
+                    <input name="idarticulo4" id="idarticulo4" value="<?php  echo $idarticulo ?>" type="hidden">
+                    <input name="costo4" id="costo4" value="<?php  echo $costo ?>" type="hidden">
                     <input name="stock4" id="stock4" type="hidden">
 
                     <input name="transformacion4" id="transformacion4" type="hidden">
@@ -835,8 +835,8 @@ if (($maximo >= $inicio) && ($maximo <= $fin) && ($fechah <= $fechac)) {
                     <input NAME="ivaporc5" id="ivaporc5" type="hidden" onChange="suma_iva(5)">
                     <input NAME="iva5" id="iva5" type="hidden" value="0">
 
-                    <input name="idarticulo5" id="idarticulo5" value="<?php echo $idarticulo ?>" type="hidden">
-                    <input name="costo5" id="costo5" value="<?php echo $costo ?>" type="hidden">
+                    <input name="idarticulo5" id="idarticulo5" value="<?php  echo $idarticulo ?>" type="hidden">
+                    <input name="costo5" id="costo5" value="<?php  echo $costo ?>" type="hidden">
                     <input name="stock5" id="stock5" type="hidden">
 
                     <input name="transformacion5" id="transformacion5" type="hidden">
@@ -892,8 +892,8 @@ if (($maximo >= $inicio) && ($maximo <= $fin) && ($fechah <= $fechac)) {
                     <input NAME="ivaporc6" id="ivaporc6" type="hidden" onChange="suma_iva(6)">
                     <input NAME="iva6" id="iva6" type="hidden" value="0">
 
-                    <input name="idarticulo6" id="idarticulo6" value="<?php echo $idarticulo ?>" type="hidden">
-                    <input name="costo6" id="costo6" value="<?php echo $costo ?>" type="hidden">
+                    <input name="idarticulo6" id="idarticulo6" value="<?php  echo $idarticulo ?>" type="hidden">
+                    <input name="costo6" id="costo6" value="<?php  echo $costo ?>" type="hidden">
                     <input name="stock6" id="stock6" type="hidden">
 
                     <input name="transformacion6" id="transformacion6" type="hidden">
@@ -948,8 +948,8 @@ if (($maximo >= $inicio) && ($maximo <= $fin) && ($fechah <= $fechac)) {
                     <input NAME="ivaporc7" id="ivaporc7" type="hidden" onChange="suma_iva(7)">
                     <input NAME="iva7" id="iva7" type="hidden" value="0">
 
-                    <input name="idarticulo7" id="idarticulo7" value="<?php echo $idarticulo ?>" type="hidden">
-                    <input name="costo7" id="costo7" value="<?php echo $costo ?>" type="hidden">
+                    <input name="idarticulo7" id="idarticulo7" value="<?php  echo $idarticulo ?>" type="hidden">
+                    <input name="costo7" id="costo7" value="<?php  echo $costo ?>" type="hidden">
                     <input name="stock7" id="stock7" type="hidden">
 
                     <input name="transformacion7" id="transformacion7" type="hidden">
@@ -1005,8 +1005,8 @@ if (($maximo >= $inicio) && ($maximo <= $fin) && ($fechah <= $fechac)) {
                     <input NAME="ivaporc8" id="ivaporc8" type="hidden" onChange="suma_iva(8)">
                     <input NAME="iva8" id="iva8" type="hidden" value="0">
 
-                    <input name="idarticulo8" id="idarticulo8" value="<?php echo $idarticulo ?>" type="hidden">
-                    <input name="costo8" id="costo8" value="<?php echo $costo ?>" type="hidden">
+                    <input name="idarticulo8" id="idarticulo8" value="<?php  echo $idarticulo ?>" type="hidden">
+                    <input name="costo8" id="costo8" value="<?php  echo $costo ?>" type="hidden">
                     <input name="stock8" id="stock8" type="hidden">
 
                     <input name="transformacion8" id="transformacion8" type="hidden">
@@ -1062,8 +1062,8 @@ if (($maximo >= $inicio) && ($maximo <= $fin) && ($fechah <= $fechac)) {
                     <input NAME="ivaporc9" id="ivaporc9" type="hidden" onChange="suma_iva(9)">
                     <input NAME="iva9" id="iva9" type="hidden" value="0">
 
-                    <input name="idarticulo9" id="idarticulo9" value="<?php echo $idarticulo ?>" type="hidden">
-                    <input name="costo9" id="costo9" value="<?php echo $costo ?>" type="hidden">
+                    <input name="idarticulo9" id="idarticulo9" value="<?php  echo $idarticulo ?>" type="hidden">
+                    <input name="costo9" id="costo9" value="<?php  echo $costo ?>" type="hidden">
                     <input name="stock9" id="stock9" type="hidden">
 
                     <input name="transformacion9" id="transformacion9" type="hidden">
@@ -1118,8 +1118,8 @@ if (($maximo >= $inicio) && ($maximo <= $fin) && ($fechah <= $fechac)) {
                     <input NAME="ivaporc10" id="ivaporc10" type="hidden" onChange="suma_iva(10)">
                     <input NAME="iva10" id="iva10" type="hidden" value="0">
 
-                    <input name="idarticulo10" id="idarticulo10" value="<?php echo $idarticulo ?>" type="hidden">
-                    <input name="costo10" id="costo10" value="<?php echo $costo ?>" type="hidden">
+                    <input name="idarticulo10" id="idarticulo10" value="<?php  echo $idarticulo ?>" type="hidden">
+                    <input name="costo10" id="costo10" value="<?php  echo $costo ?>" type="hidden">
                     <input name="stock10" id="stock10" type="hidden">
 
                     <input name="transformacion10" id="transformacion10" type="hidden">
@@ -1177,8 +1177,8 @@ if (($maximo >= $inicio) && ($maximo <= $fin) && ($fechah <= $fechac)) {
                     <input NAME="ivaporc11" id="ivaporc11" type="hidden" onChange="suma_iva(11)">
                     <input NAME="iva11" id="iva11" type="hidden" value="0">
 
-                    <input name="idarticulo11" id="idarticulo11" value="<?php echo $idarticulo ?>" type="hidden">
-                    <input name="costo11" id="costo11" value="<?php echo $costo ?>" type="hidden">
+                    <input name="idarticulo11" id="idarticulo11" value="<?php  echo $idarticulo ?>" type="hidden">
+                    <input name="costo11" id="costo11" value="<?php  echo $costo ?>" type="hidden">
                     <input name="stock11" id="stock11" type="hidden">
 
                     <input name="transformacion11" id="transformacion11" type="hidden">
@@ -1233,7 +1233,7 @@ if (($maximo >= $inicio) && ($maximo <= $fin) && ($fechah <= $fechac)) {
 
 
                     <tr>
-                        <td class="busqueda">IVA <?php echo $ivaporcetaje; ?>%</td>
+                        <td class="busqueda">IVA <?php  echo $ivaporcetaje; ?>%</td>
                         <td align="right">
                             <div align="center">
                                 <input class="cajaTotales" name="iva12" type="text" id="iva12" size="12" align="right"

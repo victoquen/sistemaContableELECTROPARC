@@ -5,7 +5,7 @@
     <link href="../estilos/estilos.css" type="text/css" rel="stylesheet">
 
 
-<?php
+<?php 
 
 error_reporting(0);
 include ("../conexion/conexion.php");
@@ -62,7 +62,7 @@ $numcontacto=$_GET["numcontacto"];
                             <div id="tituloForm" class="header">CONTACTO TELEFONOS</div>
                             <table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0 >
 
-                                 <?php
+                                 <?php 
 
                                     $query_o="SELECT * FROM operadora WHERE borrado=0 ORDER BY nombre ASC";
                                     $res_o=mysql_query($query_o,$conn);
@@ -86,13 +86,13 @@ $numcontacto=$_GET["numcontacto"];
                                     <td width="25%">
                                         <select id="operadora"  class="comboMedio" NAME="operadora">
                                             <option value="0">Seleccionar operadora</option>
-                                            <?php
+                                            <?php 
                                             $contador=0;
                                             while ($contador < mysql_num_rows($res_o))
                                                 {
                                               ?>
-                                                        <option value="<?php echo mysql_result($res_o,$contador,"id_operadora")?>"><?php echo mysql_result($res_o,$contador,"nombre")?></option>
-                                            <?php $contador++;
+                                                        <option value="<?php  echo mysql_result($res_o,$contador,"id_operadora")?>"><?php  echo mysql_result($res_o,$contador,"nombre")?></option>
+                                            <?php  $contador++;
                                             } ?>
                                         </select>
                                    </td>
@@ -148,8 +148,8 @@ $numcontacto=$_GET["numcontacto"];
               </tr>
             </table>
               <input id="modif" name="modif" value="0" type="hidden">
-             <input id="codproveedortmp" name="codproveedortmp" value="<?php echo $codproveedortmp;?>" type="hidden">
-             <input id="numcontacto" name="numcontacto" value="<?php echo $numcontacto;?>" type="hidden">
+             <input id="codproveedortmp" name="codproveedortmp" value="<?php  echo $codproveedortmp;?>" type="hidden">
+             <input id="numcontacto" name="numcontacto" value="<?php  echo $numcontacto;?>" type="hidden">
             </form>
         </div>
     </div>

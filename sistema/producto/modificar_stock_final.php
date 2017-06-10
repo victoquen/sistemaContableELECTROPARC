@@ -1,4 +1,4 @@
-<?php
+<?php 
 include ("../conexion/conexion.php");
 $usuario = new ServidorBaseDatos();
 $conn = $usuario->getConexion();
@@ -77,7 +77,7 @@ body {
     <div id="pagina">
 	<div id="zonaContenido">
 		<div align="center">
-			<div id="tituloForm" class="header">STOCK <?echo $idproducto . "-" .$idbodega?></div>
+			<div id="tituloForm" class="header">STOCK <?php echo $idproducto . "-" .$idbodega?></div>
 			<div id="frmBusqueda">
 
 
@@ -86,15 +86,15 @@ body {
           <table class="fuente8" width="95%" id="tabla_resultado" name="tabla_resultado" align="center">
                 <tr>
                   <td>Producto:</td>
-                  <td><strong><?php echo $producto ?></strong></td>
+                  <td><strong><?php  echo $producto ?></strong></td>
                 </tr>
                 <tr>
                     <td width="5%">Bodega:</td>
-                    <td width="40%"><?php echo $bodega?></td>
+                    <td width="40%"><?php  echo $bodega?></td>
                 </tr>
                 <tr>
                     <td width="5%">STOCK:</td>
-                    <td width="40%"><input NAME="astock" type="text" class="cajaPequena" id="astock" value="<?php echo $stock?>"></td>
+                    <td width="40%"><input NAME="astock" type="text" class="cajaPequena" id="astock" value="<?php  echo $stock?>"></td>
                     
                 </tr>               
 
@@ -114,8 +114,8 @@ body {
           </tr>
         </table>
 
-            <input id="idbodega" name="idbodega" value="<?php echo $idbodega?>" type="hidden">
-            <input id="idproducto" name="idproducto" value="<?php echo $idproducto?>" type="hidden">
+            <input id="idbodega" name="idbodega" value="<?php  echo $idbodega?>" type="hidden">
+            <input id="idproducto" name="idproducto" value="<?php  echo $idproducto?>" type="hidden">
            
             
 

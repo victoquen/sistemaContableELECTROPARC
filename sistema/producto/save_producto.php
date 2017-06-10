@@ -1,4 +1,4 @@
-<?php
+<?php 
 include_once 'class/producto.php';
 include_once '../conexion/conexion.php';
 $usuario = new ServidorBaseDatos();
@@ -165,7 +165,7 @@ if ($accion == "baja") {
                             parent.opener.document.formulario.costo1.value = costo;
                             parent.opener.document.formulario.stock1.value = stock;
                             if (iva == 1) {
-                                parent.opener.document.formulario.ivaporc1.value =<?php echo $ivaporcetaje; ?>;
+                                parent.opener.document.formulario.ivaporc1.value =<?php  echo $ivaporcetaje; ?>;
                                 parent.opener.document.formulario.grabaiva1.style.display = 'inherit';
 
                             }
@@ -183,7 +183,7 @@ if ($accion == "baja") {
                             parent.opener.document.formulario.costo2.value = costo;
                             parent.opener.document.formulario.stock2.value = stock;
                             if (iva == 1) {
-                                parent.opener.document.formulario.ivaporc2.value =<?php echo $ivaporcetaje; ?>;
+                                parent.opener.document.formulario.ivaporc2.value =<?php  echo $ivaporcetaje; ?>;
                                 parent.opener.document.formulario.grabaiva2.style.display = 'inherit';
                             }
                             else {
@@ -200,7 +200,7 @@ if ($accion == "baja") {
                             parent.opener.document.formulario.costo3.value = costo;
                             parent.opener.document.formulario.stock3.value = stock;
                             if (iva == 1) {
-                                parent.opener.document.formulario.ivaporc3.value =<?php echo $ivaporcetaje; ?>;
+                                parent.opener.document.formulario.ivaporc3.value =<?php  echo $ivaporcetaje; ?>;
                                 parent.opener.document.formulario.grabaiva3.style.display = 'inherit';
                             }
                             else {
@@ -217,7 +217,7 @@ if ($accion == "baja") {
                             parent.opener.document.formulario.costo4.value = costo;
                             parent.opener.document.formulario.stock4.value = stock;
                             if (iva == 1) {
-                                parent.opener.document.formulario.ivaporc4.value =<?php echo $ivaporcetaje; ?>;
+                                parent.opener.document.formulario.ivaporc4.value =<?php  echo $ivaporcetaje; ?>;
                                 parent.opener.document.formulario.grabaiva4.style.display = 'inherit';
                             }
                             else {
@@ -234,7 +234,7 @@ if ($accion == "baja") {
                             parent.opener.document.formulario.costo5.value = costo;
                             parent.opener.document.formulario.stock5.value = stock;
                             if (iva == 1) {
-                                parent.opener.document.formulario.ivaporc5.value =<?php echo $ivaporcetaje; ?>;
+                                parent.opener.document.formulario.ivaporc5.value =<?php  echo $ivaporcetaje; ?>;
                                 parent.opener.document.formulario.grabaiva5.style.display = 'inherit';
                             }
                             else {
@@ -251,7 +251,7 @@ if ($accion == "baja") {
                             parent.opener.document.formulario.costo6.value = costo;
                             parent.opener.document.formulario.stock6.value = stock;
                             if (iva == 1) {
-                                parent.opener.document.formulario.ivaporc6.value =<?php echo $ivaporcetaje; ?>;
+                                parent.opener.document.formulario.ivaporc6.value =<?php  echo $ivaporcetaje; ?>;
                                 parent.opener.document.formulario.grabaiva6.style.display = 'inherit';
                             }
                             else {
@@ -268,7 +268,7 @@ if ($accion == "baja") {
                             parent.opener.document.formulario.costo7.value = costo;
                             parent.opener.document.formulario.stock7.value = stock;
                             if (iva == 1) {
-                                parent.opener.document.formulario.ivaporc7.value =<?php echo $ivaporcetaje; ?>;
+                                parent.opener.document.formulario.ivaporc7.value =<?php  echo $ivaporcetaje; ?>;
                                 parent.opener.document.formulario.grabaiva7.style.display = 'inherit';
                             }
                             else {
@@ -285,7 +285,7 @@ if ($accion == "baja") {
                             parent.opener.document.formulario.costo8.value = costo;
                             parent.opener.document.formulario.stock8.value = stock;
                             if (iva == 1) {
-                                parent.opener.document.formulario.ivaporc8.value =<?php echo $ivaporcetaje; ?>;
+                                parent.opener.document.formulario.ivaporc8.value =<?php  echo $ivaporcetaje; ?>;
                                 parent.opener.document.formulario.grabaiva8.style.display = 'inherit';
                             }
                             else {
@@ -302,7 +302,7 @@ if ($accion == "baja") {
                             parent.opener.document.formulario.costo9.value = costo;
                             parent.opener.document.formulario.stock9.value = stock;
                             if (iva == 1) {
-                                parent.opener.document.formulario.ivaporc9.value =<?php echo $ivaporcetaje; ?>;
+                                parent.opener.document.formulario.ivaporc9.value =<?php  echo $ivaporcetaje; ?>;
                                 parent.opener.document.formulario.grabaiva9.style.display = 'inherit';
                             }
                             else {
@@ -319,7 +319,7 @@ if ($accion == "baja") {
                             parent.opener.document.formulario.costo10.value = costo;
                             parent.opener.document.formulario.stock10.value = stock;
                             if (iva == 1) {
-                                parent.opener.document.formulario.ivaporc10.value =<?php echo $ivaporcetaje; ?>;
+                                parent.opener.document.formulario.ivaporc10.value =<?php  echo $ivaporcetaje; ?>;
                                 parent.opener.document.formulario.grabaiva10.style.display = 'inherit';
                             }
                             else {
@@ -335,7 +335,7 @@ if ($accion == "baja") {
                             parent.opener.document.formulario.costo11.value = costo;
                             parent.opener.document.formulario.stock11.value = stock;
                             if (iva == 1) {
-                                parent.opener.document.formulario.ivaporc11.value =<?php echo $ivaporcetaje; ?>;
+                                parent.opener.document.formulario.ivaporc11.value =<?php  echo $ivaporcetaje; ?>;
                                 parent.opener.document.formulario.grabaiva11.style.display = 'inherit';
                             }
                             else {
@@ -359,7 +359,7 @@ if ($accion == "baja") {
                                 parent.opener.document.formulario.costo1.value = costo;
                                 parent.opener.document.formulario.stock1.value = stock_consignacion;
                                 if (iva == 1) {
-                                    parent.opener.document.formulario.ivaporc1.value =<?php echo $ivaporcetaje; ?>;
+                                    parent.opener.document.formulario.ivaporc1.value =<?php  echo $ivaporcetaje; ?>;
                                     parent.opener.document.formulario.grabaiva1.style.display = 'inherit';
 
                                 }
@@ -377,7 +377,7 @@ if ($accion == "baja") {
                                 parent.opener.document.formulario.costo2.value = costo;
                                 parent.opener.document.formulario.stock2.value = stock_consignacion;
                                 if (iva == 1) {
-                                    parent.opener.document.formulario.ivaporc2.value =<?php echo $ivaporcetaje; ?>;
+                                    parent.opener.document.formulario.ivaporc2.value =<?php  echo $ivaporcetaje; ?>;
                                     parent.opener.document.formulario.grabaiva2.style.display = 'inherit';
                                 }
                                 else {
@@ -394,7 +394,7 @@ if ($accion == "baja") {
                                 parent.opener.document.formulario.costo3.value = costo;
                                 parent.opener.document.formulario.stock3.value = stock_consignacion;
                                 if (iva == 1) {
-                                    parent.opener.document.formulario.ivaporc3.value =<?php echo $ivaporcetaje; ?>;
+                                    parent.opener.document.formulario.ivaporc3.value =<?php  echo $ivaporcetaje; ?>;
                                     parent.opener.document.formulario.grabaiva3.style.display = 'inherit';
                                 }
                                 else {
@@ -411,7 +411,7 @@ if ($accion == "baja") {
                                 parent.opener.document.formulario.costo4.value = costo;
                                 parent.opener.document.formulario.stock4.value = stock_consignacion;
                                 if (iva == 1) {
-                                    parent.opener.document.formulario.ivaporc4.value =<?php echo $ivaporcetaje; ?>;
+                                    parent.opener.document.formulario.ivaporc4.value =<?php  echo $ivaporcetaje; ?>;
                                     parent.opener.document.formulario.grabaiva4.style.display = 'inherit';
                                 }
                                 else {
@@ -428,7 +428,7 @@ if ($accion == "baja") {
                                 parent.opener.document.formulario.costo5.value = costo;
                                 parent.opener.document.formulario.stock5.value = stock_consignacion;
                                 if (iva == 1) {
-                                    parent.opener.document.formulario.ivaporc5.value =<?php echo $ivaporcetaje; ?>;
+                                    parent.opener.document.formulario.ivaporc5.value =<?php  echo $ivaporcetaje; ?>;
                                     parent.opener.document.formulario.grabaiva5.style.display = 'inherit';
                                 }
                                 else {
@@ -445,7 +445,7 @@ if ($accion == "baja") {
                                 parent.opener.document.formulario.costo6.value = costo;
                                 parent.opener.document.formulario.stock6.value = stock_consignacion;
                                 if (iva == 1) {
-                                    parent.opener.document.formulario.ivaporc6.value =<?php echo $ivaporcetaje; ?>;
+                                    parent.opener.document.formulario.ivaporc6.value =<?php  echo $ivaporcetaje; ?>;
                                     parent.opener.document.formulario.grabaiva6.style.display = 'inherit';
                                 }
                                 else {
@@ -462,7 +462,7 @@ if ($accion == "baja") {
                                 parent.opener.document.formulario.costo7.value = costo;
                                 parent.opener.document.formulario.stock7.value = stock_consignacion;
                                 if (iva == 1) {
-                                    parent.opener.document.formulario.ivaporc7.value =<?php echo $ivaporcetaje; ?>;
+                                    parent.opener.document.formulario.ivaporc7.value =<?php  echo $ivaporcetaje; ?>;
                                     parent.opener.document.formulario.grabaiva7.style.display = 'inherit';
                                 }
                                 else {
@@ -479,7 +479,7 @@ if ($accion == "baja") {
                                 parent.opener.document.formulario.costo8.value = costo;
                                 parent.opener.document.formulario.stock8.value = stock_consignacion;
                                 if (iva == 1) {
-                                    parent.opener.document.formulario.ivaporc8.value =<?php echo $ivaporcetaje; ?>;
+                                    parent.opener.document.formulario.ivaporc8.value =<?php  echo $ivaporcetaje; ?>;
                                     parent.opener.document.formulario.grabaiva8.style.display = 'inherit';
                                 }
                                 else {
@@ -496,7 +496,7 @@ if ($accion == "baja") {
                                 parent.opener.document.formulario.costo9.value = costo;
                                 parent.opener.document.formulario.stock9.value = stock_consignacion;
                                 if (iva == 1) {
-                                    parent.opener.document.formulario.ivaporc9.value =<?php echo $ivaporcetaje; ?>;
+                                    parent.opener.document.formulario.ivaporc9.value =<?php  echo $ivaporcetaje; ?>;
                                     parent.opener.document.formulario.grabaiva9.style.display = 'inherit';
                                 }
                                 else {
@@ -513,7 +513,7 @@ if ($accion == "baja") {
                                 parent.opener.document.formulario.costo10.value = costo;
                                 parent.opener.document.formulario.stock10.value = stock_consignacion;
                                 if (iva == 1) {
-                                    parent.opener.document.formulario.ivaporc10.value =<?php echo $ivaporcetaje; ?>;
+                                    parent.opener.document.formulario.ivaporc10.value =<?php  echo $ivaporcetaje; ?>;
                                     parent.opener.document.formulario.grabaiva10.style.display = 'inherit';
                                 }
                                 else {
@@ -529,7 +529,7 @@ if ($accion == "baja") {
                                 parent.opener.document.formulario.costo11.value = costo;
                                 parent.opener.document.formulario.stock11.value = stock_consignacion;
                                 if (iva == 1) {
-                                    parent.opener.document.formulario.ivaporc11.value =<?php echo $ivaporcetaje; ?>;
+                                    parent.opener.document.formulario.ivaporc11.value =<?php  echo $ivaporcetaje; ?>;
                                     parent.opener.document.formulario.grabaiva11.style.display = 'inherit';
                                 }
                                 else {
@@ -556,7 +556,7 @@ if ($accion == "baja") {
                                     parent.opener.document.formulario.costo1.value = costo;
                                     parent.opener.document.formulario.stock1.value = stock;
                                     if (iva == 1) {
-                                        parent.opener.document.formulario.ivaporc1.value =<?php echo $ivaporcetaje; ?>;
+                                        parent.opener.document.formulario.ivaporc1.value =<?php  echo $ivaporcetaje; ?>;
                                         parent.opener.document.formulario.grabaiva1.style.display = 'inherit';
                                     }
                                     else {
@@ -575,7 +575,7 @@ if ($accion == "baja") {
                                     parent.opener.document.formulario.costo2.value = costo;
                                     parent.opener.document.formulario.stock2.value = stock;
                                     if (iva == 1) {
-                                        parent.opener.document.formulario.ivaporc2.value =<?php echo $ivaporcetaje; ?>;
+                                        parent.opener.document.formulario.ivaporc2.value =<?php  echo $ivaporcetaje; ?>;
                                         parent.opener.document.formulario.grabaiva2.style.display = 'inherit';
                                     }
                                     else {
@@ -594,7 +594,7 @@ if ($accion == "baja") {
                                     parent.opener.document.formulario.costo3.value = costo;
                                     parent.opener.document.formulario.stock3.value = stock;
                                     if (iva == 1) {
-                                        parent.opener.document.formulario.ivaporc3.value =<?php echo $ivaporcetaje; ?>;
+                                        parent.opener.document.formulario.ivaporc3.value =<?php  echo $ivaporcetaje; ?>;
                                         parent.opener.document.formulario.grabaiva3.style.display = 'inherit';
                                     }
                                     else {
@@ -613,7 +613,7 @@ if ($accion == "baja") {
                                     parent.opener.document.formulario.costo4.value = costo;
                                     parent.opener.document.formulario.stock4.value = stock;
                                     if (iva == 1) {
-                                        parent.opener.document.formulario.ivaporc4.value =<?php echo $ivaporcetaje; ?>;
+                                        parent.opener.document.formulario.ivaporc4.value =<?php  echo $ivaporcetaje; ?>;
                                         parent.opener.document.formulario.grabaiva4.style.display = 'inherit';
                                     }
                                     else {
@@ -632,7 +632,7 @@ if ($accion == "baja") {
                                     parent.opener.document.formulario.costo5.value = costo;
                                     parent.opener.document.formulario.stock5.value = stock;
                                     if (iva == 1) {
-                                        parent.opener.document.formulario.ivaporc5.value =<?php echo $ivaporcetaje; ?>;
+                                        parent.opener.document.formulario.ivaporc5.value =<?php  echo $ivaporcetaje; ?>;
                                         parent.opener.document.formulario.grabaiva5.style.display = 'inherit';
                                     }
                                     else {
@@ -651,7 +651,7 @@ if ($accion == "baja") {
                                     parent.opener.document.formulario.costo6.value = costo;
                                     parent.opener.document.formulario.stock6.value = stock;
                                     if (iva == 1) {
-                                        parent.opener.document.formulario.ivaporc6.value =<?php echo $ivaporcetaje; ?>;
+                                        parent.opener.document.formulario.ivaporc6.value =<?php  echo $ivaporcetaje; ?>;
                                         parent.opener.document.formulario.grabaiva6.style.display = 'inherit';
                                     }
                                     else {
@@ -670,7 +670,7 @@ if ($accion == "baja") {
                                     parent.opener.document.formulario.costo7.value = costo;
                                     parent.opener.document.formulario.stock7.value = stock;
                                     if (iva == 1) {
-                                        parent.opener.document.formulario.ivaporc7.value =<?php echo $ivaporcetaje; ?>;
+                                        parent.opener.document.formulario.ivaporc7.value =<?php  echo $ivaporcetaje; ?>;
                                         parent.opener.document.formulario.grabaiva7.style.display = 'inherit';
                                     }
                                     else {
@@ -689,7 +689,7 @@ if ($accion == "baja") {
                                     parent.opener.document.formulario.costo8.value = costo;
                                     parent.opener.document.formulario.stock8.value = stock;
                                     if (iva == 1) {
-                                        parent.opener.document.formulario.ivaporc8.value =<?php echo $ivaporcetaje; ?>;
+                                        parent.opener.document.formulario.ivaporc8.value =<?php  echo $ivaporcetaje; ?>;
                                         parent.opener.document.formulario.grabaiva8.style.display = 'inherit';
                                     }
                                     else {
@@ -708,7 +708,7 @@ if ($accion == "baja") {
                                     parent.opener.document.formulario.costo9.value = costo;
                                     parent.opener.document.formulario.stock9.value = stock;
                                     if (iva == 1) {
-                                        parent.opener.document.formulario.ivaporc9.value =<?php echo $ivaporcetaje; ?>;
+                                        parent.opener.document.formulario.ivaporc9.value =<?php  echo $ivaporcetaje; ?>;
                                         parent.opener.document.formulario.grabaiva9.style.display = 'inherit';
                                     }
                                     else {
@@ -727,7 +727,7 @@ if ($accion == "baja") {
                                     parent.opener.document.formulario.costo10.value = costo;
                                     parent.opener.document.formulario.stock10.value = stock;
                                     if (iva == 1) {
-                                        parent.opener.document.formulario.ivaporc10.value =<?php echo $ivaporcetaje; ?>;
+                                        parent.opener.document.formulario.ivaporc10.value =<?php  echo $ivaporcetaje; ?>;
                                         parent.opener.document.formulario.grabaiva10.style.display = 'inherit';
                                     }
                                     else {
@@ -745,7 +745,7 @@ if ($accion == "baja") {
                                     parent.opener.document.formulario.costo11.value = costo;
                                     parent.opener.document.formulario.stock11.value = stock;
                                     if (iva == 1) {
-                                        parent.opener.document.formulario.ivaporc11.value =<?php echo $ivaporcetaje; ?>;
+                                        parent.opener.document.formulario.ivaporc11.value =<?php  echo $ivaporcetaje; ?>;
                                         parent.opener.document.formulario.grabaiva11.style.display = 'inherit';
                                     }
                                     else {
@@ -777,7 +777,7 @@ if ($accion == "baja") {
                 parent.opener.document.formulario_lineas.precio.value = costo;
                 parent.opener.document.formulario_lineas.pvp.value = pvp;
                 if (iva == 1) {
-                    parent.opener.document.formulario_lineas.ivaporc.value =<?php echo $ivaporcetaje; ?>;
+                    parent.opener.document.formulario_lineas.ivaporc.value =<?php  echo $ivaporcetaje; ?>;
                 }
                 else {
                     parent.opener.document.formulario_lineas.ivaporc.value = 0;
@@ -795,89 +795,89 @@ if ($accion == "baja") {
 <div id="pagina">
     <div id="zonaContenido">
         <div align="center">
-            <div id="tituloForm" class="header"><?php echo $cabecera2 ?></div>
+            <div id="tituloForm" class="header"><?php  echo $cabecera2 ?></div>
             <div id="frmBusqueda">
                 <table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0>
                     <tr>
                         <td width="15%"></td>
-                        <td width="85%" colspan="2" class="mensaje"><?php echo $mensaje; ?></td>
+                        <td width="85%" colspan="2" class="mensaje"><?php  echo $mensaje; ?></td>
                     </tr>
                     <tr>
                         <td width="15%">Producto Gasto:</td>
-                        <td width="85%" colspan="2"><?php echo $esGasto ?></td>
+                        <td width="85%" colspan="2"><?php  echo $esGasto ?></td>
                     </tr>
                     <tr>
                         <td width="15%">C&oacute;digo</td>
-                        <td width="85%" colspan="2"><?php echo $codigo ?></td>
+                        <td width="85%" colspan="2"><?php  echo $codigo ?></td>
                     </tr>
                     <tr>
                         <td width="15%">Nombre</td>
-                        <td width="85%" colspan="2"><?php echo $nombre ?></td>
+                        <td width="85%" colspan="2"><?php  echo $nombre ?></td>
                     </tr>
                     <tr>
                         <td width="15%">GRAVA IVA:</td>
-                        <?php if ($iva == 0) { ?>
+                        <?php  if ($iva == 0) { ?>
                             <td width="85%" colspan="2">NO</td>
-                        <?php } else { ?>
+                        <?php  } else { ?>
                             <td width="85%" colspan="2">SI</td>
-                        <?php } ?>
+                        <?php  } ?>
                     </tr>
 
                     <tr>
                         <td>PRODUCTO ESPECIAL</td>
-                        <?php if ($especial == 0) { ?>
+                        <?php  if ($especial == 0) { ?>
                             <td width="85%" colspan="2">NO</td>
-                        <?php } else { ?>
+                        <?php  } else { ?>
                             <td width="85%" colspan="2">SI</td>
-                        <?php } ?>
+                        <?php  } ?>
                     </tr>
                     <tr>
                         <td>Stock</td>
-                        <td colspan="2"><?php echo $stock ?></td>
+                        <td colspan="2"><?php  echo $stock ?></td>
                     </tr>
                     <tr>
                         <td>Stock Consignacion</td>
-                        <td colspan="2"><?php echo $stock_consignacion ?></td>
+                        <td colspan="2"><?php  echo $stock_consignacion ?></td>
                     </tr>
                     <tr>
                         <td>PVP</td>
-                        <td colspan="2"><?php echo $pvp ?></td>
+                        <td colspan="2"><?php  echo $pvp ?></td>
                     </tr>
 
                     <tr>
                         <td>Utilidad</td>
-                        <td colspan="2"><?php echo $utilidad ?>%</td>
+                        <td colspan="2"><?php  echo $utilidad ?>%</td>
                     </tr>
 
                     <tr>
                         <td>Composici&oacute;n</td>
-                        <td colspan="2"><?php echo $composicion ?></td>
+                        <td colspan="2"><?php  echo $composicion ?></td>
                     </tr>
                     <tr>
                         <td>Aplicaci&oacute;n</td>
-                        <td colspan="2"><?php echo $aplicacion ?></td>
+                        <td colspan="2"><?php  echo $aplicacion ?></td>
                     </tr>
-                    <?php
+                    <?php 
                     $quer = "SELECT empresa FROM proveedor WHERE id_proveedor=$proveedor";
                     $res = mysql_query($quer, $conn);
                     ?>
 
                     <tr>
                         <td>Proveedor</td>
-                        <td colspan="2"><?php echo mysql_result($res, 0, "empresa") ?></td>
+                        <td colspan="2"><?php  echo mysql_result($res, 0, "empresa") ?></td>
                     </tr>
 
-                    <?php
+                    <?php 
                     $quer = "SELECT nombre FROM grupo WHERE id_grupo=$grupo";
                     $res = mysql_query($quer, $conn);
                     ?>
 
                     <tr>
                         <td>Grupo</td>
-                        <td><?php echo mysql_result($res, 0, "nombre") ?></td>
+                        <td><?php  echo mysql_result($res, 0, "nombre") ?></td>
                     </tr>
 
-                    <?php
+                    <?php 
                     $quer = "SELECT nombre FROM subgrupo WHERE id_subgrupo=$subgrupo";
                     $res = mysql_query($quer, $conn);
                     ?>
@@ -885,25 +885,25 @@ if ($accion == "baja") {
 
                     <tr>
                         <td>Subgrupo</td>
-                        <td><?php echo mysql_result($res, 0, "nombre") ?></td>
+                        <td><?php  echo mysql_result($res, 0, "nombre") ?></td>
                     </tr>
                 </table>
             </div>
             <div id="botonBusqueda">
-                <?php if ($origen == "factura") { ?>
+                <?php  if ($origen == "factura") { ?>
                     <img src="../img/botonaceptar.jpg" width="85" height="22"
-                         onClick="ingreso_factura_venta(<?php echo $validacion ?>,'<?php echo $codigo ?>','<?php echo $nombre ?>','<?php echo $pvp ?>','<?php echo $idproducto ?>','<?php echo $costo ?>','<?php echo $stock ?>','<?php echo $iva ?>',<?php echo $op ?>)"
+                         onClick="ingreso_factura_venta(<?php  echo $validacion ?>,'<?php  echo $codigo ?>','<?php  echo $nombre ?>','<?php  echo $pvp ?>','<?php  echo $idproducto ?>','<?php  echo $costo ?>','<?php  echo $stock ?>','<?php  echo $iva ?>',<?php  echo $op ?>)"
                          border="1" onMouseOver="style.cursor=cursor">
-                <?php } else {
+                <?php  } else {
                     if ($origen == "facturacompra") { ?>
                         <img src="../img/botonaceptar.jpg" width="85" height="22"
-                             onClick="ingreso_factura_compra(<?php echo $validacion ?>,'<?php echo $codigo ?>','<?php echo $nombre ?>','<?php echo $idproducto ?>','<?php echo $iva ?>', '<?php echo $costo ?>','<?php echo $pvp ?>')"
+                             onClick="ingreso_factura_compra(<?php  echo $validacion ?>,'<?php  echo $codigo ?>','<?php  echo $nombre ?>','<?php  echo $idproducto ?>','<?php  echo $iva ?>', '<?php  echo $costo ?>','<?php  echo $pvp ?>')"
                              border="1" onMouseOver="style.cursor=cursor">
-                    <?php } else {
+                    <?php  } else {
                         ?>
                         <img src="../img/botonaceptar.jpg" width="85" height="22"
-                             onClick="aceptar(<?php echo $validacion ?>)" border="1" onMouseOver="style.cursor=cursor">
-                    <?php }
+                             onClick="aceptar(<?php  echo $validacion ?>)" border="1" onMouseOver="style.cursor=cursor">
+                    <?php  }
                 } ?>
             </div>
         </div>

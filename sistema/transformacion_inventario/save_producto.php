@@ -1,4 +1,4 @@
-<?php
+<?php 
 include_once 'class/producto.php';
 include_once '../conexion/conexion.php';
 $usuario = new ServidorBaseDatos();
@@ -235,77 +235,77 @@ function ingreso_factura_compra(validacion,codarticulo,nombre,idarticulo,iva)
 		<div id="pagina">
 			<div id="zonaContenido">
 				<div align="center">
-				<div id="tituloForm" class="header"><?php echo $cabecera2?></div>
+				<div id="tituloForm" class="header"><?php  echo $cabecera2?></div>
 				<div id="frmBusqueda">
 					<table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0>
                                             <tr>
 							<td width="15%"></td>
-							<td width="85%" colspan="2" class="mensaje"><?php echo $mensaje;?></td>
+							<td width="85%" colspan="2" class="mensaje"><?php  echo $mensaje;?></td>
                                             </tr>
 					    <tr>
-							<td width="15%">C&oacute;digo<?php echo $id_productobodega?></td>
-							<td width="85%" colspan="2"><?php echo $codigo?></td>
+							<td width="15%">C&oacute;digo<?php  echo $id_productobodega?></td>
+							<td width="85%" colspan="2"><?php  echo $codigo?></td>
 					    </tr>
 					    <tr>
 							<td width="15%">Nombre</td>
-						    <td width="85%" colspan="2"><?php echo $nombre?></td>
+						    <td width="85%" colspan="2"><?php  echo $nombre?></td>
 					    </tr>
                                             <tr>
                                                     <td width="15%">GRAVA IVA:</td>
-                                                    <?if ($iva==0){?>
+                                                    <?php if ($iva==0){?>
                                                         <td width="85%" colspan="2">NO</td>
-                                                    <?}  else {?>
+                                                    <?php }  else {?>
                                                         <td width="85%" colspan="2">SI</td>
-                                                    <?}?>
+                                                    <?php }?>
 					    </tr>
 
 											
                                             <tr>
                                                   <td>Stock</td>
-                                                  <td colspan="2"><?php echo $stock?></td>
+                                                  <td colspan="2"><?php  echo $stock?></td>
                                             </tr>
                                             <tr>
                                                   <td>Stock Consignacion</td>
-                                                  <td colspan="2"><?php echo $stock_consignacion?></td>
+                                                  <td colspan="2"><?php  echo $stock_consignacion?></td>
                                             </tr>
 						<tr>
 						  <td>PVP</td>
-						  <td colspan="2"><?php echo $pvp?></td>
+						  <td colspan="2"><?php  echo $pvp?></td>
 					  </tr>
 					  <tr>
 						  <td>Utilidad</td>
-						  <td colspan="2"><?php echo $utilidad?>%</td>
+						  <td colspan="2"><?php  echo $utilidad?>%</td>
 					  </tr>
 						
                                           <tr>
                                                 <td>Composici&oacute;n</td>
-						  <td colspan="2"><?php echo $composicion?></td>
+						  <td colspan="2"><?php  echo $composicion?></td>
 					  </tr>
                                            <tr>
                                                 <td>Aplicaci&oacute;n</td>
-						  <td colspan="2"><?php echo $aplicacion?></td>
+						  <td colspan="2"><?php  echo $aplicacion?></td>
 					  </tr>
-                                          <?
+                                          <?php 
                                             $quer="SELECT empresa FROM proveedor WHERE id_proveedor=$proveedor";
                                             $res=mysql_query($quer,$conn);
                                           ?>
 
                                           <tr>
 						  <td>Proveedor</td>
-						  <td colspan="2"><?php echo mysql_result($res,0,"empresa")?></td>
+						  <td colspan="2"><?php  echo mysql_result($res,0,"empresa")?></td>
 					  </tr>
 
-                                          <?
+                                          <?php 
                                             $quer="SELECT nombre FROM grupo WHERE id_grupo=$grupo";
                                             $res=mysql_query($quer,$conn);
                                           ?>
 
                                           <tr>
                                               <td>Grupo</td>
-                                              <td><?echo mysql_result($res,0,"nombre")?></td>
+                                              <td><?php echo mysql_result($res,0,"nombre")?></td>
                                           </tr>
 
-                                           <?
+                                           <?php 
                                             $quer="SELECT nombre FROM subgrupo WHERE id_subgrupo=$subgrupo";
                                             $res=mysql_query($quer,$conn);
                                           ?>
@@ -313,19 +313,19 @@ function ingreso_factura_compra(validacion,codarticulo,nombre,idarticulo,iva)
 
                                            <tr>
                                               <td>Subgrupo</td>
-                                              <td><?echo mysql_result($res,0,"nombre")?></td>
+                                              <td><?php echo mysql_result($res,0,"nombre")?></td>
                                           </tr>
 					</table>
 			  </div>
 				<div id="botonBusqueda">
-                                     <?if ($origen=="factura"){?>
-                                        <img src="../img/botonaceptar.jpg" width="85" height="22" onClick="ingreso_factura_venta(<?php echo $validacion?>,'<?echo $codigo?>','<?echo $nombre?>','<?echo $pvp?>','<?echo $idproducto?>','<?echo $costo?>','<?echo $stock?>','<?echo $iva?>',<?echo $op?>)" border="1" onMouseOver="style.cursor=cursor">
-                                    <?}else{
+                                     <?php if ($origen=="factura"){?>
+                                        <img src="../img/botonaceptar.jpg" width="85" height="22" onClick="ingreso_factura_venta(<?php  echo $validacion?>,'<?php echo $codigo?>','<?php echo $nombre?>','<?php echo $pvp?>','<?php echo $idproducto?>','<?php echo $costo?>','<?php echo $stock?>','<?php echo $iva?>',<?php echo $op?>)" border="1" onMouseOver="style.cursor=cursor">
+                                    <?php }else{
                                             if ($origen=="facturacompra"){ ?>
-                                                 <img src="../img/botonaceptar.jpg" width="85" height="22" onClick="ingreso_factura_compra(<?php echo $validacion?>,'<?echo $codigo?>','<?echo $nombre?>','<?echo $idproducto?>','<?echo $iva?>')" border="1" onMouseOver="style.cursor=cursor">
-                                            <?}else{?>
-                                                <img src="../img/botonaceptar.jpg" width="85" height="22" onClick="aceptar(<?php echo $validacion?>)" border="1" onMouseOver="style.cursor=cursor">
-                                    <?}}?>
+                                                 <img src="../img/botonaceptar.jpg" width="85" height="22" onClick="ingreso_factura_compra(<?php  echo $validacion?>,'<?php echo $codigo?>','<?php echo $nombre?>','<?php echo $idproducto?>','<?php echo $iva?>')" border="1" onMouseOver="style.cursor=cursor">
+                                            <?php }else{?>
+                                                <img src="../img/botonaceptar.jpg" width="85" height="22" onClick="aceptar(<?php  echo $validacion?>)" border="1" onMouseOver="style.cursor=cursor">
+                                    <?php }}?>
                                 </div>
 			 </div>
 		  </div>
