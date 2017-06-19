@@ -68,7 +68,7 @@ if ($accion=="insertar") {
 	$fechacobro=$_POST["fechacobro"];
 	if ($fechacobro<>"") { $fechacobro=explota($fechacobro); }
 	$sel_insertar="INSERT INTO pagos (id_pago,id_factura,id_proveedor,importe,id_formapago,id_banco,fechacobro,documento,recibo,observaciones) VALUES
-                                          ('','$idfactura','$idproveedor','$importe','$formapago','$idbanco','$fechacobro','$documento','$recibo','$observaciones')";
+                                          (null,'$idfactura','$idproveedor','$importe','$formapago','$idbanco','$fechacobro','$documento','$recibo','$observaciones')";
 	$rs_insertar=mysql_query($sel_insertar, $conn);
         $idmov_pago=mysql_insert_id();
 	
@@ -76,7 +76,7 @@ if ($accion=="insertar") {
 	//2 venta
 	
 	$sel_libro="INSERT INTO librodiario (id_librodiario,id_mov,fecha,tipodocumento,id_factura,id_cliente,id_formapago,id_banco,total) VALUES
-                                            ('','$idmov_pago','$fechacobro','1','$idfactura','$idproveedor','$formapago','$idbanco','$importe')";
+                                            (null,'$idmov_pago','$fechacobro','1','$idfactura','$idproveedor','$formapago','$idbanco','$importe')";
 	$rs_libro=mysql_query($sel_libro, $conn);
         
         

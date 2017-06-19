@@ -79,7 +79,7 @@ if ($accion=="insertar") {
 
 
 	$sel_insertar="INSERT INTO cobros (id_cobro,id_factura,id_cliente,importe,id_formapago,id_banco,fechacobro,observaciones) VALUES
-                                         ('','$idfactura','$idcliente','$importe','$formapago','$idbanco','$fechacobro','$observaciones')";
+                                         (null,'$idfactura','$idcliente','$importe','$formapago','$idbanco','$fechacobro','$observaciones')";
 
 	$rs_insertar=mysql_query($sel_insertar, $conn);
         $idmov_cobro=mysql_insert_id();
@@ -88,7 +88,7 @@ if ($accion=="insertar") {
 	//2 venta
 	
 	$sel_libro="INSERT INTO librodiario (id_librodiario,id_mov,fecha,tipodocumento,id_factura,id_cliente,id_formapago,id_banco,total) VALUES
-                                            ('','$idmov_cobro','$fechacobro','2','$idfactura','$idcliente','$formapago','$idbanco','$importe')";
+                                            (null,'$idmov_cobro','$fechacobro','2','$idfactura','$idcliente','$formapago','$idbanco','$importe')";
 	$rs_libro=mysql_query($sel_libro, $conn);
 	
 	?>
