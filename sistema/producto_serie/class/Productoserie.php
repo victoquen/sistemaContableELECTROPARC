@@ -61,6 +61,7 @@ class Productoserie
     public function vendido($conn, $id, $linea)
     {
         $query = "UPDATE productoserie SET estado = 1, id_factulinea = '$linea' WHERE id='$id'";
+        //$query = "UPDATE productoserie SET estado = 1, id_factulinea = '$linea' WHERE serie='$id'";
         $result = mysql_query($query, $conn);
         return $result;
     }

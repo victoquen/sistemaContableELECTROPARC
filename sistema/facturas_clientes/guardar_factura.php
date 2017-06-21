@@ -351,6 +351,7 @@ if ($accion == "alta") {
             $iva = $array_productos[$contador]["iva"];
             $iva = $array_productos[$contador]["iva"];
             $subt = $array_productos[$contador]["subt"];
+            $series = $array_productos[$contador]["series"];
 
             $idbodega = $array_productos[$contador]["idbodega"];
 
@@ -394,7 +395,7 @@ if ($accion == "alta") {
 
             // UPDATE SERIES PRODUCTO *********************************************************************************
 
-            $series = $array_productos[$contador]["series"];
+
             foreach ($series as $s) {
                 $serie = new Productoserie();
                 $res_serie = $serie->vendido($conn, $s, $idlinea);

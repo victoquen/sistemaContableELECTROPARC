@@ -129,7 +129,7 @@ class Pro
     public $subtotal;
 }
 
-$sel_lineas = "SELECT b.codigo as codigo, b.nombre as nombre, a.cantidad as cantidad, a.precio as precio, a.subtotal as subtotal, a.dcto as dcto, a.iva as iva FROM factulinea a INNER JOIN producto b ON a.id_producto=b.id_producto WHERE a.id_factura = '$idfactura'";
+$sel_lineas = "SELECT b.codigo as codigo, b.nombre as nombre, a.cantidad as cantidad, a.precio as precio, a.subtotal as subtotal, a.dcto as dcto, a.iva as iva, b.moto as moto FROM factulinea a INNER JOIN producto b ON a.id_producto=b.id_producto WHERE a.id_factura = '$idfactura'";
 $rs_lineas = mysql_query($sel_lineas, $conn);
 
 $productos_array = array();
@@ -140,6 +140,7 @@ for ($i = 0; $i < $totalfilas; $i++) {
     $myPro = new Pro();
     $codarticulo = mysql_result($rs_lineas, $i, "codigo");
     $codarticulo = substr($codarticulo, 0, 7);
+    $moto = mysql_result($rs_lineas, $i, "moto");
 
     $descripcion = mysql_result($rs_lineas, $i, "nombre");
     $cantidad = mysql_result($rs_lineas, $i, "cantidad");

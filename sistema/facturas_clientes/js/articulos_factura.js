@@ -72,34 +72,102 @@ function validar_cabecera() {
 //                                                document.getElementById("descuentoporc").value=entero;
 //                                        }
 //                                }
+
+
     if (document.getElementById("descripcion1").value != "") {
         if (document.getElementById("cbobodega1").value == 0) {
             mensaje += "  - Escoger Bodega del item 1\n";
+        }
+        var s1 = document.getElementById("series1");
+        var c1 = document.getElementById("cantidad1").value;
+        var res1= 0;
+        for(var i=0; i<s1.options.length; i++){
+            if(s1.options[i].selected){
+                res1++;
+            }
+        }
+        if(res1 != c1){
+            mensaje += "  - NO concuerda la cantidad con las series escogidas item 1\n";
         }
     }
     if (document.getElementById("descripcion2").value != "") {
         if (document.getElementById("cbobodega2").value == 0) {
             mensaje += "  - Escoger Bodega del item 2\n";
         }
+        var s2 = document.getElementById("series2");
+        var c2 = document.getElementById("cantidad2").value;
+        var res2= 0;
+        for(var i=0; i<s2.options.length; i++){
+            if(s2.options[i].selected){
+                res2++;
+            }
+        }
+        if(res2 != c2){
+            mensaje += "  - NO concuerda la cantidad con las series escogidas item 2\n";
+        }
     }
     if (document.getElementById("descripcion3").value != "") {
         if (document.getElementById("cbobodega3").value == 0) {
             mensaje += "  - Escoger Bodega del item 3\n";
+        }
+        var s3 = document.getElementById("series3");
+        var c3 = document.getElementById("cantidad3").value;
+        var res3= 0;
+        for(var i=0; i<s3.options.length; i++){
+            if(s3.options[i].selected){
+                res3++;
+            }
+        }
+        if(res3 != c3){
+            mensaje += "  - NO concuerda la cantidad con las series escogidas item 3\n";
         }
     }
     if (document.getElementById("descripcion4").value != "") {
         if (document.getElementById("cbobodega4").value == 0) {
             mensaje += "  - Escoger Bodega del item 4\n";
         }
+        var s4 = document.getElementById("series4");
+        var c4 = document.getElementById("cantidad4").value;
+        var res4= 0;
+        for(var i=0; i<s4.options.length; i++){
+            if(s4.options[i].selected){
+                res4++;
+            }
+        }
+        if(res4 != c4){
+            mensaje += "  - NO concuerda la cantidad con las series escogidas item 4\n";
+        }
     }
     if (document.getElementById("descripcion5").value != "") {
         if (document.getElementById("cbobodega5").value == 0) {
             mensaje += "  - Escoger Bodega del item 5\n";
         }
+        var s5 = document.getElementById("series5");
+        var c5 = document.getElementById("cantidad5").value;
+        var res5= 0;
+        for(var i=0; i<s5.options.length; i++){
+            if(s5.options[i].selected){
+                res5++;
+            }
+        }
+        if(res5 != c5){
+            mensaje += "  - NO concuerda la cantidad con las series escogidas item 5\n";
+        }
     }
     if (document.getElementById("descripcion6").value != "") {
         if (document.getElementById("cbobodega6").value == 0) {
             mensaje += "  - Escoger Bodega del item 6\n";
+        }
+        var s6 = document.getElementById("series6");
+        var c6 = document.getElementById("cantidad6").value;
+        var res6= 0;
+        for(var i=0; i<s6.options.length; i++){
+            if(s6.options[i].selected){
+                res6++;
+            }
+        }
+        if(res6 != c6){
+            mensaje += "  - NO concuerda la cantidad con las series escogidas item 6\n";
         }
     }
 
@@ -108,25 +176,80 @@ function validar_cabecera() {
         if (document.getElementById("cbobodega7").value == 0) {
             mensaje += "  - Escoger Bodega del item 7\n";
         }
+        var s7 = document.getElementById("series7");
+        var c7 = document.getElementById("cantidad7").value;
+        var res7= 0;
+        for(var i=0; i<s7.options.length; i++){
+            if(s7.options[i].selected){
+                res7++;
+            }
+        }
+        if(res7 != c7){
+            mensaje += "  - NO concuerda la cantidad con las series escogidas item 7\n";
+        }
     }
     if (document.getElementById("descripcion8").value != "") {
         if (document.getElementById("cbobodega8").value == 0) {
             mensaje += "  - Escoger Bodega del item 8\n";
+        }
+        var s8 = document.getElementById("series8");
+        var c8 = document.getElementById("cantidad8").value;
+        var res8= 0;
+        for(var i=0; i<s8.options.length; i++){
+            if(s8.options[i].selected){
+                res8++;
+            }
+        }
+        if(res8 != c8){
+            mensaje += "  - NO concuerda la cantidad con las series escogidas item 8\n";
         }
     }
     if (document.getElementById("descripcion9").value != "") {
         if (document.getElementById("cbobodega9").value == 0) {
             mensaje += "  - Escoger Bodega del item 9\n";
         }
+        var s9 = document.getElementById("series9");
+        var c9 = document.getElementById("cantidad9").value;
+        var res9= 0;
+        for(var i=0; i<s9.options.length; i++){
+            if(s9.options[i].selected){
+                res9++;
+            }
+        }
+        if(res9 != c9){
+            mensaje += "  - NO concuerda la cantidad con las series escogidas item 9\n";
+        }
     }
     if (document.getElementById("descripcion10").value != "") {
         if (document.getElementById("cbobodega10").value == 0) {
             mensaje += "  - Escoger Bodega del item 10\n";
         }
+        var s10 = document.getElementById("series10");
+        var c10 = document.getElementById("cantidad10").value;
+        var res10= 0;
+        for(var i=0; i<s10.options.length; i++){
+            if(s10.options[i].selected){
+                res10++;
+            }
+        }
+        if(res10 != c10){
+            mensaje += "  - NO concuerda la cantidad con las series escogidas item 10\n";
+        }
     }
     if (document.getElementById("descripcion11").value != "") {
         if (document.getElementById("cbobodega11").value == 0) {
             mensaje += "  - Escoger Bodega del item 11\n";
+        }
+        var s11 = document.getElementById("series11");
+        var c11 = document.getElementById("cantidad11").value;
+        var res11= 0;
+        for(var i=0; i<s11.options.length; i++){
+            if(s11.options[i].selected){
+                res11++;
+            }
+        }
+        if(res11 != c11){
+            mensaje += "  - NO concuerda la cantidad con las series escogidas item 11\n";
         }
     }
     
