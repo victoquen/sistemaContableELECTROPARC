@@ -69,6 +69,27 @@ var ApiUrl= function(){
     this.getClientePrint = function () {
         return 'http://localhost/electroparc/sistema/roles_cuotas/getClientePrint.php';
     }
+    this.getOldContract = function () {
+        return 'http://localhost/electroparc/sistema/roles_cuotas/getContratoOld.php';
+    }
+    this.getCuotasOld = function () {
+        return 'http://localhost/electroparc/sistema/roles_cuotas/getCuotasOld.php';
+    }
+    this.getAbonoOld = function () {
+        return ' http://localhost/electroparc/sistema/roles_cuotas/getAbonosOld.php';
+    }
+    this.saveOld = function () {
+        return ' http://localhost/electroparc/sistema/roles_cuotas/saveAbonoLegacy.php';
+    }
+    this.updateCuota = function () {
+        return ' http://localhost/electroparc/sistema/roles_cuotas/updateStateOldCuota.php';
+    }
+    this.getUsr2 = function () {
+        return ' http://localhost/electroparc/sistema/roles_cuotas/getUsr2.php';
+    }
+    this.getTotal = function () {
+        return ' http://localhost/electroparc/sistema/roles_cuotas/getTotal.php';
+    }
 }
 
 app.factory("myProvider",function(){

@@ -74,6 +74,7 @@
 					[null, 'Rol de Pago', './roles_cuotas/table.html', 'principal', 'Contratacion Empleado'],
                 ],
 				[null, ' Creditos', null, null, ' Creditos',
+                    [null, 'Pago Antiguo', './roles_cuotas/oldModule/cobros.html', 'principal', 'Pago Antiguo'],
                     [null, 'Pago', './roles_cuotas/tablaPagos.html', 'principal', 'Pago'],
                     [null, 'Contratos', './roles_cuotas/tableContrato.html', 'principal', 'Contratos'],
                 ],

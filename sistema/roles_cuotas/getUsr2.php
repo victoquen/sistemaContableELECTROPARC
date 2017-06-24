@@ -3,7 +3,7 @@
 //$data = json_decode(file_get_contents("php://input"));
 //session_start();
 session_start();
-$result = $_SESSION['username'];
+$result = $_SESSION['userid'];
 
 echo $json_response = json_encode($result);
 

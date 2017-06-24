@@ -71,7 +71,7 @@
         <panel class="hidden-print">
 
             <div class="panel-header ">
-                <h1 class="text-center pane-title">Pagos</h1>
+                <h1 class="text-center pane-title">Cobros</h1>
             </div>
             <div class="container">
                 <div class="row">
@@ -117,7 +117,7 @@
                                 </thead>
                                 <tbody>
 
-                                    <tr dir-paginate="item in listaContratos | filter: cedula| itemsPerPage:7" ng-class="{'selected':$index == selectedRow}" ng-click="setClickedRow($index,item)">
+                                    <tr dir-paginate="item in listaContratos | filter: cedula| itemsPerPage:7 track by $index "  ng-class="{'selected':$index == selectedRow}" ng-click="setClickedRow($index,item)">
 
                                         <td>{{$index}}</td>
                                         <td>{{ item.codigo}}</td>

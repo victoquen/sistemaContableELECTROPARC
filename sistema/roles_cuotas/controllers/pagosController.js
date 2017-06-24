@@ -785,7 +785,7 @@ app.controller('PagosController', ['$scope', '$http', '$location', 'myProvider',
 
     fixedNumbers = function (cal) {
 
-        var constant100 = 100;
+        var constant100 = 10000;
         var resp = (Math.floor(cal * constant100) / constant100).toFixed(2);
         //   console.log(resp);
         return (resp);
@@ -930,7 +930,7 @@ app.controller('PagosController', ['$scope', '$http', '$location', 'myProvider',
             
             //doc.text(x, y+20, 'Mes:');
            /* doc.text(x, y + 20, mes);
-            //  $scope.aux =  ["Año:"];
+            //  $scope.aux =  ["Aï¿½o:"];
             //doc.text(x + 40, y + 20, $scope.aux[0]);
             doc.text(x + 30, y + 20, $scope.anioSeleccionado);
             doc.text(x, y + 30, 'Dias No Laborados');
