@@ -76,7 +76,7 @@ if ($accion == "alta") {
             $idbodega = mysql_result($rs_tmp, $contador, "id_bodega");
 
             //SERIES SPLIT *********************************************************************************************
-            $seriestemp = mysql_result($rs_tmp, $contador, "series");
+            $seriestemp = (mysql_result($rs_tmp, $contador, "series"));
             $series = split("----", $seriestemp);
             //**********************************************************************************************************
             

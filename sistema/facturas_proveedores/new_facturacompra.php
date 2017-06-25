@@ -1,4 +1,5 @@
-<?php 
+<?php
+
 include("../conexion/conexion.php");
 
 $usuario = new ServidorBaseDatos();
@@ -381,13 +382,14 @@ $obligatorio_serie = 1;
         function AddItem() {
 
             var Text = document.getElementById("serieaux").value;
+            //var Text = encodeURIComponent(document.getElementById("serieaux").value);
             if(Text != ""){
                 // Create an Option object
                 var opt = document.createElement("option");
                 // Add an Option object to Drop Down/List Box
                 document.getElementById("series").options.add(opt);
                 // Assign text and value to Option object
-                opt.text = Text;
+                opt.text = (Text);
                 opt.value = Text;
                 document.getElementById("serieaux").value="";
             }

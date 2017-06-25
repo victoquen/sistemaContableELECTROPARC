@@ -142,9 +142,9 @@ if ($retorno == 0) {
     $cont =0;
     while($cont < $num_series){
         if($cont == ($num_series -1)){
-            $series_string = $series_string . $series[$cont];
+            $series_string = $series_string . utf8_encode($series[$cont]);
         }else{
-            $series_string = $series_string . $series[$cont] . "----";
+            $series_string = $series_string . utf8_encode($series[$cont]) . "----";
         }
         $cont++;
     }
@@ -184,7 +184,7 @@ if ($retorno == 0) {
         $iva = mysql_result($rs_lineas, $i, "iva");
         $utilidad = mysql_result($rs_lineas, $i, "utilidad");
         $idbodega = mysql_result($rs_lineas, $i, "idbodega");
-        $seriestemp = mysql_result($rs_lineas, $i, "series");
+        $seriestemp = (mysql_result($rs_lineas, $i, "series"));
 
         $queryb = "SELECT nombre FROM bodega WHERE id_bodega = '$idbodega'";
         $resb = mysql_query($queryb, $conn);
