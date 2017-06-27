@@ -90,6 +90,9 @@ var ApiUrl= function(){
     this.getTotal = function () {
         return ' http://localhost/electroparc/sistema/roles_cuotas/getTotal.php';
     }
+    this.saveDiary = function () {
+        return ' http://localhost/electroparc/sistema/roles_cuotas/inputDiary.php';
+    }
 }
 
 app.factory("myProvider",function(){

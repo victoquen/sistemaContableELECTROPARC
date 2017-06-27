@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b6142e45-63f9-4e7d-93db-bb8b68d54bc1" name="Default" comment="factura completa venta con motos">
+    <list default="true" id="b6142e45-63f9-4e7d-93db-bb8b68d54bc1" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sistema/roles_cuotas/inputDiary.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sistema/facturas_proveedores/frame_lineas.php" afterPath="$PROJECT_DIR$/sistema/facturas_proveedores/frame_lineas.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sistema/facturas_proveedores/guardar_factura.php" afterPath="$PROJECT_DIR$/sistema/facturas_proveedores/guardar_factura.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sistema/facturas_proveedores/guardar_linea.php" afterPath="$PROJECT_DIR$/sistema/facturas_proveedores/guardar_linea.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sistema/facturas_proveedores/new_facturacompra.php" afterPath="$PROJECT_DIR$/sistema/facturas_proveedores/new_facturacompra.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sistema/imprimir/imprimir_factura_electroparc.php" afterPath="$PROJECT_DIR$/sistema/imprimir/imprimir_factura_electroparc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sistema/roles_cuotas/addOne.php" afterPath="$PROJECT_DIR$/sistema/roles_cuotas/addOne.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sistema/roles_cuotas/addpagos.php" afterPath="$PROJECT_DIR$/sistema/roles_cuotas/addpagos.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sistema/roles_cuotas/app.js" afterPath="$PROJECT_DIR$/sistema/roles_cuotas/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sistema/roles_cuotas/controllers/cobrosOld.js" afterPath="$PROJECT_DIR$/sistema/roles_cuotas/controllers/cobrosOld.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sistema/roles_cuotas/controllers/pagosController.js" afterPath="$PROJECT_DIR$/sistema/roles_cuotas/controllers/pagosController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sistema/roles_cuotas/getAllContratos.php" afterPath="$PROJECT_DIR$/sistema/roles_cuotas/getAllContratos.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sistema/roles_cuotas/getAllContratosActivos3.php" afterPath="$PROJECT_DIR$/sistema/roles_cuotas/getAllContratosActivos3.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sistema/roles_cuotas/getContratoOld.php" afterPath="$PROJECT_DIR$/sistema/roles_cuotas/getContratoOld.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sistema/roles_cuotas/getContratosActivos2.php" afterPath="$PROJECT_DIR$/sistema/roles_cuotas/getContratosActivos2.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sistema/roles_cuotas/getNames.php" afterPath="$PROJECT_DIR$/sistema/roles_cuotas/getNames.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sistema/roles_cuotas/getPhones.php" afterPath="$PROJECT_DIR$/sistema/roles_cuotas/getPhones.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sistema/roles_cuotas/insertContrato.php" afterPath="$PROJECT_DIR$/sistema/roles_cuotas/insertContrato.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sistema/roles_cuotas/modificar.php" afterPath="$PROJECT_DIR$/sistema/roles_cuotas/modificar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sistema/roles_cuotas/selectAll.php" afterPath="$PROJECT_DIR$/sistema/roles_cuotas/selectAll.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sistema/roles_cuotas/updatePagoDelete.php" afterPath="$PROJECT_DIR$/sistema/roles_cuotas/updatePagoDelete.php" />
     </list>
     <ignored path="sistemaContableELECTROPARC.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,136 +40,114 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Productoserie.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sistema/producto_serie/class/Productoserie.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="918">
-              <caret line="54" column="36" selection-start-line="54" selection-start-column="36" selection-end-line="54" selection-end-column="36" />
-              <folding>
-                <marker date="1498013810945" expanded="true" signature="701:789" placeholder="INSERT INTO productoserie... " />
-                <marker date="1498013810945" expanded="true" signature="959:1010" placeholder="UPDATE produ... " />
-                <marker date="1498013810945" expanded="true" signature="1181:1299" placeholder="UPDATE produ... " />
-                <marker date="1498013810945" expanded="true" signature="1452:1528" placeholder="UPDATE produ... " />
-                <marker date="1498013810945" expanded="true" signature="1551:1630" placeholder="UPDATE produ... " />
-                <marker date="1498013810945" expanded="true" signature="1800:1918" placeholder="UPDATE produ... " />
-                <marker date="1498013810945" expanded="true" signature="2060:2518" placeholder="SELECT s.ser... productoserie" />
-                <marker date="1498013810945" expanded="true" signature="2754:3241" placeholder="SELECT s.ser... productoserie" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="guardar_factura.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sistema/facturas_proveedores/guardar_factura.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1326">
-              <caret line="78" column="26" selection-start-line="78" selection-start-column="26" selection-end-line="78" selection-end-column="26" />
-              <folding>
-                <marker date="1498257382368" expanded="true" signature="1798:1882" placeholder="SELECT * FRO... factulineaptmp" />
-                <marker date="1498257382368" expanded="true" signature="3457:3571" placeholder="SELECT id_pr... productobodega" />
-                <marker date="1498257382368" expanded="true" signature="4238:4340" placeholder="UPDATE produ... " />
-                <marker date="1498257382368" expanded="true" signature="4434:4515" placeholder="SELECT SUM(s... productobodega" />
-                <marker date="1498257382368" expanded="true" signature="4677:4747" placeholder="UPDATE produ... " />
-                <marker date="1498257382368" expanded="true" signature="4870:4930" placeholder="DELETE FROM " />
-                <marker date="1498257382368" expanded="true" signature="4993:5051" placeholder="DELETE FROM " />
-                <marker date="1498257382368" expanded="true" signature="5143:5157" placeholder="..." />
-                <marker date="1498257382368" expanded="true" signature="5497:6076" placeholder="UPDATE factu... " />
-                <marker date="1498257382368" expanded="true" signature="6154:6219" placeholder="UPDATE reten... " />
-                <marker date="1498257382368" expanded="true" signature="6302:6356" placeholder="SELECT * FRO... facturasp" />
-                <marker date="1498257382368" expanded="true" signature="7473:7508" placeholder="DELETE FROM " />
-                <marker date="1498257382368" expanded="true" signature="7578:7649" placeholder="DELETE FROM " />
-                <marker date="1498257382368" expanded="true" signature="7709:7765" placeholder="SELECT * FRO... factulineap" />
-                <marker date="1498257382368" expanded="true" signature="8134:8247" placeholder="SELECT id_pr... productobodega" />
-                <marker date="1498257382368" expanded="true" signature="8412:8514" placeholder="UPDATE produ... " />
-                <marker date="1498257382368" expanded="true" signature="8600:8680" placeholder="SELECT SUM(s... productobodega" />
-                <marker date="1498257382368" expanded="true" signature="8830:8899" placeholder="UPDATE produ... " />
-                <marker date="1498257382368" expanded="true" signature="9226:9280" placeholder="SELECT * FRO... facturasp" />
-                <marker date="1498257382368" expanded="true" signature="12588:12645" placeholder="SELECT * FRO... proveedor" />
-                <marker date="1498257382368" expanded="true" signature="15697:15748" placeholder="SELECT nombr... cuenta" />
-                <marker date="1498257382368" expanded="true" signature="17088:17336" placeholder="SELECT b.cod... factulineap" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="frame_lineas.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sistema/facturas_proveedores/frame_lineas.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3162">
-              <caret line="186" column="22" selection-start-line="186" selection-start-column="22" selection-end-line="186" selection-end-column="22" />
-              <folding>
-                <marker date="1498257030971" expanded="true" signature="8282:8568" placeholder="INSERT INTO factulineaptmp... " />
-                <marker date="1498257030971" expanded="true" signature="8748:9129" placeholder="SELECT b.cod... factulineaptmp" />
-                <marker date="1498257030971" expanded="true" signature="9991:10046" placeholder="SELECT nombr... bodega" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="new_facturacompra.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sistema/facturas_proveedores/new_facturacompra.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="9639">
-              <caret line="567" column="104" selection-start-line="567" selection-start-column="92" selection-end-line="567" selection-end-column="104" />
-              <folding>
-                <marker date="1498255985065" expanded="true" signature="200:255" placeholder="select porce... iva" />
-                <marker date="1498255985065" expanded="true" signature="468:534" placeholder="INSERT INTO facturasptmp... " />
-                <marker date="1498255985065" expanded="true" signature="21020:21070" placeholder="SELECT id_cu... cuenta" />
-                <marker date="1498255985065" expanded="true" signature="28220:28317" placeholder="SELECT b.id_... bodega" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="articulos_factura.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sistema/facturas_clientes/js/articulos_factura.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4250">
-              <caret line="254" column="4" selection-start-line="254" selection-start-column="4" selection-end-line="254" selection-end-column="4" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="frame_articulos.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sistema/facturas_clientes/frame_articulos.php">
+      <file leaf-file-name="saveAbonoLegacy.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/saveAbonoLegacy.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <marker date="1495556148330" expanded="true" signature="230:285" placeholder="select porce... iva" />
+                <marker date="1498264648643" expanded="true" signature="459:762" placeholder="INSERT INTO `abono_legacy`... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sistema/index.php">
+      <file leaf-file-name="selectAll.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/selectAll.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="22" column="2" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
+              <folding>
+                <marker date="1498572378089" expanded="true" signature="136:554" placeholder="SELECT b.id_... rol_pago" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="selectEmpleado.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/selectEmpleado.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1495290844137" expanded="true" signature="137:159" placeholder="select * fro... empleado" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="testPostphp.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/testPostphp.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="imprimir_factura_electroparc.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sistema/imprimir/imprimir_factura_electroparc.php">
+      <file leaf-file-name="updatePago.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/updatePago.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="565">
-              <caret line="176" column="38" selection-start-line="176" selection-start-column="38" selection-end-line="176" selection-end-column="38" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <marker date="1498259741162" expanded="true" signature="411:518" placeholder="SELECT *, DA... facturas" />
-                <marker date="1498259741162" expanded="true" signature="1793:1844" placeholder="SELECT * FRO... cliente" />
-                <marker date="1498259741162" expanded="true" signature="2243:2303" placeholder="SELECT numer... clientefono" />
-                <marker date="1498259741162" expanded="true" signature="2779:2834" placeholder="select porce... iva" />
-                <marker date="1498259741162" expanded="true" signature="3367:3518" placeholder="SELECT f.nom... formapago" />
-                <marker date="1498259741162" expanded="true" signature="4985:5332" placeholder="SELECT b.cod... factulinea" />
-                <marker date="1498259741162" expanded="true" signature="5598:5709" placeholder="SELECT serie... productoserie" />
-                <marker date="1498259741162" expanded="true" signature="8136:8155" placeholder="..." />
+                <marker date="1495290844233" expanded="true" signature="267:389" placeholder="UPDATE pagos... " />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="updatePagoDelete.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/updatePagoDelete.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding>
+                <marker date="1498572508158" expanded="true" signature="344:573" placeholder="INSERT INTO `pagos_credito_borrados`... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="updateStateCont.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/updateStateCont.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding>
+                <marker date="1495290844257" expanded="true" signature="205:290" placeholder="UPDATE contr... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="updateStateOldCuota.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/updateStateOldCuota.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="db.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/db.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="db2.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/db2.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -178,18 +167,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/sistema/remisiones/ver_remision.php" />
-        <option value="$PROJECT_DIR$/sistema/remisiones/ver_remision1.php" />
-        <option value="$PROJECT_DIR$/sistema/reporte_cuentasCobrar/index.php" />
-        <option value="$PROJECT_DIR$/sistema/reporte_cuentasCobrar/rejilla.php" />
-        <option value="$PROJECT_DIR$/sistema/reporte_cuentasPagar/index.php" />
-        <option value="$PROJECT_DIR$/sistema/reporte_fact_compras_iva0iva12/index.php" />
-        <option value="$PROJECT_DIR$/sistema/reporte_fact_compras_iva0iva12/rejilla.php" />
-        <option value="$PROJECT_DIR$/sistema/reporte_fact_ventas_iva0iva12/rejilla.php" />
-        <option value="$PROJECT_DIR$/sistema/reporte_historial_cliente_ventas_detallado/rejilla.php" />
-        <option value="$PROJECT_DIR$/sistema/reporte_historial_cliente_ventas_detallado/index.php" />
-        <option value="$PROJECT_DIR$/sistema/reporte_historial_cliente_ventas_totales/index.php" />
-        <option value="$PROJECT_DIR$/sistema/reporte_kardex/index.php" />
         <option value="$PROJECT_DIR$/sistema/reporte_retenciones_mes/rejilla.php" />
         <option value="$PROJECT_DIR$/sistema/reportes_cuentas/rejilla.php" />
         <option value="$PROJECT_DIR$/sistema/retencionero/modificar_retencionero.php" />
@@ -221,14 +198,26 @@
         <option value="$PROJECT_DIR$/sistema/usuario/save.php" />
         <option value="$PROJECT_DIR$/sistema/cobros/frame_cobros.php" />
         <option value="$PROJECT_DIR$/sistema/pagos/frame_pagos.php" />
+        <option value="$PROJECT_DIR$/sistema/imprimir/imprimir_factura_electroparc.php" />
         <option value="$PROJECT_DIR$/sistema/facturas_clientes/guardar_factura.php" />
         <option value="$PROJECT_DIR$/sistema/producto_serie/class/Productoserie.php" />
         <option value="$PROJECT_DIR$/sistema/facturas_clientes/js/articulos_factura.js" />
-        <option value="$PROJECT_DIR$/sistema/facturas_proveedores/new_facturacompra.php" />
-        <option value="$PROJECT_DIR$/sistema/facturas_proveedores/guardar_linea.php" />
-        <option value="$PROJECT_DIR$/sistema/facturas_proveedores/frame_lineas.php" />
-        <option value="$PROJECT_DIR$/sistema/facturas_proveedores/guardar_factura.php" />
-        <option value="$PROJECT_DIR$/sistema/imprimir/imprimir_factura_electroparc.php" />
+        <option value="$PROJECT_DIR$/sistema/roles_cuotas/app.js" />
+        <option value="$PROJECT_DIR$/sistema/roles_cuotas/controllers/cobrosOld.js" />
+        <option value="$PROJECT_DIR$/sistema/roles_cuotas/controllers/pagosController.js" />
+        <option value="$PROJECT_DIR$/sistema/roles_cuotas/getContratosActivos2.php" />
+        <option value="$PROJECT_DIR$/sistema/roles_cuotas/inputDiary.php" />
+        <option value="$PROJECT_DIR$/sistema/roles_cuotas/getContratoOld.php" />
+        <option value="$PROJECT_DIR$/sistema/roles_cuotas/addOne.php" />
+        <option value="$PROJECT_DIR$/sistema/roles_cuotas/addpagos.php" />
+        <option value="$PROJECT_DIR$/sistema/roles_cuotas/getAllContratos.php" />
+        <option value="$PROJECT_DIR$/sistema/roles_cuotas/getAllContratosActivos3.php" />
+        <option value="$PROJECT_DIR$/sistema/roles_cuotas/getNames.php" />
+        <option value="$PROJECT_DIR$/sistema/roles_cuotas/getPhones.php" />
+        <option value="$PROJECT_DIR$/sistema/roles_cuotas/insertContrato.php" />
+        <option value="$PROJECT_DIR$/sistema/roles_cuotas/modificar.php" />
+        <option value="$PROJECT_DIR$/sistema/roles_cuotas/selectAll.php" />
+        <option value="$PROJECT_DIR$/sistema/roles_cuotas/updatePagoDelete.php" />
       </list>
     </option>
   </component>
@@ -272,31 +261,32 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sistemaContableELECTROPARC" />
+              <option name="myItemId" value="electroparc" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sistemaContableELECTROPARC" />
+              <option name="myItemId" value="electroparc" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sistemaContableELECTROPARC" />
+              <option name="myItemId" value="electroparc" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sistemaContableELECTROPARC" />
+              <option name="myItemId" value="electroparc" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sistemaContableELECTROPARC" />
+              <option name="myItemId" value="electroparc" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -306,11 +296,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sistemaContableELECTROPARC" />
+              <option name="myItemId" value="electroparc" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sistemaContableELECTROPARC" />
+              <option name="myItemId" value="electroparc" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -318,54 +308,13 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="producto_serie" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="class" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sistemaContableELECTROPARC" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sistemaContableELECTROPARC" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sistema" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sistemaContableELECTROPARC" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sistemaContableELECTROPARC" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sistema" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="facturas_proveedores" />
+              <option name="myItemId" value="roles_cuotas" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -398,13 +347,12 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/sistema/conexion/conexion.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/sistema/index.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/sistema/roles_cuotas/app.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/sistema/roles_cuotas/controllers/pagosController.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/sistema/roles_cuotas/db.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/sistema/roles_cuotas/getUsr.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/sistema/roles_cuotas/tablaPagos.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/sistema/facturas_proveedores/frame_lineas.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/sistema/facturas_proveedores/guardar_factura.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/sistema/facturas_proveedores/guardar_linea.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/sistema/facturas_proveedores/new_facturacompra.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/sistema/imprimir/imprimir_factura_electroparc.php</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -412,18 +360,6 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/sistema/roles_cuotas/controllers/cobrosOld.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/sistema/roles_cuotas/db2.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/sistema/roles_cuotas/getAbonosOld.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/sistema/roles_cuotas/getAbonosPorCuota.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/sistema/roles_cuotas/getContratoOld.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/sistema/roles_cuotas/getCuotasOld.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/sistema/roles_cuotas/getTotal.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/sistema/roles_cuotas/getUsr2.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/sistema/roles_cuotas/oldModule/cobros.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/sistema/roles_cuotas/saveAbonoLegacy.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/sistema/roles_cuotas/scripts/moment.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/sistema/roles_cuotas/updateStateOldCuota.php</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Deleted" />
@@ -640,10 +576,10 @@
       <workItem from="1498009330515" duration="765000" />
       <workItem from="1498010796781" duration="2965000" />
       <workItem from="1498014968097" duration="736000" />
-      <workItem from="1498015868509" duration="1795000" />
-      <workItem from="1498243802696" duration="5600000" />
-      <workItem from="1498253837081" duration="5111000" />
-      <workItem from="1498410105709" duration="62000" />
+      <workItem from="1498015868509" duration="1681000" />
+      <workItem from="1498264659939" duration="66000" />
+      <workItem from="1498422568506" duration="9224000" />
+      <workItem from="1498572090258" duration="450000" />
     </task>
     <task id="LOCAL-00001" summary="LocalStorage UP">
       <created>1494349590317</created>
@@ -778,33 +714,33 @@
       <option name="project" value="LOCAL" />
       <updated>1497884602823</updated>
     </task>
-    <task id="LOCAL-00020" summary="control series vender">
-      <created>1498017628697</created>
+    <task id="LOCAL-00020" summary="agrego modulo de cobros antiguo">
+      <created>1498264692768</created>
       <option name="number" value="00020" />
       <option name="presentableId" value="LOCAL-00020" />
       <option name="project" value="LOCAL" />
-      <updated>1498017628697</updated>
+      <updated>1498264692768</updated>
     </task>
     <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="171587000" />
+    <option name="totallyTimeSpent" value="170440000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10543478" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10465116" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -846,9 +782,8 @@
     <MESSAGE value="factura venta new" />
     <MESSAGE value="final fixed php" />
     <MESSAGE value="null cobras y pagos" />
-    <MESSAGE value="control series vender" />
-    <MESSAGE value="factura completa venta con motos" />
-    <option name="LAST_COMMIT_MESSAGE" value="factura completa venta con motos" />
+    <MESSAGE value="agrego modulo de cobros antiguo" />
+    <option name="LAST_COMMIT_MESSAGE" value="agrego modulo de cobros antiguo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -857,266 +792,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sistema/subgrupo/new_subgrupo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="63" column="107" selection-start-line="63" selection-start-column="107" selection-end-line="63" selection-end-column="107" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/subgrupo/processing_listado_subgrupos.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/subgrupo/rejilla.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/subgrupo/save_subgrupo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2465">
-          <caret line="145" column="104" selection-start-line="145" selection-start-column="104" selection-end-line="145" selection-end-column="104" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/subgrupo/ver_subgrupo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="61" column="40" selection-start-line="61" selection-start-column="40" selection-end-line="61" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/subgrupo/modificar_subgrupo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1836">
-          <caret line="108" column="77" selection-start-line="108" selection-start-column="77" selection-end-line="108" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/transformacion_inventario/class/producto.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/transformacion_inventario/bodega_stock.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/transformacion_inventario/bodegas.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/transformacion_inventario/frame_articulos.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1341">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/transformacion_inventario/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-98">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/transformacion_inventario/modificar_producto.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="80" selection-start-line="33" selection-start-column="80" selection-end-line="33" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/transformacion_inventario/new_producto.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/transformacion_inventario/eliminar_producto.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="798">
-          <caret line="81" column="85" selection-start-line="81" selection-start-column="85" selection-end-line="81" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/transformacion_inventario/processing_inventario_productos.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/transformacion_inventario/processing_inventario_productos_transformados.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/transformacion_inventario/save_producto.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/transformacion_inventario/subgrupo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="6" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/transformacion_inventario/ver_articulos.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-846">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/transformacion_inventario/ver_producto.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1461">
-          <caret line="128" column="85" selection-start-line="128" selection-start-column="85" selection-end-line="128" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/transformacion_inventario/rejilla.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/tributacion_ats/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/tributacion_ats/ats.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12639">
-          <caret line="760" column="45" selection-start-line="760" selection-start-column="45" selection-end-line="760" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/usuario/class/usuario.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/usuario/eliminar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-714">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/usuario/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-115">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/usuario/new.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1887">
-          <caret line="111" column="57" selection-start-line="111" selection-start-column="57" selection-end-line="111" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/usuario/processing_listado.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/usuario/rejilla.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/usuario/save.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2822">
-          <caret line="166" column="100" selection-start-line="166" selection-start-column="100" selection-end-line="166" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/usuario/ver.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/usuario/modificar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2754">
-          <caret line="162" column="71" selection-start-line="162" selection-start-column="71" selection-end-line="162" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="39" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logout.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log.inout.ajax.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/facturas_clientes/class/facturas.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sistema/bodega_transferencia/new_transferencia.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1131,27 +806,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/cobros/frame_cobros.php">
+    <entry file="file://$PROJECT_DIR$/sistema/facturas_clientes/guardar_factura.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="88" column="4" selection-start-line="88" selection-start-column="4" selection-end-line="88" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/pagos/frame_pagos.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="198" column="66" selection-start-line="198" selection-start-column="66" selection-end-line="198" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/facturas_clientes/js/articulos_factura.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4250">
-          <caret line="254" column="4" selection-start-line="254" selection-start-column="4" selection-end-line="254" selection-end-column="4" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state relative-caret-position="6766">
+          <caret line="398" column="37" selection-start-line="398" selection-start-column="37" selection-end-line="398" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -1159,124 +817,439 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1495556148330" expanded="true" signature="230:285" placeholder="select porce... iva" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/facturas_clientes/js/articulos_factura.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-803">
+          <caret line="224" column="58" selection-start-line="224" selection-start-column="58" selection-end-line="224" selection-end-column="58" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sistema/facturas_clientes/new_facturaventa.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
+        <state relative-caret-position="759">
           <caret line="571" column="64" selection-start-line="571" selection-start-column="57" selection-end-line="571" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/facturas_clientes/guardar_factura.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="398" column="37" selection-start-line="398" selection-start-column="37" selection-end-line="398" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sistema/producto_serie/class/Productoserie.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1071">
+          <caret line="63" column="10" selection-start-line="63" selection-start-column="10" selection-end-line="63" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/oldModule/cobros.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2261">
+          <caret line="133" column="56" selection-start-line="133" selection-start-column="56" selection-end-line="133" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/controllers/contratoController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-561">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/controllers/cobrosOld.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7480">
+          <caret line="440" column="27" selection-start-line="416" selection-start-column="19" selection-end-line="440" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/tablaPagos.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2261">
+          <caret line="133" column="0" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/app.js">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="918">
-          <caret line="54" column="36" selection-start-line="54" selection-start-column="36" selection-end-line="54" selection-end-column="36" />
+          <caret line="54" column="75" selection-start-line="54" selection-start-column="75" selection-end-line="54" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/controllers/pagosController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9792">
+          <caret line="576" column="64" selection-start-line="576" selection-start-column="64" selection-end-line="576" selection-end-column="64" />
           <folding>
-            <marker date="1498013810945" expanded="true" signature="701:789" placeholder="INSERT INTO productoserie... " />
-            <marker date="1498013810945" expanded="true" signature="959:1010" placeholder="UPDATE produ... " />
-            <marker date="1498013810945" expanded="true" signature="1181:1299" placeholder="UPDATE produ... " />
-            <marker date="1498013810945" expanded="true" signature="1452:1528" placeholder="UPDATE produ... " />
-            <marker date="1498013810945" expanded="true" signature="1551:1630" placeholder="UPDATE produ... " />
-            <marker date="1498013810945" expanded="true" signature="1800:1918" placeholder="UPDATE produ... " />
-            <marker date="1498013810945" expanded="true" signature="2060:2518" placeholder="SELECT s.ser... productoserie" />
-            <marker date="1498013810945" expanded="true" signature="2754:3241" placeholder="SELECT s.ser... productoserie" />
+            <element signature="e#24747#25695#0" expanded="false" />
+            <element signature="e#25751#25954#0" expanded="false" />
+            <element signature="e#25989#26136#0" expanded="false" />
+            <element signature="e#26023#26043#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/facturas_proveedores/new_facturacompra.php">
+    <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/inputDiary.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9639">
-          <caret line="567" column="104" selection-start-line="567" selection-start-column="92" selection-end-line="567" selection-end-column="104" />
+        <state relative-caret-position="136">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
-            <marker date="1498255985065" expanded="true" signature="200:255" placeholder="select porce... iva" />
-            <marker date="1498255985065" expanded="true" signature="468:534" placeholder="INSERT INTO facturasptmp... " />
-            <marker date="1498255985065" expanded="true" signature="21020:21070" placeholder="SELECT id_cu... cuenta" />
-            <marker date="1498255985065" expanded="true" signature="28220:28317" placeholder="SELECT b.id_... bodega" />
+            <marker date="1498572120043" expanded="true" signature="257:422" placeholder="INSERT INTO cobros... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/facturas_proveedores/frame_lineas.php">
+    <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/addOne.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3162">
-          <caret line="186" column="22" selection-start-line="186" selection-start-column="22" selection-end-line="186" selection-end-column="22" />
+        <state relative-caret-position="238">
+          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
           <folding>
-            <marker date="1498257030971" expanded="true" signature="8282:8568" placeholder="INSERT INTO factulineaptmp... " />
-            <marker date="1498257030971" expanded="true" signature="8748:9129" placeholder="SELECT b.cod... factulineaptmp" />
-            <marker date="1498257030971" expanded="true" signature="9991:10046" placeholder="SELECT nombr... bodega" />
+            <marker date="1498572154733" expanded="true" signature="450:784" placeholder="INSERT INTO `ideweb`.`rol_pago`... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/facturas_proveedores/guardar_linea.php">
+    <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/addpagos.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="30" column="53" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="53" />
+        <state relative-caret-position="170">
+          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
           <folding>
-            <marker date="1498256536724" expanded="true" signature="1288:1610" placeholder="UPDATE factu... " />
-            <marker date="1498256536724" expanded="true" signature="1815:2041" placeholder="..." />
+            <marker date="1498572154717" expanded="true" signature="300:481" placeholder="INSERT INTO pagos_credito... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/facturas_proveedores/guardar_factura.php">
+    <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/getAbonosOld.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1326">
-          <caret line="78" column="26" selection-start-line="78" selection-start-column="26" selection-end-line="78" selection-end-column="26" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1498257382368" expanded="true" signature="1798:1882" placeholder="SELECT * FRO... factulineaptmp" />
-            <marker date="1498257382368" expanded="true" signature="3457:3571" placeholder="SELECT id_pr... productobodega" />
-            <marker date="1498257382368" expanded="true" signature="4238:4340" placeholder="UPDATE produ... " />
-            <marker date="1498257382368" expanded="true" signature="4434:4515" placeholder="SELECT SUM(s... productobodega" />
-            <marker date="1498257382368" expanded="true" signature="4677:4747" placeholder="UPDATE produ... " />
-            <marker date="1498257382368" expanded="true" signature="4870:4930" placeholder="DELETE FROM " />
-            <marker date="1498257382368" expanded="true" signature="4993:5051" placeholder="DELETE FROM " />
-            <marker date="1498257382368" expanded="true" signature="5143:5157" placeholder="..." />
-            <marker date="1498257382368" expanded="true" signature="5497:6076" placeholder="UPDATE factu... " />
-            <marker date="1498257382368" expanded="true" signature="6154:6219" placeholder="UPDATE reten... " />
-            <marker date="1498257382368" expanded="true" signature="6302:6356" placeholder="SELECT * FRO... facturasp" />
-            <marker date="1498257382368" expanded="true" signature="7473:7508" placeholder="DELETE FROM " />
-            <marker date="1498257382368" expanded="true" signature="7578:7649" placeholder="DELETE FROM " />
-            <marker date="1498257382368" expanded="true" signature="7709:7765" placeholder="SELECT * FRO... factulineap" />
-            <marker date="1498257382368" expanded="true" signature="8134:8247" placeholder="SELECT id_pr... productobodega" />
-            <marker date="1498257382368" expanded="true" signature="8412:8514" placeholder="UPDATE produ... " />
-            <marker date="1498257382368" expanded="true" signature="8600:8680" placeholder="SELECT SUM(s... productobodega" />
-            <marker date="1498257382368" expanded="true" signature="8830:8899" placeholder="UPDATE produ... " />
-            <marker date="1498257382368" expanded="true" signature="9226:9280" placeholder="SELECT * FRO... facturasp" />
-            <marker date="1498257382368" expanded="true" signature="12588:12645" placeholder="SELECT * FRO... proveedor" />
-            <marker date="1498257382368" expanded="true" signature="15697:15748" placeholder="SELECT nombr... cuenta" />
-            <marker date="1498257382368" expanded="true" signature="17088:17336" placeholder="SELECT b.cod... factulineap" />
+            <marker date="1498264648620" expanded="true" signature="155:197" placeholder="select * fro... abono_legacy" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sistema/imprimir/imprimir_factura_electroparc.php">
+    <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/getAbonosPorCuota.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="565">
-          <caret line="176" column="38" selection-start-line="176" selection-start-column="38" selection-end-line="176" selection-end-column="38" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1498259741162" expanded="true" signature="411:518" placeholder="SELECT *, DA... facturas" />
-            <marker date="1498259741162" expanded="true" signature="1793:1844" placeholder="SELECT * FRO... cliente" />
-            <marker date="1498259741162" expanded="true" signature="2243:2303" placeholder="SELECT numer... clientefono" />
-            <marker date="1498259741162" expanded="true" signature="2779:2834" placeholder="select porce... iva" />
-            <marker date="1498259741162" expanded="true" signature="3367:3518" placeholder="SELECT f.nom... formapago" />
-            <marker date="1498259741162" expanded="true" signature="4985:5332" placeholder="SELECT b.cod... factulinea" />
-            <marker date="1498259741162" expanded="true" signature="5598:5709" placeholder="SELECT serie... productoserie" />
-            <marker date="1498259741162" expanded="true" signature="8136:8155" placeholder="..." />
+            <marker date="1498264648621" expanded="true" signature="237:303" placeholder="select SUM(c... abono_legacy" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/getAllContratos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
+          <folding>
+            <marker date="1498572220087" expanded="true" signature="164:275" placeholder="SELECT * FRO... contrato_credito" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/getAllContratosActivos3.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
+          <folding>
+            <marker date="1498572220112" expanded="true" signature="164:246" placeholder="SELECT * FRO... contrato_credito" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/getClientePrint.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1495290843275" expanded="true" signature="195:235" placeholder="SELECT * FRO... cliente" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/getContratoOld.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+          <folding>
+            <marker date="1498572120041" expanded="true" signature="163:687" placeholder="select a.cod... contrato_credito_legacy" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/getContratosActivos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1495290843281" expanded="true" signature="162:407" placeholder="SELECT codig... contrato_credito" />
+            <marker date="1495290843281" expanded="true" signature="326:379" placeholder="SELECT id_cl... cliente" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/getContratosActivos2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+          <folding>
+            <marker date="1498572120042" expanded="true" signature="162:616" placeholder="SELECT a.cod... contrato_credito" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/getCuotas.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1495290843293" expanded="true" signature="185:269" placeholder="SELECT * FRO... pagos_credito" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/getCuotasOld.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1498264648623" expanded="true" signature="155:220" placeholder="select * fro... cuota_legacy" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/getFactura.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1495290843304" expanded="true" signature="193:341" placeholder="SELECT * FRO... factulinea" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/getNames.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="48" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
+          <folding>
+            <marker date="1498572248894" expanded="true" signature="164:277" placeholder="SELECT nombr... factulinea" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/getPhones.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+          <folding>
+            <marker date="1498572323063" expanded="true" signature="170:227" placeholder="SELECT * FRO... clientefono" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/getTotal.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1498264648624" expanded="true" signature="237:311" placeholder="select * fro... cuota_legacy" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/getUser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/getUsr.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/getUsr2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/insertContrato.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="65" column="20" selection-start-line="65" selection-start-column="20" selection-end-line="65" selection-end-column="20" />
+          <folding>
+            <marker date="1498572323040" expanded="true" signature="4164:7703" placeholder="INSERT INTO `contrato_credito`... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/modificar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
+          <folding>
+            <marker date="1498572323089" expanded="true" signature="469:700" placeholder="UPDATE `rol_... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/modify.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/modifyCont.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-663">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1495290843454" expanded="true" signature="3806:7258" placeholder="UPDATE contr... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/modifyContract.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/pagos.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/selecContrato.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1495290844123" expanded="true" signature="188:271" placeholder="select * fro... relacion_empleado_contrato" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/saveAbonoLegacy.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1498264648643" expanded="true" signature="459:762" placeholder="INSERT INTO `abono_legacy`... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/selectAll.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="2" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
+          <folding>
+            <marker date="1498572378089" expanded="true" signature="136:554" placeholder="SELECT b.id_... rol_pago" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/selectEmpleado.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1495290844137" expanded="true" signature="137:159" placeholder="select * fro... empleado" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/testPostphp.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/updatePago.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1495290844233" expanded="true" signature="267:389" placeholder="UPDATE pagos... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/updatePagoDelete.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <marker date="1498572508158" expanded="true" signature="344:573" placeholder="INSERT INTO `pagos_credito_borrados`... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/updateStateCont.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <marker date="1495290844257" expanded="true" signature="205:290" placeholder="UPDATE contr... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/updateStateOldCuota.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/db.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema/roles_cuotas/db2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
+          <folding />
         </state>
       </provider>
     </entry>

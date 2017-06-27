@@ -63,7 +63,7 @@ $data = json_decode(file_get_contents("php://input"));
     $concostocuota = $data->concostocuota;
     //$conobservacion = $data->conobservacion;
 
-$query="INSERT INTO `ideweb`.`contrato_credito`
+$query="INSERT INTO `contrato_credito`
 (`tipconcodigo`,
 `id_cliente`,
 `id_venta`,

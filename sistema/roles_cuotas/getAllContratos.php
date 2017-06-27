@@ -7,7 +7,7 @@ require_once 'db.php'; // The mysql database connection script
 $data = json_decode(file_get_contents("php://input"));
 //$cedula = $data->cedula;
 
-$query="SELECT * FROM ideweb.contrato_credito as a join ideweb.cliente as b on a.id_cliente=b.id_cliente where estconcodigo='Vigente'";
+$query="SELECT * FROM contrato_credito as a join cliente as b on a.id_cliente=b.id_cliente where estconcodigo='Vigente'";
 $result = $mysqli->query($query) or die($mysqli->error.__LINE__);
 
 $arr = array();

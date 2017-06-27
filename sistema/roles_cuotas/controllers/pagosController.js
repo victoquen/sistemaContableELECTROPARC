@@ -436,7 +436,7 @@ app.controller('PagosController', ['$scope', '$http', '$location', 'myProvider',
                             .then(function (response) {
                                 console.log(response);
                                 console.log('ingreso correcto');
-                               
+
                                 $scope.loadPagos();
                             }, function errorCallback(response) {
                                 //console.log(url2);
@@ -564,6 +564,35 @@ app.controller('PagosController', ['$scope', '$http', '$location', 'myProvider',
                     .then(function (response) {
 
                         console.log('ingreso correcto');
+
+
+                        $http({
+                            method: 'POST',
+                            url: myProvider.saveDiary(),
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            data: {
+                                id_factura : $scope.id.id_venta,
+                                id_cliente: $scope.id.id_cliente,
+                                // id_usuario: '1',
+                                importe: $scope.pagar.valor,
+                                fechacobro:$scope.dateNow
+
+
+
+
+                            }
+
+
+                        })
+                            .then(function (response) {
+                            }, function errorCallback(response) {
+
+                                // console.log(response);
+                            });
+
+
                         $scope.vec1= $scope.pagar.fecha_maxima.split('-');
                         console.log($scope.vec1);
                         $scope.flag = false;
@@ -742,6 +771,31 @@ app.controller('PagosController', ['$scope', '$http', '$location', 'myProvider',
                     .then(function (response) {
 
                         console.log('ingreso correcto');
+                        $http({
+                            method: 'POST',
+                            url: myProvider.saveDiary(),
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            data: {
+                                id_factura : $scope.id.id_venta,
+                                id_cliente: $scope.id.id_cliente,
+                                // id_usuario: '1',
+                                importe: $scope.pagar.valor,
+                                fechacobro:$scope.dateNow
+
+
+
+
+                            }
+
+
+                        })
+                            .then(function (response) {
+                            }, function errorCallback(response) {
+
+                                // console.log(response);
+                            });
                         $scope.loadPagos();
                     }, function errorCallback(response) {
                         //console.log(url2);
@@ -770,9 +824,9 @@ app.controller('PagosController', ['$scope', '$http', '$location', 'myProvider',
         $scope.month2 = parseInt($scope.vec1[1]);
         if ($scope.month2 >= $scope.month && $scope.day2 > $scope.day1) {
             $scope.id.coninteresmora = $scope.id.coninteresmora / 100;
-            $scope.adicional = parseFloat(fixedNumbers($scope.pagar.valor * $scope.id.coninteresmora));
+            $scope.adicional = fixedNumbers(parseFloat($scope.pagar.valor) * parseFloat($scope.id.coninteresmora));
 
-            $scope.pagar.valor += $scope.adicional;
+            $scope.pagar.valor = fixedNumbers(parseFloat($scope.adicional)+parseFloat($scope.pagar.valor));
 
         }
        // $scope.vec1 
@@ -785,7 +839,7 @@ app.controller('PagosController', ['$scope', '$http', '$location', 'myProvider',
 
     fixedNumbers = function (cal) {
 
-        var constant100 = 10000;
+        var constant100 = 1000;
         var resp = (Math.floor(cal * constant100) / constant100).toFixed(2);
         //   console.log(resp);
         return (resp);

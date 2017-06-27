@@ -13,7 +13,7 @@ $anio = $data->anio;
 $dias_no_laborados = $data->dias_no_laborados;
 $id = $data->id;
 
-$query="UPDATE `ideweb`.`rol_pago` SET  seguro=$seguro, sueldo=$sueldo, descuento=$descuento, comision=$comision, total_dias=$total_dias, total_pagar=$total_pagar, mes=$mes, anio=$anio, borrado=0, dias_no_laborados=\"$dias_no_laborados\"
+$query="UPDATE `rol_pago` SET  seguro=$seguro, sueldo=$sueldo, descuento=$descuento, comision=$comision, total_dias=$total_dias, total_pagar=$total_pagar, mes=$mes, anio=$anio, borrado=0, dias_no_laborados=\"$dias_no_laborados\"
  WHERE id=$id";
 
 $result = $mysqli->query($query) or die($mysqli->error.__LINE__);

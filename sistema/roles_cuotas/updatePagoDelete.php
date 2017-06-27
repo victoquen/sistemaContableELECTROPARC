@@ -10,7 +10,7 @@ $usuario=$data->usuario;
 $hora=$data->hora;
 
 
-$query="INSERT INTO `ideweb`.`pagos_credito_borrados` (`id_contrato`, `descripcion_pago`, `fecha_maxima`, `estado`, `valor`, `usuario`,`hora`)
+$query="INSERT INTO `pagos_credito_borrados` (`id_contrato`, `descripcion_pago`, `fecha_maxima`, `estado`, `valor`, `usuario`,`hora`)
  VALUES ('$id_contrato', '$descripcion_pago', '$fecha_maxima', '$estado', '$valor','$usuario', '$hora');";
 
 $result = $mysqli->query($query) or die($mysqli->error.__LINE__);

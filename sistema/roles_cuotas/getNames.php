@@ -7,7 +7,7 @@ require_once 'db.php'; // The mysql database connection script
 $data = json_decode(file_get_contents("php://input"));
 $factura = $data->factura;
 
-$query="SELECT nombre from ideweb.factulinea as a join ideweb.producto  as b on a.id_producto=b.id_producto where id_factura='$factura'";
+$query="SELECT nombre from factulinea as a join producto  as b on a.id_producto=b.id_producto where id_factura='$factura'";
 $result = $mysqli->query($query) or die($mysqli->error.__LINE__);
 
 $arr = array();

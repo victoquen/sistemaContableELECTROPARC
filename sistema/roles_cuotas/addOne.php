@@ -12,7 +12,7 @@ $mes = $data->mes;
 $anio = $data->anio;
 $dias_no_laborados = $data->dias_no_laborados;
 
-$query="INSERT INTO `ideweb`.`rol_pago` (`id_relacion_empleado_contrato`, `seguro`, `sueldo`, `descuento`, `comision`, `total_dias`, `total_pagar`, `mes`, `anio`, `borrado`, `dias_no_laborados`)
+$query="INSERT INTO rol_pago` (`id_relacion_empleado_contrato`, `seguro`, `sueldo`, `descuento`, `comision`, `total_dias`, `total_pagar`, `mes`, `anio`, `borrado`, `dias_no_laborados`)
  VALUES ('$id_contrato_empleado', '$seguro', '$sueldo', '$descuento', '$comision', '$total_dias', '$total_pagar', '$mes', '$anio', '0', '$dias_no_laborados');";
 
 $result = $mysqli->query($query) or die($mysqli->error.__LINE__);

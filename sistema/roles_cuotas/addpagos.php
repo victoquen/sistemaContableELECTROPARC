@@ -8,7 +8,7 @@ $estado = $data->estado;
 $valor = $data->valor;
 
 
-$query="INSERT INTO `ideweb`.`pagos_credito` (`id_contrato`, `descripcion_pago`, `fecha_maxima`, `estado`, `valor`)
+$query="INSERT INTO pagos_credito` (`id_contrato`, `descripcion_pago`, `fecha_maxima`, `estado`, `valor`)
  VALUES ('$id_contrato', '$descripcion_pago', '$fecha_maxima', '$estado', '$valor');";
 
 $result = $mysqli->query($query) or die($mysqli->error.__LINE__);

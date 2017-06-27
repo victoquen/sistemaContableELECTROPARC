@@ -11,7 +11,7 @@ app.controller('CobrosOld', ['$scope', '$http', '$location', 'myProvider', '$loc
     $scope.usuario;
     $scope.faltanteCuota;
     $scope.diasMora;
-
+    $scope.valorInteres;
     $scope.iniciar = function () {
         $http({
             method: 'POST',
@@ -265,7 +265,7 @@ app.controller('CobrosOld', ['$scope', '$http', '$location', 'myProvider', '$loc
     
     $scope.loadAbono=function(){
 
-        console.log($scope.pagar);
+   //     console.log($scope.pagar);
         $http({
             method: 'POST',
             url: myProvider.getAbonoOld(),
@@ -288,47 +288,49 @@ app.controller('CobrosOld', ['$scope', '$http', '$location', 'myProvider', '$loc
                 var n = $scope.listaAbono.length;
                 $scope.cont=0;
                 for(var i=0; i<n;i++){
-                    console.log($scope.cont);
+                 //   console.log($scope.cont);
                     $scope.cont+=parseFloat($scope.listaAbono[i].costo)
 
 
                 }
-                console.log('meses');
+             //   console.log('meses');
                 $scope.diasMora=$scope.countDays($scope.id2.fecha_pago);
-                console.log('meses '+$scope.diasMora)
+            //    console.log('meses '+$scope.diasMora)
                 $scope.dias2=$scope.countDays2($scope.id2.fecha_pago);
-                console.log('dias '+$scope.dias2)
+            //    console.log('dias '+$scope.dias2)
                 if($scope.diasMora>0 && $scope.dias2>0){
+                    console.log('entra mora')
                     var interes = parseFloat($scope.id2.interes_mora)/100;
-                    console.log(interes);
+                    //console.log(interes);
                     var totalInteres = fixedNumbers(interes*parseFloat($scope.diasMora));
                     var cuota=parseFloat($scope.id2.costo_cuota);
                     var subtotal= fixedNumbers(totalInteres*cuota);
-
+                    $scope.valorInteres=subtotal;
 
                     var number1=parseFloat($scope.id2.costo_cuota);
                     var number2=parseFloat($scope.cont);
-                    console.log(subtotal);
-                    console.log(cuota);
-                    console.log(number1);
-                    console.log(number2);
+                   // console.log(subtotal);
+                  //  console.log(cuota);
+                  //  console.log(number1);
+                 //   console.log(number2);
                     $scope.faltanteCuota=number1-number2;
                     $scope.faltanteCuota+=parseFloat(subtotal)
                     $scope.faltanteCuota=fixedNumbers($scope.faltanteCuota);
                 }else{
+                    console.log('no entra mora')
                     var number1=parseFloat($scope.id2.costo_cuota);
                     var number2=parseFloat($scope.cont);
-                    console.log(number1);
-                    console.log(number2);
-
+                  //  console.log(number1);
+                  //  console.log(number2);
+                    $scope.valorInteres=0;
                     $scope.faltanteCuota=parseFloat(fixedNumbers(number1-number2));
                 }
 
-                console.log($scope.faltanteCuota);
-                console.log($scope.id2.costo_cuota);
-                console.log($scope.id2.costo_cuota);
-                console.log(fixedNumbers($scope.id2.costo_cuota));
-                console.log($scope.cont);
+              //  console.log($scope.faltanteCuota);
+            //    console.log($scope.id2.costo_cuota);
+           //     console.log($scope.id2.costo_cuota);
+            //    console.log(fixedNumbers($scope.id2.costo_cuota));
+           //     console.log($scope.cont);
                  //console.log($scope.listaAbono);
             }, function errorCallback(response) {
 
@@ -348,7 +350,7 @@ app.controller('CobrosOld', ['$scope', '$http', '$location', 'myProvider', '$loc
     $scope.ingresar=function (){
 
         var dt = new Date();
-
+        console.log($scope.valorInteres);
 // Display the month, day, and year. getMonth() returns a 0-based number.
         var month = dt.getMonth()+1;
         var day = dt.getDate();
@@ -362,8 +364,8 @@ app.controller('CobrosOld', ['$scope', '$http', '$location', 'myProvider', '$loc
 
         var time=hora+':'+minuto+":"+segundo;
 
-        console.log(now);
-        console.log(time);
+       // console.log(now);
+      //  console.log(time);
         var subtotal=0;
         var n= $scope.listaAbono.length;
         for(var i=0;i<n;i++){
@@ -374,9 +376,9 @@ app.controller('CobrosOld', ['$scope', '$http', '$location', 'myProvider', '$loc
         }
 
         subtotal+=parseFloat($scope.pago3.costo);
-        console.log(subtotal);
+      //  console.log(subtotal);
         var sub2=parseFloat($scope.id2.costo_cuota);
-        console.log(parseFloat($scope.id2.costo_cuota));
+     //   console.log(parseFloat($scope.id2.costo_cuota));
 
         if(subtotal<sub2){
 
@@ -393,7 +395,7 @@ app.controller('CobrosOld', ['$scope', '$http', '$location', 'myProvider', '$loc
                     costo: $scope.pago3.costo,
                     fecha_abono:now,
                     numero_comprobante: $scope.id2.id_cuota,
-                    interes_mora: $scope.id2.interes_mora,
+                    interes_mora: $scope.valorInteres,
                     dias_mora: "0",
                     costo_cobrado:  $scope.pago3.costo,
                     observacion: "obs",
@@ -408,16 +410,44 @@ app.controller('CobrosOld', ['$scope', '$http', '$location', 'myProvider', '$loc
                 .then(function (response) {
                     console.log(response.data);
                     $scope.loadAbono();
-
+                            
                     //$scope.listaAbono.push(data);
                     // console.log($scope.listaAbono);
+
+                    $http({
+                        method: 'POST',
+                        url: myProvider.saveDiary(),
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        data: {
+                            id_factura : $scope.id.id_venta,
+                            id_cliente: $scope.id.id_cliente,
+                            // id_usuario: '1',
+                            importe: $scope.pago3.costo,
+                            fechacobro:now
+
+
+
+
+                        }
+
+
+                    })
+                        .then(function (response) {
+                        }, function errorCallback(response) {
+
+                            // console.log(response);
+                        });
+                        
                 }, function errorCallback(response) {
 
                     // console.log(response);
                 });
 
         }else{
-            console.log($scope.usuario);
+          //  console.log($scope.usuario);
+
             $http({
                 method: 'POST',
                 url: myProvider.saveOld(),
@@ -431,7 +461,7 @@ app.controller('CobrosOld', ['$scope', '$http', '$location', 'myProvider', '$loc
                     costo: $scope.pago3.costo,
                     fecha_abono:now,
                     numero_comprobante: $scope.id2.id_cuota,
-                    interes_mora: $scope.id2.interes_mora,
+                    interes_mora: $scope.valorInteres,
                     dias_mora: "0",
                     costo_cobrado:  $scope.pago3.costo,
                     observacion: "obs",
@@ -521,7 +551,7 @@ app.controller('CobrosOld', ['$scope', '$http', '$location', 'myProvider', '$loc
         var fecha2 = moment(date, "YYYY-MM-DD");
 
         var diff = fecha1.diff(fecha2, 'months'); // Diff in days
-        console.log(diff+'meses');
+     //   console.log(diff+'meses');
         diff++;
         return(diff);
 
@@ -545,7 +575,7 @@ app.controller('CobrosOld', ['$scope', '$http', '$location', 'myProvider', '$loc
         var fecha2 = moment(date, "YYYY-MM-DD");
 
         var diff = fecha1.diff(fecha2, 'd'); // Diff in days
-        console.log(diff+'dias');
+    //    console.log(diff+'dias');
 
         return(diff);
 

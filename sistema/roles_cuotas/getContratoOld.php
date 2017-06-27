@@ -7,7 +7,7 @@ require_once 'db2.php'; // The mysql database connection script
 $data = json_decode(file_get_contents("php://input"));
 $cedula = $data->cedula;
 
-$query="select a.codigo,confechacontrato,conplazocredito,estconcodigo,concostocuota,coninterescredito,coninteresmora,concuotainicial,b.nombre,ci_ruc,a.id_venta,e.descripcion_producto as producto
+$query="select a.codigo,confechacontrato,conplazocredito,estconcodigo,concostocuota,coninterescredito,coninteresmora,concuotainicial,b.nombre,ci_ruc,a.id_venta,e.descripcion_producto as producto,a.id_cliente
 from contrato_credito_legacy as a 
 join cliente as b on a.id_cliente=b.id_cliente
 join venta_legacy as c on c.id_venta=a.id_venta
