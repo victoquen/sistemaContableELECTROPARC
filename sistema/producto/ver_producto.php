@@ -240,9 +240,9 @@ $row = $producto->get_producto_id($conn, $idproducto);
             </div>
             <div id="botonBusqueda">
                 <img src='../img/botonmodificar.jpg' border='1' width='85' height='22' border='1' title='Modificar'
-                     onClick='modificar_producto(<? echo $idproducto ?>)' onMouseOver='style.cursor=cursor'>
+                     onClick='modificar_producto(<?php echo $idproducto ?>)' onMouseOver='style.cursor=cursor'>
                 <img src='../img/botoneliminar.jpg' border='1' width='85' height='22' border='1' title='Eliminar'
-                     onClick='eliminar_producto(<? echo $idproducto ?>)' onMouseOver='style.cursor=cursor'>
+                     onClick='eliminar_producto(<?php echo $idproducto ?>)' onMouseOver='style.cursor=cursor'>
                 <img src="../img/botonaceptar.jpg" width="85" height="22" onClick="aceptar()" border="1"
                      onMouseOver="style.cursor=cursor">
 
