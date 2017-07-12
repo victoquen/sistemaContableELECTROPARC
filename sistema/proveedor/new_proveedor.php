@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 include_once '../conexion/conexion.php';
 include_once 'class/proveedor.php';
@@ -192,8 +192,8 @@ $codproveedortmp=mysql_insert_id();
                     </div>
 
                     <div id="botonBusqueda">
-                         <input id="origen" name="origen" value="<?php echo $origen?>" type="hidden">
-                         <input id="codproveedortmp" name="codproveedortmp" value="<?php echo $codproveedortmp;?>" type="hidden">
+                         <input id="origen" name="origen" value="<?php  echo $origen?>" type="hidden">
+                         <input id="codproveedortmp" name="codproveedortmp" value="<?php  echo $codproveedortmp;?>" type="hidden">
                         <input id="accion" name="accion" value="alta" type="hidden">
                         <input id="id" name="Zid" value="" type="hidden">
                     </div>
@@ -208,7 +208,7 @@ $codproveedortmp=mysql_insert_id();
                             <div id="tituloForm" class="header" style="background: #EFD279">OFICINA TELEFONOS</div>
                             <table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0 >
 
-                                 <?php
+                                 <?php 
 
                                     $query_o="SELECT * FROM operadora WHERE borrado=0 ORDER BY nombre ASC";
                                     $res_o=mysql_query($query_o,$conn);
@@ -221,18 +221,18 @@ $codproveedortmp=mysql_insert_id();
                                          Operadora:&nbsp;
                                         <select id="operadora"  class="comboMedio" NAME="operadora">
                                             <option value="0">Seleccionar operadora</option>
-                                            <?php
+                                            <?php 
                                             $contador=0;
                                             while ($contador < mysql_num_rows($res_o)) 
                                                 {
                                                     if(mysql_result($res_o,$contador,"nombre")=="FIJO")
                                                     {?>
-                                                        <option selected value="<?php echo mysql_result($res_o,$contador,"id_operadora")?>"><?php echo mysql_result($res_o,$contador,"nombre")?></option>
+                                                        <option selected value="<?php  echo mysql_result($res_o,$contador,"id_operadora")?>"><?php  echo mysql_result($res_o,$contador,"nombre")?></option>
                                             
 
-                                                     <?} else {?>
-                                                        <option value="<?php echo mysql_result($res_o,$contador,"id_operadora")?>"><?php echo mysql_result($res_o,$contador,"nombre")?></option>
-                                            <?php }$contador++;
+                                                     <?php } else {?>
+                                                        <option value="<?php  echo mysql_result($res_o,$contador,"id_operadora")?>"><?php  echo mysql_result($res_o,$contador,"nombre")?></option>
+                                            <?php  }$contador++;
                                             } ?>
                                         </select>
                                          &nbsp;
@@ -267,7 +267,7 @@ $codproveedortmp=mysql_insert_id();
                     </div>
 
                               
-             <input id="codproveedortmp" name="codproveedortmp" value="<?php echo $codproveedortmp;?>" type="hidden">
+             <input id="codproveedortmp" name="codproveedortmp" value="<?php  echo $codproveedortmp;?>" type="hidden">
             </form>
 
 <!--- FIN FORMULARIO TELEFONOS OFICINA------------------------------------------------------------------------------------->
@@ -283,7 +283,7 @@ $codproveedortmp=mysql_insert_id();
                             <div id="tituloForm" class="header" style="background: #024769">BANCOS</div>
                             <table class="fuente8" width="98%" cellspacing=0 cellpadding=3 border=0 >
 
-                                 <?php
+                                 <?php 
 
                                     $query_b="SELECT * FROM banco WHERE borrado=0 ORDER BY nombre ASC";
                                     $res_b=mysql_query($query_b,$conn);
@@ -294,14 +294,14 @@ $codproveedortmp=mysql_insert_id();
                                          Banco:&nbsp;
                                         <select id="banco"  class="comboMedio" NAME="banco">
                                             <option value="0">Seleccionar banco</option>
-                                            <?php
+                                            <?php 
                                             $contador=0;
                                             while ($contador < mysql_num_rows($res_b))
                                                 {
                                                     
                                             ?>                                                    
-                                               <option value="<?php echo mysql_result($res_b,$contador,"id_banco")?>"><?php echo mysql_result($res_b,$contador,"nombre")?></option>
-                                            <?php $contador++;
+                                               <option value="<?php  echo mysql_result($res_b,$contador,"id_banco")?>"><?php  echo mysql_result($res_b,$contador,"nombre")?></option>
+                                            <?php  $contador++;
                                             } ?>
                                         </select>
                                          &nbsp;
@@ -346,7 +346,7 @@ $codproveedortmp=mysql_insert_id();
                     </div>
 
                              
-             <input id="codproveedortmp" name="codproveedortmp" value="<?php echo $codproveedortmp;?>" type="hidden">
+             <input id="codproveedortmp" name="codproveedortmp" value="<?php  echo $codproveedortmp;?>" type="hidden">
             </form>
 
 <!--- FIN FORMULARIO BANCOS ------------------------------------------------------------------------------------->
@@ -408,18 +408,18 @@ $codproveedortmp=mysql_insert_id();
                     </div>
 
                     <div id="botonBusqueda">
-                        <?if ($origen=="factura"){?>
-                        <input id="origen" name="origen" value="<?php echo $origen?>" type="hidden">
+                        <?php if ($origen=="factura"){?>
+                        <input id="origen" name="origen" value="<?php  echo $origen?>" type="hidden">
                         <img src="../img/botonaceptar.jpg" width="85" height="22" onClick="validar_formulario(formulario,true)" border="1" onMouseOver="style.cursor=cursor">
-                        <?}else{?>
+                        <?php }else{?>
                         <img src="../img/botonaceptar.jpg" width="85" height="22" onClick="validar_formulario(formulario,true)" border="1" onMouseOver="style.cursor=cursor">
                         <img src="../img/botonlimpiar.jpg" width="69" height="22" onClick="limpiar()" border="1" onMouseOver="style.cursor=cursor">
                         <img src="../img/botoncancelar.jpg" width="85" height="22" onClick="cancelar()" border="1" onMouseOver="style.cursor=cursor">
-                        <?}?>
+                        <?php }?>
 
 
                     </div>
-             <input id="codproveedortmp" name="codproveedortmp" value="<?php echo $codproveedortmp;?>" type="hidden">
+             <input id="codproveedortmp" name="codproveedortmp" value="<?php  echo $codproveedortmp;?>" type="hidden">
             </form>
 
 <!--- FIN FORMULARIO CONTACTOS------------------------------------------------------------------------------------->
